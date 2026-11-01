@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Badge } from '../components/Badge';
-import { ButtonLink, ExternalButton } from '../components/Button';
+import { Button, ButtonLink, ExternalButton } from '../components/Button';
 import { Container, PageHeader, SectionHeading } from '../components/Layout';
 import { usePageMeta } from '../components/Seo';
 import { Alert } from '../components/States';
@@ -9,6 +10,8 @@ import { listGuides } from '../services/contentService';
 import {
   COMMUNITY_CATEGORIES,
   discussionCategoryNote,
+  discussionSearchUrl,
+  forumPath,
   issueTemplateUrl,
   SITE,
 } from '../services/site';
@@ -16,22 +19,28 @@ import { formatDate } from '../lib/utils/format';
 
 export function CommunityPage() {
   usePageMeta({
-    title: '经验社区',
+    title: '论坛',
     description:
-      '通过 GitHub Discussions 参与竞赛咨询、备赛经验、技术问答、组队与项目展示；站内提供分类规划、模板与行为准则。',
+      'TechCompetitionHub 论坛：通过 GitHub Discussions 参与竞赛咨询、备赛经验、技术问答、组队与项目展示；站内提供分类说明、发帖模板与行为准则。',
   });
 
   const guides = listGuides().slice(0, 3);
+  const [query, setQuery] = useState('');
+
+  const searchForum = () => {
+    const target = query.trim() ? discussionSearchUrl(query.trim()) : SITE.discussions;
+    window.open(target, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <>
       <PageHeader
-        eyebrow="经验社区"
+        eyebrow="论坛"
         title="在公开、可搜索的地方交流"
         description="论坛以 GitHub Discussions 承载：经验、问答、组队与项目展示可搜索、可引用、可追溯。站内不保存帖子正文，也不建设私信或即时聊天。"
         actions={
           <>
-            <ExternalButton href={SITE.discussions}>前往论坛</ExternalButton>
+            <ExternalButton href={SITE.discussions}>前往 GitHub 论坛</ExternalButton>
             <ButtonLink to="/submit-review" variant="secondary">
               提交参赛评价
             </ButtonLink>
@@ -64,12 +73,38 @@ export function CommunityPage() {
           </div>
         </div>
 
+        <div className="mt-4 rounded-2xl border border-line bg-surface p-4">
+          <form
+            className="flex flex-col gap-2 sm:flex-row"
+            onSubmit={(event) => {
+              event.preventDefault();
+              searchForum();
+            }}
+          >
+            <label htmlFor="forum-search" className="sr-only">
+              搜索 GitHub Discussions
+            </label>
+            <input
+              id="forum-search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="搜索论坛帖子，如“电赛 控制”“组队 嵌入式”"
+              className="min-w-0 flex-1 rounded-lg border border-line-strong bg-surface px-3 py-2.5 text-sm text-ink-900 placeholder:text-ink-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 focus:outline-none"
+            />
+            <Button type="submit">搜索论坛</Button>
+          </form>
+          <p className="mt-2 text-xs leading-5 text-ink-500">
+            搜索会在 GitHub Discussions 中打开，不在站内建立帖子索引；帖子正文与账号仍由 GitHub
+            管理。
+          </p>
+        </div>
+
         <section className="mt-10" aria-labelledby="categories-heading">
           <SectionHeading
             id="categories-heading"
             eyebrow="分类入口"
             title="每个分类只解决一类问题"
-            description="以下是当前仓库实际的 Discussions 分类，点击可直接进入。"
+            description="点击分类进入站内说明页，查看适用内容与发帖模板；右侧可直接去 GitHub 分类。"
           />
           <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
             <table className="w-full text-left text-sm">
@@ -85,16 +120,26 @@ export function CommunityPage() {
                   <th scope="col" className="px-4 py-3 font-semibold">
                     形式
                   </th>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    入口
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-line">
                 {COMMUNITY_CATEGORIES.map((category) => (
                   <tr key={category.name}>
                     <th scope="row" className="px-4 py-3 text-left font-semibold text-ink-900">
-                      <ExternalLink href={category.url}>{category.name}</ExternalLink>
+                      <Link to={forumPath(category.slug)} className="hover:text-brand-700">
+                        {category.name}
+                      </Link>
                     </th>
                     <td className="px-4 py-3 text-ink-700">{category.purpose}</td>
                     <td className="px-4 py-3 text-ink-500">{category.mode}</td>
+                    <td className="px-4 py-3">
+                      <ExternalLink href={category.url} className="text-xs">
+                        GitHub
+                      </ExternalLink>
+                    </td>
                   </tr>
                 ))}
               </tbody>

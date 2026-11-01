@@ -2,10 +2,24 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { LoadingBlock } from '../components/States';
 import { RootLayout } from './RootLayout';
+
+const ForumCategoryPage = lazy(() =>
+  import('../pages/ForumCategoryPage').then((module) => ({
+    default: module.ForumCategoryPage,
+  })),
+);
+
+const CategoriesPage = lazy(() =>
+  import('../pages/CategoriesPage').then((module) => ({ default: module.CategoriesPage })),
+);
+
+const CategoryDetailPage = lazy(() =>
+  import('../pages/CategoryDetailPage').then((module) => ({
+    default: module.CategoryDetailPage,
+  })),
+);
 import { AboutPage } from '../pages/AboutPage';
 import { CommunityPage } from '../pages/CommunityPage';
-import { CategoriesPage } from '../pages/CategoriesPage';
-import { CategoryDetailPage } from '../pages/CategoryDetailPage';
 import { CompetitionCatalogPage } from '../pages/CompetitionCatalogPage';
 import { CompetitionDetailPage } from '../pages/CompetitionDetailPage';
 import { ContributePage } from '../pages/ContributePage';
@@ -35,8 +49,22 @@ export function AppRoutes() {
         <Route index element={<HomePage />} />
         <Route path="competitions" element={<CompetitionCatalogPage />} />
         <Route path="competitions/:competitionId" element={<CompetitionDetailPage />} />
-        <Route path="categories" element={<CategoriesPage />} />
-        <Route path="categories/:domainId" element={<CategoryDetailPage />} />
+        <Route
+          path="categories"
+          element={
+            <Suspense fallback={<LoadingBlock label="正在加载竞赛类别…" />}>
+              <CategoriesPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="categories/:domainId"
+          element={
+            <Suspense fallback={<LoadingBlock label="正在加载竞赛类别…" />}>
+              <CategoryDetailPage />
+            </Suspense>
+          }
+        />
         <Route path="rankings" element={<RankingsPage />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="projects/:projectId" element={<ProjectDetailPage />} />
@@ -53,6 +81,15 @@ export function AppRoutes() {
           }
         />
         <Route path="community" element={<CommunityPage />} />
+        <Route path="forum" element={<CommunityPage />} />
+        <Route
+          path="forum/:slug"
+          element={
+            <Suspense fallback={<LoadingBlock label="正在加载论坛分类…" />}>
+              <ForumCategoryPage />
+            </Suspense>
+          }
+        />
         <Route path="about" element={<AboutPage />} />
         <Route path="contribute" element={<ContributePage />} />
         <Route path="submit-competition" element={<SubmitCompetitionPage />} />

@@ -36,7 +36,7 @@ npm run check
 | 格式   | `npm run format:check`       | 通过                                                                                |
 | Lint   | `npm run lint`               | 通过，0 error                                                                       |
 | 类型   | `npm run typecheck`          | 通过                                                                                |
-| 测试   | `npm test`                   | 10 个文件、109 个测试全部通过（含 20 条路由 axe 审计）                              |
+| 测试   | `npm test`                   | 10 个文件、113 个测试全部通过（含 22 条路由 axe 审计）                              |
 | 数据   | `npm run data:validate`      | 21 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章 / 0 社区评价；0 错误、0 警告 |
 | Schema | `npm run data:schemas:check` | 9 个 JSON Schema 与 Zod 定义一致                                                    |
 | 构建   | `npm run build`              | 通过                                                                                |
@@ -200,8 +200,11 @@ postbuild：... base=/
 - 竞赛详情新增“参赛者自述评分”区块：无评价时显示空状态；有审核评价时显示平均分、样本量、分布与公开背景。社区评分不参与平台六维评分或正式排名。
 - 新增 `/submit-competition`：生成 `needs_review`、`scores: null` 的竞赛 JSON 草稿，支持复制/下载，不保存表单内容。
 - 新增 `/categories` 与 `/categories/:domainId`：按机器人、嵌入式、电子设计、机械与工程、软件、创新创业等 12 个受控类别浏览，展示收录、核验与评分数量；首页类别按收录数量排序。
+- 新增 `/forum` 与 6 个 `/forum/:slug` 分类页：分类边界、适用/不适用内容、发帖模板、相关站内入口与 GitHub 直达；社区页增加论坛搜索。
+- 新增 `docs/COMMUNITY_MODERATION.md`：处理阶梯、参赛评价审核、数据纠错分工与申诉。
+- 论坛分类详情页与类别页按需加载，主包从约 711 KB 降到约 697 KB，构建不再出现 700 KB 警告。
 - 论坛头像采用维护者设计的原图，优化为 `public/forum-avatar.jpg`（512×512，约 42 KB），用于页头与社区页；README 已记录出处与许可提示。
 - Discussions 当前默认 6 个分类，社区页链接实际分类。
-- 测试：10 个文件、109 个测试全部通过；`npm run check` exit 0。
-- 构建：608 modules，sitemap 78 个 URL（21 竞赛 + 25 技能 + 4 文章 + 16 静态路由 + 12 类别），base `/`。
+- 测试：10 个文件、113 个测试全部通过；`npm run check` exit 0。
+- 构建：610 modules，sitemap 85 个 URL（21 竞赛 + 25 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），base `/`。
 - 推送提交 `718a58e` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 21 条竞赛 / 12 个类别 / 78 个 URL；`/forum-avatar.jpg` 返回 200（image/jpeg，42,156 bytes）；`/submit-review`、`/submit-competition` 与 `/categories/robotics` 由 `404.html` 回退渲染。

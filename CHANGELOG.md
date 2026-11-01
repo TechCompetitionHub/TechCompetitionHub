@@ -11,13 +11,15 @@
 - 社区页链接到已启用的 GitHub Discussions 实际分类（Announcements、Q&A、Show and tell、General、Ideas、Polls）。
 - 新增“提交竞赛”与“提交参赛评价”页面：生成 JSON/Markdown 草稿并跳转 GitHub Issue；不保存表单内容。
 - 新增 `/categories` 与 `/categories/:domainId` 类别页；首页按收录数量展示机器人、嵌入式、电子设计、机械与工程、软件、创新创业等类别。
+- 新增 `/forum` 与 6 个 `/forum/:slug` 论坛分类页：分类边界、适用/不适用内容、可复制发帖模板、相关站内入口和 GitHub 直达；社区页增加论坛搜索。
+- 新增 `docs/COMMUNITY_MODERATION.md`，明确处理阶梯、参赛评价审核、数据纠错分工与申诉。
 - 新增社区参赛评价：1–5 星、是否参加过、赛道、年份、学校（可选）、角色、公开主页与证据链接；审核后展示，不参与平台评分。
 - 新增 `data/reviews/` 与 `community-review` JSON Schema；当前公开评价为 0，不使用示例评价填充。
 
 ### Changed
 
 - 竞赛数据从 10 条增加到 21 条；已评分仍为 8 条，13 条因未评分进入资料不足列表。
-- 测试从 93 个增加到 109 个；数据校验、Schema、构建与部署在扩展后重新运行。
+- 测试从 93 个增加到 113 个；数据校验、Schema、构建与部署在扩展后重新运行。
 
 ### 计划
 

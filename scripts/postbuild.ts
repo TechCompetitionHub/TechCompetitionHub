@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { COMMUNITY_CATEGORIES } from '../src/services/site';
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, 'dist');
@@ -41,6 +42,7 @@ async function main(): Promise<void> {
     await readFile(path.join(ROOT, 'data', 'vocabularies', 'domains.json'), 'utf8'),
   ) as { terms?: Array<{ id: string }> };
   const domainIds = (domainVocabulary.terms ?? []).map((term) => term.id).sort();
+  const forumSlugs = COMMUNITY_CATEGORIES.map((category) => category.slug).sort();
 
   const staticRoutes = [
     '',
@@ -52,6 +54,7 @@ async function main(): Promise<void> {
     'planner',
     'guides',
     'community',
+    'forum',
     'submit-competition',
     'submit-review',
     'about',
@@ -65,6 +68,7 @@ async function main(): Promise<void> {
     ...staticRoutes.map((route) => `${SITE_URL}/${route}`.replace(/\/$/, '/')),
     ...competitionIds.map((id) => `${SITE_URL}/competitions/${id}`),
     ...domainIds.map((id) => `${SITE_URL}/categories/${id}`),
+    ...forumSlugs.map((slug) => `${SITE_URL}/forum/${slug}`),
     ...skillIds.map((id) => `${SITE_URL}/skills/${id}`),
     ...guideSlugs.map((slug) => `${SITE_URL}/guides/${slug}`),
   ];
@@ -96,6 +100,9 @@ async function main(): Promise<void> {
   }
   if (domainIds.length === 0 || !sitemap.includes(`${SITE_URL}/categories/${domainIds[0]}`)) {
     throw new Error('sitemap 缺少竞赛类别 URL');
+  }
+  if (forumSlugs.length === 0 || !sitemap.includes(`${SITE_URL}/forum/${forumSlugs[0]}`)) {
+    throw new Error('sitemap 缺少论坛分类 URL');
   }
   if (!robots.includes(`${SITE_URL}/sitemap.xml`)) {
     throw new Error('robots.txt 未指向 sitemap');

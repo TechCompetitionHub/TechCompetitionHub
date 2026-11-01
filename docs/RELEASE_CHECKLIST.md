@@ -23,7 +23,7 @@
 - [x] 格式检查通过（`npm run format:check`）。
 - [x] Lint 通过（`npm run lint`）。
 - [x] 类型检查通过（`npm run typecheck`）。
-- [x] 单元/集成测试通过（109 个测试，含 20 条路由的 axe 审计）。
+- [x] 单元/集成测试通过（113 个测试，含 22 条路由的 axe 审计）。
 - [x] 数据校验通过（21 竞赛 / 25 技能 / 23 资源 / 2 路线 / 4 文章 / 0 社区评价，0 错误 0 警告）。
 - [x] 生成 Schema 与 Zod 定义一致（`npm run data:schemas:check`）。
 - [x] 生产构建通过（`npm run build`）。

@@ -8,7 +8,7 @@ const FOOTER_GROUPS = [
       { to: '/competitions', label: '竞赛目录' },
       { to: '/categories', label: '竞赛类别' },
       { to: '/rankings', label: '价值榜' },
-      { to: '/community', label: '论坛' },
+      { to: '/forum', label: '论坛' },
       { to: '/projects', label: '项目成果' },
       { to: '/skills', label: '技能图谱' },
       { to: '/planner', label: '成长规划' },

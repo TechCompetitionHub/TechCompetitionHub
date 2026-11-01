@@ -56,16 +56,18 @@ describe('核心页面', () => {
     expect(screen.getByText('目录不等于认可度或技术含量')).toBeInTheDocument();
   });
 
-  it('类别页展示机器人方向竞赛', () => {
+  it('类别页展示机器人方向竞赛', async () => {
     renderApp('/categories/robotics');
-    expect(screen.getByRole('heading', { level: 1, name: '机器人' })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { level: 1, name: '机器人' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /全国大学生机器人大赛 ROBOCON/ })).toBeInTheDocument();
     expect(screen.getAllByText(/RoboMaster|RoboCup|ROBOCON/).length).toBeGreaterThan(0);
   });
 
-  it('未知类别返回 404 内容', () => {
+  it('未知类别返回 404 内容', async () => {
     renderApp('/categories/not-real');
-    expect(screen.getByRole('heading', { level: 1, name: '这个类别不存在' })).toBeInTheDocument();
+    expect(
+      await screen.findByRole('heading', { level: 1, name: '这个类别不存在' }),
+    ).toBeInTheDocument();
   });
 
   it('未知竞赛 ID 返回 404 内容', () => {
@@ -188,6 +190,24 @@ describe('核心页面', () => {
       expect(allowed).toContain(slug);
     }
     expect(links.some((href) => href.endsWith('/discussions'))).toBe(true);
+    expect(links.filter((href) => href.startsWith('/forum/')).length).toBeGreaterThanOrEqual(6);
+  });
+
+  it('论坛分类页展示规则、模板与 GitHub 入口', async () => {
+    renderApp('/forum/q-a');
+    expect(await screen.findByRole('heading', { level: 1, name: /Q&A/ })).toBeInTheDocument();
+    expect(screen.getByText('竞赛咨询模板')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: '进入 GitHub 分类' })).toHaveAttribute(
+      'href',
+      expect.stringContaining('/discussions/categories/q-a'),
+    );
+  });
+
+  it('未知论坛分类返回 404 内容', () => {
+    renderApp('/forum/not-real');
+    expect(
+      screen.getByRole('heading', { level: 1, name: '这个论坛分类不存在' }),
+    ).toBeInTheDocument();
   });
 
   it('首页通过基础可访问性自动检查', async () => {
@@ -220,6 +240,8 @@ describe('核心页面', () => {
     '/guides',
     '/guides/choose-first-competition',
     '/community',
+    '/forum',
+    '/forum/q-a',
     '/submit-competition',
     '/submit-review',
     '/about',

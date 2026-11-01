@@ -12,7 +12,7 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、109 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、113 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
 
 ## 仓库关系
 
@@ -189,6 +189,7 @@ git push root main
 
 - 新增竞赛 / 纠错 / 项目 / 技能资源：使用 `.github/ISSUE_TEMPLATE/` 中的模板，或使用站内“提交竞赛”生成 JSON 草稿。
 - 参赛评价：使用“提交参赛评价”填写是否参加过、赛道、年份、学校（可选）、角色与公开主页，生成 Markdown 后通过 GitHub Issue 提交；审核后才展示。
+- 论坛治理：分类边界、处理阶梯、评价审核与申诉见 [COMMUNITY_MODERATION.md](docs/COMMUNITY_MODERATION.md)。
 - 数据改动：修改 `data/` 下 JSON，运行 `npm run data:validate` 与 `npm run data:schemas:check`。
 - 代码改动：保持领域逻辑纯函数化，补充测试，不降低检查标准。
 - 安全问题：按 [SECURITY.md](SECURITY.md) 私下报告，不要公开可利用细节。

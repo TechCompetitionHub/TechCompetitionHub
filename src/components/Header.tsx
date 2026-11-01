@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { to: '/projects', label: '项目成果' },
   { to: '/skills', label: '技能图谱' },
   { to: '/planner', label: '成长规划' },
-  { to: '/community', label: '论坛' },
+  { to: '/forum', label: '论坛' },
   { to: '/contribute', label: '参与贡献' },
 ] as const;
 
