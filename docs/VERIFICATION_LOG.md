@@ -210,4 +210,4 @@ postbuild：... base=/
 - 测试：10 个文件、113 个测试全部通过；`npm run check` exit 0。
 - 构建：612 modules，sitemap 85 个 URL（21 竞赛 + 25 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），CSS 55.06 KB，主 JS 683.83 KB（无 700 KB 警告），base `/`。
 - 懒加载：论坛分类、竞赛类别、类别详情、文章详情、提交竞赛与提交评价均按需加载；骨架屏在 Suspense 期间显示。
-- 推送提交 `78b1018` 后，根站点与项目站点 Deploy 均成功；线上首页 200，CSS `/assets/index-DD4k-Dgs.css` 200（54,036 bytes），包含 `hero-mesh` 与 `card-hover`；sitemap 仍为 85 个 URL。
+- 推送提交 `70dd4a7` 后，根站点与项目站点 Deploy 均成功；线上首页 200，CSS `/assets/index-BvSTu5Nj.css` 200（55,064 bytes），主 JS 683,829 bytes；CSS/JS 均包含 `route-progress`，CSS 包含 `skeleton`；sitemap 仍为 85 个 URL。
