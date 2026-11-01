@@ -56,12 +56,13 @@ jobs:
       - name: Build
         run: |
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          OWNER_LOWER=$(printf '%s' "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')
           if [ "$REPO_NAME" = "TechCompetitionHub.github.io" ]; then
             export VITE_BASE_PATH="/"
-            export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io"
+            export SITE_URL="https://${OWNER_LOWER}.github.io"
           else
             export VITE_BASE_PATH="/${REPO_NAME}/"
-            export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}"
+            export SITE_URL="https://${OWNER_LOWER}.github.io/${REPO_NAME}"
           fi
           echo "Building ${REPO_NAME} with base ${VITE_BASE_PATH} and site ${SITE_URL}"
           npm run build

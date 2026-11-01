@@ -2,6 +2,8 @@
 
 站点是纯静态 SPA，构建产物在 `dist/`。使用 GitHub Actions 构建并部署，不提交 `dist/`。
 
+> 2026-11-01：根站点已启用并通过 GitHub Actions 部署到 `https://techcompetitionhub.github.io/`。以下步骤保留用于迁移、重建或项目站点镜像。
+
 ## 1. 发布目标
 
 | 用途                 | 仓库                                              | URL                                                        | `VITE_BASE_PATH`       |
@@ -13,12 +15,13 @@
 
 ```bash
 REPO_NAME="${GITHUB_REPOSITORY#*/}"
+OWNER_LOWER=$(printf '%s' "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')
 if [ "$REPO_NAME" = "TechCompetitionHub.github.io" ]; then
   export VITE_BASE_PATH="/"
-  export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io"
+  export SITE_URL="https://${OWNER_LOWER}.github.io"
 else
   export VITE_BASE_PATH="/${REPO_NAME}/"
-  export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}"
+  export SITE_URL="https://${OWNER_LOWER}.github.io/${REPO_NAME}"
 fi
 ```
 

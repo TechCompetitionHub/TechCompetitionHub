@@ -12,7 +12,7 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点为 `https://techcompetitionhub.github.io/`**。GitHub Pages 与 Discussions 的仓库设置由维护者完成，首次部署前请按下方的部署与设置清单操作。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**。Discussions、About 与可选项目站点由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
 
 ## 仓库关系
 
@@ -168,7 +168,7 @@ git push root main
 首次发布时在 GitHub 仓库中完成以下设置；代码与工作流文件已经就绪：
 
 - **About（根站点仓库）**：填写描述 `大学生科技竞赛开源成长平台：可追溯的数据、可解释的评分与规则式成长规划`，主页设为 `https://techcompetitionhub.github.io/`，添加 Topics：`competition`、`education`、`react`、`typescript`、`github-pages`、`open-data`。
-- **Pages（根站点仓库）**：在 `TechCompetitionHub.github.io` 的 `Settings → Pages → Build and deployment → Source` 选择 **GitHub Actions**；推送 `main` 或手动运行 `Deploy GitHub Pages`。
+- **Pages（根站点仓库）**：已自动启用并通过 GitHub Actions 成功部署（2026-11-01）。如迁移/重建，在 `TechCompetitionHub.github.io` 的 `Settings → Pages → Build and deployment → Source` 选择 **GitHub Actions**，再运行 `Deploy GitHub Pages`。
 - **Pages（主仓库，可选）**：如保留项目站点镜像，在 `TechCompetitionHub` 仓库同样选择 GitHub Actions。
 - **Discussions（主仓库）**：在 `TechCompetitionHub` 的 `Settings → General → Features` 启用 Discussions，按 [.github/DISCUSSION_GUIDE.md](.github/DISCUSSION_GUIDE.md) 创建 8 个分类。站内只链接 Discussions 根地址。
 - **Actions**：允许两个仓库运行 Actions；默认工作流权限设为只读，部署工作流已声明所需最小权限。
@@ -196,7 +196,7 @@ git push root main
 - 项目成果与 Discussions 需要维护者在 GitHub 上启用/审核后才有内容。
 - 首版没有账户、跨设备收藏、动态评分、后端审核后台或 AI 辅助。
 - 排行榜目前只实现 P0 要求的**竞赛价值榜**；项目成果榜、技能路线/资源榜、成长案例展示尚未实现。
-- GitHub Pages 的真实部署与 404 回退状态尚未在远程环境验证；本地预览与构建产物检查已通过。
+- 根站点已部署并验证首页、静态资源、`404.html` 与深层链接回退；深层链接按 GitHub Pages 规则返回 HTTP 404，但由 SPA 正常渲染。项目站点镜像尚未部署。
 - 根站点仓库与主仓库目前需要手动同步推送；未配置自动镜像或跨仓库部署令牌。
 - 外部链接在线检查为每周非阻塞任务，受网络环境影响时以人工复核为准。
 - 部分竞赛官网仅提供前端渲染页面，链接检查以 HTTP 可访问性为准，不保证页面内容解析完整。

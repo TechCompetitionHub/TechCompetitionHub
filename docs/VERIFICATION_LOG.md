@@ -2,7 +2,7 @@
 
 - 日期：2026-11-01（Asia/Shanghai）
 - 环境：Windows 11、Node v24.17.0、npm 11.14.1、Git 2.47.1
-- 提交状态：已推送 `origin/main`（commit `95b12b4`）；GitHub Pages 尚未启用，尚未部署
+- 提交状态：已推送主仓库与根站点仓库的 `main`；根站点已部署（2026-11-01），最新提交以远程 HEAD 为准
 - 说明：本文件只记录实际运行的命令与结果；没有运行的检查不会被写成“通过”。
 - 2026-11-01 更新：主站改为根站点 `TechCompetitionHub.github.io`（base `/`）。第 3–5 节保留迁移前项目站点验证记录；第 9 节为当前根站点验证。
 
@@ -145,7 +145,7 @@ npm run links:check:online
 
 ## 8. 未完成或未验证
 
-- 已推送主仓库与根站点仓库的 `main`；GitHub Pages 尚未启用，真实部署未验证。
+- 根站点已部署并完成首页、资源、404.html 与深层链接回退验证；项目站点镜像尚未部署。
 - 未在真实手机/浏览器上做人工视觉与键盘走查；已有自动化 axe 与响应式布局检查。
 - 首版 8 条评分尚未由维护者/领域评审人工复核。
 - 外部链接在线检查受本机网络影响，未在 CI 环境运行。
@@ -174,4 +174,5 @@ postbuild：... base=/
 - `dist/index.html` 资源为 `/assets/...`；sitemap 首页为 `https://techcompetitionhub.github.io/`，包含 10 条竞赛详情 URL。
 - 根站点预览：`/`、`/competitions/cumcm`、`/404.html`、主 JS、`/sitemap.xml` 均返回 200；主 JS 625,208 bytes。
 - 项目站点覆盖构建：`VITE_BASE_PATH=/TechCompetitionHub/` 时资源为 `/TechCompetitionHub/assets/...`，postbuild 通过；随后已恢复根站点构建。
-- GitHub Pages 需要在根站点仓库设置中启用 **GitHub Actions** 后，部署工作流才能通过 `Setup Pages` 并发布。
+- 根站点 Pages 已由 GitHub Actions 成功部署（2026-11-01）。线上检查：首页 200、主 JS 200、`404.html` 200、`/competitions/cumcm` 返回 HTTP 404 但由 SPA 回退渲染、sitemap 含 10 条竞赛 URL、robots 指向 sitemap。
+- 部署时发现 `GITHUB_REPOSITORY_OWNER` 为大小写混合，sitemap/robots 曾生成 `https://TechCompetitionHub.github.io/`；工作流已改为小写 owner，重新部署后以 `https://techcompetitionhub.github.io/` 为准。

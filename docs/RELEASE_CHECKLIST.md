@@ -33,7 +33,7 @@
 - [x] 仓库没有密钥和个人敏感信息（人工检索 + `.gitignore`）。
 - [ ] 移动端、键盘操作、空状态和错误状态人工复核（已做自动化与响应式检查，仍需真机/浏览器人工走查）。
 - [x] 关键页面有标题、描述与合理 SEO 元数据（`usePageMeta`）。
-- [ ] 生产预览在真实 GitHub Pages 环境验证（已推送两个仓库，Pages 尚未启用）。
+- [x] 生产预览在真实 GitHub Pages 环境验证（根站点 200、资源 200、404.html 与深层链接回退正常）。
 - [ ] 外部链接在线检查（`npm run links:check:online`）在 CI 定期任务中运行一次。
 
 ## GitHub 设置
@@ -41,7 +41,7 @@
 - [ ] 仓库描述、Topics、README 和许可证设置完成。
 - [ ] 启用 Discussions 并创建 `.github/DISCUSSION_GUIDE.md` 中的分类。
 - [ ] 配置 Issues 表单（文件已提交）与 PR 模板。
-- [ ] 在根站点仓库配置 Pages 使用 GitHub Actions 部署；主仓库项目站点可选。
+- [x] 根站点仓库 Pages 已通过 GitHub Actions 部署；主仓库项目站点可选，尚未部署。
 - [ ] 检查默认分支保护、必需检查与合并权限。
 - [ ] 配置社区行为准则与安全报告流程（文件已提交，需在仓库设置中启用入口）。
 - [ ] 配置 Dependabot 告警（`dependabot.yml` 已提交，需在仓库设置中确认）。
