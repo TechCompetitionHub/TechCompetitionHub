@@ -7,7 +7,16 @@
   "industry": "操作系统、云、开发工具与人工智能",
   "website": "https://www.microsoft.com/",
   "careers_url": "https://careers.microsoft.com/",
-  "role_ids": ["software", "frontend", "backend", "algorithm", "ai", "product", "test"],
+  "role_ids": [
+    "software",
+    "frontend",
+    "backend",
+    "algorithm",
+    "ai",
+    "product",
+    "test",
+    "cloud-engineer"
+  ],
   "competition_preferences": [],
   "hiring_programs": [],
   "sources": [

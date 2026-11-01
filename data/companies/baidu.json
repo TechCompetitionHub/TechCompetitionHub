@@ -7,7 +7,7 @@
   "industry": "搜索、人工智能、自动驾驶与云",
   "website": "https://www.baidu.com/",
   "careers_url": "https://talent.baidu.com/",
-  "role_ids": ["backend", "software", "algorithm", "ai", "product"],
+  "role_ids": ["backend", "software", "algorithm", "ai", "product", "data-analyst"],
   "competition_preferences": [
     {
       "competition_id": "baidu-star",

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "data-visualization",
+  "name": "数据可视化",
+  "domain": "data",
+  "definition": "选择合适图表、设计可读的坐标与标注，并用代码/工具复现数据结论。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未系统使用过数据可视化工具。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能用表格软件或绘图库画出柱状图、折线图与散点图。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能根据数据类型选择图表、处理坐标轴/单位/图例，并写出图表结论。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能设计多图叙事、处理误导性比例与异常值，并做可访问性检查。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能制定图表规范、评审他人可视化并指导仪表盘设计。"
+    }
+  ],
+  "prerequisite_skill_ids": ["data-analysis"],
+  "practice_tasks": [
+    {
+      "id": "visualize-model-results",
+      "title": "把一次建模结果做成 4 张图",
+      "level": 2,
+      "goal": "用 4 张互补图表呈现趋势、分布、对比与误差，并为每张图写一句结论。",
+      "prerequisites": ["能读取 CSV/JSON 数据"],
+      "steps": [
+        "明确每张图要回答的问题。",
+        "选择图表类型并标注单位、样本量与来源。",
+        "检查颜色/对比度与误导性比例。"
+      ],
+      "deliverables": ["图表代码或工作簿", "4 张图与结论", "数据来源说明"],
+      "acceptance_criteria": [
+        "每张图只有一个主要结论。",
+        "坐标轴、单位与来源完整。",
+        "至少检查一次色盲/灰度可读性。"
+      ],
+      "estimated_hours": 5,
+      "common_failures": ["图表堆叠但没有结论", "截断坐标轴夸大差异"]
+    }
+  ],
+  "resource_ids": ["pandas-docs"],
+  "related_competition_ids": [
+    "cumcm",
+    "mcm-icm",
+    "national-undergraduate-statistical-modeling-competition",
+    "national-market-research-analysis-competition"
+  ],
+  "sources": [
+    {
+      "id": "matplotlib-docs",
+      "title": "Matplotlib Documentation",
+      "url": "https://matplotlib.org/stable/users/index.html",
+      "publisher": "Matplotlib Development Team",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

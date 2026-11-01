@@ -7,7 +7,15 @@
   "industry": "工业自动化、机器人、电气与数字化",
   "website": "https://global.abb/",
   "careers_url": "https://careers.abb/china/zh",
-  "role_ids": ["embedded", "hardware", "robotics", "software", "mechanical", "project-management"],
+  "role_ids": [
+    "embedded",
+    "hardware",
+    "robotics",
+    "software",
+    "mechanical",
+    "project-management",
+    "simulation-engineer"
+  ],
   "competition_preferences": [],
   "hiring_programs": [],
   "sources": [

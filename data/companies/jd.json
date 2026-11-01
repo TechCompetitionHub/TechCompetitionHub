@@ -7,7 +7,16 @@
   "industry": "电商、物流、云计算与零售科技",
   "website": "https://www.jd.com/",
   "careers_url": "https://zhaopin.jd.com/",
-  "role_ids": ["backend", "frontend", "software", "algorithm", "ai", "product", "test"],
+  "role_ids": [
+    "backend",
+    "frontend",
+    "software",
+    "algorithm",
+    "ai",
+    "product",
+    "test",
+    "data-analyst"
+  ],
   "competition_preferences": [],
   "hiring_programs": [],
   "sources": [

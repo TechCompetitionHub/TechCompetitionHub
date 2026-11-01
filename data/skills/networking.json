@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "networking",
+  "name": "计算机网络基础",
+  "domain": "engineering",
+  "definition": "理解 IP、路由、DNS、HTTP/TLS 与常见网络排错方法，能定位端到端连接问题。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未系统学习网络协议。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能解释 IP/端口/DNS/HTTP 的基本作用。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能用 ping/traceroute/curl/抓包定位常见连接问题。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能分析丢包、延迟、MTU、TLS 与代理问题，并给出取舍。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计网络分段、可观测性与故障演练方案。"
+    }
+  ],
+  "prerequisite_skill_ids": ["linux-cli"],
+  "practice_tasks": [
+    {
+      "id": "debug-http-failure",
+      "title": "定位一个 HTTPS 请求失败",
+      "level": 2,
+      "goal": "从 DNS、TCP、TLS、HTTP 四层逐步定位故障，并写出可复现的排查记录。",
+      "prerequisites": ["会使用命令行"],
+      "steps": [
+        "用 dig/curl 检查 DNS 与连接。",
+        "抓包或查看证书链，区分超时、拒绝与证书错误。",
+        "写出最小复现与修复验证。"
+      ],
+      "deliverables": ["排查记录", "命令与输出", "修复验证"],
+      "acceptance_criteria": [
+        "能区分 DNS/TCP/TLS/HTTP 层错误。",
+        "每一步都有命令与结果。",
+        "修复后复测通过。"
+      ],
+      "estimated_hours": 4,
+      "common_failures": ["直接重装环境", "把证书错误当成 DNS 错误"]
+    }
+  ],
+  "resource_ids": ["mdn-web-docs"],
+  "related_competition_ids": [
+    "national-undergraduate-information-security-competition",
+    "huawei-ict-competition",
+    "iot-design-competition"
+  ],
+  "sources": [
+    {
+      "id": "cisco-networking",
+      "title": "Cisco Networking Academy",
+      "url": "https://www.netacad.com/",
+      "publisher": "Cisco",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

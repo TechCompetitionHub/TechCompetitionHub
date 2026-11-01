@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "optimization",
+  "name": "优化方法",
+  "domain": "math",
+  "definition": "把实际问题写成目标函数与约束，选择线性/非线性/启发式方法并验证解的合理性与敏感性。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未学习最优化方法。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能识别目标函数、变量与约束，使用现成求解器。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立建模线性/整数/非线性问题，并解释求解结果。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理多目标、不可行、局部最优与敏感性分析。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计优化方案、评估近似方法并指导建模。"
+    }
+  ],
+  "prerequisite_skill_ids": ["math-foundations", "python-programming"],
+  "practice_tasks": [
+    {
+      "id": "scheduling-optimization",
+      "title": "完成一个小型排班优化",
+      "level": 2,
+      "goal": "为 10 人、3 班次的排班问题建立约束，求解并做敏感性分析。",
+      "prerequisites": ["了解线性规划基本概念"],
+      "steps": [
+        "写出决策变量、目标与硬/软约束。",
+        "用求解器求解并检查可行性。",
+        "改变 1–2 个参数，记录解的变化。"
+      ],
+      "deliverables": ["模型说明", "求解代码", "敏感性分析"],
+      "acceptance_criteria": ["约束与目标可解释。", "解满足全部硬约束。", "至少做 2 组参数变化。"],
+      "estimated_hours": 8,
+      "common_failures": ["目标与约束混淆", "只报最优解不做敏感性分析"]
+    }
+  ],
+  "resource_ids": ["python-control-docs"],
+  "related_competition_ids": [
+    "cumcm",
+    "mcm-icm",
+    "national-undergraduate-statistical-modeling-competition",
+    "global-campus-ai-algorithm-competition"
+  ],
+  "sources": [
+    {
+      "id": "cvxbook",
+      "title": "Convex Optimization",
+      "url": "https://web.stanford.edu/~boyd/cvxbook/",
+      "publisher": "Stanford University",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

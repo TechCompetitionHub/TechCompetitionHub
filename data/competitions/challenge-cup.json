@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["挑战杯", "大挑"],
+  "organizers": [],
+  "domains": ["innovation"],
+  "tracks": [],
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": null
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队作品参赛；具体赛制以当届通知为准。"
+  },
+  "equipment": {
+    "type": "unknown",
+    "description": null,
+    "requirements": null
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要对应方向的基础能力与团队协作；具体难度以当届赛题为准。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    },
+    {
+      "skill_id": "data-analysis",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官方站点当前不可访问；具体日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "赛事官网（待核验）",
+      "url": "https://www.tiaozhanbei.net/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "challenge-cup-catalog",
+      "title": "全国普通高校大学生竞赛分析报告 84 项竞赛目录（高校教务处转载）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "catalog"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "needs_review",
+  "last_verified_at": null,
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "官方站点不可访问；赛道、赛制、资格、日程与费用待核验。",
+  "id": "challenge-cup",
+  "name": "“挑战杯”全国大学生课外学术科技作品竞赛",
+  "summary": "面向高校学生的课外学术科技作品竞赛，强调创新性、科学性与作品完整度。",
+  "description": "“挑战杯”全国大学生课外学术科技作品竞赛见于高校常用竞赛目录。官方站点在当前网络不可访问；平台仅以目录与公开资料记录名称，具体赛道、赛制、资格、日程与费用待核验。"
+}

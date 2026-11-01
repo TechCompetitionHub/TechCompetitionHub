@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "cloud-computing",
+  "name": "云计算基础",
+  "domain": "engineering",
+  "definition": "理解计算/存储/网络/身份等云基础服务，能把一个应用部署到云上并控制成本与权限。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未使用过云平台。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能创建虚拟机/对象存储并完成基本访问控制。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能部署一个含数据库与域名的应用，配置日志与备份。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理权限、网络、成本与可用性取舍，并做故障演练。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计多环境架构、制定成本/安全规范并指导团队。"
+    }
+  ],
+  "prerequisite_skill_ids": ["linux-cli", "web-development"],
+  "practice_tasks": [
+    {
+      "id": "deploy-web-app",
+      "title": "把静态站点 + API 部署到云上",
+      "level": 2,
+      "goal": "完成一个公开可访问的静态站点与 API，配置最小权限、日志与成本告警。",
+      "prerequisites": ["了解 HTTP 与 DNS 基础"],
+      "steps": [
+        "划分计算、存储与数据库资源。",
+        "配置最小权限与环境变量，不提交密钥。",
+        "设置日志、备份与预算告警。"
+      ],
+      "deliverables": ["部署说明", "架构图", "权限与成本清单"],
+      "acceptance_criteria": [
+        "公网可访问且 HTTPS 正常。",
+        "密钥不在仓库中。",
+        "有预算告警与备份策略。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["使用根账号/全权限密钥", "忽略流量与存储成本"]
+    }
+  ],
+  "resource_ids": ["mdn-web-docs"],
+  "related_competition_ids": [
+    "china-software-cup",
+    "china-collegiate-computing-competition",
+    "iot-design-competition",
+    "huawei-ict-competition"
+  ],
+  "sources": [
+    {
+      "id": "aws-training",
+      "title": "AWS Training and Certification",
+      "url": "https://aws.amazon.com/training/",
+      "publisher": "Amazon Web Services",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

@@ -68,6 +68,36 @@
       "id": "project-management",
       "label": "项目管理",
       "description": "研发项目计划、跨团队协作、风险与交付管理。"
+    },
+    {
+      "id": "data-analyst",
+      "label": "数据分析师",
+      "description": "数据清洗、指标设计、可视化与业务分析。"
+    },
+    {
+      "id": "security-engineer",
+      "label": "安全工程师",
+      "description": "安全开发、漏洞分析、渗透测试与安全运营。"
+    },
+    {
+      "id": "devops",
+      "label": "DevOps / SRE",
+      "description": "持续集成、自动化运维、可靠性与可观测性。"
+    },
+    {
+      "id": "cloud-engineer",
+      "label": "云工程师",
+      "description": "云平台、容器、网络与云原生应用交付。"
+    },
+    {
+      "id": "game-developer",
+      "label": "游戏开发工程师",
+      "description": "游戏客户端/服务端、图形、引擎与玩法实现。"
+    },
+    {
+      "id": "simulation-engineer",
+      "label": "仿真工程师",
+      "description": "物理/机器人/工程系统建模、仿真与结果验证。"
     }
   ]
 }

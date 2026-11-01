@@ -7,7 +7,7 @@
   "industry": "网络设备、云、安全与协作",
   "website": "https://www.cisco.com/",
   "careers_url": "https://careers.cisco.com/global/en",
-  "role_ids": ["embedded", "software", "hardware", "test", "product"],
+  "role_ids": ["embedded", "software", "hardware", "test", "product", "security-engineer"],
   "competition_preferences": [],
   "hiring_programs": [],
   "sources": [

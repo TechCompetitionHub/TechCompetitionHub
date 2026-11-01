@@ -7,7 +7,7 @@
   "industry": "GPU、加速计算、人工智能与机器人",
   "website": "https://www.nvidia.cn/",
   "careers_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-  "role_ids": ["embedded", "software", "algorithm", "ai", "ic", "robotics"],
+  "role_ids": ["embedded", "software", "algorithm", "ai", "ic", "robotics", "simulation-engineer"],
   "competition_preferences": [
     {
       "competition_id": "robocup-china",

@@ -7,7 +7,7 @@
   "industry": "数据库、云基础设施与企业软件",
   "website": "https://www.oracle.com/",
   "careers_url": "https://careers.oracle.com/en/sites/jobsearch",
-  "role_ids": ["backend", "software", "algorithm", "ai", "product"],
+  "role_ids": ["backend", "software", "algorithm", "ai", "product", "cloud-engineer"],
   "competition_preferences": [],
   "hiring_programs": [],
   "sources": [

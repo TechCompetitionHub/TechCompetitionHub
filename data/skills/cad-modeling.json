@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "cad-modeling",
+  "name": "CAD 与三维建模",
+  "domain": "engineering",
+  "definition": "使用 CAD 工具完成零件/装配建模、工程图与可制造性检查，并能导出用于仿真/打印的模型。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未使用过 CAD 工具。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按教程完成简单零件与装配。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立完成零件、装配、工程图与尺寸标注。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理公差、干涉、可制造性与轻量化取舍。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能制定建模规范、评审装配并指导团队。"
+    }
+  ],
+  "prerequisite_skill_ids": ["mechanical-design"],
+  "practice_tasks": [
+    {
+      "id": "robot-bracket",
+      "title": "设计一个机器人传感器支架",
+      "level": 2,
+      "goal": "完成支架零件、装配、工程图与 3D 打印文件，并检查干涉与安装孔位。",
+      "prerequisites": ["了解基本机械制图"],
+      "steps": [
+        "测量安装孔位与传感器尺寸。",
+        "完成零件与装配，检查干涉。",
+        "出工程图并导出 STL/STEP。"
+      ],
+      "deliverables": ["CAD 源文件", "工程图", "STL/STEP", "装配说明"],
+      "acceptance_criteria": ["孔位与传感器尺寸匹配。", "装配无干涉。", "工程图含关键尺寸与公差。"],
+      "estimated_hours": 6,
+      "common_failures": ["只建模不出图", "忽略打印方向与公差"]
+    }
+  ],
+  "resource_ids": ["freecad-docs"],
+  "related_competition_ids": [
+    "robocon",
+    "robomaster-university-championship",
+    "china-engineering-practice-innovation-competition",
+    "national-undergraduate-mechanical-innovation-design-competition"
+  ],
+  "sources": [
+    {
+      "id": "freecad-docs",
+      "title": "FreeCAD Documentation",
+      "url": "https://wiki.freecad.org/",
+      "publisher": "FreeCAD Community",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

@@ -7,7 +7,7 @@
   "industry": "本地生活服务、即时零售与科技平台",
   "website": "https://www.meituan.com/",
   "careers_url": "https://zhaopin.meituan.com/web/home",
-  "role_ids": ["backend", "frontend", "software", "algorithm", "product"],
+  "role_ids": ["backend", "frontend", "software", "algorithm", "product", "data-analyst"],
   "competition_preferences": [
     {
       "competition_id": "acm-icpc",

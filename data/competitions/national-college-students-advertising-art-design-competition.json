@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["大广赛", "广告艺术大赛"],
+  "organizers": [],
+  "domains": ["design", "innovation"],
+  "tracks": [
+    {
+      "name": "平面类",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "视频类",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "动画类",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "互动类",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "广播类",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "策划案类",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "文案类",
+      "description": null,
+      "url": null
+    }
+  ],
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": null
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["online", "offline"],
+    "notes": "团队或个人按类别提交创意作品；具体赛制以官网为准。"
+  },
+  "equipment": {
+    "type": "none",
+    "description": null,
+    "requirements": null
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要创意策略、视觉/视频制作与提案表达；具体难度以命题为准。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网提供参赛指南与赛区信息；具体日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "大广赛官网",
+      "url": "https://www.sun-ada.net/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sunada-home",
+      "title": "全国大学生广告艺术大赛官网",
+      "url": "https://www.sun-ada.net/",
+      "publisher": "全国大学生广告艺术大赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "tracks", "entry"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "具体命题、资格、日程与费用以当届通知为准。",
+  "id": "national-college-students-advertising-art-design-competition",
+  "name": "全国大学生广告艺术大赛",
+  "summary": "面向高校学生的广告创意与设计赛事，覆盖平面、视频、动画、互动、广播、策划与文案等类别。",
+  "description": "全国大学生广告艺术大赛官网提供大赛简介、章程、参赛指南、赛区与作品提交入口。平台记录官网可核验的名称、类别与入口；具体命题、资格、日程与费用以当届通知为准。"
+}

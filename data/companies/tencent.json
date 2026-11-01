@@ -7,7 +7,16 @@
   "industry": "互联网、社交、游戏、云与金融科技",
   "website": "https://www.tencent.com/zh-cn/",
   "careers_url": "https://careers.tencent.com/",
-  "role_ids": ["frontend", "backend", "software", "algorithm", "ai", "test", "product"],
+  "role_ids": [
+    "frontend",
+    "backend",
+    "software",
+    "algorithm",
+    "ai",
+    "test",
+    "product",
+    "game-developer"
+  ],
   "competition_preferences": [
     {
       "competition_id": "acm-icpc",

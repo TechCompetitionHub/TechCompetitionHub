@@ -7,7 +7,7 @@
   "industry": "电商、云服务、物流与人工智能",
   "website": "https://www.amazon.com/",
   "careers_url": "https://www.amazon.jobs/",
-  "role_ids": ["software", "backend", "frontend", "algorithm", "ai", "product"],
+  "role_ids": ["software", "backend", "frontend", "algorithm", "ai", "product", "cloud-engineer"],
   "competition_preferences": [],
   "hiring_programs": [],
   "sources": [

@@ -55,6 +55,11 @@
       "description": "节能减排、新能源、能源动力系统与可持续发展。"
     },
     {
+      "id": "design",
+      "label": "设计与艺术",
+      "description": "视觉设计、广告创意、交互与数字媒体表达。"
+    },
+    {
       "id": "innovation",
       "label": "创新创业",
       "description": "面向真实问题的创新项目、商业计划与跨学科协作。"

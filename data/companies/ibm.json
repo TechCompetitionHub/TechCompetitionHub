@@ -7,7 +7,7 @@
   "industry": "企业软件、云、人工智能与咨询",
   "website": "https://www.ibm.com/",
   "careers_url": "https://www.ibm.com/careers",
-  "role_ids": ["backend", "software", "ai", "algorithm", "product", "test"],
+  "role_ids": ["backend", "software", "ai", "algorithm", "product", "test", "security-engineer"],
   "competition_preferences": [],
   "hiring_programs": [],
   "sources": [
