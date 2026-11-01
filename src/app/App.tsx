@@ -4,6 +4,8 @@ import { LoadingBlock } from '../components/States';
 import { RootLayout } from './RootLayout';
 import { AboutPage } from '../pages/AboutPage';
 import { CommunityPage } from '../pages/CommunityPage';
+import { CategoriesPage } from '../pages/CategoriesPage';
+import { CategoryDetailPage } from '../pages/CategoryDetailPage';
 import { CompetitionCatalogPage } from '../pages/CompetitionCatalogPage';
 import { CompetitionDetailPage } from '../pages/CompetitionDetailPage';
 import { ContributePage } from '../pages/ContributePage';
@@ -33,6 +35,8 @@ export function AppRoutes() {
         <Route index element={<HomePage />} />
         <Route path="competitions" element={<CompetitionCatalogPage />} />
         <Route path="competitions/:competitionId" element={<CompetitionDetailPage />} />
+        <Route path="categories" element={<CategoriesPage />} />
+        <Route path="categories/:domainId" element={<CategoryDetailPage />} />
         <Route path="rankings" element={<RankingsPage />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="projects/:projectId" element={<ProjectDetailPage />} />

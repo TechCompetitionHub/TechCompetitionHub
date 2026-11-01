@@ -56,6 +56,18 @@ describe('核心页面', () => {
     expect(screen.getByText('目录不等于认可度或技术含量')).toBeInTheDocument();
   });
 
+  it('类别页展示机器人方向竞赛', () => {
+    renderApp('/categories/robotics');
+    expect(screen.getByRole('heading', { level: 1, name: '机器人' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /全国大学生机器人大赛 ROBOCON/ })).toBeInTheDocument();
+    expect(screen.getAllByText(/RoboMaster|RoboCup|ROBOCON/).length).toBeGreaterThan(0);
+  });
+
+  it('未知类别返回 404 内容', () => {
+    renderApp('/categories/not-real');
+    expect(screen.getByRole('heading', { level: 1, name: '这个类别不存在' })).toBeInTheDocument();
+  });
+
   it('未知竞赛 ID 返回 404 内容', () => {
     renderApp('/competitions/not-real');
     expect(screen.getByRole('heading', { level: 1, name: '这个页面不存在' })).toBeInTheDocument();
@@ -198,6 +210,8 @@ describe('核心页面', () => {
     '/',
     '/competitions',
     '/competitions/cumcm',
+    '/categories',
+    '/categories/robotics',
     '/rankings',
     '/projects',
     '/skills',

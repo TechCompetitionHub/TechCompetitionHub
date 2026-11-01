@@ -33,6 +33,10 @@ export function HomePage() {
   const competitions = listCompetitions();
   const ranking = getValueRanking();
   const domains = getDomainOptions();
+  const activeDomains = [...domains]
+    .filter((domain) => domain.count > 0)
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'zh-CN'))
+    .slice(0, 8);
   const guides = getGuidesByCategory('guide');
   const verified = countVerifiedCompetitions();
   const scored = countScoredCompetitions();
@@ -146,15 +150,20 @@ export function HomePage() {
         <Container>
           <SectionHeading
             id="domains-heading"
-            eyebrow="按领域探索"
+            eyebrow="按类别探索"
             title="从你关心的技术方向开始"
-            description="领域使用受控词表，避免同一方向被拆成多个标签。数量来自当前仓库真实数据。"
+            description="类别使用受控词表，按当前收录数量排序；数量来自仓库真实数据。"
+            action={
+              <ButtonLink to="/categories" variant="secondary">
+                全部类别
+              </ButtonLink>
+            }
           />
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {domains.slice(0, 8).map((domain) => (
+            {activeDomains.map((domain) => (
               <Link
                 key={domain.id}
-                to={`/competitions?domain=${domain.id}`}
+                to={`/categories/${domain.id}`}
                 className="group rounded-xl border border-line bg-surface p-4 shadow-card transition-colors hover:border-brand-500/60"
               >
                 <div className="flex items-center justify-between gap-2">

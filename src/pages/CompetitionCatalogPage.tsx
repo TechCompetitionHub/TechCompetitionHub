@@ -70,9 +70,14 @@ export function CompetitionCatalogPage() {
           </p>
         }
         actions={
-          <ButtonLink to="/submit-competition" variant="secondary">
-            提交竞赛
-          </ButtonLink>
+          <>
+            <ButtonLink to="/categories" variant="secondary">
+              按类别浏览
+            </ButtonLink>
+            <ButtonLink to="/submit-competition" variant="ghost">
+              提交竞赛
+            </ButtonLink>
+          </>
         }
       />
 

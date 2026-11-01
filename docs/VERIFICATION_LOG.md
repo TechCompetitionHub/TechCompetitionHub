@@ -36,9 +36,9 @@ npm run check
 | 格式   | `npm run format:check`       | 通过                                                                                |
 | Lint   | `npm run lint`               | 通过，0 error                                                                       |
 | 类型   | `npm run typecheck`          | 通过                                                                                |
-| 测试   | `npm test`                   | 10 个文件、105 个测试全部通过（含 18 条路由 axe 审计）                              |
+| 测试   | `npm test`                   | 10 个文件、109 个测试全部通过（含 20 条路由 axe 审计）                              |
 | 数据   | `npm run data:validate`      | 21 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章 / 0 社区评价；0 错误、0 警告 |
-| Schema | `npm run data:schemas:check` | 8 个 JSON Schema 与 Zod 定义一致                                                    |
+| Schema | `npm run data:schemas:check` | 9 个 JSON Schema 与 Zod 定义一致                                                    |
 | 构建   | `npm run build`              | 通过                                                                                |
 
 测试明细：
@@ -199,8 +199,9 @@ postbuild：... base=/
 - 新增 `/submit-review`：要求填写是否参加过、赛道、年份、学校（可选）、角色、公开主页、证据链接与公开同意；生成 Markdown 并通过 GitHub Issue 提交，审核后才展示。
 - 竞赛详情新增“参赛者自述评分”区块：无评价时显示空状态；有审核评价时显示平均分、样本量、分布与公开背景。社区评分不参与平台六维评分或正式排名。
 - 新增 `/submit-competition`：生成 `needs_review`、`scores: null` 的竞赛 JSON 草稿，支持复制/下载，不保存表单内容。
+- 新增 `/categories` 与 `/categories/:domainId`：按机器人、嵌入式、电子设计、机械与工程、软件、创新创业等 12 个受控类别浏览，展示收录、核验与评分数量；首页类别按收录数量排序。
 - 论坛头像采用维护者设计的原图，优化为 `public/forum-avatar.jpg`（512×512，约 42 KB），用于页头与社区页；README 已记录出处与许可提示。
 - Discussions 当前默认 6 个分类，社区页链接实际分类。
-- 测试：10 个文件、105 个测试全部通过；`npm run check` exit 0。
-- 构建：606 modules，sitemap 63 个 URL（21 竞赛 + 25 技能 + 4 文章 + 13 静态路由），base `/`。
+- 测试：10 个文件、109 个测试全部通过；`npm run check` exit 0。
+- 构建：608 modules，sitemap 78 个 URL（21 竞赛 + 25 技能 + 4 文章 + 16 静态路由 + 12 类别），base `/`。
 - 推送提交 `94918d8` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 21 条竞赛 / 63 个 URL；`/forum-avatar.jpg` 返回 200（image/jpeg，42,156 bytes）；`/submit-review` 与 `/submit-competition` 由 `404.html` 回退渲染。

@@ -6,7 +6,9 @@ const FOOTER_GROUPS = [
     title: '产品',
     links: [
       { to: '/competitions', label: '竞赛目录' },
+      { to: '/categories', label: '竞赛类别' },
       { to: '/rankings', label: '价值榜' },
+      { to: '/community', label: '论坛' },
       { to: '/projects', label: '项目成果' },
       { to: '/skills', label: '技能图谱' },
       { to: '/planner', label: '成长规划' },
@@ -78,7 +80,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="hover:text-white"
             >
-              Discussions<span className="sr-only">（在新标签页打开）</span>
+              GitHub 论坛<span className="sr-only">（在新标签页打开）</span>
             </a>
             <Link to="/data-policy" className="hover:text-white">
               免责声明与数据来源

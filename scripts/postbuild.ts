@@ -37,16 +37,23 @@ async function main(): Promise<void> {
   const competitionIds = await listSlugs('data/competitions', '.json');
   const skillIds = await listSlugs('data/skills', '.json');
   const guideSlugs = await listSlugs('content/guides', '.md');
+  const domainVocabulary = JSON.parse(
+    await readFile(path.join(ROOT, 'data', 'vocabularies', 'domains.json'), 'utf8'),
+  ) as { terms?: Array<{ id: string }> };
+  const domainIds = (domainVocabulary.terms ?? []).map((term) => term.id).sort();
 
   const staticRoutes = [
     '',
     'competitions',
+    'categories',
     'rankings',
     'projects',
     'skills',
     'planner',
     'guides',
     'community',
+    'submit-competition',
+    'submit-review',
     'about',
     'contribute',
     'data-policy',
@@ -57,6 +64,7 @@ async function main(): Promise<void> {
   const urls = [
     ...staticRoutes.map((route) => `${SITE_URL}/${route}`.replace(/\/$/, '/')),
     ...competitionIds.map((id) => `${SITE_URL}/competitions/${id}`),
+    ...domainIds.map((id) => `${SITE_URL}/categories/${id}`),
     ...skillIds.map((id) => `${SITE_URL}/skills/${id}`),
     ...guideSlugs.map((slug) => `${SITE_URL}/guides/${slug}`),
   ];
@@ -85,6 +93,9 @@ async function main(): Promise<void> {
   }
   if (!sitemap.includes(`${SITE_URL}/competitions/${competitionIds[0]}`)) {
     throw new Error('sitemap 缺少竞赛详情 URL');
+  }
+  if (domainIds.length === 0 || !sitemap.includes(`${SITE_URL}/categories/${domainIds[0]}`)) {
+    throw new Error('sitemap 缺少竞赛类别 URL');
   }
   if (!robots.includes(`${SITE_URL}/sitemap.xml`)) {
     throw new Error('robots.txt 未指向 sitemap');
