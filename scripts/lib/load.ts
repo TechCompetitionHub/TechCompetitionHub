@@ -3,6 +3,7 @@ import path from 'node:path';
 import type { ZodType } from 'zod';
 import { parseContentFile, slugFromFilename } from '../../src/lib/domain/content';
 import {
+  communityReviewSchema,
   competitionSchema,
   projectSchema,
   resourceSchema,
@@ -12,6 +13,7 @@ import {
   vocabularySchema,
 } from '../../src/lib/domain/schemas';
 import type {
+  CommunityReview,
   Competition,
   ContentEntry,
   DataBundle,
@@ -171,6 +173,11 @@ export async function loadAllData(): Promise<FullData> {
     vocabularySchema,
     (record) => record.id,
   );
+  const reviewLoad = await loadCollection(
+    'data/reviews',
+    communityReviewSchema,
+    (record) => record.id,
+  );
   const contentLoad = await loadContents();
   const exampleIssues = await loadExamples();
 
@@ -182,6 +189,7 @@ export async function loadAllData(): Promise<FullData> {
     ...roadmapLoad.issues,
     ...modelLoad.issues,
     ...vocabularyLoad.issues,
+    ...reviewLoad.issues,
     ...contentLoad.issues,
     ...exampleIssues,
   ];
@@ -210,6 +218,7 @@ export async function loadAllData(): Promise<FullData> {
       roadmaps: officialRecords(roadmapLoad.records).map((record) => record.data),
       scoringModels: modelLoad.records.map((record) => record.data),
       vocabularies: vocabularyLoad.records.map((record) => record.data),
+      reviews: officialRecords(reviewLoad.records).map((record) => record.data),
     },
     contents: contentLoad.records,
     issues,
@@ -226,6 +235,7 @@ export async function pathExists(relative: string): Promise<boolean> {
 }
 
 export type {
+  CommunityReview,
   Competition,
   ContentEntry,
   DataBundle,

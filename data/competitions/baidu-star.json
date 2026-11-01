@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["百度之星"],
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "id": "baidu-star",
+  "name": "百度之星·程序设计大赛",
+  "domains": ["software", "ai"],
+  "organizers": [],
+  "summary": "面向程序设计爱好者的算法与编程赛事，通常包含在线资格赛与现场决赛等环节。",
+  "description": "百度之星大赛官网为赛事官方入口。平台记录官网可核验的名称与入口；主办组织、赛制、报名资格、日程与费用未在本次核验中确认，使用前请查看官网当届通知。",
+  "audience": {
+    "levels": ["undergraduate", "graduate"],
+    "notes": "面向高校及程序设计爱好者；具体资格以当届规则为准。"
+  },
+  "format": {
+    "team_based": false,
+    "team_size": null,
+    "delivery_modes": ["online", "offline"],
+    "notes": "以个人编程赛为主；具体赛制与是否含团队环节以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要算法、数据结构与编程实现能力，决赛通常有更高难度题目。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "algorithms",
+      "target_level": 2
+    },
+    {
+      "skill_id": "c-programming",
+      "target_level": 2
+    },
+    {
+      "skill_id": "python-programming",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网为前端应用；具体日程与赛制待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "大赛官网",
+      "url": "https://star.baidu.com/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "baidu-star-home",
+      "title": "百度之星大赛官网",
+      "url": "https://star.baidu.com/",
+      "publisher": "百度之星大赛",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "entry"],
+      "confidence": "medium",
+      "notes": "官网为前端应用，仅核验名称与入口；于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "needs_review",
+  "last_verified_at": null,
+  "notes": "主办组织、赛制、日程与费用待核验；评分待补充。"
+}

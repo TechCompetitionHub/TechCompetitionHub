@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { z } from 'zod';
 import {
+  communityReviewSchema,
   competitionSchema,
   contentFrontmatterSchema,
   projectSchema,
@@ -16,6 +17,7 @@ const OUTPUT_DIR = path.join(process.cwd(), 'data', 'schemas');
 
 const SCHEMAS = [
   ['competition', competitionSchema],
+  ['community-review', communityReviewSchema],
   ['skill', skillSchema],
   ['project', projectSchema],
   ['resource', resourceSchema],

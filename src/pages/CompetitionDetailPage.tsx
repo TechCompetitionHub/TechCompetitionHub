@@ -8,6 +8,7 @@ import { EmptyState, Alert } from '../components/States';
 import { SourceList } from '../components/SourceList';
 import { StatusBadge } from '../components/StatusBadge';
 import { ExternalLink } from '../components/ExternalLink';
+import { CommunityRatingPanel } from '../features/competitions/CommunityRatingPanel';
 import { CompetitionScorePanel } from '../features/competitions/CompetitionScorePanel';
 import { ExternalLists } from '../features/competitions/ExternalLists';
 import { NotFoundPage } from './NotFoundPage';
@@ -286,6 +287,16 @@ export function CompetitionDetailPage() {
               <div className="rounded-2xl border border-line bg-surface p-5 shadow-card sm:p-6">
                 <CompetitionScorePanel competition={competition} />
               </div>
+            </section>
+
+            <section aria-labelledby="community-rating-heading">
+              <SectionHeading
+                id="community-rating-heading"
+                eyebrow="社区评价"
+                title="参赛者自述评分"
+                description="社区评分来自用户自述，审核后公开展示；它与平台编辑评分、正式排行榜分开，不作为已验证事实。"
+              />
+              <CommunityRatingPanel competitionId={competition.id} />
             </section>
 
             <section aria-labelledby="sources-heading">

@@ -12,7 +12,7 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、105 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
 
 ## 仓库关系
 
@@ -27,18 +27,19 @@
 
 | 类型         | 数量 | 说明                                          |
 | ------------ | ---- | --------------------------------------------- |
-| 竞赛         | 13   | 全部关键事实按官网核验，来源与访问日期可见    |
+| 竞赛         | 21   | 17 条已核验；4 条待核验（目录索引）           |
 | 已评分       | 8    | 六维评分，平台编辑初评，待维护者/领域评审复核 |
-| 正式排名     | 8    | 满足准入规则；5 条因未评分进入“资料不足”      |
+| 正式排名     | 8    | 满足准入规则；13 条因未评分进入“资料不足”     |
 | 技能         | 25   | L0–L4 行为描述、前置依赖、练习任务            |
 | 学习资源     | 23   | 真实链接、访问条款与最后检查日期              |
 | 路线模板     | 2    | 嵌入式、数据建模方向                          |
 | 指南         | 4    | 选赛、复盘、可复现性、数据核验                |
-| 外部目录引用 | 12   | 仅作检索线索，不参与评分                      |
+| 外部目录引用 | 19   | 仅作检索线索，不参与评分                      |
+| 社区评价     | 0    | 用户提交经审核后展示，不参与平台评分          |
 
 > 部分条目记录高校常用的“A 类”竞赛目录引用。该目录/榜单只用于检索，不参与平台评分，也不代表认可度、技术含量或适合度；平台评分仍按六维模型、证据等级与核验日期独立评估。详见 [数据模型](docs/DATA_MODEL.md)。
 
-项目成果目录当前为真实空状态：平台不使用示例项目冒充提交。
+论坛以 GitHub Discussions 承载；竞赛详情支持提交“参赛者自述评分”，必须填写是否参加过、赛道、年份、学校（可选）、角色与公开主页，经审核后才展示，且不进入平台评分或正式排名。项目成果目录当前为真实空状态：平台不使用示例项目冒充提交。
 
 ## 快速开始
 
@@ -186,7 +187,8 @@ git push root main
 
 请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 与 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
 
-- 新增竞赛 / 纠错 / 项目 / 技能资源：使用 `.github/ISSUE_TEMPLATE/` 中的模板。
+- 新增竞赛 / 纠错 / 项目 / 技能资源：使用 `.github/ISSUE_TEMPLATE/` 中的模板，或使用站内“提交竞赛”生成 JSON 草稿。
+- 参赛评价：使用“提交参赛评价”填写是否参加过、赛道、年份、学校（可选）、角色与公开主页，生成 Markdown 后通过 GitHub Issue 提交；审核后才展示。
 - 数据改动：修改 `data/` 下 JSON，运行 `npm run data:validate` 与 `npm run data:schemas:check`。
 - 代码改动：保持领域逻辑纯函数化，补充测试，不降低检查标准。
 - 安全问题：按 [SECURITY.md](SECURITY.md) 私下报告，不要公开可利用细节。
@@ -209,6 +211,7 @@ git push root main
 - 代码：MIT，见 [LICENSE](LICENSE)。
 - 原创文档与内容：CC BY 4.0，见 [LICENSE-CONTENT.md](LICENSE-CONTENT.md)。
 - 第三方材料遵循原许可证，不默认获得转载授权。
+- 论坛头像由维护者设计，优化版本位于 `public/forum-avatar.jpg`；随项目展示，第三方使用需遵守上述许可并保留出处。
 
 许可证选择已按 PRD 建议采用 MIT + CC BY 4.0，**最终需维护者确认**；如维护者选择其他许可证，请在合并前更新本段与许可证文件。
 

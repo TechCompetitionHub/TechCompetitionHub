@@ -1,6 +1,7 @@
 import type { ZodType } from 'zod';
 import { parseContentFile, slugFromFilename } from '../lib/domain/content';
 import {
+  communityReviewSchema,
   competitionSchema,
   projectSchema,
   resourceSchema,
@@ -69,6 +70,10 @@ const vocabularyModules = import.meta.glob<unknown>('../../data/vocabularies/*.j
   eager: true,
   import: 'default',
 });
+const reviewModules = import.meta.glob<unknown>('../../data/reviews/*.json', {
+  eager: true,
+  import: 'default',
+});
 const contentModules = import.meta.glob<string>('../../content/guides/*.md', {
   eager: true,
   query: '?raw',
@@ -80,6 +85,9 @@ const isPublicCompetition = (competition: Competition): boolean =>
 
 const isPublicProject = (project: Project): boolean =>
   !project.is_example && project.verification_status !== 'rejected';
+
+const isPublicReview = (review: import('../lib/domain/types').CommunityReview): boolean =>
+  !review.is_example && review.verification_status === 'approved' && review.consent_public;
 
 function sortByName<T extends { name?: string; title?: string; id: string }>(records: T[]): T[] {
   return [...records].sort((a, b) =>
@@ -108,6 +116,9 @@ const scoringModels = parseRecords(scoringModelModules, scoringModelSchema).sort
 const vocabularies = parseRecords(vocabularyModules, vocabularySchema).sort((a, b) =>
   a.id.localeCompare(b.id),
 );
+const reviews = parseRecords(reviewModules, communityReviewSchema)
+  .filter(isPublicReview)
+  .sort((a, b) => b.submitted_at.localeCompare(a.submitted_at));
 
 const contents: ContentEntry[] = Object.entries(contentModules)
   .map(([path, raw]) => parseContentFile(raw, slugFromFilename(path)))
@@ -122,6 +133,7 @@ export const dataset: DataBundle = {
   roadmaps,
   scoringModels,
   vocabularies,
+  reviews,
 };
 
 export { contents };
@@ -137,6 +149,7 @@ export const indexes = {
   resources: asMap(resources),
   roadmaps: asMap(roadmaps),
   vocabularies: asMap(vocabularies),
+  reviews: asMap(reviews),
   contents: new Map(contents.map((entry) => [entry.slug, entry])),
 };
 

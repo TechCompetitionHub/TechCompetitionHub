@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["软件杯", "中国软件杯"],
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "id": "china-software-cup",
+  "name": "“中国软件杯”大学生软件设计大赛",
+  "domains": ["software", "ai"],
+  "organizers": [
+    {
+      "name": "工业和信息化部",
+      "role": "host",
+      "url": "https://www.miit.gov.cn/"
+    },
+    {
+      "name": "教育部",
+      "role": "host",
+      "url": "https://www.moe.gov.cn/"
+    },
+    {
+      "name": "江苏省人民政府",
+      "role": "host",
+      "url": "https://www.jiangsu.gov.cn/"
+    },
+    {
+      "name": "中国电子信息产业发展研究院",
+      "role": "co-organizer",
+      "url": "https://www.ccidgroup.com/"
+    }
+  ],
+  "summary": "面向高校学生的软件设计赛事，围绕企业真实赛题完成软件作品、初赛评审与决赛答辩。",
+  "description": "“中国软件杯”大学生软件设计大赛由工业和信息化部、教育部、江苏省人民政府主办，官网公开主办/承办单位、赛事环节与往届回顾。赛事以企业赛题、软件作品、初赛评审与决赛答辩为核心。平台记录官网可核验的组织与赛制信息；具体年份赛题、报名资格、日程与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": "官网面向高校学生；具体资格与组队要求以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["hybrid"],
+    "notes": "团队围绕企业赛题开发软件作品，包含初赛评审与决赛答辩。"
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要软件设计、工程实现、文档与答辩，赛题通常有企业场景约束。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "python-programming",
+      "target_level": 2
+    },
+    {
+      "skill_id": "web-development",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网可见赛事动态与往届信息；具体年份日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "大赛官网",
+      "url": "https://www.cnsoftbei.com/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "software-cup-about",
+      "title": "“中国软件杯”大学生软件设计大赛赛事环节介绍",
+      "url": "https://www.cnsoftbei.com/list-17-1.html",
+      "publisher": "中国软件杯大赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "format"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    },
+    {
+      "id": "software-cup-org",
+      "title": "“中国软件杯”大学生软件设计大赛组织机构",
+      "url": "https://www.cnsoftbei.com/list-18-1.html",
+      "publisher": "中国软件杯大赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["organizers"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "notes": "具体赛题、报名资格、日程与费用以当届通知为准。"
+}

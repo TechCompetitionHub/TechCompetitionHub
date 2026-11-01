@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["ROBOCON", "全国大学生机器人大赛"],
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "id": "robocon",
+  "name": "全国大学生机器人大赛 ROBOCON",
+  "domains": ["robotics", "embedded", "mechanical"],
+  "organizers": [],
+  "summary": "以团队自主研发机器人在高难度任务中竞技的全国性大学生机器人赛事，强调机械、电控与算法协同。",
+  "description": "全国大学生机器人大赛 ROBOCON 官网介绍其为中国综合性大学生机器人竞赛之一，参赛队需要围绕高难度任务完成机器人设计、制作与现场竞技。官网公开了历届赛事、规则与通知入口。平台记录官网可核验的名称、方向与赛事定位；具体主办单位、赛制、日程与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate", "graduate"],
+    "notes": "面向高校学生；具体参赛资格与队伍构成以当届规则为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队自主研发机器人并现场竞技；团队人数与赛制以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 5,
+    "rationale": "需要机械、嵌入式、控制与算法长期协作，并完成高难度现场任务。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "robotics-integration",
+      "target_level": 3
+    },
+    {
+      "skill_id": "embedded-c",
+      "target_level": 2
+    },
+    {
+      "skill_id": "control-theory",
+      "target_level": 2
+    },
+    {
+      "skill_id": "mechanical-design",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网展示 2026/2027 赛季规则与通知；具体报名、比赛日期与费用待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "赛事官网",
+      "url": "https://robocon.org.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "robocon-home",
+      "title": "全国大学生机器人大赛 ROBOCON 官网",
+      "url": "https://robocon.org.cn/",
+      "publisher": "全国大学生机器人大赛 ROBOCON 组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "description", "tracks"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "notes": "官网首页未列出主办/承办单位；具体赛制、日程与费用以当届通知为准。"
+}

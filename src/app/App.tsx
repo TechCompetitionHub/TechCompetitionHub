@@ -19,6 +19,8 @@ import { RankingsPage } from '../pages/RankingsPage';
 import { ScoringMethodPage } from '../pages/ScoringMethodPage';
 import { SkillDetailPage } from '../pages/SkillDetailPage';
 import { SkillsPage } from '../pages/SkillsPage';
+import { SubmitCompetitionPage } from '../pages/SubmitCompetitionPage';
+import { SubmitReviewPage } from '../pages/SubmitReviewPage';
 
 const GuideDetailPage = lazy(() =>
   import('../pages/GuideDetailPage').then((module) => ({ default: module.GuideDetailPage })),
@@ -49,6 +51,8 @@ export function AppRoutes() {
         <Route path="community" element={<CommunityPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="contribute" element={<ContributePage />} />
+        <Route path="submit-competition" element={<SubmitCompetitionPage />} />
+        <Route path="submit-review" element={<SubmitReviewPage />} />
         <Route path="data-policy" element={<DataPolicyPage />} />
         <Route path="scoring-method" element={<ScoringMethodPage />} />
         <Route path="privacy" element={<PrivacyPage />} />

@@ -55,7 +55,10 @@ describe('搜索与筛选', () => {
       ...DEFAULT_FILTERS,
       status: 'verified',
     });
-    expect(verified.length).toBe(dataset.competitions.length);
+    expect(verified.length).toBeGreaterThan(0);
+    expect(verified.every((competition) => competition.verification_status === 'verified')).toBe(
+      true,
+    );
   });
 
   it('按难度与名称排序', () => {

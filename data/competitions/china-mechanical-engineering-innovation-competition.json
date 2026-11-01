@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["机械工程创新创意大赛"],
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "id": "china-mechanical-engineering-innovation-competition",
+  "name": "中国大学生机械工程创新创意大赛",
+  "domains": ["mechanical", "innovation"],
+  "organizers": [
+    {
+      "name": "中国机械工程学会",
+      "role": "organizer",
+      "url": "https://www.cmes.org/"
+    }
+  ],
+  "summary": "中国机械工程学会面向高校学生组织的机械工程创新创意赛事，覆盖机械设计、制造与工程应用方向。",
+  "description": "中国机械工程学会官网“大学生大赛”入口列出中国大学生机械工程创新创意大赛，并指向赛事平台。平台记录学会官网可核验的名称与组织入口；具体赛道、赛制、报名资格、日程与费用以赛事平台与当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": "面向高校学生；具体资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队参赛，包含机械设计、制造与工程应用方向；具体赛制以当届通知为准。"
+  },
+  "difficulty": {
+    "level": 4,
+    "rationale": "需要机械设计、制造工艺与工程实现，并完成作品展示与答辩。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "mechanical-design",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "学会官网与赛事平台可访问；具体日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "赛事平台",
+      "url": "http://meicc.cmes.org/"
+    },
+    {
+      "label": "中国机械工程学会",
+      "url": "https://www.cmes.org/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cmes-home",
+      "title": "中国机械工程学会官网（大学生大赛入口）",
+      "url": "https://www.cmes.org/",
+      "publisher": "中国机械工程学会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizer"],
+      "confidence": "medium",
+      "notes": "官网导航含“大学生大赛”，指向 meicc.cmes.org；于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "notes": "赛事平台为前端应用，具体赛制、日程与费用待核验。"
+}

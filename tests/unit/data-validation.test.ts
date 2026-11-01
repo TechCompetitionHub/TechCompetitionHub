@@ -2,7 +2,11 @@ import { describe, expect, it } from 'vitest';
 import { loadAllData } from '../../scripts/lib/load';
 import { summarizeIssues, validateDataset } from '../../src/lib/domain/validateDataset';
 import { rankCompetitions } from '../../src/lib/domain/ranking';
-import { competitionSchema, skillSchema } from '../../src/lib/domain/schemas';
+import {
+  communityReviewSchema,
+  competitionSchema,
+  skillSchema,
+} from '../../src/lib/domain/schemas';
 import type { DataBundle } from '../../src/lib/domain/types';
 import exampleJson from '../../data/examples/example-competition.json';
 
@@ -104,7 +108,11 @@ describe('校验器能拦截错误数据', () => {
 
   it('verified 条目缺少权威来源', async () => {
     const { bundle, contents } = await load();
-    bundle.competitions[0].sources = [];
+    const verified = bundle.competitions.find(
+      (competition) => competition.verification_status === 'verified',
+    );
+    if (!verified) throw new Error('测试数据缺少 verified 条目');
+    verified.sources = [];
     expect(codes(bundle, contents)).toContain('verified_without_authority');
   });
 
@@ -132,6 +140,62 @@ describe('校验器能拦截错误数据', () => {
     const { bundle, contents } = await load();
     contents[0].frontmatter.related_competition_ids = ['not-a-competition'];
     expect(codes(bundle, contents)).toContain('missing_competition_reference');
+  });
+
+  it('已审核社区评价缺少公开同意会被拦截', async () => {
+    const { bundle, contents } = await load();
+    bundle.reviews.push(
+      communityReviewSchema.parse({
+        schema_version: '1.0.0',
+        is_example: false,
+        id: 'review-no-consent',
+        competition_id: bundle.competitions[0].id,
+        rating: 4,
+        participated: true,
+        track: '本科组',
+        year: 2025,
+        school: null,
+        role: 'participant',
+        public_profile: null,
+        review: '这是一条用于测试校验逻辑的社区评价，长度足够通过 Schema。',
+        evidence_url: null,
+        consent_public: false,
+        verification_status: 'approved',
+        submitted_at: AS_OF,
+        reviewed_at: AS_OF,
+        notes: null,
+      }),
+    );
+    const codes = validateDataset(bundle, contents, { asOf: AS_OF }).map((issue) => issue.code);
+    expect(codes).toContain('review_without_consent');
+  });
+
+  it('参加过竞赛的评价缺少赛道或年份会被拦截', async () => {
+    const { bundle, contents } = await load();
+    bundle.reviews.push(
+      communityReviewSchema.parse({
+        schema_version: '1.0.0',
+        is_example: false,
+        id: 'review-missing-context',
+        competition_id: bundle.competitions[0].id,
+        rating: 4,
+        participated: true,
+        track: null,
+        year: null,
+        school: null,
+        role: 'participant',
+        public_profile: null,
+        review: '这是一条用于测试参赛背景校验的社区评价，长度足够通过 Schema。',
+        evidence_url: null,
+        consent_public: true,
+        verification_status: 'approved',
+        submitted_at: AS_OF,
+        reviewed_at: AS_OF,
+        notes: null,
+      }),
+    );
+    const codes = validateDataset(bundle, contents, { asOf: AS_OF }).map((issue) => issue.code);
+    expect(codes).toContain('review_missing_participation_context');
   });
 
   it('汇总错误与警告数量', async () => {

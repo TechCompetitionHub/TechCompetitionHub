@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Badge } from '../components/Badge';
-import { Button } from '../components/Button';
+import { Button, ButtonLink } from '../components/Button';
 import { Field, Select, TextInput } from '../components/Fields';
 import { Container, PageHeader } from '../components/Layout';
 import { usePageMeta } from '../components/Seo';
@@ -68,6 +68,11 @@ export function CompetitionCatalogPage() {
             </strong>{' '}
             条已核验。
           </p>
+        }
+        actions={
+          <ButtonLink to="/submit-competition" variant="secondary">
+            提交竞赛
+          </ButtonLink>
         }
       />
 

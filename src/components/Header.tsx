@@ -10,26 +10,21 @@ const NAV_ITEMS = [
   { to: '/projects', label: '项目成果' },
   { to: '/skills', label: '技能图谱' },
   { to: '/planner', label: '成长规划' },
-  { to: '/community', label: '经验社区' },
+  { to: '/community', label: '论坛' },
   { to: '/contribute', label: '参与贡献' },
 ] as const;
 
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label="TechCompetitionHub 首页">
-      <span className="flex size-9 items-center justify-center rounded-xl bg-navy-900">
-        <svg viewBox="0 0 64 64" className="size-6" aria-hidden="true">
-          <path
-            d="M16 42l12-20 9 14 6-8 6 14"
-            fill="none"
-            stroke="#59d2c6"
-            strokeWidth="5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <circle cx="16" cy="42" r="4" fill="#f4b942" />
-          <circle cx="49" cy="42" r="4" fill="#f4b942" />
-        </svg>
+      <span className="flex size-9 overflow-hidden rounded-xl bg-navy-900">
+        <img
+          src={`${import.meta.env.BASE_URL}forum-avatar.jpg`}
+          alt=""
+          width={36}
+          height={36}
+          className="size-full object-cover"
+        />
       </span>
       <span className="leading-tight">
         <span className="block text-sm font-bold tracking-tight text-ink-900">
@@ -149,7 +144,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-surface-muted"
               >
-                GitHub Discussions
+                GitHub 论坛
                 <span className="sr-only">（在新标签页打开）</span>
               </a>
             </li>

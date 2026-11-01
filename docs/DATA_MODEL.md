@@ -174,6 +174,37 @@
 
 评分是平台方法论评估，不是官方分数。
 
+## 10.1 Community review（社区参赛评价）
+
+文件：`data/reviews/<id>.json`。只保存审核通过后允许公开的评价；公开站点只加载 `verification_status: approved` 且 `consent_public: true` 的记录。
+
+| 字段                  | 必填 | 说明                                             |
+| --------------------- | ---- | ------------------------------------------------ |
+| `id`                  | 是   | 稳定 ID                                          |
+| `competition_id`      | 是   | 必须对应存在的竞赛                               |
+| `rating`              | 是   | 1–5 的整数，用户自述综合评分                     |
+| `participated`        | 是   | 是否参加过                                       |
+| `track`               | 是   | 赛道/组别；`participated=true` 时必填            |
+| `year`                | 是   | 参赛年份；`participated=true` 时必填             |
+| `school`              | 是   | 学校（可公开）；可为 null，不要求填写            |
+| `role`                | 是   | participant/team_lead/advisor/organizer/observer |
+| `public_profile`      | 是   | GitHub 用户名或公开主页；可为 null               |
+| `review`              | 是   | 至少 20 字，不得包含手机号、身份证或真实姓名     |
+| `evidence_url`        | 是   | 公开证据链接；可为 null                          |
+| `consent_public`      | 是   | 必须为 true 才能审核通过                         |
+| `verification_status` | 是   | pending/approved/rejected                        |
+| `submitted_at`        | 是   | 提交日期                                         |
+| `reviewed_at`         | 是   | 审核日期；approved 时必填                        |
+| `notes`               | 是   | 审核备注；可为 null                              |
+
+规则：
+
+- 社区评分是用户自述，**不参与平台六维评分，也不进入正式排行榜**；
+- 公开页展示评分、是否参加过、赛道、年份、学校（若提供）、角色、公开主页、评价与证据链接；
+- 未审核、不同意公开、示例评价不展示；
+- 学校、年份、赛道属于用户主动公开的信息；平台不要求真实姓名或联系方式；
+- 审核者应检查内容是否包含敏感信息、未授权材料或人身攻击。
+
 ## 11. Vocabulary（词表）
 
 文件：`data/vocabularies/<id>.json`

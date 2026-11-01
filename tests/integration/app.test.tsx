@@ -119,6 +119,49 @@ describe('核心页面', () => {
     expect(screen.getAllByRole('heading', { level: 2 }).length).toBeGreaterThan(0);
   });
 
+  it('用户可以生成竞赛 JSON 草稿并看到 needs_review', async () => {
+    const user = userEvent.setup();
+    renderApp('/submit-competition');
+    await user.type(screen.getByLabelText('竞赛名称'), '测试竞赛');
+    await user.type(screen.getByLabelText('官方入口'), 'https://example.org/contest');
+    await user.type(
+      screen.getByLabelText('一句话说明'),
+      '这是一个用于测试的竞赛说明，长度足够通过校验。',
+    );
+    await user.type(
+      screen.getByLabelText('详细说明'),
+      '这是一个用于测试竞赛草稿生成流程的详细说明，包含来源、领域与待核验字段；内容需要超过五十个字符，才能通过前端校验并生成 JSON 草稿。',
+    );
+    await user.click(screen.getByRole('checkbox', { name: '机器人' }));
+    await user.click(screen.getByRole('button', { name: '生成 JSON 草稿' }));
+    expect(await screen.findByText(/"verification_status": "needs_review"/)).toBeInTheDocument();
+    expect(screen.getByText(/"scores": null/)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '复制 JSON' })).toBeInTheDocument();
+  });
+
+  it('用户可以生成带公开背景信息的参赛评价', async () => {
+    const user = userEvent.setup();
+    renderApp('/submit-review?competition=cumcm');
+    await user.type(screen.getByLabelText('赛道/组别'), '本科组');
+    await user.type(screen.getByLabelText('参赛年份'), '2025');
+    await user.type(screen.getByLabelText('学校（可选，公开展示）'), '示例大学');
+    await user.type(
+      screen.getByLabelText('评价'),
+      '这是一条用于测试的参赛评价，包含赛制体验、准备过程与对后来者的建议，长度足够。',
+    );
+    await user.click(screen.getByRole('checkbox'));
+    await user.click(screen.getByRole('button', { name: '生成评价草稿' }));
+    expect(await screen.findByText(/是否参加过：是/)).toBeInTheDocument();
+    expect(screen.getByText(/学校（公开）：示例大学/)).toBeInTheDocument();
+    expect(screen.getByText(/不参与平台六维评分或正式排名/)).toBeInTheDocument();
+  });
+
+  it('竞赛详情在无社区评价时显示空状态与提交入口', () => {
+    renderApp('/competitions/cumcm');
+    expect(screen.getByText('暂无已审核的社区评分')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: '提交参赛评价' })).toBeInTheDocument();
+  });
+
   it('社区页链接到实际存在的 Discussions 分类', () => {
     renderApp('/community');
     expect(
@@ -163,6 +206,8 @@ describe('核心页面', () => {
     '/guides',
     '/guides/choose-first-competition',
     '/community',
+    '/submit-competition',
+    '/submit-review',
     '/about',
     '/contribute',
     '/data-policy',

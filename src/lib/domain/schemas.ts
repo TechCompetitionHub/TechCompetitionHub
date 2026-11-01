@@ -484,6 +484,31 @@ export const vocabularySchema = z
 export type Vocabulary = z.infer<typeof vocabularySchema>;
 export type VocabularyTerm = z.infer<typeof vocabularyTermSchema>;
 
+export const communityReviewSchema = z
+  .object({
+    schema_version: z.literal(SCHEMA_VERSION),
+    is_example: z.boolean(),
+    id: slugSchema,
+    competition_id: slugSchema,
+    rating: z.number().int().min(1).max(5),
+    participated: z.boolean(),
+    track: z.string().trim().max(120).nullable(),
+    year: z.number().int().min(2000).max(2100).nullable(),
+    school: z.string().trim().max(160).nullable(),
+    role: z.enum(['participant', 'team_lead', 'advisor', 'organizer', 'observer']),
+    public_profile: z.string().trim().max(160).nullable(),
+    review: z.string().trim().min(20).max(3000),
+    evidence_url: httpUrlSchema.nullable(),
+    consent_public: z.boolean(),
+    verification_status: z.enum(['pending', 'approved', 'rejected']),
+    submitted_at: isoDateSchema,
+    reviewed_at: isoDateSchema.nullable(),
+    notes: z.string().trim().max(1000).nullable(),
+  })
+  .strict();
+
+export type CommunityReview = z.infer<typeof communityReviewSchema>;
+
 export const contentFrontmatterSchema = z
   .object({
     title: z.string().trim().min(2).max(200),

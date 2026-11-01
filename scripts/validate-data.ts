@@ -11,7 +11,7 @@ async function main(): Promise<void> {
   console.log('TechCompetitionHub 数据校验');
   console.log(`基准日期：${asOf}`);
   console.log(
-    `记录：竞赛 ${bundle.competitions.length}，技能 ${bundle.skills.length}，项目 ${bundle.projects.length}，资源 ${bundle.resources.length}，路线 ${bundle.roadmaps.length}，评分模型 ${bundle.scoringModels.length}，文章 ${contents.length}`,
+    `记录：竞赛 ${bundle.competitions.length}，技能 ${bundle.skills.length}，项目 ${bundle.projects.length}，资源 ${bundle.resources.length}，路线 ${bundle.roadmaps.length}，评分模型 ${bundle.scoringModels.length}，文章 ${contents.length}，社区评价 ${bundle.reviews.length}`,
   );
 
   for (const item of issues.sort((a, b) => {

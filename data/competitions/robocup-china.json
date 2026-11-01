@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["RoboCup 中国赛", "中国机器人大赛"],
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "id": "robocup-china",
+  "name": "中国机器人大赛暨 RoboCup 机器人世界杯中国赛",
+  "domains": ["robotics", "ai", "embedded"],
+  "organizers": [
+    {
+      "name": "中国自动化学会",
+      "role": "organizer",
+      "url": "https://rcccaa.drct-caa.org.cn/"
+    }
+  ],
+  "summary": "中国机器人大赛与 RoboCup 机器人世界杯中国赛区赛事，覆盖机器人对抗、服务、仿真与人工智能等方向。",
+  "description": "中国机器人大赛暨 RoboCup 机器人世界杯中国赛由自动化学会机器人竞赛与培训部组织相关赛事活动。2026 年赛事通知已发布，包含 RoboCup 赛区等安排。平台记录官方通知与组织入口可核验的信息；具体赛道、报名资格、日程与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate", "graduate"],
+    "notes": "面向高校学生；具体赛区与资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队参赛，包含 RoboCup 赛区等方向；具体赛制以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 5,
+    "rationale": "需要机器人系统集成、控制、视觉或仿真能力，并完成现场任务与答辩。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "robotics-integration",
+      "target_level": 3
+    },
+    {
+      "skill_id": "control-theory",
+      "target_level": 2
+    },
+    {
+      "skill_id": "computer-vision",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "2026 年赛事通知已发布；具体日期与赛区安排待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "自动化学会机器人竞赛与培训部",
+      "url": "https://rcccaa.drct-caa.org.cn/"
+    },
+    {
+      "label": "2026 赛事通知（PDF）",
+      "url": "https://rcccaa.drct-caa.org.cn/image/file/20260423/1776959552655445.pdf"
+    }
+  ],
+  "sources": [
+    {
+      "id": "rcccaa-home",
+      "title": "自动化学会机器人竞赛与培训部",
+      "url": "https://rcccaa.drct-caa.org.cn/",
+      "publisher": "中国自动化学会机器人竞赛与培训部",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizer"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    },
+    {
+      "id": "robocup-2026-notice",
+      "title": "2026 中国机器人大赛暨 RoboCup 机器人世界杯中国赛（RoboCup 赛区）通知",
+      "url": "https://rcccaa.drct-caa.org.cn/image/file/20260423/1776959552655445.pdf",
+      "publisher": "中国自动化学会机器人竞赛与培训部",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "schedule", "tracks"],
+      "confidence": "high",
+      "notes": "PDF 通知；于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "notes": "2026 通知已发布；具体赛制、日程与费用待核验。"
+}

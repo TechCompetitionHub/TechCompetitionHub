@@ -130,6 +130,7 @@ export function validateDataset(
   duplicateIds(bundle.projects, 'projects', issues);
   duplicateIds(bundle.resources, 'resources', issues);
   duplicateIds(bundle.roadmaps, 'roadmaps', issues);
+  duplicateIds(bundle.reviews, 'reviews', issues);
 
   for (const vocabulary of bundle.vocabularies) {
     const termIds = new Set<string>();
@@ -677,6 +678,62 @@ export function validateDataset(
         });
       }
     }
+  }
+
+  for (const review of bundle.reviews) {
+    const path = `reviews/${review.id}`;
+    if (!competitionMap.has(review.competition_id)) {
+      issues.push({
+        severity: 'error',
+        code: 'missing_competition_reference',
+        path,
+        message: `评价引用了不存在的竞赛：${review.competition_id}`,
+      });
+    }
+    if (review.verification_status === 'approved') {
+      if (!review.consent_public) {
+        issues.push({
+          severity: 'error',
+          code: 'review_without_consent',
+          path,
+          message: '已审核评价必须获得公开展示同意',
+        });
+      }
+      if (!review.reviewed_at) {
+        issues.push({
+          severity: 'error',
+          code: 'review_without_review_date',
+          path,
+          message: '已审核评价必须填写 reviewed_at',
+        });
+      }
+      if (review.participated && (!review.track || review.year === null)) {
+        issues.push({
+          severity: 'error',
+          code: 'review_missing_participation_context',
+          path,
+          message: '参加过竞赛的评价必须填写赛道与参赛年份',
+        });
+      }
+      if (review.is_example) {
+        issues.push({
+          severity: 'error',
+          code: 'example_review_approved',
+          path,
+          message: '示例评价不得标记为 approved',
+        });
+      }
+    }
+    if (review.participated === false && (review.track || review.year !== null)) {
+      issues.push({
+        severity: 'warning',
+        code: 'review_context_mismatch',
+        path,
+        message: '未参加过竞赛但填写了赛道或年份，请确认是否准确',
+      });
+    }
+    checkDate(review.submitted_at, path, asOf, issues, 'warning');
+    checkDate(review.reviewed_at, path, asOf, issues);
   }
 
   const contentSlugs = new Set<string>();

@@ -1,4 +1,5 @@
 export type {
+  CommunityReview,
   Competition,
   CompetitionScore,
   ContentFrontmatter,
@@ -33,4 +34,5 @@ export interface DataBundle {
   roadmaps: import('./schemas').Roadmap[];
   scoringModels: import('./schemas').ScoringModel[];
   vocabularies: import('./schemas').Vocabulary[];
+  reviews: import('./schemas').CommunityReview[];
 }

@@ -28,11 +28,14 @@ export function CommunityPage() {
       <PageHeader
         eyebrow="经验社区"
         title="在公开、可搜索的地方交流"
-        description="首版不建设自建论坛、私信或即时聊天。经验、问答、组队与项目展示统一在 GitHub Discussions 中进行，内容可搜索、可引用、可追溯。"
+        description="论坛以 GitHub Discussions 承载：经验、问答、组队与项目展示可搜索、可引用、可追溯。站内不保存帖子正文，也不建设私信或即时聊天。"
         actions={
           <>
-            <ExternalButton href={SITE.discussions}>前往 Discussions</ExternalButton>
-            <ButtonLink to="/guides" variant="secondary">
+            <ExternalButton href={SITE.discussions}>前往论坛</ExternalButton>
+            <ButtonLink to="/submit-review" variant="secondary">
+              提交参赛评价
+            </ButtonLink>
+            <ButtonLink to="/guides" variant="ghost">
               阅读经验指南
             </ButtonLink>
           </>
@@ -43,6 +46,23 @@ export function CommunityPage() {
         <Alert tone="success" title="Discussions 已启用">
           {discussionCategoryNote()} 站内只链接当前实际存在的分类，不伪造分类地址。
         </Alert>
+
+        <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-line bg-surface p-5 shadow-card sm:flex-row sm:items-center">
+          <img
+            src={`${import.meta.env.BASE_URL}forum-avatar.jpg`}
+            alt="TechCompetitionHub 论坛头像"
+            width={96}
+            height={96}
+            className="size-20 shrink-0 rounded-2xl object-cover sm:size-24"
+          />
+          <div>
+            <p className="text-base font-semibold text-ink-900">TechCompetitionHub 论坛</p>
+            <p className="mt-1 text-sm leading-6 text-ink-500">
+              论坛头像由维护者设计。帖子与问答在 GitHub Discussions
+              中；站内展示分类入口、发帖模板与参赛评价入口，不镜像帖子正文。
+            </p>
+          </div>
+        </div>
 
         <section className="mt-10" aria-labelledby="categories-heading">
           <SectionHeading

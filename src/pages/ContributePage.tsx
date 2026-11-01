@@ -42,6 +42,7 @@ export function ContributePage() {
         description="平台通过 Issue 与 PR 管理数据、内容与代码。CI 会拦截结构错误、重复 ID、无效引用、技能依赖环、评分权重错误与构建失败。"
         actions={
           <>
+            <ButtonLink to="/submit-competition">提交竞赛草稿</ButtonLink>
             <ExternalButton href={SITE.issues}>打开 Issue</ExternalButton>
             <ButtonLink to="/data-policy" variant="secondary">
               先读数据政策
