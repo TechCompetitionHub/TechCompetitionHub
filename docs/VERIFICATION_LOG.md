@@ -186,4 +186,6 @@ postbuild：... base=/
 - 新增 `external_lists` 字段；12 条竞赛引用高校常用“A 类”84 项目录（RoboMaster 未引用）。目录仅作检索线索，不参与评分；详情页显示“外部竞赛目录（不参与评分）”与免责声明。
 - 数据校验：13 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章；0 错误 0 警告。
 - Discussions 已启用；社区页链接实际默认分类：Announcements、Q&A、Show and tell、General、Ideas、Polls。
-- 测试仍为 93 个，全部通过；构建与部署需在本次提交后重新验证。
+- 测试仍为 93 个，全部通过；`npm run check` exit 0。
+- 构建：593 modules，sitemap 55 个 URL（13 竞赛 + 25 技能 + 4 文章 + 13 静态路由），base `/`。
+- 推送提交 `42f3fbc` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 均包含 13 条竞赛 URL，并包含 3 个新竞赛 ID。
