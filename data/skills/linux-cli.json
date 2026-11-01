@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "linux-cli",
+  "name": "Linux 命令行",
+  "domain": "programming",
+  "definition": "在 Linux 环境中完成文件操作、进程管理、日志排查与 Shell 自动化。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不熟悉终端操作。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成目录、文件与权限操作。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立用管道、grep、awk 等完成日志分析与脚本任务。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能定位进程、网络与权限问题，写出可维护脚本。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计自动化流程、审查脚本安全性。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "log-triage",
+      "title": "完成一次日志排查与脚本自动化",
+      "level": 2,
+      "goal": "在 Linux 环境中分析一份日志，定位异常，并写脚本输出摘要。",
+      "prerequisites": ["会基本终端命令", "了解文件权限"],
+      "steps": [
+        "用 grep/awk/sort 统计错误类型与时间分布。",
+        "写一个带参数校验的 Shell 脚本输出摘要。",
+        "记录排查过程与误判。"
+      ],
+      "deliverables": ["分析脚本", "排查记录"],
+      "acceptance_criteria": [
+        "脚本对不存在文件与空文件有错误处理。",
+        "统计结果可由原始日志复现。",
+        "记录中区分事实与推测。"
+      ],
+      "estimated_hours": 5,
+      "common_failures": ["直接删除日志", "脚本未引用变量"]
+    }
+  ],
+  "resource_ids": ["tlcl"],
+  "related_competition_ids": ["national-undergraduate-information-security-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "linux-cli-reference",
+      "title": "The Linux Command Line",
+      "url": "https://linuxcommand.org/tlcl.php",
+      "publisher": "William Shotts",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

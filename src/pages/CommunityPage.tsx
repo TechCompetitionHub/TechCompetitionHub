@@ -1,0 +1,195 @@
+import { Link } from 'react-router-dom';
+import { Badge } from '../components/Badge';
+import { ButtonLink, ExternalButton } from '../components/Button';
+import { Container, PageHeader, SectionHeading } from '../components/Layout';
+import { usePageMeta } from '../components/Seo';
+import { Alert } from '../components/States';
+import { ExternalLink } from '../components/ExternalLink';
+import { listGuides } from '../services/contentService';
+import {
+  COMMUNITY_CATEGORIES,
+  discussionCategoryNote,
+  issueTemplateUrl,
+  SITE,
+} from '../services/site';
+import { formatDate } from '../lib/utils/format';
+
+export function CommunityPage() {
+  usePageMeta({
+    title: '经验社区',
+    description:
+      '通过 GitHub Discussions 参与竞赛咨询、备赛经验、技术问答、组队与项目展示；站内提供分类规划、模板与行为准则。',
+  });
+
+  const guides = listGuides().slice(0, 3);
+
+  return (
+    <>
+      <PageHeader
+        eyebrow="经验社区"
+        title="在公开、可搜索的地方交流"
+        description="首版不建设自建论坛、私信或即时聊天。经验、问答、组队与项目展示统一在 GitHub Discussions 中进行，内容可搜索、可引用、可追溯。"
+        actions={
+          <>
+            <ExternalButton href={SITE.discussions}>前往 Discussions</ExternalButton>
+            <ButtonLink to="/guides" variant="secondary">
+              阅读经验指南
+            </ButtonLink>
+          </>
+        }
+      />
+
+      <Container className="py-8">
+        <Alert tone="info" title="需要维护者先启用 Discussions">
+          {discussionCategoryNote()} 在仓库 Settings → General → Features 中启用 Discussions
+          后，按下方分类创建即可。站内不会链接不存在的分类。
+        </Alert>
+
+        <section className="mt-10" aria-labelledby="categories-heading">
+          <SectionHeading
+            id="categories-heading"
+            eyebrow="分类规划"
+            title="每个分类只解决一类问题"
+            description="分类名称与用途是仓库设置建议；实际链接由维护者启用后生成。"
+          />
+          <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
+            <table className="w-full text-left text-sm">
+              <caption className="sr-only">建议的 Discussions 分类与用途</caption>
+              <thead className="bg-surface-muted text-xs text-ink-500">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    分类
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    用途
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    形式
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-line">
+                {COMMUNITY_CATEGORIES.map((category) => (
+                  <tr key={category.name}>
+                    <th scope="row" className="px-4 py-3 text-left font-semibold text-ink-900">
+                      {category.name}
+                    </th>
+                    <td className="px-4 py-3 text-ink-700">{category.purpose}</td>
+                    <td className="px-4 py-3 text-ink-500">{category.mode}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <section aria-labelledby="rules-heading">
+            <SectionHeading
+              id="rules-heading"
+              eyebrow="社区规则"
+              title="这些内容会被移除"
+              description="规则同样适用于 Issue、PR 与 Discussions。"
+            />
+            <ul className="space-y-2 rounded-2xl border border-line bg-surface p-5 text-sm leading-6 text-ink-700">
+              <li>· 伪造获奖、参赛经历或项目成果；</li>
+              <li>· 代写、代做、买卖奖项或鼓励学术不端；</li>
+              <li>· 未经授权上传他人源码、论文、课程材料；</li>
+              <li>· 发布手机号、身份证、住址等个人敏感信息；</li>
+              <li>· 骚扰、人身攻击、广告刷屏或操纵排名；</li>
+              <li>· 把未经证实的指控当作事实传播。</li>
+            </ul>
+            <p className="mt-3 text-xs leading-5 text-ink-500">
+              完整条款见仓库中的{' '}
+              <ExternalLink href={`${SITE.repo}/blob/main/CODE_OF_CONDUCT.md`} className="text-xs">
+                CODE_OF_CONDUCT.md
+              </ExternalLink>
+              。
+            </p>
+          </section>
+
+          <section aria-labelledby="templates-heading">
+            <SectionHeading
+              id="templates-heading"
+              eyebrow="投稿入口"
+              title="用模板减少来回沟通"
+              description="Issue 模板会要求来源、字段、证据与确认项。"
+            />
+            <ul className="space-y-3">
+              <li className="rounded-xl border border-line bg-surface p-4">
+                <ExternalLink
+                  href={issueTemplateUrl('competition-add.yml')}
+                  className="font-semibold"
+                >
+                  新增竞赛
+                </ExternalLink>
+                <p className="mt-1 text-xs text-ink-500">提供官方名称、来源、领域与核验日期。</p>
+              </li>
+              <li className="rounded-xl border border-line bg-surface p-4">
+                <ExternalLink
+                  href={issueTemplateUrl('competition-correction.yml')}
+                  className="font-semibold"
+                >
+                  竞赛信息纠错
+                </ExternalLink>
+                <p className="mt-1 text-xs text-ink-500">提供字段、当前值、建议值与来源。</p>
+              </li>
+              <li className="rounded-xl border border-line bg-surface p-4">
+                <ExternalLink
+                  href={issueTemplateUrl('project-submit.yml')}
+                  className="font-semibold"
+                >
+                  项目提交
+                </ExternalLink>
+                <p className="mt-1 text-xs text-ink-500">提供复现步骤、证据、许可证与成员同意。</p>
+              </li>
+              <li className="rounded-xl border border-line bg-surface p-4">
+                <ExternalLink
+                  href={issueTemplateUrl('skill-resource-suggestion.yml')}
+                  className="font-semibold"
+                >
+                  技能/资源建议
+                </ExternalLink>
+                <p className="mt-1 text-xs text-ink-500">
+                  说明适用技能、来源、访问条款与免费状态。
+                </p>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <section className="mt-10" aria-labelledby="guides-heading">
+          <SectionHeading
+            id="guides-heading"
+            eyebrow="先读再问"
+            title="最新经验指南"
+            description="很多问题在指南里已经有可执行答案。"
+            action={
+              <ButtonLink to="/guides" variant="secondary" size="sm">
+                全部指南
+              </ButtonLink>
+            }
+          />
+          <div className="grid gap-4 md:grid-cols-3">
+            {guides.map((guide) => (
+              <article key={guide.slug} className="rounded-2xl border border-line bg-surface p-5">
+                <Badge tone="brand">指南</Badge>
+                <h3 className="mt-3 font-bold text-ink-900">
+                  <Link to={`/guides/${guide.slug}`} className="hover:text-brand-700">
+                    {guide.frontmatter.title}
+                  </Link>
+                </h3>
+                <p className="mt-1 line-clamp-2 text-sm text-ink-500">
+                  {guide.frontmatter.summary}
+                </p>
+                <p className="mt-3 text-xs text-ink-500">
+                  更新 {formatDate(guide.frontmatter.updated_at)}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </Container>
+    </>
+  );
+}

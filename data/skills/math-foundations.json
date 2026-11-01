@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "math-foundations",
+  "name": "数学基础",
+  "domain": "math",
+  "definition": "支撑建模、统计、控制与算法分析的微积分、线性代数与概率基础。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未系统学习微积分、线性代数或概率统计。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教材完成求导、矩阵运算与基础概率题。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立把实际问题写成函数、矩阵或概率模型，并解释假设。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能判断模型适用边界，选择合适的数学工具并检查数值稳定性。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能为团队设计数学方案、审查推导并指导他人补齐基础。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "linear-probability-report",
+      "title": "用线性代数与概率完成一份小型分析",
+      "level": 2,
+      "goal": "把一份带多个变量的公开数据表示为矩阵，计算相关性并用概率语言解释一个现象。",
+      "prerequisites": ["掌握矩阵乘法与逆矩阵", "了解条件概率与期望"],
+      "steps": [
+        "选择一份公开 CSV，说明字段含义与缺失值处理。",
+        "用矩阵运算完成标准化与相关性计算，保留脚本。",
+        "写 800 字报告，说明假设、计算与结论边界。"
+      ],
+      "deliverables": ["可运行脚本与数据说明", "含公式与解释的短报告"],
+      "acceptance_criteria": [
+        "脚本能从原始数据复现结果，且不依赖手工改数。",
+        "报告明确写出假设，至少指出一个不成立的边界。",
+        "所有公式与代码中的变量能一一对应。"
+      ],
+      "estimated_hours": 6,
+      "common_failures": ["把相关性直接解释为因果", "忽略缺失值导致结论偏差"]
+    }
+  ],
+  "resource_ids": ["openstax-math"],
+  "related_competition_ids": [],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "math-foundations-reference",
+      "title": "OpenStax 数学教材",
+      "url": "https://openstax.org/subjects/math",
+      "publisher": "OpenStax",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

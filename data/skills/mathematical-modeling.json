@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "mathematical-modeling",
+  "name": "数学建模",
+  "domain": "data",
+  "definition": "把开放问题抽象为可计算模型，完成假设、求解、验证与论文表达的能力。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未完整经历一次建模过程。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能复现教材案例，但面对开放问题不知如何假设。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立完成问题分析、模型选择、求解与结果解释。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能比较多个模型、做敏感性分析并说明取舍。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计完整建模路线、组织三人协作并审查论文逻辑。"
+    }
+  ],
+  "prerequisite_skill_ids": ["math-foundations", "statistics", "python-programming"],
+  "practice_tasks": [
+    {
+      "id": "mini-modeling-sprint",
+      "title": "完成一次 72 小时迷你建模",
+      "level": 2,
+      "goal": "选一道公开建模题，在 72 小时内完成假设、模型、求解、验证与 6 页论文。",
+      "prerequisites": ["掌握一种编程语言", "了解基本统计与优化方法"],
+      "steps": [
+        "写一页问题拆解，列出假设、变量与数据来源。",
+        "实现基线模型，再做一次改进并对比指标。",
+        "完成论文与可复现代码，记录运行环境。"
+      ],
+      "deliverables": ["6 页以内论文", "可复现代码与结果表"],
+      "acceptance_criteria": [
+        "每个假设都有理由，并说明不成立时的影响。",
+        "至少有一个基线和一个改进模型的可比结果。",
+        "他人按 README 能在 30 分钟内复现主要结果。"
+      ],
+      "estimated_hours": 12,
+      "common_failures": ["模型复杂度超过数据支撑", "只报结果不说明验证方法"]
+    }
+  ],
+  "resource_ids": [],
+  "related_competition_ids": ["cumcm"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "mathematical-modeling-reference",
+      "title": "COMAP 数学建模竞赛资料",
+      "url": "https://www.comap.com/contests/mcm-icm",
+      "publisher": "COMAP",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

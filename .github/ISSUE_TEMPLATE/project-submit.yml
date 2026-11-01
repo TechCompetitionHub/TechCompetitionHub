@@ -1,0 +1,108 @@
+name: 项目提交
+description: 提交一个可复现的竞赛项目成果；需要证据链接与团队成员同意。
+title: '[项目] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > 项目展示不等于平台对原创性、质量或获奖真实性作出保证。
+        > 请不要提交未授权代码、论文、图片或个人信息；涉及队友的内容需获得同意。
+
+  - type: input
+    id: title
+    attributes:
+      label: 项目名称
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 项目摘要
+      description: 一两句话说明问题、方法和结果。
+    validations:
+      required: true
+
+  - type: input
+    id: competitions
+    attributes:
+      label: 关联竞赛（名称或 ID）
+      placeholder: 例如：cumcm、robomaster-university-championship
+    validations:
+      required: false
+
+  - type: input
+    id: repository_url
+    attributes:
+      label: 代码仓库 URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: demo_url
+    attributes:
+      label: 演示 URL（可选）
+      placeholder: https://...
+    validations:
+      required: false
+
+  - type: input
+    id: documentation_url
+    attributes:
+      label: 文档 URL（可选）
+      placeholder: https://...
+    validations:
+      required: false
+
+  - type: textarea
+    id: technologies
+    attributes:
+      label: 技术栈
+      placeholder: Python、PyTorch、STM32、ROS 2...
+    validations:
+      required: true
+
+  - type: textarea
+    id: contributions
+    attributes:
+      label: 团队角色与贡献
+      description: 写明角色、贡献与是否已获得发布同意；只需公开 GitHub handle，不要填手机号或真实姓名。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: 复现步骤
+      description: 环境、依赖、运行命令、测试方法与预期结果。
+    validations:
+      required: true
+
+  - type: textarea
+    id: results_limits
+    attributes:
+      label: 结果、局限与证据
+      description: 包含指标、失败案例、已知限制与证据链接。
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: 许可证
+      placeholder: MIT、Apache-2.0、CC BY 4.0...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 确认
+      options:
+        - label: 团队成员已同意公开其角色与贡献信息。
+          required: true
+        - label: 我拥有代码、图片与文档的发布权限，第三方材料保留原许可证。
+          required: true
+        - label: 项目描述不包含虚构获奖、伪造数据或无法复现的声明。
+          required: true

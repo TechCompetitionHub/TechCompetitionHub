@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "china-engineering-practice-innovation-competition",
+  "name": "中国大学生工程实践与创新能力大赛",
+  "aliases": ["工创赛", "中国大学生工创大赛", "工程训练综合能力竞赛"],
+  "organizers": [
+    {
+      "name": "教育部工程训练教学指导委员会",
+      "role": "host",
+      "url": "http://www.gcxl.edu.cn/"
+    },
+    {
+      "name": "中国大学生工程实践与创新能力大赛组委会",
+      "role": "organizer",
+      "url": null
+    }
+  ],
+  "domains": ["mechanical", "electronics", "embedded", "energy"],
+  "summary": "面向大学生的工程实践与创新能力竞赛，围绕新能源车、智能+、工程场景数字化等赛道完成设计、制作与现场运行。",
+  "description": "中国大学生工程实践与创新能力大赛（简称中国大学生工创大赛）由教育部工程训练教学指导委员会指导，大赛组委会组织。官网 2025 年预通知说明赛事严格遵守教育部评审评比评估和竞赛管理要求，设置新能源车、智能+等赛道。平台仅记录官网通知可核验的名称、组织架构与赛道信息；具体年份、赛题与报名安排需查看当届通知。",
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": "官网通知面向高等学校；具体参赛资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "以团队形式完成设计制作与现场运行；团队人数以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 4,
+    "rationale": "需要机械、电子、控制与项目管理协同，并完成实物制作与现场调试。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "mechanical-design",
+      "target_level": 2
+    },
+    {
+      "skill_id": "embedded-c",
+      "target_level": 2
+    },
+    {
+      "skill_id": "electronics-fundamentals",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网可见 2025 年赛事预通知；2026/2027 年安排待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "http://www.gcxl.edu.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "gcxl-notice-2025",
+      "title": "关于举办 2025 年中国大学生工程实践与创新能力大赛的预通知",
+      "url": "http://www.gcxl.edu.cn/info/1049/1762.htm",
+      "publisher": "教育部工程训练教学指导委员会、大赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "format", "tracks"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": "1.0.0",
+  "scores": {
+    "model_version": "1.0.0",
+    "dimension_scores": {
+      "technical_depth": {
+        "score": 88,
+        "rationale": "涉及机械结构、电子控制、嵌入式与系统联调，问题开放度较高。",
+        "evidence_level": "high"
+      },
+      "recognition": {
+        "score": 85,
+        "rationale": "由教育部工程训练教学指导委员会指导，官网通知公开组织架构与赛道设置。",
+        "evidence_level": "high"
+      },
+      "practical_value": {
+        "score": 92,
+        "rationale": "以实物作品和现场运行为核心，直接锻炼工程实现与调试能力。",
+        "evidence_level": "high"
+      },
+      "competitiveness": {
+        "score": 78,
+        "rationale": "官网可见往届与预通知信息，但本次未核验参赛规模与获奖比例。",
+        "evidence_level": "medium"
+      },
+      "growth_value": {
+        "score": 88,
+        "rationale": "覆盖机械、电子、控制、项目协作与现场答辩，迁移面广。",
+        "evidence_level": "medium"
+      },
+      "cost_accessibility": {
+        "score": 45,
+        "rationale": "设备、材料与加工成本可能较高，官网未给出费用；保守估计，证据不足。",
+        "evidence_level": "medium"
+      }
+    },
+    "weighted_score": 84.55,
+    "evidence_summary": "名称、组织架构、赛道与赛制来自官网预通知；2026/2027 年安排、费用与获奖比例未核验。成本维度为保守估计。",
+    "sample_size": null,
+    "confidence_level": "medium",
+    "review_status": "approved",
+    "reviewed_at": "2026-11-01",
+    "reviewer_role": "platform-editorial-initial",
+    "notes": "首轮平台编辑初评，依据官网公开信息；待维护者与领域评审复核，不构成官方评价。"
+  },
+  "notes": "赛事年份与赛道可能调整；报名、费用与资格以当届通知为准。"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "national-undergraduate-smart-car-competition",
+  "name": "全国大学生智能汽车竞赛",
+  "aliases": ["智能汽车竞赛", "智能车竞赛"],
+  "organizers": [
+    {
+      "name": "全国大学生智能汽车竞赛组织委员会",
+      "role": "host",
+      "url": "http://www.smartcarrace.com/"
+    }
+  ],
+  "domains": ["embedded", "robotics", "electronics", "software"],
+  "summary": "以自主设计、制作和调试智能汽车为主题的工程实践竞赛，覆盖嵌入式、控制、传感与软件实现。",
+  "description": "全国大学生智能汽车竞赛官网页脚署名为全国大学生智能汽车竞赛组织委员会秘书处。赛事围绕智能汽车自主行驶任务，通常要求参赛队完成传感器、控制、嵌入式软件与车辆平台的集成调试。平台记录官网可核验的名称与组织署名；赛道设置、报名资格、日程与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": "官网面向高校学生；具体资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "以团队形式完成智能汽车设计与现场调试；团队人数以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 4,
+    "rationale": "需要嵌入式、控制、电子与软件协同，并在现场完成调试与运行。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "embedded-c",
+      "target_level": 3
+    },
+    {
+      "skill_id": "microcontroller",
+      "target_level": 2
+    },
+    {
+      "skill_id": "control-theory",
+      "target_level": 2
+    },
+    {
+      "skill_id": "electronics-fundamentals",
+      "target_level": 2
+    },
+    {
+      "skill_id": "c-programming",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网未展示明确日程；具体安排待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "http://www.smartcarrace.com/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "smartcar-home",
+      "title": "全国大学生智能汽车竞赛官网",
+      "url": "http://www.smartcarrace.com/",
+      "publisher": "全国大学生智能汽车竞赛组织委员会秘书处",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "technical_domains"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "评分待补充：官网为前端应用，赛道与规则细节需查看当届通知；费用与日程未核验。"
+}

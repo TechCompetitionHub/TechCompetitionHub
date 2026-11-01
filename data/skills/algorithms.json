@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "algorithms",
+  "name": "算法与数据结构",
+  "domain": "programming",
+  "definition": "选择合适的数据结构与算法，分析复杂度并验证正确性。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未系统学习复杂度与常见数据结构。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能实现教材中的排序、查找与基础图算法。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能根据约束选择结构、分析复杂度并写随机/边界测试。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能优化瓶颈、比较多种方案并解释取舍。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计算法方案、证明正确性并指导他人。"
+    }
+  ],
+  "prerequisite_skill_ids": ["c-programming"],
+  "practice_tasks": [
+    {
+      "id": "algorithm-comparison",
+      "title": "实现并对比三种算法",
+      "level": 2,
+      "goal": "针对同一问题实现暴力、改进与最优方案，测量复杂度并验证正确性。",
+      "prerequisites": ["会一门编程语言", "了解大 O 记号"],
+      "steps": [
+        "写清问题约束与输入规模。",
+        "实现三种方案，统一接口与测试数据。",
+        "记录运行时间/操作次数，解释差异。"
+      ],
+      "deliverables": ["三种实现与测试", "复杂度对比报告"],
+      "acceptance_criteria": [
+        "正确性测试覆盖边界与随机数据。",
+        "复杂度分析与实测趋势一致。",
+        "报告说明何时应选择较慢但更简单的方案。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["只测最好情况", "复杂度分析与实现不符"]
+    }
+  ],
+  "resource_ids": ["cp-algorithms"],
+  "related_competition_ids": ["lanqiao-cup"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "algorithms-reference",
+      "title": "CP-Algorithms",
+      "url": "https://cp-algorithms.com/",
+      "publisher": "CP-Algorithms 社区",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "tlcl",
+  "title": "The Linux Command Line",
+  "resource_type": "book",
+  "url": "https://linuxcommand.org/tlcl.php",
+  "language": "en",
+  "level": 1,
+  "domains": ["software"],
+  "related_skill_ids": ["linux-cli"],
+  "publisher": "William Shotts",
+  "license_or_access_terms": "免费在线阅读；原书采用 CC BY-NC-ND 3.0，转载需遵守许可。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "从 shell 基础到脚本与进程管理。"
+}

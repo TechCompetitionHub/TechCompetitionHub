@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "cppreference-c",
+  "title": "cppreference C 参考",
+  "resource_type": "documentation",
+  "url": "https://en.cppreference.com/w/c",
+  "language": "en",
+  "level": 2,
+  "domains": ["software", "embedded"],
+  "related_skill_ids": ["c-programming", "embedded-c"],
+  "publisher": "cppreference",
+  "license_or_access_terms": "免费访问；内容遵循原站许可与署名要求。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "C 语言与标准库参考，适合查边界行为与函数签名。"
+}

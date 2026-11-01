@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "uw-madison-writing",
+  "title": "The Writer’s Handbook",
+  "resource_type": "documentation",
+  "url": "https://writing.wisc.edu/handbook/",
+  "language": "en",
+  "level": 1,
+  "domains": ["software"],
+  "related_skill_ids": ["technical-writing"],
+  "publisher": "University of Wisconsin–Madison",
+  "license_or_access_terms": "免费访问；内容版权归原作者/机构，转载需遵守原站条款。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "学术写作、结构、引用与修改策略。"
+}

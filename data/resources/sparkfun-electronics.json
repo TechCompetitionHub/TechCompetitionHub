@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "sparkfun-electronics",
+  "title": "SparkFun Electronics Tutorials",
+  "resource_type": "documentation",
+  "url": "https://learn.sparkfun.com/tutorials",
+  "language": "en",
+  "level": 1,
+  "domains": ["electronics", "embedded"],
+  "related_skill_ids": ["electronics-fundamentals"],
+  "publisher": "SparkFun Electronics",
+  "license_or_access_terms": "免费访问；教程与图片版权归 SparkFun，转载需遵守原站条款。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "电子基础、传感器与开发板入门教程；部分产品页面为商业内容。"
+}

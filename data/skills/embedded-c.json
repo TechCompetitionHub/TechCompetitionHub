@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "embedded-c",
+  "name": "嵌入式 C",
+  "domain": "embedded",
+  "definition": "在资源受限设备上用 C 完成外设驱动、定时、通信与错误处理。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未在单片机上写过程序。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程点亮 LED、读取按键。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立使用定时器、中断、串口与传感器并处理错误。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能定位时序、并发与内存问题，做资源取舍。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计驱动分层、测试策略并指导调试。"
+    }
+  ],
+  "prerequisite_skill_ids": ["c-programming"],
+  "practice_tasks": [
+    {
+      "id": "timer-uart-sampling",
+      "title": "完成定时采样与串口输出",
+      "level": 2,
+      "goal": "在开发板上以固定周期采样传感器，通过串口输出，并记录误差与异常处理。",
+      "prerequisites": ["会 C 语言", "了解中断与串口基础"],
+      "steps": [
+        "用定时器触发采样，避免忙等。",
+        "设计串口帧格式与错误处理。",
+        "记录采样周期、抖动与异常情况。"
+      ],
+      "deliverables": ["固件源码", "测试记录"],
+      "acceptance_criteria": [
+        "采样周期可测量，记录抖动范围。",
+        "串口断连或传感器异常时有明确处理。",
+        "构建命令与烧录步骤可复现。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["在中断里做长时间阻塞", "忽略 volatile 与竞态"]
+    }
+  ],
+  "resource_ids": ["cppreference-c"],
+  "related_competition_ids": [
+    "china-engineering-practice-innovation-competition",
+    "national-undergraduate-ic-innovation-competition",
+    "national-undergraduate-smart-car-competition",
+    "robomaster-university-championship"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "embedded-c-reference",
+      "title": "cppreference C 参考",
+      "url": "https://en.cppreference.com/w/c",
+      "publisher": "cppreference",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

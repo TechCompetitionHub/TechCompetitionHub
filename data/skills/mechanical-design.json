@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "mechanical-design",
+  "name": "机械设计与 CAD",
+  "domain": "engineering",
+  "definition": "使用 CAD 完成零件/装配设计，考虑公差、材料与可制造性。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未使用 CAD 完成零件设计。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程画出简单零件与装配。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立完成零件、装配、工程图与基本公差标注。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能考虑加工、装配与轻量化取舍，做干涉检查。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计完整机构、审查可制造性与维护性。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "bracket-print",
+      "title": "设计并打印一个承力支架",
+      "level": 2,
+      "goal": "为一个真实小负载设计支架，完成 CAD、公差标注、3D 打印与破坏测试。",
+      "prerequisites": ["会基础 CAD 操作", "了解 3D 打印流程"],
+      "steps": [
+        "测量接口尺寸，画零件与装配。",
+        "标注关键公差与打印方向。",
+        "打印并测试，记录失效位置与改进。"
+      ],
+      "deliverables": ["CAD 文件", "打印件与测试记录"],
+      "acceptance_criteria": [
+        "关键尺寸与装配接口可复现。",
+        "测试记录包含载荷、失效模式与照片。",
+        "至少提出一个可制造性改进。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["只画外观不做装配检查", "忽略打印收缩与公差"]
+    }
+  ],
+  "resource_ids": ["freecad-docs"],
+  "related_competition_ids": [
+    "china-engineering-practice-innovation-competition",
+    "national-energy-saving-emission-reduction-competition",
+    "robomaster-university-championship"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "mechanical-design-reference",
+      "title": "FreeCAD Wiki",
+      "url": "https://wiki.freecad.org/",
+      "publisher": "FreeCAD 社区",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

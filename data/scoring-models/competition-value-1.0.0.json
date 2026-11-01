@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "id": "competition-value",
+  "version": "1.0.0",
+  "effective_from": "2026-11-01",
+  "title": "TechCompetitionHub 竞赛价值评分模型",
+  "description": "面向大学生的竞赛价值评估模型。所有维度归一化到 0–100，权重之和为 1。分数是平台方法论下的编辑评估，不是官方排名、认证或对个人结果的预测。",
+  "dimensions": [
+    {
+      "id": "technical_depth",
+      "name": "技术深度",
+      "weight": 0.25,
+      "description": "技术复杂度、工程整合、理论要求与问题开放度。",
+      "scoring_guidance": "综合赛题要求、所需知识面、系统集成难度与开放性问题比例评分；不因主办方层级直接加分。"
+    },
+    {
+      "id": "recognition",
+      "name": "行业/学术认可度",
+      "weight": 0.2,
+      "description": "主办方与赛事机制的可验证信息、跨机构或行业影响。",
+      "scoring_guidance": "依据官方章程、主办单位层级、公开赛制与可核验的行业参与情况评分；不采用宣传文案中的自述排名。"
+    },
+    {
+      "id": "practical_value",
+      "name": "实践与创新价值",
+      "weight": 0.2,
+      "description": "能否产出可验证作品、工程能力与可复用成果。",
+      "scoring_guidance": "依据作品产出、可复现性、工程约束与创新空间评分；纯笔试型赛事的实践分应更保守。"
+    },
+    {
+      "id": "competitiveness",
+      "name": "竞争难度",
+      "weight": 0.15,
+      "description": "参赛资格、赛制、公开参赛规模与获奖比例（数据可用时）。",
+      "scoring_guidance": "有公开规模或获奖比例时据此评分；缺少可靠数据时降低证据等级，不臆造参赛人数。"
+    },
+    {
+      "id": "growth_value",
+      "name": "学习成长收益",
+      "weight": 0.15,
+      "description": "技能覆盖、项目积累、复用价值与复盘资源。",
+      "scoring_guidance": "依据技能覆盖广度、项目可迁移性与公开学习资源评分；不以获奖数量代替成长收益。"
+    },
+    {
+      "id": "cost_accessibility",
+      "name": "参与成本可承受性",
+      "weight": 0.05,
+      "description": "费用、时间、设备和团队组织成本；成本越低分数越高。",
+      "scoring_guidance": "有官方费用时按金额与时间投入评分；无数据时采用保守估计并降低证据等级，绝不默认高分。"
+    }
+  ],
+  "eligibility": {
+    "required_verification_status": ["verified"],
+    "required_review_status": ["approved"],
+    "min_confidence": "medium",
+    "require_all_dimensions": true,
+    "min_score_coverage": 1
+  },
+  "missing_data_policy": "exclude_from_official_ranking",
+  "tie_policy": "equal_scores_share_rank",
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-01",
+      "change": "首版公开模型：六维度、权重和为准入规则、缺失数据排除正式排名、同分并列。"
+    }
+  ]
+}

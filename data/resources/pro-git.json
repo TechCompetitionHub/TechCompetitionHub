@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "pro-git",
+  "title": "Pro Git（中文版）",
+  "resource_type": "book",
+  "url": "https://git-scm.com/book/zh/v2",
+  "language": "zh-CN",
+  "level": 1,
+  "domains": ["software"],
+  "related_skill_ids": ["git-collaboration"],
+  "publisher": "Git 社区 / Scott Chacon、Ben Straub",
+  "license_or_access_terms": "免费在线阅读；原书采用 CC BY-NC-SA 3.0，转载需遵守许可。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "覆盖分支、合并、远程协作与工作流。"
+}

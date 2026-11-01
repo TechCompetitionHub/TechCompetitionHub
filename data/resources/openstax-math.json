@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "openstax-math",
+  "title": "OpenStax 数学教材",
+  "resource_type": "book",
+  "url": "https://openstax.org/subjects/math",
+  "language": "en",
+  "level": 1,
+  "domains": ["math_modeling"],
+  "related_skill_ids": ["math-foundations"],
+  "publisher": "OpenStax",
+  "license_or_access_terms": "免费在线阅读；教材采用开放许可，具体条款以每本书页面为准。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "微积分、线性代数、概率统计等开放教材入口。"
+}

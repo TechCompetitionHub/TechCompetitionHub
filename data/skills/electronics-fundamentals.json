@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "electronics-fundamentals",
+  "name": "电子电路基础",
+  "domain": "embedded",
+  "definition": "理解基本电路、运算放大器、滤波、电源与测量方法。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不熟悉电压、电流与基本元件。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按教程搭建简单电路并测量。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立设计基础放大/滤波电路并验证。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能分析噪声、带宽、功耗与器件限制。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计完整模拟前端并审查测量方案。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "opamp-filter",
+      "title": "设计并测量一个运放滤波器",
+      "level": 2,
+      "goal": "设计一个有源低通/高通滤波器，计算截止频率，仿真并实测幅频响应。",
+      "prerequisites": ["了解电阻电容与运放基础", "会使用仿真工具"],
+      "steps": [
+        "计算参数并做 SPICE 仿真。",
+        "搭建电路，测量至少 5 个频点。",
+        "对比仿真与实测，分析偏差来源。"
+      ],
+      "deliverables": ["电路图与参数", "仿真与实测记录"],
+      "acceptance_criteria": [
+        "截止频率计算、仿真与实测差异有解释。",
+        "记录测量设备与负载条件。",
+        "指出至少一个器件非理想因素。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["忽略运放带宽", "测量未考虑探头电容"]
+    }
+  ],
+  "resource_ids": ["sparkfun-electronics"],
+  "related_competition_ids": [
+    "china-engineering-practice-innovation-competition",
+    "national-undergraduate-ic-innovation-competition",
+    "national-undergraduate-smart-car-competition"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "electronics-fundamentals-reference",
+      "title": "SparkFun Electronics Tutorials",
+      "url": "https://learn.sparkfun.com/tutorials",
+      "publisher": "SparkFun Electronics",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

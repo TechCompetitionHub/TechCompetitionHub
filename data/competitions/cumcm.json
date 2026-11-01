@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "cumcm",
+  "name": "全国大学生数学建模竞赛",
+  "aliases": ["数学建模国赛", "国赛", "CUMCM"],
+  "organizers": [
+    {
+      "name": "中国工业与应用数学学会",
+      "role": "host",
+      "url": "https://www.mcm.edu.cn/"
+    }
+  ],
+  "domains": ["math_modeling", "data_science"],
+  "summary": "三人一队，在限定时间内完成实际问题建模、求解、验证与论文写作的全国性数学建模竞赛。",
+  "description": "全国大学生数学建模竞赛创办于 1992 年，每年举办一届，分本科组与高职高专组。参赛队在限定时间内根据赛题完成模型建立、求解、结果分析与论文写作。官网公开了 2026 年赛题发布时间、参赛规模与主办单位信息。平台仅记录官网可核验的事实；报名费用、获奖比例与下一年度安排未在本次核验中确认。",
+  "audience": {
+    "levels": ["undergraduate", "vocational"],
+    "notes": "官网显示分本科组与高职高专组；具体资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": {
+      "min": 3,
+      "max": 3
+    },
+    "delivery_modes": ["offline", "online"],
+    "notes": "各校设赛点组织，论文通过官方指定网站在线提交。"
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要在三天左右完成建模、编程求解与论文表达，强调跨知识点整合与时间管理。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "mathematical-modeling",
+      "target_level": 2
+    },
+    {
+      "skill_id": "statistics",
+      "target_level": 2
+    },
+    {
+      "skill_id": "python-programming",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    },
+    {
+      "skill_id": "git-collaboration",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": "2026-09-10",
+    "event_end": null,
+    "status": "partial",
+    "notes": "官网载明 2026 年赛题于 2026-09-10 18:00 发布；报名时间与结束日期未在本次核验中确认。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "https://www.mcm.edu.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "mcm-home",
+      "title": "全国大学生数学建模竞赛官网首页",
+      "url": "https://www.mcm.edu.cn/",
+      "publisher": "全国大学生数学建模竞赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "schedule.event_start", "audience", "format", "scale"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": "1.0.0",
+  "scores": {
+    "model_version": "1.0.0",
+    "dimension_scores": {
+      "technical_depth": {
+        "score": 82,
+        "rationale": "需要把开放问题抽象为模型，并完成求解、敏感性分析与论文表达。",
+        "evidence_level": "medium"
+      },
+      "recognition": {
+        "score": 90,
+        "rationale": "主办单位为中国工业与应用数学学会，官网公开赛制与 2026 年参赛规模；不使用非官方排名作为依据。",
+        "evidence_level": "high"
+      },
+      "practical_value": {
+        "score": 85,
+        "rationale": "产出为完整论文与可复现代码/数据，能直接转化为研究与分析能力。",
+        "evidence_level": "medium"
+      },
+      "competitiveness": {
+        "score": 88,
+        "rationale": "官网称 2026 年有 1963 所院校/校区、89543 队报名，规模大；官网未给出获奖比例。",
+        "evidence_level": "medium"
+      },
+      "growth_value": {
+        "score": 90,
+        "rationale": "覆盖建模、统计、编程、写作与团队协作，可迁移到数据分析与研究场景。",
+        "evidence_level": "medium"
+      },
+      "cost_accessibility": {
+        "score": 55,
+        "rationale": "官网首页未公开报名费；按 3 天时间与计算设备投入保守估计，证据不足，不默认高分。",
+        "evidence_level": "medium"
+      }
+    },
+    "weighted_score": 84.95,
+    "evidence_summary": "名称、主办单位、2026 年赛题发布时间与参赛规模来自官网；费用与获奖比例未核验。评分中的成本维度为保守估计。",
+    "sample_size": null,
+    "confidence_level": "high",
+    "review_status": "approved",
+    "reviewed_at": "2026-11-01",
+    "reviewer_role": "platform-editorial-initial",
+    "notes": "首轮平台编辑初评，依据官网公开信息；待维护者与领域评审复核，不构成官方评价。"
+  },
+  "notes": "费用、获奖比例与下一年度报名安排待核验；评分中的成本维度为保守估计。"
+}

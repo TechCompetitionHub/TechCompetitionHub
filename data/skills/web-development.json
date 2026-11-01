@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "web-development",
+  "name": "Web 前端开发",
+  "domain": "web",
+  "definition": "使用 HTML、CSS、JavaScript 与组件框架构建可访问、响应式的页面。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未写过完整网页。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成静态页面与简单交互。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立实现响应式页面、表单校验与基础状态管理。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理可访问性、性能与边界状态，并写组件测试。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计组件体系、审查可访问性与性能。"
+    }
+  ],
+  "prerequisite_skill_ids": ["git-collaboration"],
+  "practice_tasks": [
+    {
+      "id": "accessible-list-page",
+      "title": "构建一个可访问的数据列表页",
+      "level": 2,
+      "goal": "用组件框架实现可搜索、可筛选、可键盘操作的数据列表，并处理空状态。",
+      "prerequisites": ["掌握 HTML/CSS/JavaScript", "了解 Git 基本操作"],
+      "steps": [
+        "实现搜索、筛选与空状态，状态写入 URL。",
+        "保证键盘可操作、焦点可见、标签完整。",
+        "为筛选逻辑与空状态写测试。"
+      ],
+      "deliverables": ["可运行页面", "测试与 README"],
+      "acceptance_criteria": [
+        "刷新 URL 后筛选条件恢复。",
+        "键盘可完成搜索与筛选，焦点不被吞掉。",
+        "空状态与错误状态有明确文字，不只靠颜色。"
+      ],
+      "estimated_hours": 10,
+      "common_failures": ["只用 div 做按钮", "筛选状态无法分享"]
+    }
+  ],
+  "resource_ids": ["mdn-web-docs"],
+  "related_competition_ids": ["china-collegiate-computing-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "web-development-reference",
+      "title": "MDN Web 文档",
+      "url": "https://developer.mozilla.org/zh-CN/docs/Web",
+      "publisher": "MDN",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

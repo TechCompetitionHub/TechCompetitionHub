@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "lanqiao-cup",
+  "name": "蓝桥杯全国大学生软件和信息技术大赛",
+  "aliases": ["蓝桥杯", "蓝桥杯大赛"],
+  "organizers": [
+    {
+      "name": "蓝桥杯全国大学生软件和信息技术大赛组委会",
+      "role": "host",
+      "url": "https://dasai.lanqiao.cn/"
+    },
+    {
+      "name": "中国软件行业协会",
+      "role": "organizer",
+      "url": null
+    },
+    {
+      "name": "国信蓝桥教育科技股份有限公司",
+      "role": "co-organizer",
+      "url": null
+    }
+  ],
+  "domains": ["software", "electronics"],
+  "summary": "面向大学生的软件和信息技术赛事，包含软件、电子等多个赛道，以个人赛为主，强调编程与工程实践。",
+  "description": "蓝桥杯全国大学生软件和信息技术大赛（原名蓝桥杯全国软件和信息技术专业人才大赛）官网介绍其面向全国大学生，覆盖软件与电子等方向，设置多个竞赛科目。官网页脚列明指导单位为中国软件行业协会、主办单位为蓝桥杯大赛组委会、承办单位为国信蓝桥教育科技股份有限公司。平台仅记录官网可核验的组织信息与赛事定位；具体赛道、报名资格与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate", "vocational"],
+    "notes": "官网面向全国大学生，含本科与高职高专；具体资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": false,
+    "team_size": null,
+    "delivery_modes": ["online", "offline"],
+    "notes": "以个人赛为主，部分赛道或组别为团队赛；具体形式以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 2,
+    "rationale": "入门门槛相对清晰，以编程与基础工程能力为主；高级赛道难度提升。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "algorithms",
+      "target_level": 2
+    },
+    {
+      "skill_id": "c-programming",
+      "target_level": 2
+    },
+    {
+      "skill_id": "python-programming",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网按赛季组织；具体报名与考试日期待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "大赛官网",
+      "url": "https://dasai.lanqiao.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "lanqiao-home",
+      "title": "蓝桥杯大赛官网",
+      "url": "https://dasai.lanqiao.cn/",
+      "publisher": "蓝桥杯全国大学生软件和信息技术大赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "description", "tracks"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "评分待补充：赛事含多个赛道，需先核对赛道级规则与费用；费用与具体日程未核验。"
+}

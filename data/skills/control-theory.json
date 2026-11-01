@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "control-theory",
+  "name": "控制理论基础",
+  "domain": "robotics",
+  "definition": "理解反馈、稳定性、PID、频域/时域指标与仿真验证。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不了解反馈与稳定性概念。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程实现简单 PID。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立整定 PID、分析阶跃响应并解释超调与稳态误差。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理饱和、延迟与噪声，比较不同控制方案。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计控制架构、审查稳定性与安全边界。"
+    }
+  ],
+  "prerequisite_skill_ids": ["math-foundations"],
+  "practice_tasks": [
+    {
+      "id": "pid-line-following",
+      "title": "完成 PID 巡线仿真与阶跃响应",
+      "level": 2,
+      "goal": "在仿真环境中实现 PID 巡线，记录阶跃响应并分析参数影响。",
+      "prerequisites": ["了解微分方程与拉普拉斯变换基础", "会 Python 或 MATLAB"],
+      "steps": [
+        "建立简化车辆/被控对象模型。",
+        "实现 PID，记录不同参数下的响应。",
+        "分析超调、调节时间与稳态误差。"
+      ],
+      "deliverables": ["仿真代码", "参数对比报告"],
+      "acceptance_criteria": [
+        "至少比较 3 组参数，指标定义清楚。",
+        "说明积分饱和与输出限幅的处理。",
+        "结论与波形一致。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["只看最终误差不看稳定性", "忽略执行器饱和"]
+    }
+  ],
+  "resource_ids": ["python-control-docs"],
+  "related_competition_ids": [
+    "national-undergraduate-smart-car-competition",
+    "robomaster-university-championship"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "control-theory-reference",
+      "title": "Python Control Systems Library",
+      "url": "https://python-control.readthedocs.io/",
+      "publisher": "python-control",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

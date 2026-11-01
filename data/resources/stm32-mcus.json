@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "stm32-mcus",
+  "title": "STM32 微控制器资料",
+  "resource_type": "documentation",
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html",
+  "language": "en",
+  "level": 1,
+  "domains": ["embedded", "electronics"],
+  "related_skill_ids": ["microcontroller"],
+  "publisher": "STMicroelectronics",
+  "license_or_access_terms": "免费访问；数据手册与软件许可遵循 ST 条款。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "选型、参考手册与开发工具入口；具体开发板另购。"
+}

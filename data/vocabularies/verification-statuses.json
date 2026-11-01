@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "id": "verification-statuses",
+  "label": "数据核验状态",
+  "description": "公开数据的可信状态。verified 不等于所有字段都绝对正确，只表示关键事实已按来源核验。",
+  "terms": [
+    { "id": "draft", "label": "草稿", "description": "尚在整理，不作为公开事实展示。" },
+    {
+      "id": "needs_review",
+      "label": "待核验",
+      "description": "已录入但关键事实尚未完成交叉核对。"
+    },
+    {
+      "id": "verified",
+      "label": "已核验",
+      "description": "关键事实有可访问来源，并记录最后核验日期。"
+    },
+    {
+      "id": "stale",
+      "label": "可能过期",
+      "description": "距上次核验时间较久，使用前应重新确认。"
+    },
+    {
+      "id": "rejected",
+      "label": "已拒绝",
+      "description": "来源不足、重复或不符合平台规则，不公开展示。"
+    }
+  ]
+}

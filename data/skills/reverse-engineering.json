@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "reverse-engineering",
+  "name": "逆向与二进制分析",
+  "domain": "security",
+  "definition": "在授权环境中分析二进制行为，记录假设、证据与影响。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不了解汇编与二进制分析工具。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成简单 crackme。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立分析给定样本的控制流与关键校验。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理混淆、反调试与多架构样本。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计分析流程、编写脚本并审查证据链。"
+    }
+  ],
+  "prerequisite_skill_ids": ["c-programming", "linux-cli", "cybersecurity-basics"],
+  "practice_tasks": [
+    {
+      "id": "binary-analysis",
+      "title": "分析一个给定二进制并写报告",
+      "level": 1,
+      "goal": "在隔离环境中分析授权样本，判断关键校验逻辑并写可复现报告。",
+      "prerequisites": ["了解 C 与汇编基础", "会使用 Linux 命令行"],
+      "steps": [
+        "记录样本来源、哈希与隔离环境。",
+        "用静态/动态工具定位关键逻辑。",
+        "写清假设、证据、结论与未解决问题。"
+      ],
+      "deliverables": ["分析报告", "脚本或命令记录"],
+      "acceptance_criteria": [
+        "样本哈希与环境可复现。",
+        "结论有证据支持，区分推测。",
+        "未在真实目标或未授权环境测试。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["在宿主机直接运行样本", "把字符串猜测当作结论"]
+    }
+  ],
+  "resource_ids": ["radare2-book"],
+  "related_competition_ids": ["national-undergraduate-information-security-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "reverse-engineering-reference",
+      "title": "The Radare2 Book",
+      "url": "https://book.rada.re/",
+      "publisher": "Radare2 社区",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

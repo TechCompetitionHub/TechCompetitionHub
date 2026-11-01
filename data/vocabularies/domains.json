@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "id": "domains",
+  "label": "竞赛与技能领域",
+  "description": "受控领域词表。新增领域必须先通过 PR 修改本文件，避免同义标签被拆成多个无关领域。",
+  "terms": [
+    {
+      "id": "ai",
+      "label": "人工智能",
+      "description": "机器学习、计算机视觉、自然语言处理、智能系统与相关应用。"
+    },
+    {
+      "id": "robotics",
+      "label": "机器人",
+      "description": "机器人系统集成、运动控制、感知、自主导航与对抗竞赛。"
+    },
+    {
+      "id": "electronics",
+      "label": "电子设计",
+      "description": "模拟与数字电路、电源、信号处理、集成电路与电子系统设计。"
+    },
+    {
+      "id": "embedded",
+      "label": "嵌入式",
+      "description": "单片机、实时系统、传感器、通信与外设驱动开发。"
+    },
+    {
+      "id": "software",
+      "label": "软件开发",
+      "description": "程序设计、算法、软件工程、Web 与系统软件开发。"
+    },
+    {
+      "id": "math_modeling",
+      "label": "数学建模",
+      "description": "把实际问题抽象为数学模型，完成求解、验证与论文表达。"
+    },
+    {
+      "id": "mechanical",
+      "label": "机械与工程",
+      "description": "机械设计、制造、工程训练、结构与机电系统集成。"
+    },
+    {
+      "id": "cybersecurity",
+      "label": "网络安全",
+      "description": "网络空间安全、密码学、漏洞分析、逆向与安全防护。"
+    },
+    {
+      "id": "data_science",
+      "label": "数据科学",
+      "description": "统计分析、数据挖掘、可视化与数据驱动的决策。"
+    },
+    {
+      "id": "energy",
+      "label": "能源与环境",
+      "description": "节能减排、新能源、能源动力系统与可持续发展。"
+    },
+    {
+      "id": "innovation",
+      "label": "创新创业",
+      "description": "面向真实问题的创新项目、商业计划与跨学科协作。"
+    },
+    {
+      "id": "transportation",
+      "label": "交通运输",
+      "description": "交通系统规划、智能交通、载运工具与交通工程。"
+    }
+  ]
+}

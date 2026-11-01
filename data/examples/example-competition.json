@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": true,
+  "id": "example-competition",
+  "name": "示例竞赛（非真实数据）",
+  "aliases": ["示例别名"],
+  "organizers": [],
+  "domains": ["embedded"],
+  "summary": "仅用于展示数据结构与页面空状态的占位条目，不代表任何真实竞赛。",
+  "description": "这是 TechCompetitionHub 的示例数据，专门用于展示竞赛记录的结构、未知值语义与页面渲染方式。它不是任何真实竞赛，不包含真实报名时间、费用或评分，也不会进入公开 Repository 或排行榜。复制本文件创建新条目时，必须删除 is_example 标记、补齐真实来源并把状态改为 needs_review。",
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": "示例值，不代表真实资格。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": { "min": 1, "max": 3 },
+    "delivery_modes": ["offline"],
+    "notes": "示例值。"
+  },
+  "difficulty": {
+    "level": 1,
+    "rationale": "示例难度，仅用于展示字段，不是真实评价。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "示例值，禁止当作真实费用。"
+  },
+  "skills_required": [],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "示例值，禁止当作真实日期。"
+  },
+  "official_urls": [{ "label": "示例链接（非竞赛官网）", "url": "https://www.w3.org/TR/" }],
+  "sources": [
+    {
+      "id": "example-source",
+      "title": "示例来源（W3C 技术报告目录，非竞赛官网）",
+      "url": "https://www.w3.org/TR/",
+      "publisher": "W3C",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["example"],
+      "confidence": "low",
+      "notes": "仅用于满足示例数据的结构校验，不支撑任何竞赛事实。"
+    }
+  ],
+  "verification_status": "draft",
+  "last_verified_at": null,
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "示例数据，不得进入公开目录或排行榜。"
+}

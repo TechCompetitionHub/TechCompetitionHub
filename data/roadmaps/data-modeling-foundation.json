@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "data-modeling-foundation",
+  "title": "数据分析与建模入门：从 CSV 到建模报告",
+  "goal_type": "skill_direction",
+  "summary": "面向数学建模、统计建模等数据类竞赛的入门路线，覆盖 Python、统计、数据分析、建模与写作。",
+  "target_competition_ids": [],
+  "target_project_ids": [],
+  "target_skill_levels": [
+    { "skill_id": "python-programming", "target_level": 2 },
+    { "skill_id": "statistics", "target_level": 2 },
+    { "skill_id": "data-analysis", "target_level": 2 },
+    { "skill_id": "mathematical-modeling", "target_level": 1 },
+    { "skill_id": "technical-writing", "target_level": 1 }
+  ],
+  "phases": [
+    {
+      "id": "phase-python",
+      "title": "阶段 1：Python 与数据读取",
+      "goal": "能写可测试的脚本读取、清洗并输出数据摘要。",
+      "task_ids": ["python-script", "data-cleaning"]
+    },
+    {
+      "id": "phase-stats",
+      "title": "阶段 2：统计推断与可视化",
+      "goal": "能选择合适统计方法并解释不确定性。",
+      "task_ids": ["stats-report", "eda-notebook"]
+    },
+    {
+      "id": "phase-model",
+      "title": "阶段 3：建模与表达",
+      "goal": "完成一次迷你建模并写出可复现报告。",
+      "task_ids": ["mini-model", "modeling-report"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "python-script",
+      "title": "写一个命令行数据处理脚本",
+      "skill_id": "python-programming",
+      "goal": "读取 CSV、处理缺失值并输出 Markdown/JSON 摘要。",
+      "deliverables": ["脚本与测试", "示例输入输出"],
+      "acceptance_criteria": [
+        "错误路径有清晰提示",
+        "至少 3 个测试覆盖正常与异常输入",
+        "示例输入输出可复现"
+      ],
+      "estimated_hours": 6
+    },
+    {
+      "id": "data-cleaning",
+      "title": "完成一次可追溯的数据清洗",
+      "skill_id": "data-analysis",
+      "goal": "记录缺失、异常与口径处理规则，生成可复现的清洗数据。",
+      "deliverables": ["清洗脚本", "数据字典与清洗日志"],
+      "acceptance_criteria": [
+        "每条清洗规则可追溯到字段与理由",
+        "未静默删除异常值",
+        "原始数据与清洗结果分开保存"
+      ],
+      "estimated_hours": 6
+    },
+    {
+      "id": "stats-report",
+      "title": "完成一份统计推断报告",
+      "skill_id": "statistics",
+      "goal": "针对一个明确问题完成描述统计、检验、效应量与局限说明。",
+      "deliverables": ["分析脚本", "一页结论摘要"],
+      "acceptance_criteria": [
+        "写明零假设、显著性水平与检验方法",
+        "同时报告效应量与置信区间",
+        "指出至少一个可能违反的假设"
+      ],
+      "estimated_hours": 8
+    },
+    {
+      "id": "eda-notebook",
+      "title": "制作可复现的探索性分析",
+      "skill_id": "data-analysis",
+      "goal": "用 notebook 或脚本完成至少 3 个探索性图表，并写清样本范围。",
+      "deliverables": ["notebook/脚本", "图表与说明"],
+      "acceptance_criteria": ["图表有标题、单位与样本量", "结论与图表一致", "他人可从原始数据复现"],
+      "estimated_hours": 6
+    },
+    {
+      "id": "mini-model",
+      "title": "完成一次迷你建模",
+      "skill_id": "mathematical-modeling",
+      "goal": "选一道公开题，完成假设、基线模型、改进与验证。",
+      "deliverables": ["模型代码", "结果对比表"],
+      "acceptance_criteria": [
+        "假设有理由并说明影响",
+        "至少一个基线与一个改进模型",
+        "验证方法可复现"
+      ],
+      "estimated_hours": 12
+    },
+    {
+      "id": "modeling-report",
+      "title": "写一份建模报告",
+      "skill_id": "technical-writing",
+      "goal": "把问题、假设、方法、结果与限制写成结构清晰的报告。",
+      "deliverables": ["6 页以内报告", "复现说明"],
+      "acceptance_criteria": ["结论能追溯到具体图表或结果", "包含限制与失败案例", "复现步骤完整"],
+      "estimated_hours": 5
+    }
+  ],
+  "estimated_hours": 43,
+  "acceptance_criteria": [
+    "完成一次从原始数据到报告的完整分析",
+    "统计方法与结论边界写清楚",
+    "主要结果可由他人复现"
+  ],
+  "resource_ids": ["python-tutorial", "openintro-stats", "pandas-docs", "uw-madison-writing"],
+  "assumptions": [
+    "学习者每周可投入约 6–8 小时",
+    "需要一台可安装 Python 的电脑；不要求付费软件",
+    "任务工时为估算，不构成完成日期承诺"
+  ],
+  "version": "1.0.0",
+  "updated_at": "2026-11-01"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cost-statuses",
+  "label": "费用状态",
+  "description": "区分免费、已核验、估算与未知，避免把未知费用当作免费。",
+  "terms": [
+    { "id": "free", "label": "免费", "description": "官方明确不收取报名费。" },
+    { "id": "verified", "label": "已核验费用", "description": "费用金额有官方来源。" },
+    {
+      "id": "estimated",
+      "label": "估算",
+      "description": "基于设备、差旅或材料投入的估算，不是官方收费。"
+    },
+    { "id": "unknown", "label": "待核验", "description": "尚未找到可靠的费用信息。" },
+    {
+      "id": "not_applicable",
+      "label": "不适用",
+      "description": "该竞赛没有可直接对应的费用口径。"
+    }
+  ]
+}

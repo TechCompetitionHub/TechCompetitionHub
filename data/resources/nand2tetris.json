@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "nand2tetris",
+  "title": "Nand2Tetris",
+  "resource_type": "course",
+  "url": "https://www.nand2tetris.org/",
+  "language": "en",
+  "level": 1,
+  "domains": ["electronics", "embedded"],
+  "related_skill_ids": ["digital-logic"],
+  "publisher": "Nand2Tetris",
+  "license_or_access_terms": "课程材料免费访问；具体许可与教材条款见项目页面。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "从逻辑门到计算机体系结构的项目式课程。"
+}

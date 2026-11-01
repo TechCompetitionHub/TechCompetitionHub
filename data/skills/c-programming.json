@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "c-programming",
+  "name": "C 语言编程",
+  "domain": "programming",
+  "definition": "使用 C 语言完成内存安全、边界清晰、可测试的系统级编程。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未写过可编译的 C 程序。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成数组、指针与结构体练习。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立实现模块化程序，处理边界与错误，写基础测试。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能定位内存与并发问题，做性能与可维护性取舍。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计接口与测试策略，审查他人 C 代码。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "ring-buffer",
+      "title": "实现带测试的环形缓冲区",
+      "level": 2,
+      "goal": "实现一个固定容量环形缓冲区，覆盖满/空、覆盖写与边界条件，并写测试。",
+      "prerequisites": ["掌握数组、指针与结构体", "会使用编译器和调试器"],
+      "steps": [
+        "定义清晰 API，说明所有权与错误返回。",
+        "实现读写、容量查询与清空操作。",
+        "用断言或测试框架覆盖空、满、回绕与非法参数。"
+      ],
+      "deliverables": ["ring_buffer.c/h", "测试与 README"],
+      "acceptance_criteria": [
+        "所有边界条件有测试，测试可一键运行。",
+        "无未定义行为，开启编译警告后无告警。",
+        "README 说明 API 语义与线程安全边界。"
+      ],
+      "estimated_hours": 6,
+      "common_failures": ["忽略整数回绕", "越界写未检查"]
+    }
+  ],
+  "resource_ids": ["cppreference-c"],
+  "related_competition_ids": ["lanqiao-cup", "national-undergraduate-smart-car-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "c-programming-reference",
+      "title": "cppreference C 参考",
+      "url": "https://en.cppreference.com/w/c",
+      "publisher": "cppreference",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

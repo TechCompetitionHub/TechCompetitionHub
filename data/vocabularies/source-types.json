@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "id": "source-types",
+  "label": "来源类型",
+  "description": "证据优先级从官方到社区递减；社区经验不能替代官方规则。",
+  "terms": [
+    {
+      "id": "official",
+      "label": "官方竞赛网站",
+      "description": "竞赛官网、官方章程或组委会通知。"
+    },
+    {
+      "id": "organizer",
+      "label": "主办/承办单位",
+      "description": "主办或承办单位发布的正式页面。"
+    },
+    {
+      "id": "institutional",
+      "label": "高校/机构",
+      "description": "高校教务部门或权威机构发布的资料。"
+    },
+    { "id": "news", "label": "可信媒体", "description": "有编辑责任与署名机制的媒体报道。" },
+    {
+      "id": "community",
+      "label": "社区经验",
+      "description": "参赛者经验与讨论，仅用于经验，不替代官方规则。"
+    },
+    { "id": "research", "label": "研究资料", "description": "论文、研究报告或数据集文档。" }
+  ]
+}

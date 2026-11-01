@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "cryptography",
+  "name": "密码学基础",
+  "domain": "security",
+  "definition": "理解对称/非对称加密、哈希、消息认证与常见误用。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不了解加密与哈希的区别。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程调用加密库完成加解密。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立选择合适原语、处理随机数与密钥，写测试向量。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能识别模式误用、重放与非预期攻击面。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计密钥管理与协议方案并审查实现。"
+    }
+  ],
+  "prerequisite_skill_ids": ["math-foundations", "python-programming"],
+  "practice_tasks": [
+    {
+      "id": "aes-modes",
+      "title": "实现并验证 AES 模式",
+      "level": 2,
+      "goal": "使用标准库实现 AES-CBC/GCM 示例，验证测试向量并说明误用风险。",
+      "prerequisites": ["会 Python", "了解异或与哈希"],
+      "steps": [
+        "用标准库实现加密/解密，禁止自造算法。",
+        "用公开测试向量验证结果。",
+        "写清 IV/nonce 管理、认证与错误处理。"
+      ],
+      "deliverables": ["示例代码", "测试向量与风险说明"],
+      "acceptance_criteria": [
+        "测试向量验证通过。",
+        "明确说明 nonce 复用与填充预言风险。",
+        "密钥不写入代码或日志。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["自己实现加密算法", "固定 IV 复用"]
+    }
+  ],
+  "resource_ids": ["crypto101"],
+  "related_competition_ids": ["national-undergraduate-information-security-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "cryptography-reference",
+      "title": "Crypto101",
+      "url": "https://www.crypto101.io/",
+      "publisher": "Crypto101",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "radare2-book",
+  "title": "The Radare2 Book",
+  "resource_type": "documentation",
+  "url": "https://book.rada.re/",
+  "language": "en",
+  "level": 2,
+  "domains": ["cybersecurity"],
+  "related_skill_ids": ["reverse-engineering"],
+  "publisher": "Radare2 社区",
+  "license_or_access_terms": "免费访问；内容遵循原站许可。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "逆向分析工具使用与分析方法。"
+}

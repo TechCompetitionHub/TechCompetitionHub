@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "national-energy-saving-emission-reduction-competition",
+  "name": "全国大学生节能减排社会实践与科技竞赛",
+  "aliases": ["节能减排竞赛", "节能减排大赛"],
+  "organizers": [
+    {
+      "name": "全国大学生节能减排社会实践与科技竞赛委员会",
+      "role": "host",
+      "url": "http://www.jienengjianpai.org/"
+    },
+    {
+      "name": "教育部高等学校能源动力类专业教学指导委员会",
+      "role": "organizer",
+      "url": null
+    }
+  ],
+  "domains": ["energy", "mechanical", "innovation"],
+  "summary": "围绕节能减排、绿色能源主题的社会实践与科技作品竞赛，通常每年举办一次，包含申报、评审与决赛。",
+  "description": "全国大学生节能减排社会实践与科技竞赛由教育部高等学校能源动力类专业教学指导委员会指导，全国大学生节能减排社会实践与科技竞赛委员会主办。官网竞赛介绍与章程说明赛事紧密围绕节能减排、绿色能源主题，每年举办一次，原则上 4 月申报、8 月竞赛，承办单位一般为上届表现突出院校。平台记录官网可核验的组织架构、主题与赛制；具体年份日程、资格与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": "官网定位为大学生竞赛；研究生参赛资格以当届章程为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "以团队社会实践或科技作品参赛，包含申报、评审与决赛；团队要求以当届章程为准。"
+  },
+  "difficulty": {
+    "level": 4,
+    "rationale": "需要将能源环境问题转化为可验证作品或社会实践成果，并完成工程实现与答辩。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "mechanical-design",
+      "target_level": 1
+    },
+    {
+      "skill_id": "data-analysis",
+      "target_level": 1
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "章程（2025 修订）载明原则上 4 月申报、8 月竞赛；具体年份日期待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "http://www.jienengjianpai.org/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "energy-intro",
+      "title": "全国大学生节能减排社会实践与科技竞赛介绍",
+      "url": "https://www.jienengjianpai.org/h-col-109.html",
+      "publisher": "全国大学生节能减排社会实践与科技竞赛委员会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "purpose", "format"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    },
+    {
+      "id": "energy-charter",
+      "title": "全国大学生节能减排社会实践与科技竞赛章程（2025 年修订）",
+      "url": "https://www.jienengjianpai.org/h-col-161.html",
+      "publisher": "全国大学生节能减排社会实践与科技竞赛委员会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["organizers", "schedule", "eligibility"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": "1.0.0",
+  "scores": {
+    "model_version": "1.0.0",
+    "dimension_scores": {
+      "technical_depth": {
+        "score": 82,
+        "rationale": "需要能源环境问题分析、工程方案设计与验证，部分作品涉及系统集成。",
+        "evidence_level": "medium"
+      },
+      "recognition": {
+        "score": 80,
+        "rationale": "由教育部能源动力类专业教学指导委员会指导、竞赛委员会主办，官网公开章程。",
+        "evidence_level": "high"
+      },
+      "practical_value": {
+        "score": 90,
+        "rationale": "强调社会实践与可验证科技作品，成果导向明确。",
+        "evidence_level": "high"
+      },
+      "competitiveness": {
+        "score": 76,
+        "rationale": "官网未公开本届参赛规模与获奖比例，本次不据此加分。",
+        "evidence_level": "medium"
+      },
+      "growth_value": {
+        "score": 84,
+        "rationale": "覆盖问题调研、方案设计、工程实现与表达，适合跨学科项目。",
+        "evidence_level": "medium"
+      },
+      "cost_accessibility": {
+        "score": 55,
+        "rationale": "官网未公开费用；按材料与差旅投入保守估计，证据不足。",
+        "evidence_level": "medium"
+      }
+    },
+    "weighted_score": 81.25,
+    "evidence_summary": "名称、组织架构、主题与章程来自官网；具体年份日程、费用与获奖比例未核验。成本维度为保守估计。",
+    "sample_size": null,
+    "confidence_level": "medium",
+    "review_status": "approved",
+    "reviewed_at": "2026-11-01",
+    "reviewer_role": "platform-editorial-initial",
+    "notes": "首轮平台编辑初评，依据官网公开信息；待维护者与领域评审复核，不构成官方评价。"
+  },
+  "notes": "每年主题与日程可能调整；报名、费用与资格以当届通知为准。"
+}

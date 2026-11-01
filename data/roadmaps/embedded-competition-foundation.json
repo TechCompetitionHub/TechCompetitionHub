@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "embedded-competition-foundation",
+  "title": "嵌入式竞赛入门：从 C 到闭环控制",
+  "goal_type": "skill_direction",
+  "summary": "面向智能汽车、工创赛等嵌入式相关竞赛的入门路线，覆盖 C 语言、电子基础、单片机外设、控制与文档。",
+  "target_competition_ids": [],
+  "target_project_ids": [],
+  "target_skill_levels": [
+    { "skill_id": "electronics-fundamentals", "target_level": 2 },
+    { "skill_id": "embedded-c", "target_level": 2 },
+    { "skill_id": "microcontroller", "target_level": 2 },
+    { "skill_id": "control-theory", "target_level": 1 },
+    { "skill_id": "technical-writing", "target_level": 1 }
+  ],
+  "phases": [
+    {
+      "id": "phase-foundations",
+      "title": "阶段 1：电路与 C 语言基础",
+      "goal": "能安全使用开发板与基础仪器，写出可编译、可测试的 C 模块。",
+      "task_ids": ["electronics-safety", "c-module"]
+    },
+    {
+      "id": "phase-peripherals",
+      "title": "阶段 2：单片机外设与采样",
+      "goal": "能配置定时器、串口与 ADC，并记录可复现的实验结果。",
+      "task_ids": ["timer-uart", "sensor-sampling"]
+    },
+    {
+      "id": "phase-integration",
+      "title": "阶段 3：闭环联调与文档",
+      "goal": "完成一个可复现的小型闭环系统，并写清限制与调试记录。",
+      "task_ids": ["closed-loop", "integration-report"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "electronics-safety",
+      "title": "搭一个安全的供电与测量实验",
+      "skill_id": "electronics-fundamentals",
+      "goal": "理解电压、电流、限流与接地，完成一次安全的开发板供电与信号测量。",
+      "deliverables": ["接线图与限流方案", "测量记录（含设备与量程）"],
+      "acceptance_criteria": [
+        "接线图标注电源、地与限流措施",
+        "测量记录包含设备型号、量程与至少 3 个测点",
+        "说明一个可能损坏器件的错误操作及规避方法"
+      ],
+      "estimated_hours": 6
+    },
+    {
+      "id": "c-module",
+      "title": "写一个可测试的 C 模块",
+      "skill_id": "embedded-c",
+      "goal": "实现环形缓冲区或状态机模块，开启编译警告并通过边界测试。",
+      "deliverables": ["模块源码与头文件", "测试与构建命令"],
+      "acceptance_criteria": [
+        "开启 -Wall -Wextra 后无告警",
+        "测试覆盖空、满、回绕与非法参数",
+        "头文件说明所有权与错误返回"
+      ],
+      "estimated_hours": 8
+    },
+    {
+      "id": "timer-uart",
+      "title": "定时器采样与串口输出",
+      "skill_id": "microcontroller",
+      "goal": "用定时器触发采样并通过串口输出，测量周期抖动。",
+      "deliverables": ["固件工程", "周期与抖动记录"],
+      "acceptance_criteria": [
+        "采样周期来自定时器而非忙等",
+        "串口帧格式与错误处理有文档",
+        "记录至少 100 次采样的周期分布"
+      ],
+      "estimated_hours": 10
+    },
+    {
+      "id": "sensor-sampling",
+      "title": "传感器数据采集与标定",
+      "skill_id": "microcontroller",
+      "goal": "读取一个模拟或数字传感器，完成标定并处理异常值。",
+      "deliverables": ["采集代码", "标定数据与异常处理说明"],
+      "acceptance_criteria": [
+        "标定方法可复现，记录参考量",
+        "断线/超量程时有明确处理",
+        "数据文件包含时间戳与原始值"
+      ],
+      "estimated_hours": 8
+    },
+    {
+      "id": "closed-loop",
+      "title": "完成一个小型闭环控制",
+      "skill_id": "control-theory",
+      "goal": "让电机或舵机根据传感器反馈达到目标位置/速度，并记录参数与失败。",
+      "deliverables": ["闭环代码", "参数对比与失败记录"],
+      "acceptance_criteria": [
+        "有输出限幅与安全停止",
+        "至少比较 3 组参数并给出指标",
+        "失败记录区分现象、假设与验证"
+      ],
+      "estimated_hours": 14
+    },
+    {
+      "id": "integration-report",
+      "title": "写一份可复现的联调报告",
+      "skill_id": "technical-writing",
+      "goal": "把硬件、代码、测试与限制写成他人可复现的报告。",
+      "deliverables": ["联调报告", "复现命令与物料清单"],
+      "acceptance_criteria": [
+        "他人按报告能复现主要实验",
+        "报告区分事实、推断与未解决问题",
+        "包含安全注意事项与已知限制"
+      ],
+      "estimated_hours": 4
+    }
+  ],
+  "estimated_hours": 50,
+  "acceptance_criteria": [
+    "完成至少一个可运行的闭环小系统",
+    "所有关键实验有可复现记录与限制说明",
+    "代码开启编译警告后无告警，测试可一键运行"
+  ],
+  "resource_ids": [
+    "cppreference-c",
+    "sparkfun-electronics",
+    "stm32-mcus",
+    "python-control-docs",
+    "uw-madison-writing"
+  ],
+  "assumptions": [
+    "学习者每周可投入约 6–10 小时",
+    "需要一块 MCU 开发板、基础传感器与万用表；示波器/逻辑分析仪为加分项",
+    "任务工时为估算，不构成完成日期承诺"
+  ],
+  "version": "1.0.0",
+  "updated_at": "2026-11-01"
+}

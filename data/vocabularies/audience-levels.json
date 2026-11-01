@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "id": "audience-levels",
+  "label": "适合对象",
+  "description": "竞赛面向的学习阶段。具体资格仍以官方章程为准。",
+  "terms": [
+    { "id": "undergraduate", "label": "本科生", "description": "普通高等学校全日制本科在校生。" },
+    {
+      "id": "graduate",
+      "label": "研究生",
+      "description": "硕士研究生或博士研究生，具体以官方规则为准。"
+    },
+    {
+      "id": "vocational",
+      "label": "高职高专",
+      "description": "高等职业院校与高等专科学校学生。"
+    },
+    { "id": "high_school", "label": "高中生", "description": "部分竞赛设有中学生赛道。" },
+    {
+      "id": "open",
+      "label": "不限",
+      "description": "官方未限制学习阶段，或面向更广泛人群。"
+    }
+  ]
+}

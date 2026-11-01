@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "crypto101",
+  "title": "Crypto101",
+  "resource_type": "book",
+  "url": "https://www.crypto101.io/",
+  "language": "en",
+  "level": 2,
+  "domains": ["cybersecurity", "math_modeling"],
+  "related_skill_ids": ["cryptography"],
+  "publisher": "Crypto101",
+  "license_or_access_terms": "免费访问；原书许可与再利用条款以项目页面为准。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "密码学入门教材，强调常见误区与实践约束。"
+}

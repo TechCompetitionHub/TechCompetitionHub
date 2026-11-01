@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "python-control-docs",
+  "title": "Python Control Systems Library",
+  "resource_type": "documentation",
+  "url": "https://python-control.readthedocs.io/",
+  "language": "en",
+  "level": 2,
+  "domains": ["robotics", "software"],
+  "related_skill_ids": ["control-theory"],
+  "publisher": "python-control",
+  "license_or_access_terms": "免费访问；文档与代码遵循原站许可证。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "用 Python 做传递函数、状态空间与频域分析。"
+}

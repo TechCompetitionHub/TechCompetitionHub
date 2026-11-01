@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "verilog",
+  "name": "Verilog 与硬件描述",
+  "domain": "embedded",
+  "definition": "使用 Verilog 编写可综合 RTL、测试平台并完成仿真验证。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未写过 Verilog。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成组合逻辑与简单时序逻辑。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立编写可综合模块与自检测试平台。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理跨时钟域、时序收敛与综合约束。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计可验证 RTL 架构并审查验证覆盖率。"
+    }
+  ],
+  "prerequisite_skill_ids": ["digital-logic"],
+  "practice_tasks": [
+    {
+      "id": "uart-tx",
+      "title": "实现 UART 发送器并仿真",
+      "level": 2,
+      "goal": "实现参数化波特率的 UART 发送器，写自检测试平台并验证帧格式。",
+      "prerequisites": ["了解数字逻辑与时序", "会使用仿真器"],
+      "steps": [
+        "画帧格式与状态机。",
+        "编写可综合 RTL 与测试平台。",
+        "覆盖空闲、起始、数据、停止与连续发送。"
+      ],
+      "deliverables": ["RTL 与测试平台", "仿真记录"],
+      "acceptance_criteria": [
+        "测试覆盖连续发送与背靠背帧。",
+        "波特率参数改变后测试仍通过。",
+        "RTL 无锁存器推断与多驱动。"
+      ],
+      "estimated_hours": 10,
+      "common_failures": ["在 always 块中混用阻塞/非阻塞", "测试只跑一帧"]
+    }
+  ],
+  "resource_ids": ["chipverify-verilog"],
+  "related_competition_ids": ["national-undergraduate-ic-innovation-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "verilog-reference",
+      "title": "Verilog Tutorial",
+      "url": "https://www.chipverify.com/verilog/verilog-tutorial",
+      "publisher": "ChipVerify",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

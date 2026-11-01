@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "atlassian-agile",
+  "title": "Agile project management",
+  "resource_type": "article",
+  "url": "https://www.atlassian.com/agile/project-management",
+  "language": "en",
+  "level": 1,
+  "domains": ["innovation"],
+  "related_skill_ids": ["project-management"],
+  "publisher": "Atlassian",
+  "license_or_access_terms": "免费访问；内容版权归 Atlassian，转载需遵守原站条款。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "敏捷项目管理的角色、节奏与常见实践。"
+}

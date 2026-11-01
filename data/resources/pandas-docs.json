@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "pandas-docs",
+  "title": "pandas 用户指南",
+  "resource_type": "documentation",
+  "url": "https://pandas.pydata.org/docs/user_guide/",
+  "language": "en",
+  "level": 2,
+  "domains": ["data_science"],
+  "related_skill_ids": ["data-analysis"],
+  "publisher": "pandas / NumFOCUS",
+  "license_or_access_terms": "免费访问；文档与代码遵循原站许可证。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "英文文档；提供 10 分钟入门与专题章节。"
+}

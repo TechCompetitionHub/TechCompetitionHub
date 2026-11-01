@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "national-undergraduate-information-security-competition",
+  "name": "全国大学生信息安全竞赛",
+  "aliases": ["信安竞赛", "信息安全竞赛", "CISCN"],
+  "organizers": [
+    {
+      "name": "中国信息安全测评中心",
+      "role": "host",
+      "url": "http://www.ciscn.cn/"
+    },
+    {
+      "name": "教育部高等学校网络空间安全专业教学指导委员会",
+      "role": "organizer",
+      "url": null
+    }
+  ],
+  "domains": ["cybersecurity", "software"],
+  "summary": "面向高校学生的网络空间安全竞赛，设作品赛与创新实践能力赛等赛道，覆盖安全作品、攻防与创新实践。",
+  "description": "全国大学生信息安全竞赛由教育部高等学校网络空间安全专业教学指导委员会指导，中国信息安全测评中心等主办。官网公告说明 2026 年 8 月举办第十九届全国大学生信息安全竞赛（作品赛）暨相关赛事，并设创新实践能力赛。平台记录官网可核验的名称、组织信息与赛事安排；具体赛道规则、报名资格与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": "官网通知面向高校学生；具体资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["hybrid"],
+    "notes": "作品赛与创新实践能力赛形式不同，通常包含作品提交、线上/线下评审与答辩。"
+  },
+  "difficulty": {
+    "level": 5,
+    "rationale": "需要网络安全、系统、密码学或逆向等专业知识，并完成作品或攻防实践。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "cybersecurity-basics",
+      "target_level": 2
+    },
+    {
+      "skill_id": "cryptography",
+      "target_level": 1
+    },
+    {
+      "skill_id": "reverse-engineering",
+      "target_level": 1
+    },
+    {
+      "skill_id": "linux-cli",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网公告显示 2026 年 8 月举办第十九届；2027 年安排待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "http://www.ciscn.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ciscn-announcement",
+      "title": "关于举办第十九届全国大学生信息安全竞赛的通知",
+      "url": "http://www.ciscn.cn/announcement/view/412",
+      "publisher": "全国大学生信息安全竞赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "schedule", "tracks"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    },
+    {
+      "id": "ciscn-charter",
+      "title": "全国大学生信息安全竞赛章程",
+      "url": "http://www.ciscn.cn/competitioncharter",
+      "publisher": "全国大学生信息安全竞赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["organizers", "format", "eligibility"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": "1.0.0",
+  "scores": {
+    "model_version": "1.0.0",
+    "dimension_scores": {
+      "technical_depth": {
+        "score": 90,
+        "rationale": "涉及系统安全、密码学、逆向或安全作品实现，专业门槛高。",
+        "evidence_level": "high"
+      },
+      "recognition": {
+        "score": 84,
+        "rationale": "由教育部网络空间安全专业教学指导委员会指导、中国信息安全测评中心等主办，官网公开章程与通知。",
+        "evidence_level": "high"
+      },
+      "practical_value": {
+        "score": 88,
+        "rationale": "以安全作品或攻防实践为核心，产出可验证、可复现。",
+        "evidence_level": "high"
+      },
+      "competitiveness": {
+        "score": 86,
+        "rationale": "官网公开赛事安排，但本次未核验参赛规模与获奖比例。",
+        "evidence_level": "medium"
+      },
+      "growth_value": {
+        "score": 88,
+        "rationale": "覆盖安全基础、密码学、逆向、Linux 与写作，成长路径清晰。",
+        "evidence_level": "medium"
+      },
+      "cost_accessibility": {
+        "score": 60,
+        "rationale": "主要成本为时间与实验环境；官网未公开费用，保守估计。",
+        "evidence_level": "medium"
+      }
+    },
+    "weighted_score": 86,
+    "evidence_summary": "名称、组织信息与 2026 年赛事安排来自官网；具体赛道规则、费用与获奖比例未核验。成本维度为保守估计。",
+    "sample_size": null,
+    "confidence_level": "medium",
+    "review_status": "approved",
+    "reviewed_at": "2026-11-01",
+    "reviewer_role": "platform-editorial-initial",
+    "notes": "首轮平台编辑初评，依据官网公开信息；待维护者与领域评审复核，不构成官方评价。"
+  },
+  "notes": "赛道与规则以当届通知为准；费用与获奖比例未核验。"
+}

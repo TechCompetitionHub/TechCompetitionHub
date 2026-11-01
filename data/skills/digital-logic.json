@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "digital-logic",
+  "name": "数字逻辑",
+  "domain": "embedded",
+  "definition": "理解组合/时序逻辑、状态机、仿真与硬件描述基础。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不了解二进制与逻辑门。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按教程完成真值表与简单组合逻辑。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立设计状态机并写测试向量。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理时序约束、亚稳态与复位策略。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计可验证的数字模块并审查时序。"
+    }
+  ],
+  "prerequisite_skill_ids": ["electronics-fundamentals"],
+  "practice_tasks": [
+    {
+      "id": "sync-counter",
+      "title": "设计一个同步计数器并仿真",
+      "level": 2,
+      "goal": "用状态机实现带使能、复位与进位输出的同步计数器，并写自检测试。",
+      "prerequisites": ["了解触发器与时钟", "会使用仿真工具"],
+      "steps": [
+        "画状态图，列出所有状态与输出。",
+        "实现 RTL 或逻辑图，写测试平台。",
+        "覆盖复位、进位、回绕与非法状态。"
+      ],
+      "deliverables": ["设计文件", "仿真波形与测试"],
+      "acceptance_criteria": [
+        "测试覆盖所有状态转移。",
+        "复位后输出确定，无锁死。",
+        "时序图能对应到代码或逻辑。"
+      ],
+      "estimated_hours": 6,
+      "common_failures": ["异步复位未同步释放", "遗漏非法状态恢复"]
+    }
+  ],
+  "resource_ids": ["nand2tetris"],
+  "related_competition_ids": ["national-undergraduate-ic-innovation-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "digital-logic-reference",
+      "title": "Nand2Tetris",
+      "url": "https://www.nand2tetris.org/",
+      "publisher": "Nand2Tetris",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

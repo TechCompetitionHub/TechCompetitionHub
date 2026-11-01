@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "mdn-web-docs",
+  "title": "MDN Web 文档（中文）",
+  "resource_type": "documentation",
+  "url": "https://developer.mozilla.org/zh-CN/docs/Web",
+  "language": "zh-CN",
+  "level": 1,
+  "domains": ["software"],
+  "related_skill_ids": ["web-development"],
+  "publisher": "MDN contributors",
+  "license_or_access_terms": "免费访问；内容与代码示例遵循 MDN 页面所列许可证。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "覆盖 HTML、CSS、JavaScript 与可访问性基础。"
+}

@@ -1,0 +1,130 @@
+name: 新增竞赛
+description: 提交一条新的竞赛数据；请先核对官方来源，不要填写无法核验的事实。
+title: '[竞赛新增] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > 请先阅读 `CONTRIBUTING.md` 与 `docs/DATA_MODEL.md`。
+        > 无法核验的字段请写“待核验”，不要猜测日期、费用、获奖比例或官方排名。
+        > 示例数据不能提交到正式目录。
+
+  - type: input
+    id: competition_name
+    attributes:
+      label: 官方名称
+      description: 使用竞赛官网的正式名称，不要用宣传语。
+      placeholder: 例如：全国大学生数学建模竞赛
+    validations:
+      required: true
+
+  - type: input
+    id: official_url
+    attributes:
+      label: 官方来源 URL
+      description: 竞赛官网、官方章程或组委会通知。
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: organizers
+    attributes:
+      label: 主办/承办单位
+      description: 写明来源中可核验的主办、承办或指导单位。
+      placeholder: 主办：...；承办：...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domains
+    attributes:
+      label: 领域（可多选）
+      multiple: true
+      options:
+        - 人工智能
+        - 机器人
+        - 电子设计
+        - 嵌入式
+        - 软件开发
+        - 数学建模
+        - 机械与工程
+        - 网络安全
+        - 数据科学
+        - 能源与环境
+        - 创新创业
+        - 交通运输
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: 适合对象（可多选）
+      multiple: true
+      options:
+        - 本科生
+        - 研究生
+        - 高职高专
+        - 高中生
+        - 不限
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: 参赛形式
+      options:
+        - 团队赛
+        - 个人赛
+        - 个人/团队均有
+        - 不确定
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 一句话说明
+      description: 客观描述竞赛考查什么，不写“最好”“唯一”“官方排名”。
+      placeholder: 3 人一队，在限定时间内完成建模、求解与论文写作。
+    validations:
+      required: true
+
+  - type: textarea
+    id: verified_facts
+    attributes:
+      label: 已核验的关键事实
+      description: 列出你从官方来源确认的字段（名称、主办、资格、时间等）及对应证据。
+      placeholder: |
+        - 主办单位：...
+        - 参赛资格：...
+        - 2026 年赛题发布时间：...
+    validations:
+      required: true
+
+  - type: textarea
+    id: unknown_fields
+    attributes:
+      label: 仍未核验的字段
+      description: 明确写出哪些字段没有可靠来源；这些字段应保持 null 或待核验。
+      placeholder: 报名费、获奖比例、2027 年日程。
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: 来源清单
+      description: 每条来源写标题、URL、发布方、访问日期与支持的字段。
+      placeholder: |
+        1. 竞赛官网首页 | https://... | 组委会 | 2026-11-01 | name, organizers
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 确认
+      options:
+        - label: 我没有伪造竞赛事实、报名日期、官方排名、获奖数据或资源链接。
+          required: true
+        - label: 我填写的未知字段会保持待核验，不会用 0 或 100 冒充分数。
+          required: true
+        - label: 我拥有提交内容的发布权限，且不包含个人信息或未授权材料。
+          required: true

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "robotics-integration",
+  "name": "机器人系统集成",
+  "domain": "robotics",
+  "definition": "把机械、嵌入式、传感、控制与软件集成为可运行、可调试的机器人系统。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未集成过完整机器人系统。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按教程让单个模块运行。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立完成传感-控制-执行闭环并记录调试过程。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能定位跨模块故障、做性能与安全取舍。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计系统架构、测试方案并指导团队联调。"
+    }
+  ],
+  "prerequisite_skill_ids": ["microcontroller", "control-theory", "embedded-c"],
+  "practice_tasks": [
+    {
+      "id": "differential-drive",
+      "title": "完成差速底盘闭环",
+      "level": 3,
+      "goal": "让差速底盘根据传感器反馈完成直线/转向任务，记录参数、失败与安全处理。",
+      "prerequisites": ["会嵌入式 C", "了解 PID 与电机驱动"],
+      "steps": [
+        "定义坐标、传感器与执行器接口。",
+        "实现速度闭环与安全停止。",
+        "记录至少 3 次失败调试与最终参数。"
+      ],
+      "deliverables": ["系统代码", "联调记录与演示视频"],
+      "acceptance_criteria": [
+        "断线/超时/越界时能安全停止。",
+        "任务成功率可测量，记录测试次数。",
+        "联调记录区分现象、假设与验证。"
+      ],
+      "estimated_hours": 16,
+      "common_failures": ["没有急停与限幅", "只演示一次成功"]
+    }
+  ],
+  "resource_ids": ["ros2-docs"],
+  "related_competition_ids": ["robomaster-university-championship"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "robotics-integration-reference",
+      "title": "ROS 2 文档",
+      "url": "https://docs.ros.org/en/jazzy/",
+      "publisher": "ROS 2 社区",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

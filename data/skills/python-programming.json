@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "python-programming",
+  "name": "Python 编程",
+  "domain": "programming",
+  "definition": "使用 Python 完成脚本、数据处理、模块化与测试的基础能力。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未写过 Python 程序。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成变量、循环、函数与文件读写。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立编写脚本处理 CSV/JSON，使用虚拟环境并处理异常。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能拆分模块、写测试、定位性能与边界问题。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计包结构、测试策略并指导代码审查。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "csv-stats-script",
+      "title": "完成 CSV 清洗与统计脚本",
+      "level": 2,
+      "goal": "写一个命令行脚本，读取 CSV、清洗缺失值、输出统计报告，并附测试。",
+      "prerequisites": ["掌握 Python 基础语法", "了解文件读写"],
+      "steps": [
+        "定义输入参数与错误处理，拒绝不存在的文件。",
+        "实现清洗、统计与 Markdown/JSON 输出。",
+        "为正常、缺失列、空文件写测试。"
+      ],
+      "deliverables": ["可执行脚本", "README 与测试"],
+      "acceptance_criteria": [
+        "无参数或错误路径时给出清晰错误信息。",
+        "至少 3 个测试覆盖正常与异常输入。",
+        "示例输入输出可复现。"
+      ],
+      "estimated_hours": 6,
+      "common_failures": ["静默忽略缺失列", "把逻辑写在顶层无法测试"]
+    }
+  ],
+  "resource_ids": ["python-tutorial"],
+  "related_competition_ids": [
+    "china-collegiate-computing-competition",
+    "cumcm",
+    "lanqiao-cup",
+    "national-undergraduate-statistical-modeling-competition"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "python-programming-reference",
+      "title": "Python 官方教程",
+      "url": "https://docs.python.org/zh-cn/3/tutorial/",
+      "publisher": "Python Software Foundation",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

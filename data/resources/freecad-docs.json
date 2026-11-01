@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "freecad-docs",
+  "title": "FreeCAD Wiki",
+  "resource_type": "documentation",
+  "url": "https://wiki.freecad.org/",
+  "language": "en",
+  "level": 1,
+  "domains": ["mechanical"],
+  "related_skill_ids": ["mechanical-design"],
+  "publisher": "FreeCAD 社区",
+  "license_or_access_terms": "免费访问；文档遵循原站许可，软件为 LGPL。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "参数化建模、草图与工程图入门。"
+}

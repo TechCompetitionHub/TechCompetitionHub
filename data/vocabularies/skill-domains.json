@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "id": "skill-domains",
+  "label": "技能领域",
+  "description": "技能图谱的一级分类，用于目录分组与筛选。",
+  "terms": [
+    {
+      "id": "programming",
+      "label": "编程基础",
+      "description": "语言、数据结构、调试与版本控制。"
+    },
+    {
+      "id": "math",
+      "label": "数学基础",
+      "description": "微积分、线性代数、概率统计与优化。"
+    },
+    {
+      "id": "data",
+      "label": "数据与建模",
+      "description": "数据分析、统计建模、机器学习与实验评估。"
+    },
+    {
+      "id": "embedded",
+      "label": "嵌入式与硬件",
+      "description": "单片机、外设、实时系统与电子电路。"
+    },
+    {
+      "id": "robotics",
+      "label": "机器人与控制",
+      "description": "控制理论、感知、运动规划与系统集成。"
+    },
+    {
+      "id": "security",
+      "label": "网络安全",
+      "description": "系统安全、密码学、逆向与漏洞分析。"
+    },
+    {
+      "id": "web",
+      "label": "Web 与后端",
+      "description": "前端、后端、数据库与 API 设计。"
+    },
+    {
+      "id": "engineering",
+      "label": "工程实践",
+      "description": "机械设计、能源系统、测试与可复现性。"
+    },
+    {
+      "id": "communication",
+      "label": "表达与协作",
+      "description": "技术写作、答辩、项目管理与团队协作。"
+    }
+  ]
+}

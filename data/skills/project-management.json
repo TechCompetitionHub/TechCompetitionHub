@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "project-management",
+  "name": "项目与团队协作",
+  "domain": "communication",
+  "definition": "拆解目标、安排里程碑、管理风险并让团队协作可追踪。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "项目没有明确目标或分工。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按模板列出任务与截止时间。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立拆解里程碑、识别依赖并维护风险清单。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能根据进度调整范围，处理冲突与阻塞。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计协作机制、复盘流程并指导团队。"
+    }
+  ],
+  "prerequisite_skill_ids": ["git-collaboration"],
+  "practice_tasks": [
+    {
+      "id": "four-week-plan",
+      "title": "制定一份 4 周备赛计划",
+      "level": 2,
+      "goal": "为一个真实竞赛目标拆解 4 周计划，包含里程碑、依赖、风险和验收标准。",
+      "prerequisites": ["有一个明确目标", "了解团队可用时间"],
+      "steps": [
+        "列出目标、范围与不做什么。",
+        "拆解每周里程碑与任务，标注依赖和负责人。",
+        "维护风险清单与每周复盘记录。"
+      ],
+      "deliverables": ["4 周计划", "风险与复盘记录"],
+      "acceptance_criteria": [
+        "每个里程碑有可验证的验收标准。",
+        "风险有触发条件与应对措施。",
+        "计划包含范围取舍，而非只堆任务。"
+      ],
+      "estimated_hours": 4,
+      "common_failures": ["只列任务不定义完成标准", "忽略依赖导致最后一周爆炸"]
+    }
+  ],
+  "resource_ids": ["atlassian-agile"],
+  "related_competition_ids": [
+    "china-engineering-practice-innovation-competition",
+    "national-energy-saving-emission-reduction-competition",
+    "robomaster-university-championship"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "project-management-reference",
+      "title": "Agile project management",
+      "url": "https://www.atlassian.com/agile/project-management",
+      "publisher": "Atlassian",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

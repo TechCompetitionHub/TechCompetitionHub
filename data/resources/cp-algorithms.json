@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "cp-algorithms",
+  "title": "CP-Algorithms",
+  "resource_type": "documentation",
+  "url": "https://cp-algorithms.com/",
+  "language": "en",
+  "level": 2,
+  "domains": ["software"],
+  "related_skill_ids": ["algorithms"],
+  "publisher": "CP-Algorithms contributors",
+  "license_or_access_terms": "免费访问；内容遵循原站许可与署名要求。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "算法与数据结构的实现与复杂度说明。"
+}

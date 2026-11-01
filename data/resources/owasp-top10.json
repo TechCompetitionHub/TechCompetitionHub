@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "owasp-top10",
+  "title": "OWASP Top 10",
+  "resource_type": "documentation",
+  "url": "https://owasp.org/www-project-top-ten/",
+  "language": "en",
+  "level": 1,
+  "domains": ["cybersecurity"],
+  "related_skill_ids": ["cybersecurity-basics"],
+  "publisher": "OWASP Foundation",
+  "license_or_access_terms": "免费访问；内容遵循 OWASP 页面所列许可。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "Web 应用主要安全风险与防护基线。"
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "cybersecurity-basics",
+  "name": "网络安全基础",
+  "domain": "security",
+  "definition": "理解常见 Web/系统安全风险、授权测试边界与基础防护。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不了解常见安全风险与授权边界。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成靶场基础练习。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立复现常见漏洞、写清影响与修复建议。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能分析攻击链、评估风险并设计防护。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计安全评审流程、指导授权测试。"
+    }
+  ],
+  "prerequisite_skill_ids": ["linux-cli"],
+  "practice_tasks": [
+    {
+      "id": "authorized-lab-report",
+      "title": "完成授权靶场漏洞复现与修复报告",
+      "level": 2,
+      "goal": "在明确授权的靶场中复现一个常见漏洞，记录步骤、影响与修复。",
+      "prerequisites": ["会 Linux 基础", "了解 HTTP 基础"],
+      "steps": [
+        "确认授权范围与禁止操作。",
+        "复现漏洞并保存请求/响应证据。",
+        "写修复建议并验证修复后不可复现。"
+      ],
+      "deliverables": ["复现记录", "修复验证报告"],
+      "acceptance_criteria": [
+        "明确写出授权范围与未测试项。",
+        "证据可复现，未包含真实敏感数据。",
+        "修复后再次测试并记录结果。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["在未授权目标上测试", "只贴工具输出不解释影响"]
+    }
+  ],
+  "resource_ids": ["owasp-top10"],
+  "related_competition_ids": ["national-undergraduate-information-security-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "cybersecurity-basics-reference",
+      "title": "OWASP Top 10",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "publisher": "OWASP Foundation",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

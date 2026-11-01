@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 社区讨论与问答
+    url: https://github.com/TechCompetitionHub/TechCompetitionHub/discussions
+    about: 竞赛选择、备赛经验、技术问答、组队与项目展示。启用 Discussions 后可用。
+  - name: 私密报告安全漏洞
+    url: https://github.com/TechCompetitionHub/TechCompetitionHub/security/advisories/new
+    about: 不要在公开 Issue 中披露可利用细节、凭据或个人数据。
+  - name: 贡献指南
+    url: https://github.com/TechCompetitionHub/TechCompetitionHub/blob/main/CONTRIBUTING.md
+    about: 提交数据、项目、技能、资源或代码前请先阅读。

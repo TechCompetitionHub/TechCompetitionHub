@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "data-analysis",
+  "name": "数据分析",
+  "domain": "data",
+  "definition": "使用表格工具与 Python 完成数据清洗、探索、可视化与可复现分析。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚不能独立清洗一份含缺失值与异常值的数据。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按教程读取 CSV 并画基础图。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立完成清洗、探索、可视化与结论表达，保留分析脚本。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理数据泄漏、异常值与口径不一致，并设计可复现流程。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计分析规范、审查他人脚本并指导复杂数据项目。"
+    }
+  ],
+  "prerequisite_skill_ids": ["python-programming", "statistics"],
+  "practice_tasks": [
+    {
+      "id": "csv-eda",
+      "title": "清洗并分析一份公开 CSV",
+      "level": 2,
+      "goal": "从原始数据出发，完成清洗、探索、可视化与结论，并让结果可复现。",
+      "prerequisites": ["会 Python 基础语法", "了解描述统计"],
+      "steps": [
+        "记录数据来源、字段含义、缺失与异常处理规则。",
+        "用 pandas 完成清洗与至少 3 个探索性图表。",
+        "写 README，说明如何从原始文件重新生成结果。"
+      ],
+      "deliverables": ["清洗脚本与 notebook", "README 与结果图"],
+      "acceptance_criteria": [
+        "清洗规则可追溯，未静默删除异常值。",
+        "图表有标题、单位、样本范围与文字说明。",
+        "他人能从原始数据复现主要图表。"
+      ],
+      "estimated_hours": 6,
+      "common_failures": ["在原始数据上直接改数", "图表缺少样本量与单位"]
+    }
+  ],
+  "resource_ids": ["pandas-docs"],
+  "related_competition_ids": [
+    "national-energy-saving-emission-reduction-competition",
+    "national-undergraduate-statistical-modeling-competition"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "data-analysis-reference",
+      "title": "pandas 用户指南",
+      "url": "https://pandas.pydata.org/docs/user_guide/",
+      "publisher": "pandas / NumFOCUS",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

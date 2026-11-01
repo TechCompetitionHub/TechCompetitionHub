@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+package-lock.json
+docs/TechCompetitionHub_产品需求与工程实施方案.md
+docs/AGENT_GUIDE.md
+data/schemas

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "git-collaboration",
+  "name": "Git 与协作",
+  "domain": "programming",
+  "definition": "使用分支、提交、合并与 Pull Request 完成可审查的协作。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未使用版本控制。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按教程完成 clone、commit、push。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立使用分支、解决简单冲突并写清晰提交信息。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能设计分支策略、拆分提交并处理回滚与冲突。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能维护协作规范、审查历史并指导团队。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "branch-pr",
+      "title": "用分支与 PR 完成一次变更",
+      "level": 1,
+      "goal": "在练习仓库中从 issue 出发，新建分支、提交、发起 PR 并回应一次评审。",
+      "prerequisites": ["安装 Git", "了解基本命令行"],
+      "steps": [
+        "从 issue 创建分支，保持提交边界清晰。",
+        "发起 PR，写清变更、验证方式与风险。",
+        "根据评审意见修改并补充测试。"
+      ],
+      "deliverables": ["分支与 PR 链接", "变更说明"],
+      "acceptance_criteria": [
+        "提交信息能说明“为什么”，不只写“update”。",
+        "PR 描述包含验证命令与结果。",
+        "冲突解决后测试仍通过。"
+      ],
+      "estimated_hours": 3,
+      "common_failures": ["把无关改动混进同一提交", "强推覆盖他人分支"]
+    }
+  ],
+  "resource_ids": ["pro-git"],
+  "related_competition_ids": ["china-collegiate-computing-competition", "cumcm"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "git-collaboration-reference",
+      "title": "Pro Git 中文版",
+      "url": "https://git-scm.com/book/zh/v2",
+      "publisher": "Git 社区",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

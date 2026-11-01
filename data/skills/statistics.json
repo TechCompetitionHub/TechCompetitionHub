@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "statistics",
+  "name": "统计与推断",
+  "domain": "math",
+  "definition": "描述统计、抽样、假设检验、回归与不确定性表达的基础能力。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未接触假设检验或回归。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程计算均值、方差并读懂 p 值。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立选择检验方法、检查假设并报告效应量与置信区间。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能识别多重比较、样本偏差与模型设定问题，并调整分析方案。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计统计方案、审查他人分析并解释方法局限。"
+    }
+  ],
+  "prerequisite_skill_ids": ["math-foundations"],
+  "practice_tasks": [
+    {
+      "id": "ab-test-report",
+      "title": "完成一份 A/B 测试分析报告",
+      "level": 2,
+      "goal": "针对一个明确的业务或竞赛指标，完成抽样、检验、效应量与局限性说明。",
+      "prerequisites": ["理解零假设与 p 值", "会使用 Python 或 R 做基础统计"],
+      "steps": [
+        "构造或选择一份公开数据，写清样本来源与分组方式。",
+        "完成描述统计、假设检验与效应量计算，保留代码。",
+        "报告结论、置信区间与至少两条局限。"
+      ],
+      "deliverables": ["可复现分析脚本", "一页结论摘要"],
+      "acceptance_criteria": [
+        "明确写出零假设、显著性水平与检验方法。",
+        "同时报告效应量与置信区间，不只报 p 值。",
+        "指出至少一个可能违反的统计假设。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["把 p<0.05 当作实际重要性", "忽略多重比较"]
+    }
+  ],
+  "resource_ids": ["openintro-stats"],
+  "related_competition_ids": ["cumcm", "national-undergraduate-statistical-modeling-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "statistics-reference",
+      "title": "OpenIntro Statistics",
+      "url": "https://www.openintro.org/book/os/",
+      "publisher": "OpenIntro",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "technical-writing",
+  "name": "技术写作",
+  "domain": "communication",
+  "definition": "把问题、方法、证据与限制写成可复现、可审查的技术文档。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "写文档时只放结论，缺少背景与证据。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按模板写 README 或报告，结构基本完整。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立写出可复现步骤、证据链接与限制说明。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能针对读者调整结构，区分事实、推断与观点。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能建立文档规范、审查他人材料并指导修改。"
+    }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "reproducible-readme",
+      "title": "写一份可复现的项目 README",
+      "level": 2,
+      "goal": "为一个真实小项目写 README，使他人能按步骤运行并验证结果。",
+      "prerequisites": ["有一个可运行的小项目", "会使用 Markdown"],
+      "steps": [
+        "写清环境、依赖、运行步骤与测试命令。",
+        "加入示例输入输出与已知限制。",
+        "请一位同学按 README 独立运行并记录卡点。"
+      ],
+      "deliverables": ["README", "复现记录"],
+      "acceptance_criteria": [
+        "他人按文档能完成运行与测试。",
+        "依赖版本与命令可直接复制执行。",
+        "限制与失败情况没有被隐藏。"
+      ],
+      "estimated_hours": 4,
+      "common_failures": ["只写“运行 main.py”", "缺少版本与数据说明"]
+    }
+  ],
+  "resource_ids": ["uw-madison-writing"],
+  "related_competition_ids": [
+    "china-collegiate-computing-competition",
+    "cumcm",
+    "national-energy-saving-emission-reduction-competition",
+    "national-undergraduate-information-security-competition",
+    "national-undergraduate-statistical-modeling-competition"
+  ],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "technical-writing-reference",
+      "title": "The Writer’s Handbook",
+      "url": "https://writing.wisc.edu/handbook/",
+      "publisher": "University of Wisconsin–Madison",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

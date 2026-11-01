@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "machine-learning",
+  "name": "机器学习基础",
+  "domain": "data",
+  "definition": "理解监督学习流程、基线、评估指标、数据划分与误差分析。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未训练过模型或评估过结果。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程调用模型，但说不清评估与数据划分。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立完成基线、训练、验证、测试与误差分析。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能识别数据泄漏、过拟合与分布偏移，并选择合适指标。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计实验方案、审查评估协议并指导模型落地。"
+    }
+  ],
+  "prerequisite_skill_ids": ["python-programming", "statistics", "math-foundations"],
+  "practice_tasks": [
+    {
+      "id": "classification-baseline",
+      "title": "训练并评估一个分类基线",
+      "level": 2,
+      "goal": "在固定数据划分下比较基线与传统模型，报告指标、失败案例与限制。",
+      "prerequisites": ["会 Python 与 pandas", "理解训练/验证/测试划分"],
+      "steps": [
+        "固定数据划分与随机种子，记录依赖版本。",
+        "实现一个简单基线和一个模型，报告至少两个指标。",
+        "分析 10 个错误样本，写出可能原因与改进方向。"
+      ],
+      "deliverables": ["训练与评估脚本", "实验报告与错误分析"],
+      "acceptance_criteria": [
+        "测试集只用于最终评估，未参与调参。",
+        "报告基线对比、指标定义与依赖版本。",
+        "错误分析包含具体样本与可验证的改进假设。"
+      ],
+      "estimated_hours": 10,
+      "common_failures": ["在测试集上调参", "只报准确率不说明类别不平衡"]
+    }
+  ],
+  "resource_ids": ["scikit-learn-guide", "pytorch-tutorials"],
+  "related_competition_ids": [],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "machine-learning-reference",
+      "title": "scikit-learn 用户指南",
+      "url": "https://scikit-learn.org/stable/user_guide.html",
+      "publisher": "scikit-learn",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

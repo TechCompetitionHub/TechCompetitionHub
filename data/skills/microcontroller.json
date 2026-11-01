@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "microcontroller",
+  "name": "单片机与外设",
+  "domain": "embedded",
+  "definition": "理解 MCU 最小系统、时钟、GPIO、定时器、ADC、通信与外设调试。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "不了解单片机最小系统。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按教程完成 GPIO 与串口实验。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立配置时钟、定时器、ADC 与通信外设。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能用示波器/逻辑分析仪定位时序与电气问题。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计板级方案、审查驱动与调试流程。"
+    }
+  ],
+  "prerequisite_skill_ids": ["embedded-c", "electronics-fundamentals"],
+  "practice_tasks": [
+    {
+      "id": "mcu-mini-system",
+      "title": "搭建一个 MCU 小系统",
+      "level": 2,
+      "goal": "完成按键、定时器、串口与 ADC 的组合实验，并用仪器验证关键时序。",
+      "prerequisites": ["会嵌入式 C", "了解基本电路"],
+      "steps": [
+        "画出示意图与引脚分配。",
+        "实现定时采样、串口输出与按键消抖。",
+        "用逻辑分析仪或示波器记录关键波形。"
+      ],
+      "deliverables": ["工程源码", "接线图与波形记录"],
+      "acceptance_criteria": [
+        "引脚分配与代码一致，接线可复现。",
+        "波形记录能证明采样周期与通信波特率。",
+        "异常情况（拔线、超时）有处理。"
+      ],
+      "estimated_hours": 10,
+      "common_failures": ["只凭“看起来正常”判断时序", "引脚冲突未检查"]
+    }
+  ],
+  "resource_ids": ["stm32-mcus"],
+  "related_competition_ids": ["national-undergraduate-smart-car-competition"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "microcontroller-reference",
+      "title": "STM32 32-bit Arm Cortex MCUs",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html",
+      "publisher": "STMicroelectronics",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

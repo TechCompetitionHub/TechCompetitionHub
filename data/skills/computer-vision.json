@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "computer-vision",
+  "name": "计算机视觉",
+  "domain": "data",
+  "definition": "图像预处理、分类/检测模型训练、评估与误差分析的基础能力。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未处理过图像数据或训练视觉模型。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程完成图像分类示例。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立完成数据增强、训练、评估与误差分析。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理类别不平衡、域偏移与推理性能问题。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计视觉系统方案、评估边界并指导部署。"
+    }
+  ],
+  "prerequisite_skill_ids": ["python-programming", "machine-learning"],
+  "practice_tasks": [
+    {
+      "id": "image-classifier",
+      "title": "训练一个小型图像分类器",
+      "level": 1,
+      "goal": "在公开小数据集上完成训练、评估和误差分析，记录可复现实验。",
+      "prerequisites": ["会 Python", "了解训练/测试划分"],
+      "steps": [
+        "选择公开数据集并说明许可与划分。",
+        "训练一个基线模型，记录增强、超参与随机种子。",
+        "展示混淆矩阵与 10 个错误样本，分析原因。"
+      ],
+      "deliverables": ["训练脚本与配置", "评估报告"],
+      "acceptance_criteria": [
+        "数据许可与划分写清楚，测试集未参与调参。",
+        "报告至少两个指标与混淆矩阵。",
+        "错误分析能对应到具体图像与假设。"
+      ],
+      "estimated_hours": 10,
+      "common_failures": ["数据泄漏", "只展示成功样例"]
+    }
+  ],
+  "resource_ids": ["pytorch-tutorials"],
+  "related_competition_ids": ["robomaster-university-championship"],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "computer-vision-reference",
+      "title": "PyTorch 教程",
+      "url": "https://pytorch.org/tutorials/",
+      "publisher": "PyTorch",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考，不代表原站对本平台的认可。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

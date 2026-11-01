@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "robomaster-university-championship",
+  "name": "RoboMaster 机甲大师高校系列赛",
+  "aliases": ["RoboMaster", "机甲大师赛", "RMUC"],
+  "organizers": [
+    {
+      "name": "DJI 大疆",
+      "role": "organizer",
+      "url": "https://www.robomaster.com/zh-CN"
+    },
+    {
+      "name": "全国大学生机器人大赛",
+      "role": "host",
+      "url": null
+    }
+  ],
+  "domains": ["robotics", "embedded", "software", "mechanical", "ai"],
+  "summary": "以团队自主研发多类机器人进行战术对抗为核心的高校机器人赛事，覆盖机械、嵌入式、控制、视觉与项目管理。",
+  "description": "RoboMaster 机甲大师高校系列赛由 DJI 大疆发起，是全国大学生机器人大赛旗下赛事之一。官网赛事介绍说明参赛队需自主研发多种机器人参与团队对抗，涉及机械工程、嵌入式系统、控制算法、电气、通信感知、自主导航与人机交互等技术。平台记录官网可核验的赛事定位、技术方向与组织信息；具体赛季规则、报名与费用以官方当届公告为准。",
+  "audience": {
+    "levels": ["undergraduate", "graduate"],
+    "notes": "官网面向高校学生；具体参赛资格与队伍构成以当届规则为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队自主研发多类机器人并现场对抗；团队规模与兵种配置以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 5,
+    "rationale": "需要机械、电子、嵌入式、控制、视觉与项目管理长期协作，系统复杂度高。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "robotics-integration",
+      "target_level": 3
+    },
+    {
+      "skill_id": "control-theory",
+      "target_level": 3
+    },
+    {
+      "skill_id": "embedded-c",
+      "target_level": 3
+    },
+    {
+      "skill_id": "mechanical-design",
+      "target_level": 2
+    },
+    {
+      "skill_id": "computer-vision",
+      "target_level": 1
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 3
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网展示 2027 赛季规则；报名与赛程日期待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "赛事官网",
+      "url": "https://www.robomaster.com/zh-CN"
+    }
+  ],
+  "sources": [
+    {
+      "id": "rm-overview",
+      "title": "RoboMaster 高校系列赛赛事介绍",
+      "url": "https://www.robomaster.com/zh-CN/robo/overview",
+      "publisher": "RoboMaster 组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "format", "technical_domains", "scale"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": "1.0.0",
+  "scores": {
+    "model_version": "1.0.0",
+    "dimension_scores": {
+      "technical_depth": {
+        "score": 92,
+        "rationale": "需要多机器人系统、机械、嵌入式、控制与视觉协同，工程复杂度高。",
+        "evidence_level": "high"
+      },
+      "recognition": {
+        "score": 86,
+        "rationale": "由 DJI 大疆发起并作为全国大学生机器人大赛旗下赛事，官网公开赛事体系与技术方向。",
+        "evidence_level": "high"
+      },
+      "practical_value": {
+        "score": 94,
+        "rationale": "以可运行机器人系统和现场对抗为核心，工程产出与团队协作价值高。",
+        "evidence_level": "high"
+      },
+      "competitiveness": {
+        "score": 92,
+        "rationale": "官网称每年吸引全球 400 余所高校参赛；具体获奖比例未核验。",
+        "evidence_level": "medium"
+      },
+      "growth_value": {
+        "score": 92,
+        "rationale": "覆盖机械、电控、算法、视觉与项目管理，是完整的系统工程训练。",
+        "evidence_level": "medium"
+      },
+      "cost_accessibility": {
+        "score": 30,
+        "rationale": "机器人硬件、加工与差旅投入通常较高，官网未给出统一费用；保守估计。",
+        "evidence_level": "medium"
+      }
+    },
+    "weighted_score": 88.1,
+    "evidence_summary": "名称、发起方、赛事定位与技术方向来自官网；具体赛季规则、费用与获奖比例未核验。成本维度为保守估计。",
+    "sample_size": null,
+    "confidence_level": "medium",
+    "review_status": "approved",
+    "reviewed_at": "2026-11-01",
+    "reviewer_role": "platform-editorial-initial",
+    "notes": "首轮平台编辑初评，依据官网公开信息；待维护者与领域评审复核，不构成官方评价。"
+  },
+  "notes": "赛季规则与赛制每年调整；费用、资格与日程以官方当届公告为准。"
+}

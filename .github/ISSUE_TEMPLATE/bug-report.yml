@@ -1,0 +1,70 @@
+name: 缺陷报告
+description: 报告页面、筛选、路由、可访问性或构建问题。
+title: '[缺陷] '
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 页面或 URL
+      placeholder: 例如：/competitions?q=嵌入式
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 包括错误信息、控制台报错或截图（可拖入文本框）。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 ...
+        2. 点击 ...
+        3. 看到 ...
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 浏览器与设备
+      placeholder: Chrome 130 / Windows 11 / 手机 375px
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影响范围
+      options:
+        - 页面渲染
+        - 搜索/筛选/排序
+        - 路由或 GitHub Pages
+        - 数据校验/评分
+        - 成长规划器
+        - 可访问性
+        - 构建或 CI
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 确认
+      options:
+        - label: 这不是安全漏洞；安全问题我会按 SECURITY.md 私下报告。
+          required: true
+        - label: 我没有在 Issue 中提交密钥、个人信息或未授权材料。
+          required: true

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "id": "evidence-levels",
+  "label": "证据完整度",
+  "description": "用于说明评分依据的充分程度，不参与总分加权。",
+  "terms": [
+    {
+      "id": "high",
+      "label": "高",
+      "description": "关键事实有官方来源，评分理由与来源齐全。"
+    },
+    {
+      "id": "medium",
+      "label": "中",
+      "description": "关键事实有来源，但部分评分依据来自估算或社区经验。"
+    },
+    {
+      "id": "low",
+      "label": "低",
+      "description": "缺少关键来源，不能参与正式排名。"
+    }
+  ]
+}

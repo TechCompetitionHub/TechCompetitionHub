@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "national-undergraduate-statistical-modeling-competition",
+  "name": "全国大学生统计建模大赛",
+  "aliases": ["统计建模大赛", "统计建模"],
+  "organizers": [
+    {
+      "name": "中国统计教育学会",
+      "role": "host",
+      "url": "http://tjjmds.ai-learning.net/"
+    },
+    {
+      "name": "内蒙古财经大学",
+      "role": "co-organizer",
+      "url": null
+    }
+  ],
+  "domains": ["data_science", "math_modeling"],
+  "summary": "以统计建模论文为核心的三人大学生团队竞赛，分本科生组与研究生组，包含校赛、省赛与国赛阶段。",
+  "description": "全国大学生统计建模大赛由中国统计教育学会主办，2026 年第十二届赛事国赛由内蒙古财经大学承办。官网大赛简介说明其旨在提高大学生数据挖掘、数据分析、统计方法与计算机技术应用能力；2026 年通知显示赛事设本科生组与研究生组，每队 3 人，分多个阶段进行。平台记录官网可核验的主办单位、组别与赛制信息；具体主题、日程与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate", "graduate"],
+    "notes": "官网通知设本科生组与研究生组，分组报名；具体资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": {
+      "min": 3,
+      "max": 3
+    },
+    "delivery_modes": ["hybrid"],
+    "notes": "以论文与材料提交为主，国赛含现场答辩；每队 3 人，不可跨校组队。"
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要统计建模、数据处理、论文写作与答辩，强调方法合理性与可解释性。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "statistics",
+      "target_level": 2
+    },
+    {
+      "skill_id": "data-analysis",
+      "target_level": 2
+    },
+    {
+      "skill_id": "python-programming",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "2026 年第十二届赛事已于 3 月启动；2027 年安排待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "http://tjjmds.ai-learning.net/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "stat-about",
+      "title": "全国大学生统计建模大赛简介",
+      "url": "http://tjjmds.ai-learning.net/gyds/37115.jhtml",
+      "publisher": "中国统计教育学会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "history", "purpose"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    },
+    {
+      "id": "stat-notice-2026",
+      "title": "关于举办 2026 年（第十二届）全国大学生统计建模大赛的通知",
+      "url": "http://tjjmds.ai-learning.net/dstz/37119.jhtml",
+      "publisher": "中国统计教育学会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["schedule", "audience", "format", "eligibility"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": "1.0.0",
+  "scores": {
+    "model_version": "1.0.0",
+    "dimension_scores": {
+      "technical_depth": {
+        "score": 80,
+        "rationale": "要求统计方法选择、数据处理、模型解释与论文表达，技术深度中等偏上。",
+        "evidence_level": "medium"
+      },
+      "recognition": {
+        "score": 76,
+        "rationale": "主办单位为中国统计教育学会，官网公开章程、组别与赛事通知。",
+        "evidence_level": "high"
+      },
+      "practical_value": {
+        "score": 84,
+        "rationale": "产出为统计建模论文与数据材料，可迁移到数据分析和研究。",
+        "evidence_level": "medium"
+      },
+      "competitiveness": {
+        "score": 80,
+        "rationale": "官网公开分组与赛制，但本次未核验参赛规模与获奖比例。",
+        "evidence_level": "medium"
+      },
+      "growth_value": {
+        "score": 86,
+        "rationale": "覆盖统计、数据处理、写作与答辩，适合作为数据分析入门赛事。",
+        "evidence_level": "medium"
+      },
+      "cost_accessibility": {
+        "score": 65,
+        "rationale": "官网未公开报名费；以数据处理与答辩投入估算，证据不足。",
+        "evidence_level": "medium"
+      }
+    },
+    "weighted_score": 80.15,
+    "evidence_summary": "名称、主办单位、组别与赛制来自官网；费用、参赛规模与获奖比例未核验。成本维度为估算。",
+    "sample_size": null,
+    "confidence_level": "medium",
+    "review_status": "approved",
+    "reviewed_at": "2026-11-01",
+    "reviewer_role": "platform-editorial-initial",
+    "notes": "首轮平台编辑初评，依据官网公开信息；待维护者与领域评审复核，不构成官方评价。"
+  },
+  "notes": "主题、日程与费用以当届通知为准；成本维度为估算。"
+}

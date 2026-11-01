@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "python-tutorial",
+  "title": "Python 官方教程（中文）",
+  "resource_type": "documentation",
+  "url": "https://docs.python.org/zh-cn/3/tutorial/",
+  "language": "zh-CN",
+  "level": 1,
+  "domains": ["software", "data_science"],
+  "related_skill_ids": ["python-programming"],
+  "publisher": "Python Software Foundation",
+  "license_or_access_terms": "免费访问；内容版权归 Python Software Foundation，转载需遵守原站条款。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "链接于 2026-11-01 可访问；内容随 Python 版本更新。"
+}

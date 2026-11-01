@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "scikit-learn-guide",
+  "title": "scikit-learn 用户指南",
+  "resource_type": "documentation",
+  "url": "https://scikit-learn.org/stable/user_guide.html",
+  "language": "en",
+  "level": 2,
+  "domains": ["ai", "data_science"],
+  "related_skill_ids": ["machine-learning"],
+  "publisher": "scikit-learn",
+  "license_or_access_terms": "免费访问；文档与代码遵循 BSD 许可证及原站条款。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "适合查算法 API、评估方法与预处理流程。"
+}

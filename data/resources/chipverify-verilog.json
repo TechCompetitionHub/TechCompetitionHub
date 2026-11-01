@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "chipverify-verilog",
+  "title": "Verilog Tutorial",
+  "resource_type": "documentation",
+  "url": "https://www.chipverify.com/verilog/verilog-tutorial",
+  "language": "en",
+  "level": 2,
+  "domains": ["electronics"],
+  "related_skill_ids": ["verilog"],
+  "publisher": "ChipVerify",
+  "license_or_access_terms": "部分内容免费访问；完整课程与资料可能收费，转载需遵守原站条款。",
+  "free_status": "freemium",
+  "last_checked_at": "2026-11-01",
+  "notes": "Verilog 语法、仿真与测试平台入门。"
+}

@@ -1,0 +1,74 @@
+name: 竞赛信息纠错
+description: 报告竞赛数据中的事实错误、过期信息或来源问题。
+title: '[纠错] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > 请提供可核验的来源。评分方法争议请进入 Discussions，不要用纠错 Issue 要求修改主观分数。
+
+  - type: input
+    id: competition
+    attributes:
+      label: 竞赛名称或 ID
+      placeholder: 例如：cumcm / 全国大学生数学建模竞赛
+    validations:
+      required: true
+
+  - type: input
+    id: field
+    attributes:
+      label: 出错的字段
+      placeholder: 例如：organizers、schedule.event_start、estimated_cost
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_value
+    attributes:
+      label: 当前值
+      description: 请粘贴页面或数据文件中的当前内容。
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_value
+    attributes:
+      label: 建议值
+      description: 写清建议修改成什么；如果应为未知，请写 null 并说明原因。
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: 支持修改的来源 URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: accessed_at
+    attributes:
+      label: 来源访问日期
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据说明
+      description: 引用来源中的关键句或截图说明，并指出是否与其他来源冲突。
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 确认
+      options:
+        - label: 我已核对来源，且描述的是事实错误而非主观评分偏好。
+          required: true
+        - label: 我没有在公开 Issue 中提交个人敏感信息或未授权材料。
+          required: true

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": true,
+  "id": "example-skill",
+  "name": "示例技能（非真实条目）",
+  "domain": "programming",
+  "definition": "仅用于展示技能数据结构与页面渲染的示例条目，不代表平台对任何真实技能的定义。",
+  "levels": [
+    { "level": 0, "label": "L0 尚未接触", "behavior": "示例：尚未接触该技能。" },
+    { "level": 1, "label": "L1 跟随教程", "behavior": "示例：能跟随教程完成基础步骤。" },
+    { "level": 2, "label": "L2 独立完成", "behavior": "示例：能独立完成常规任务并解释。" },
+    { "level": 3, "label": "L3 调试与取舍", "behavior": "示例：能定位复杂问题并做取舍。" },
+    { "level": 4, "label": "L4 设计与指导", "behavior": "示例：能设计系统并指导他人。" }
+  ],
+  "prerequisite_skill_ids": [],
+  "practice_tasks": [
+    {
+      "id": "example-task",
+      "title": "示例任务：完成一个可验证的小练习",
+      "level": 1,
+      "goal": "展示练习任务的字段结构，不构成真实学习建议。",
+      "prerequisites": ["示例前置条件"],
+      "steps": ["阅读示例说明", "完成示例操作", "记录结果"],
+      "deliverables": ["示例产出"],
+      "acceptance_criteria": ["示例验收标准一", "示例验收标准二"],
+      "estimated_hours": 2,
+      "common_failures": ["示例失败一", "示例失败二"]
+    }
+  ],
+  "resource_ids": [],
+  "related_competition_ids": [],
+  "related_project_ids": [],
+  "sources": [
+    {
+      "id": "example-skill-source",
+      "title": "示例来源（W3C 技术报告目录）",
+      "url": "https://www.w3.org/TR/",
+      "publisher": "W3C",
+      "source_type": "institutional",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels"],
+      "confidence": "low",
+      "notes": "仅用于示例数据校验，不支撑真实技能定义。"
+    }
+  ],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01"
+}

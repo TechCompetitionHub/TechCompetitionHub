@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "openintro-stats",
+  "title": "OpenIntro Statistics",
+  "resource_type": "book",
+  "url": "https://www.openintro.org/book/os/",
+  "language": "en",
+  "level": 2,
+  "domains": ["data_science", "math_modeling"],
+  "related_skill_ids": ["statistics"],
+  "publisher": "OpenIntro",
+  "license_or_access_terms": "免费在线阅读/下载；具体许可与再利用条款以 OpenIntro 页面为准。",
+  "free_status": "free",
+  "last_checked_at": "2026-11-01",
+  "notes": "英文教材；覆盖描述统计、推断与回归。"
+}
