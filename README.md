@@ -12,7 +12,7 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。**尚未推送远程或部署**；GitHub Pages 工作流已就绪，发布设置需维护者完成。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码位于 `main` 分支；GitHub Pages 与 Discussions 的仓库设置由维护者完成，首次部署前请按下方的部署与设置清单操作。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
 
 当前仓库真实数据（2026-11-01 核验）：
 
@@ -133,6 +133,22 @@ $env:VITE_BASE_PATH='/'; npm run build
 
 PR 工作流只检查，不部署生产站点。部署工作流权限限制为 `contents: read`、`pages: write`、`id-token: write`。
 
+## 维护者仓库设置
+
+首次发布时在 GitHub 仓库中完成以下设置；代码与工作流文件已经就绪：
+
+- **About**：填写描述 `大学生科技竞赛开源成长平台：可追溯的数据、可解释的评分与规则式成长规划`，主页设为 `https://techcompetitionhub.github.io/TechCompetitionHub/`，添加 Topics：`competition`、`education`、`react`、`typescript`、`github-pages`、`open-data`。
+- **Pages**：`Settings → Pages → Build and deployment → Source` 选择 **GitHub Actions**；推送 `main` 或手动运行 `Deploy GitHub Pages`。
+- **Discussions**：`Settings → General → Features` 启用 Discussions，按 [.github/DISCUSSION_GUIDE.md](.github/DISCUSSION_GUIDE.md) 创建 8 个分类。站内只链接 Discussions 根地址，不链接不存在的分类。
+- **Actions**：允许仓库运行 Actions；默认工作流权限设为只读，部署工作流已声明所需最小权限。
+- **分支保护**：保护 `main`，要求 `CI / verify` 通过后再合并，禁止未审查的直接推送。
+- **Issues**：确认 `.github/ISSUE_TEMPLATE/` 表单可用；按需创建 `data`、`bug`、`accessibility`、`documentation` 标签。
+- **安全**：启用 Dependabot alerts 与 Security Advisories 私密报告；确认 `SECURITY.md` 中的渠道可访问。
+- **许可证**：确认代码 MIT 与原创内容 CC BY 4.0；如更换许可证，先更新 `LICENSE` / `LICENSE-CONTENT.md` 与 README。
+- **组织站点**：决定 `TechCompetitionHub.github.io` 的用途（根站点、重定向或暂不使用），方案见 [Pages 部署说明](docs/pages-deployment.md)。
+
+部署后至少检查：首页、目录、详情、排行榜、技能、规划器、指南、社区、404 可访问；直接刷新深层链接不白屏；移动端 375px 无横向溢出；键盘 Tab 顺序与焦点可见；`sitemap.xml` 包含主要路由。
+
 ## 贡献
 
 请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 与 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
@@ -149,6 +165,9 @@ PR 工作流只检查，不部署生产站点。部署工作流权限限制为 `
 - 竞赛数据的时效性依赖维护者复核；超过 18 个月未核验的条目不会进入正式排名。
 - 项目成果与 Discussions 需要维护者在 GitHub 上启用/审核后才有内容。
 - 首版没有账户、跨设备收藏、动态评分、后端审核后台或 AI 辅助。
+- 排行榜目前只实现 P0 要求的**竞赛价值榜**；项目成果榜、技能路线/资源榜、成长案例展示尚未实现。
+- GitHub Pages 的真实部署与 404 回退状态尚未在远程环境验证；本地预览与构建产物检查已通过。
+- 外部链接在线检查为每周非阻塞任务，受网络环境影响时以人工复核为准。
 - 部分竞赛官网仅提供前端渲染页面，链接检查以 HTTP 可访问性为准，不保证页面内容解析完整。
 
 ## 许可证
