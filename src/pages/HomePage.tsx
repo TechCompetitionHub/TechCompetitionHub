@@ -55,21 +55,28 @@ export function HomePage() {
 
   return (
     <>
-      <section className="border-b border-line bg-navy-900 text-white">
-        <Container className="grid gap-10 py-14 sm:py-20 lg:grid-cols-[1.35fr_0.65fr] lg:items-center">
+      <section className="hero-mesh relative overflow-hidden border-b border-white/10 text-white">
+        <div aria-hidden="true" className="hero-grid absolute inset-0 opacity-70" />
+        <div aria-hidden="true" className="hero-orb hero-orb-a absolute" />
+        <div aria-hidden="true" className="hero-orb hero-orb-b absolute" />
+        <Container className="relative grid gap-10 py-14 sm:py-20 lg:grid-cols-[1.35fr_0.65fr] lg:items-center">
           <div>
             <div className="flex flex-wrap gap-2">
               <Badge tone="brand" className="border-white/15 bg-white/10 text-white">
+                <span
+                  aria-hidden="true"
+                  className="animate-pulse-soft size-1.5 rounded-full bg-brand-200"
+                />
                 开源 · 数据可追溯
               </Badge>
               <Badge tone="neutral" className="border-white/15 bg-white/5 text-white/80">
                 无需注册
               </Badge>
             </div>
-            <h1 className="mt-5 text-4xl leading-tight font-bold tracking-tight sm:text-5xl">
+            <h1 className="mt-5 text-4xl leading-[1.12] font-bold tracking-tight text-balance sm:text-5xl">
               把“参加什么竞赛”
               <br />
-              变成一份可执行的成长路线。
+              变成一份<span className="text-gradient">可执行</span>的成长路线。
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/75">
               TechCompetitionHub
@@ -119,23 +126,26 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 rounded-2xl border border-white/15 bg-white/5 p-5">
-            <div className="rounded-xl bg-white/5 p-4">
+          <div
+            className="fade-up grid grid-cols-2 gap-3 rounded-2xl border border-white/15 bg-white/[0.045] p-5 shadow-2xl shadow-black/10 backdrop-blur-sm"
+            style={{ animationDelay: '120ms' }}
+          >
+            <div className="hero-stat rounded-xl p-4">
               <p className="text-xs text-white/60">已收录竞赛</p>
               <p className="mt-1 text-2xl font-bold">{competitions.length}</p>
               <p className="mt-1 text-[11px] text-white/50">真实仓库数据</p>
             </div>
-            <div className="rounded-xl bg-white/5 p-4">
+            <div className="hero-stat rounded-xl p-4">
               <p className="text-xs text-white/60">已核验</p>
               <p className="mt-1 text-2xl font-bold">{verified}</p>
               <p className="mt-1 text-[11px] text-white/50">有官方来源</p>
             </div>
-            <div className="rounded-xl bg-white/5 p-4">
+            <div className="hero-stat rounded-xl p-4">
               <p className="text-xs text-white/60">已评分</p>
               <p className="mt-1 text-2xl font-bold">{scored}</p>
               <p className="mt-1 text-[11px] text-white/50">其中 {ranked} 条进入正式榜</p>
             </div>
-            <div className="rounded-xl bg-white/5 p-4">
+            <div className="hero-stat rounded-xl p-4">
               <p className="text-xs text-white/60">技能 / 免费资源</p>
               <p className="mt-1 text-2xl font-bold">
                 {skills.length} / {freeResources}
@@ -160,17 +170,18 @@ export function HomePage() {
             }
           />
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {activeDomains.map((domain) => (
+            {activeDomains.map((domain, index) => (
               <Link
                 key={domain.id}
                 to={`/categories/${domain.id}`}
-                className="group rounded-xl border border-line bg-surface p-4 shadow-card transition-colors hover:border-brand-500/60"
+                style={{ animationDelay: `${index * 35}ms` }}
+                className="card-hover fade-up group rounded-xl border border-line bg-surface p-4 shadow-card"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="font-semibold text-ink-900 group-hover:text-brand-700">
                     {domain.label}
                   </span>
-                  <span className="rounded-full bg-surface-muted px-2 py-0.5 text-xs text-ink-500">
+                  <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-semibold text-brand-700">
                     {domain.count}
                   </span>
                 </div>

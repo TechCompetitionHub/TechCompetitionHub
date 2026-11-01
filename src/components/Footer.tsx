@@ -28,7 +28,7 @@ const FOOTER_GROUPS = [
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-line bg-navy-900 text-white">
+    <footer className="mt-auto border-t border-white/10 bg-gradient-to-b from-navy-900 to-[#081827] text-white">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
         <div>
           <p className="text-lg font-bold">TechCompetitionHub</p>

@@ -16,18 +16,18 @@ const NAV_ITEMS = [
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2.5" aria-label="TechCompetitionHub 首页">
-      <span className="flex size-9 overflow-hidden rounded-xl bg-navy-900">
+    <Link to="/" className="group flex items-center gap-2.5" aria-label="TechCompetitionHub 首页">
+      <span className="flex size-9 overflow-hidden rounded-xl bg-navy-900 shadow-sm ring-1 ring-black/5">
         <img
           src={`${import.meta.env.BASE_URL}forum-avatar.jpg`}
           alt=""
           width={36}
           height={36}
-          className="size-full object-cover"
+          className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </span>
       <span className="leading-tight">
-        <span className="block text-sm font-bold tracking-tight text-ink-900">
+        <span className="block text-sm font-bold tracking-tight text-ink-900 transition-colors group-hover:text-brand-700">
           TechCompetitionHub
         </span>
         <span className="hidden text-[11px] text-ink-500 sm:block">大学生科技竞赛成长平台</span>
@@ -38,8 +38,16 @@ function Logo() {
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 6);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -56,7 +64,12 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur">
+    <header
+      className={cn(
+        'sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur-xl transition-[box-shadow,background-color,border-color] duration-300',
+        scrolled && 'border-line-strong/70 bg-surface/95 shadow-[0_10px_30px_rgba(16,33,43,0.07)]',
+      )}
+    >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Logo />
 
@@ -70,7 +83,7 @@ export function Header() {
                 cn(
                   'rounded-lg px-2.5 py-2 text-sm font-medium transition-colors',
                   isActive
-                    ? 'bg-brand-50 text-brand-700'
+                    ? 'bg-brand-50 text-brand-700 shadow-[inset_0_0_0_1px_rgba(22,133,127,0.10)]'
                     : 'text-ink-700 hover:bg-surface-muted hover:text-ink-900',
                 )
               }
@@ -113,7 +126,7 @@ export function Header() {
         id="mobile-navigation"
         ref={panelRef}
         hidden={!open}
-        className="border-t border-line bg-surface lg:hidden"
+        className={cn('border-t border-line bg-surface lg:hidden', open && 'fade-up')}
       >
         <nav aria-label="移动导航" className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
           <ul className="grid gap-1">

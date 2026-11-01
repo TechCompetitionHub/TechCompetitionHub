@@ -26,7 +26,7 @@ export function CompetitionCard({
   return (
     <article
       className={cn(
-        'group flex h-full flex-col rounded-2xl border border-line bg-surface p-5 shadow-card transition-colors hover:border-brand-500/60',
+        'card-hover group flex h-full flex-col rounded-2xl border border-line bg-surface p-5 shadow-card',
         className,
       )}
     >
@@ -40,14 +40,17 @@ export function CompetitionCard({
           ))}
         </div>
         {rank ? (
-          <span className="rounded-full bg-navy-900 px-2.5 py-1 text-xs font-bold text-white">
+          <span className="rounded-full bg-gradient-to-br from-navy-800 to-navy-900 px-2.5 py-1 text-xs font-bold text-white shadow-sm">
             #{rank}
           </span>
         ) : null}
       </div>
 
       <h3 className="mt-3 text-lg leading-snug font-bold text-ink-900">
-        <Link to={`/competitions/${competition.id}`} className="hover:text-brand-700">
+        <Link
+          to={`/competitions/${competition.id}`}
+          className="transition-colors hover:text-brand-700"
+        >
           {competition.name}
         </Link>
       </h3>

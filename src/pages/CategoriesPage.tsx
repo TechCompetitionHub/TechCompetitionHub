@@ -47,11 +47,12 @@ export function CategoriesPage() {
           description="类别页只做筛选与解释，不改变平台评分或正式排名。"
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <Link
               key={category.id}
               to={`/categories/${category.id}`}
-              className="group flex h-full flex-col rounded-2xl border border-line bg-surface p-5 shadow-card transition-colors hover:border-brand-500/60"
+              style={{ animationDelay: `${Math.min(index, 8) * 35}ms` }}
+              className="card-hover fade-up group flex h-full flex-col rounded-2xl border border-line bg-surface p-5 shadow-card"
             >
               <div className="flex items-start justify-between gap-3">
                 <h2 className="text-base font-bold text-ink-900 group-hover:text-brand-700">

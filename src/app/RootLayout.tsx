@@ -1,10 +1,12 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { ScrollToTop } from '../components/ScrollToTop';
 
 export function RootLayout() {
+  const location = useLocation();
+
   return (
     <div className="flex min-h-screen flex-col">
       <a
@@ -13,12 +15,17 @@ export function RootLayout() {
       >
         跳到主要内容
       </a>
+      <div aria-hidden="true" className="fixed inset-x-0 top-0 z-50 h-0.5 bg-transparent">
+        <div className="scroll-progress-bar h-full origin-left bg-gradient-to-r from-brand-500 via-brand-200 to-accent-500" />
+      </div>
       <ScrollToTop />
       <Header />
       <main id="main-content" tabIndex={-1} className="flex-1">
-        <ErrorBoundary>
-          <Outlet />
-        </ErrorBoundary>
+        <div key={location.pathname} className="page-in">
+          <ErrorBoundary>
+            <Outlet />
+          </ErrorBoundary>
+        </div>
       </main>
       <Footer />
     </div>

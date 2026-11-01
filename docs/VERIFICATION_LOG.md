@@ -203,8 +203,10 @@ postbuild：... base=/
 - 新增 `/forum` 与 6 个 `/forum/:slug` 分类页：分类边界、适用/不适用内容、发帖模板、相关站内入口与 GitHub 直达；社区页增加论坛搜索。
 - 新增 `docs/COMMUNITY_MODERATION.md`：处理阶梯、参赛评价审核、数据纠错分工与申诉。
 - 论坛分类详情页与类别页按需加载，主包从约 711 KB 降到约 697 KB，构建不再出现 700 KB 警告。
+- 视觉与动效：首页渐变网格/光晕、渐变标题、卡片悬浮抬升、页面进入过渡、CSS 滚动进度条、Header 滚动阴影与导航高光；分类卡片错峰进入。全部为 CSS 实现，并提供 `prefers-reduced-motion` 降级。
+- 视觉检查：Chrome 1440×1200 桌面与 CDP 390×844 移动视口截图；移动端 `scrollWidth = innerWidth = 390`，无横向溢出。
 - 论坛头像采用维护者设计的原图，优化为 `public/forum-avatar.jpg`（512×512，约 42 KB），用于页头与社区页；README 已记录出处与许可提示。
 - Discussions 当前默认 6 个分类，社区页链接实际分类。
 - 测试：10 个文件、113 个测试全部通过；`npm run check` exit 0。
-- 构建：610 modules，sitemap 85 个 URL（21 竞赛 + 25 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），base `/`。
+- 构建：610 modules，sitemap 85 个 URL（21 竞赛 + 25 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），CSS 54.04 KB，主 JS 699.61 KB（无 700 KB 警告），base `/`。
 - 推送提交 `ce79d87` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 21 条竞赛 / 12 个类别 / 6 个论坛分类 / 85 个 URL；`/forum` 与 `/forum/q-a` 由 `404.html` 回退渲染，`/forum-avatar.jpg` 返回 200（image/jpeg，42,156 bytes）。

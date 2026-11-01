@@ -7,11 +7,11 @@ type Size = 'sm' | 'md';
 
 const VARIANTS: Record<Variant, string> = {
   primary:
-    'bg-brand-600 text-white shadow-sm hover:bg-brand-700 disabled:bg-brand-600/50 disabled:hover:bg-brand-600/50',
+    'bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-[0_6px_18px_rgba(15,111,106,0.18)] hover:from-brand-500 hover:to-brand-600 hover:shadow-[0_10px_24px_rgba(15,111,106,0.24)] disabled:bg-brand-600/50 disabled:hover:bg-brand-600/50',
   secondary:
-    'border border-line-strong bg-surface text-ink-900 shadow-sm hover:border-brand-500 hover:text-brand-700',
+    'border border-line-strong bg-surface text-ink-900 shadow-sm hover:border-brand-500 hover:text-brand-700 hover:shadow-md',
   ghost: 'text-ink-700 hover:bg-surface-muted hover:text-ink-900',
-  danger: 'bg-danger-700 text-white shadow-sm hover:bg-danger-700/90',
+  danger: 'bg-danger-700 text-white shadow-sm hover:bg-danger-700/90 hover:shadow-md',
 };
 
 const SIZES: Record<Size, string> = {
@@ -21,7 +21,7 @@ const SIZES: Record<Size, string> = {
 
 function classes(variant: Variant, size: Size, className?: string): string {
   return cn(
-    'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors disabled:cursor-not-allowed',
+    'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 ease-out hover:-translate-y-0.5 active:translate-y-px disabled:cursor-not-allowed disabled:hover:translate-y-0',
     VARIANTS[variant],
     SIZES[size],
     className,

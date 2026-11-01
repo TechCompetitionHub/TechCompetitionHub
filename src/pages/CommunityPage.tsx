@@ -127,7 +127,7 @@ export function CommunityPage() {
               </thead>
               <tbody className="divide-y divide-line">
                 {COMMUNITY_CATEGORIES.map((category) => (
-                  <tr key={category.name}>
+                  <tr key={category.name} className="transition-colors hover:bg-surface-muted/50">
                     <th scope="row" className="px-4 py-3 text-left font-semibold text-ink-900">
                       <Link to={forumPath(category.slug)} className="hover:text-brand-700">
                         {category.name}
@@ -236,7 +236,10 @@ export function CommunityPage() {
           />
           <div className="grid gap-4 md:grid-cols-3">
             {guides.map((guide) => (
-              <article key={guide.slug} className="rounded-2xl border border-line bg-surface p-5">
+              <article
+                key={guide.slug}
+                className="card-hover rounded-2xl border border-line bg-surface p-5"
+              >
                 <Badge tone="brand">指南</Badge>
                 <h3 className="mt-3 font-bold text-ink-900">
                   <Link to={`/guides/${guide.slug}`} className="hover:text-brand-700">
