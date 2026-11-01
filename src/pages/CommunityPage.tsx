@@ -40,21 +40,20 @@ export function CommunityPage() {
       />
 
       <Container className="py-8">
-        <Alert tone="info" title="需要维护者先启用 Discussions">
-          {discussionCategoryNote()} 在仓库 Settings → General → Features 中启用 Discussions
-          后，按下方分类创建即可。站内不会链接不存在的分类。
+        <Alert tone="success" title="Discussions 已启用">
+          {discussionCategoryNote()} 站内只链接当前实际存在的分类，不伪造分类地址。
         </Alert>
 
         <section className="mt-10" aria-labelledby="categories-heading">
           <SectionHeading
             id="categories-heading"
-            eyebrow="分类规划"
+            eyebrow="分类入口"
             title="每个分类只解决一类问题"
-            description="分类名称与用途是仓库设置建议；实际链接由维护者启用后生成。"
+            description="以下是当前仓库实际的 Discussions 分类，点击可直接进入。"
           />
           <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
             <table className="w-full text-left text-sm">
-              <caption className="sr-only">建议的 Discussions 分类与用途</caption>
+              <caption className="sr-only">当前 Discussions 分类与用途</caption>
               <thead className="bg-surface-muted text-xs text-ink-500">
                 <tr>
                   <th scope="col" className="px-4 py-3 font-semibold">
@@ -72,7 +71,7 @@ export function CommunityPage() {
                 {COMMUNITY_CATEGORIES.map((category) => (
                   <tr key={category.name}>
                     <th scope="row" className="px-4 py-3 text-left font-semibold text-ink-900">
-                      {category.name}
+                      <ExternalLink href={category.url}>{category.name}</ExternalLink>
                     </th>
                     <td className="px-4 py-3 text-ink-700">{category.purpose}</td>
                     <td className="px-4 py-3 text-ink-500">{category.mode}</td>

@@ -9,6 +9,7 @@ import { SourceList } from '../components/SourceList';
 import { StatusBadge } from '../components/StatusBadge';
 import { ExternalLink } from '../components/ExternalLink';
 import { CompetitionScorePanel } from '../features/competitions/CompetitionScorePanel';
+import { ExternalLists } from '../features/competitions/ExternalLists';
 import { NotFoundPage } from './NotFoundPage';
 import { formatDate, levelLabel } from '../lib/utils/format';
 import {
@@ -301,6 +302,8 @@ export function CompetitionDetailPage() {
                 </Alert>
               ) : null}
             </section>
+
+            <ExternalLists lists={competition.external_lists} />
 
             <section aria-labelledby="projects-heading">
               <SectionHeading

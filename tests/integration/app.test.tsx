@@ -50,6 +50,10 @@ describe('核心页面', () => {
     expect(screen.getByText('全国大学生数学建模竞赛官网首页')).toBeInTheDocument();
     expect(screen.getAllByText(/85\.0/).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/不是官方排名/).length).toBeGreaterThan(0);
+    expect(
+      screen.getByRole('heading', { level: 2, name: '外部竞赛目录（不参与评分）' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('目录不等于认可度或技术含量')).toBeInTheDocument();
   });
 
   it('未知竞赛 ID 返回 404 内容', () => {
@@ -115,13 +119,19 @@ describe('核心页面', () => {
     expect(screen.getAllByRole('heading', { level: 2 }).length).toBeGreaterThan(0);
   });
 
-  it('社区页不链接不存在的 Discussions 分类', () => {
+  it('社区页链接到实际存在的 Discussions 分类', () => {
     renderApp('/community');
     expect(
       screen.getByRole('heading', { level: 1, name: '在公开、可搜索的地方交流' }),
     ).toBeInTheDocument();
     const links = screen.getAllByRole('link').map((link) => link.getAttribute('href') ?? '');
-    expect(links.some((href) => href.includes('/discussions/categories/'))).toBe(false);
+    const categoryLinks = links.filter((href) => href.includes('/discussions/categories/'));
+    expect(categoryLinks.length).toBeGreaterThanOrEqual(6);
+    const allowed = ['announcements', 'q-a', 'show-and-tell', 'general', 'ideas', 'polls'];
+    for (const href of categoryLinks) {
+      const slug = href.split('/discussions/categories/')[1]?.split(/[?#]/)[0] ?? '';
+      expect(allowed).toContain(slug);
+    }
     expect(links.some((href) => href.endsWith('/discussions'))).toBe(true);
   });
 

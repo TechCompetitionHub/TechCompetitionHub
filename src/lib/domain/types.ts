@@ -2,6 +2,7 @@ export type {
   Competition,
   CompetitionScore,
   ContentFrontmatter,
+  ExternalListReference,
   PracticeTask,
   Project,
   Resource,

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "national-undergraduate-embedded-chip-system-design-competition",
+  "name": "全国大学生嵌入式芯片与系统设计竞赛",
+  "aliases": ["嵌入式大赛", "嵌入式暨智能互联大赛"],
+  "organizers": [],
+  "domains": ["electronics", "embedded", "ai"],
+  "summary": "面向高校学生的嵌入式芯片与系统设计赛事，设应用赛道、芯片设计赛道与 FPGA 创新设计赛道。",
+  "description": "全国大学生嵌入式芯片与系统设计竞赛官网展示应用赛道、芯片设计赛道与 FPGA 创新设计赛道，并公开赛事规模数据（43,385 参赛人数、15,844 参赛团队、792 参赛学校）。平台记录官网可核验的名称、赛道与规模；官网首页未明确列出主办单位，具体组织架构、报名资格、日程与费用以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate", "graduate"],
+    "notes": "官网面向高校学生；具体参赛资格与组别以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队参赛，包含应用、芯片设计与 FPGA 等赛道；团队人数与赛程以当届通知为准。"
+  },
+  "difficulty": {
+    "level": 5,
+    "rationale": "需要数字逻辑、硬件描述语言、嵌入式系统与芯片应用知识，并完成工程实现与答辩。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "digital-logic",
+      "target_level": 2
+    },
+    {
+      "skill_id": "verilog",
+      "target_level": 2
+    },
+    {
+      "skill_id": "embedded-c",
+      "target_level": 2
+    },
+    {
+      "skill_id": "electronics-fundamentals",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网为第九届（2026）赛事页面；具体报名与赛程日期待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "https://www.socchina.net/"
+    },
+    {
+      "label": "2025 年芯片应用赛道报名通知",
+      "url": "https://www.socchina.net/details?id=9f092ba1327745f386bb598204443a2d&value=2"
+    }
+  ],
+  "sources": [
+    {
+      "id": "socchina-home",
+      "title": "全国大学生嵌入式芯片与系统设计竞赛官网",
+      "url": "https://www.socchina.net/",
+      "publisher": "全国大学生嵌入式芯片与系统设计竞赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "tracks", "scale"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；主办单位未在首页明确列出。"
+    },
+    {
+      "id": "socchina-notice-2025",
+      "title": "大赛通知丨2025 年嵌入式大赛芯片应用赛道报名通知",
+      "url": "https://www.socchina.net/details?id=9f092ba1327745f386bb598204443a2d&value=2",
+      "publisher": "全国大学生嵌入式芯片与系统设计竞赛组委会",
+      "source_type": "official",
+      "published_at": "2025-03-10",
+      "accessed_at": "2026-11-01",
+      "supports": ["schedule", "format", "eligibility"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "评分待补充；主办单位与具体日程未在本次核验中确认。竞赛目录仅作检索线索，不参与平台评分。"
+}

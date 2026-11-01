@@ -53,6 +53,7 @@
       "notes": "仅用于满足示例数据的结构校验，不支撑任何竞赛事实。"
     }
   ],
+  "external_lists": [],
   "verification_status": "draft",
   "last_verified_at": null,
   "created_at": "2026-11-01",

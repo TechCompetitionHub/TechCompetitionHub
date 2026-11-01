@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "national-market-research-analysis-competition",
+  "name": "全国大学生市场调查与分析大赛",
+  "aliases": ["市调大赛", "正大杯市场调查与分析大赛"],
+  "organizers": [
+    {
+      "name": "教育部高等学校统计学类专业教学指导委员会",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "中国商业统计学会",
+      "role": "host",
+      "url": "http://www.china-cssc.org/"
+    },
+    {
+      "name": "中华应用统计学会",
+      "role": "co-organizer",
+      "url": null
+    }
+  ],
+  "domains": ["data_science", "innovation"],
+  "summary": "面向海峡两岸高校学生的市场调查与分析赛事，设知识赛与实践赛，覆盖本科、专科与研究生组别。",
+  "description": "全国大学生市场调查与分析大赛由中国商业统计学会等主办，官网大赛简介说明其面向海峡两岸高校学生，设本科组与专科组，包含在线知识赛与 3–5 人团队实践赛，实践赛分分区赛与全国总决赛。官网介绍赛事自 2010 年启动，累计近 1500 所次院校、14 万人次参赛。平台记录官网可核验的组织、组别与赛制信息；具体年份日程、费用与获奖比例以当届通知为准。",
+  "audience": {
+    "levels": ["undergraduate", "vocational", "graduate"],
+    "notes": "官网说明全日制在校专科、本科、硕士研究生均可报名，专业不限；具体组别以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": {
+      "min": 3,
+      "max": 5
+    },
+    "delivery_modes": ["online", "offline"],
+    "notes": "知识赛为个人在线网考；实践赛为 3–5 人团队，分分区赛与全国总决赛。"
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要问卷设计、抽样与数据分析、报告写作与答辩，强调方法规范与可解释性。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "statistics",
+      "target_level": 2
+    },
+    {
+      "skill_id": "data-analysis",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网介绍每年 11 月中旬至 12 月中旬进行知识赛，次年 3–5 月进行校赛、分区赛与总决赛；具体年份日期待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "大赛官网",
+      "url": "http://www.china-cssc.org/list-60-1.html"
+    },
+    {
+      "label": "大赛简介",
+      "url": "http://www.china-cssc.org/list-75-1.html"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cssc-intro",
+      "title": "大学生市场调查与分析大赛简介",
+      "url": "http://www.china-cssc.org/list-75-1.html",
+      "publisher": "中国商业统计学会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "audience", "format", "schedule", "scale"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "评分待补充。竞赛目录仅作检索线索，不参与平台评分，也不代表认可度或技术含量。"
+}

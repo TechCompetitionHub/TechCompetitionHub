@@ -105,6 +105,21 @@ const officialUrlSchema = z
   })
   .strict();
 
+const externalListReferenceSchema = z
+  .object({
+    id: slugSchema,
+    name: z.string().trim().min(5).max(300),
+    publisher: z.string().trim().min(2).max(300),
+    year: z.number().int().min(2000).max(2100),
+    category: z.string().trim().min(2).max(120),
+    url: httpUrlSchema,
+    accessed_at: isoDateSchema,
+    notes: z.string().trim().max(1000).nullable(),
+  })
+  .strict();
+
+export type ExternalListReference = z.infer<typeof externalListReferenceSchema>;
+
 const audienceSchema = z
   .object({
     levels: z.array(z.string().trim().min(1)).min(1),
@@ -207,6 +222,7 @@ export const competitionSchema = z
     schedule: scheduleSchema,
     official_urls: z.array(officialUrlSchema).min(1),
     sources: z.array(sourceSchema).min(1),
+    external_lists: z.array(externalListReferenceSchema),
     verification_status: verificationStatusSchema,
     last_verified_at: isoDateSchema.nullable(),
     created_at: isoDateSchema,

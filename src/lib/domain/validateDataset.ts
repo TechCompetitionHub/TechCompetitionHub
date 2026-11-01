@@ -215,6 +215,28 @@ export function validateDataset(
 
     validateSources(competition.sources, path, issues);
 
+    const listIds = new Set<string>();
+    const asOfYear = Number(asOf.slice(0, 4));
+    for (const list of competition.external_lists) {
+      if (listIds.has(list.id)) {
+        issues.push({
+          severity: 'error',
+          code: 'duplicate_external_list',
+          path,
+          message: `外部目录引用 ID 重复：${list.id}`,
+        });
+      }
+      listIds.add(list.id);
+      if (Number.isFinite(asOfYear) && list.year > asOfYear) {
+        issues.push({
+          severity: 'warning',
+          code: 'future_external_list',
+          path,
+          message: `外部目录年份 ${list.year} 晚于校验基准日`,
+        });
+      }
+    }
+
     if (competition.verification_status === 'verified') {
       if (!competition.last_verified_at) {
         issues.push({

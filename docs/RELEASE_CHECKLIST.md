@@ -5,7 +5,7 @@
 ## 产品与数据
 
 - [x] 首版范围与非目标明确（README、PRD、关于页）。
-- [x] 所有公开竞赛都有唯一 ID（10 条，校验通过）。
+- [x] 所有公开竞赛都有唯一 ID（13 条，校验通过）。
 - [x] 官方事实有可访问来源（每条 verified 竞赛至少一个 official 来源）。
 - [x] 数据核验时间和状态可见（详情页、来源列表、Provenance）。
 - [x] 示例数据与正式数据分离（`data/examples/`，`is_example: true`，不加载）。
@@ -23,7 +23,7 @@
 - [x] Lint 通过（`npm run lint`）。
 - [x] 类型检查通过（`npm run typecheck`）。
 - [x] 单元/集成测试通过（93 个测试，含 16 条路由的 axe 审计）。
-- [x] 数据校验通过（10 竞赛 / 25 技能 / 23 资源 / 2 路线 / 4 文章，0 错误 0 警告）。
+- [x] 数据校验通过（13 竞赛 / 25 技能 / 23 资源 / 2 路线 / 4 文章，0 错误 0 警告）。
 - [x] 生成 Schema 与 Zod 定义一致（`npm run data:schemas:check`）。
 - [x] 生产构建通过（`npm run build`）。
 - [x] 生产构建 base path 正确（根站点默认 `/`；项目站点 `/TechCompetitionHub/`，postbuild 校验）。
@@ -39,7 +39,7 @@
 ## GitHub 设置
 
 - [ ] 仓库描述、Topics、README 和许可证设置完成。
-- [ ] 启用 Discussions 并创建 `.github/DISCUSSION_GUIDE.md` 中的分类。
+- [x] 启用 Discussions；当前使用默认 6 个分类，站内已链接实际分类。
 - [ ] 配置 Issues 表单（文件已提交）与 PR 模板。
 - [x] 根站点与主仓库项目站点均已通过 GitHub Actions 部署（主仓库为镜像）。
 - [ ] 检查默认分支保护、必需检查与合并权限。

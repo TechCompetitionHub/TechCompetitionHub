@@ -37,7 +37,7 @@ npm run check
 | Lint   | `npm run lint`               | 通过，0 error                                                          |
 | 类型   | `npm run typecheck`          | 通过                                                                   |
 | 测试   | `npm test`                   | 9 个文件、93 个测试全部通过（含 16 条路由 axe 审计）                   |
-| 数据   | `npm run data:validate`      | 10 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章；0 错误、0 警告 |
+| 数据   | `npm run data:validate`      | 13 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章；0 错误、0 警告 |
 | Schema | `npm run data:schemas:check` | 8 个 JSON Schema 与 Zod 定义一致                                       |
 | 构建   | `npm run build`              | 通过                                                                   |
 
@@ -136,8 +136,9 @@ npm run links:check:online
 
 ## 7. 数据与评分抽查
 
-- 10 条竞赛全部 `verified`，`last_verified_at = 2026-11-01`，至少一个 official 来源。
-- 8 条有平台评分并满足正式排名准入；2 条（蓝桥杯、智能汽车）无评分，进入“资料不足”。
+- 13 条竞赛全部 `verified`，`last_verified_at = 2026-11-01`，至少一个 official 来源。
+- 8 条有平台评分并满足正式排名准入；5 条（蓝桥杯、智能汽车、中国国际大学生创新大赛、市场调查与分析大赛、嵌入式芯片与系统设计竞赛）无评分，进入“资料不足”。
+- 12 条竞赛带外部目录引用（高校常用“A 类”84 项目录），该字段不参与评分与排名；RoboMaster 未引用该目录。
 - 全国大学生数学建模竞赛：82/90/85/88/90/55，按 0.25/0.20/0.20/0.15/0.15/0.05 计算 = 84.95。
 - RoboMaster：92/86/94/92/92/30 = 88.10。
 - 技能图无环、无缺失前置；25 个技能均有 L0–L4 与至少一个带验收标准的任务。
@@ -177,3 +178,12 @@ postbuild：... base=/
 - 根站点 Pages 已由 GitHub Actions 成功部署（2026-11-01）。线上检查：首页 200、主 JS 200、`404.html` 200、`/competitions/cumcm` 返回 HTTP 404 但由 SPA 回退渲染、sitemap 含 10 条竞赛 URL、robots 指向 sitemap。
 - 项目站点镜像已由主仓库 Actions 部署成功：`https://techcompetitionhub.github.io/TechCompetitionHub/` 返回 200，sitemap 主机为 `https://techcompetitionhub.github.io/TechCompetitionHub/`，深层链接同样由 `404.html` 回退。
 - 部署时发现 `GITHUB_REPOSITORY_OWNER` 为大小写混合，sitemap/robots 曾生成 `https://TechCompetitionHub.github.io/`；工作流已改为小写 owner，重新部署后以 `https://techcompetitionhub.github.io/` 为准。
+
+## 10. 竞赛目录扩展与 Discussions 接入
+
+- 新增 3 条经官网核验的竞赛：中国国际大学生创新大赛、全国大学生市场调查与分析大赛、全国大学生嵌入式芯片与系统设计竞赛；全部 `verified`、`scores: null`，不进入正式排名。
+- 竞赛总数 13，已评分 8，正式排名 8，资料不足 5。
+- 新增 `external_lists` 字段；12 条竞赛引用高校常用“A 类”84 项目录（RoboMaster 未引用）。目录仅作检索线索，不参与评分；详情页显示“外部竞赛目录（不参与评分）”与免责声明。
+- 数据校验：13 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章；0 错误 0 警告。
+- Discussions 已启用；社区页链接实际默认分类：Announcements、Q&A、Show and tell、General、Ideas、Polls。
+- 测试仍为 93 个，全部通过；构建与部署需在本次提交后重新验证。

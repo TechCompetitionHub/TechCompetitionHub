@@ -50,6 +50,7 @@
 | `schedule`                  | 是   | object      | 四个日期可 null；`status` 为 confirmed/partial/expected/unknown/not_applicable |
 | `official_urls`             | 是   | object[]    | `{label, url}`，至少 1 个                                                      |
 | `sources`                   | 是   | Source[]    | 至少 1 条                                                                      |
+| `external_lists`            | 是   | object[]    | 外部目录/榜单引用；不参与评分；可为空数组                                      |
 | `verification_status`       | 是   | enum        | 状态见上                                                                       |
 | `last_verified_at`          | 是   | date/null   | verified 时必须填写                                                            |
 | `created_at` / `updated_at` | 是   | date        | `updated_at` 不早于 `created_at`                                               |
@@ -68,6 +69,16 @@
 - `status = verified` 时必须有 `amount`。
 - 未知费用不得写成 `free` 或 0。
 - 估算必须使用 `estimated` 并在 `basis`/`notes` 说明。
+
+### 外部目录规则
+
+`external_lists` 字段记录竞赛被外部目录/榜单收录的情况，例如高校常用的“A 类”竞赛目录。它只作检索线索：
+
+- 每条引用必须有名称、发布方、年份、口径、URL 与访问日期；
+- 不得因为进入某个目录/榜单而自动提高平台评分；
+- 不得把目录排名写成“官方认可度”“技术含量”或“官方排名”；
+- 目录名称与平台名称不一致时，在 `notes` 说明（例如使用原赛事名）；
+- 评分引擎不读取该字段，正式排名也不使用它。
 
 ## 4. Source（来源）
 

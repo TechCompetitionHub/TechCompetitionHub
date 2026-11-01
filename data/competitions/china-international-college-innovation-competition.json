@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "china-international-college-innovation-competition",
+  "name": "中国国际大学生创新大赛",
+  "aliases": ["互联网+", "国创赛", "中国国际“互联网+”大学生创新创业大赛"],
+  "organizers": [
+    {
+      "name": "教育部",
+      "role": "host",
+      "url": "https://www.moe.gov.cn/"
+    },
+    {
+      "name": "中央统战部",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "中央网信办",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "国家发展改革委",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "工业和信息化部",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "人力资源社会保障部",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "农业农村部",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "中国科学院",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "中国工程院",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "国家知识产权局",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "共青团中央",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "河南省人民政府",
+      "role": "host",
+      "url": null
+    },
+    {
+      "name": "郑州大学",
+      "role": "co-organizer",
+      "url": "https://www.zzu.edu.cn/"
+    },
+    {
+      "name": "郑州市人民政府",
+      "role": "co-organizer",
+      "url": null
+    }
+  ],
+  "domains": ["innovation", "software", "ai"],
+  "summary": "面向高校学生的创新创业赛事，设高教主赛道、红旅赛道、职教赛道、产业赛道与萌芽赛道，采用校级、省级、总决赛三级赛制。",
+  "description": "中国国际大学生创新大赛由教育部等部门联合主办。教育部 2025 年通知说明，大赛于 2025 年 4 月至 10 月举办，设高教主赛道、“青年红色筑梦之旅”赛道、职教赛道、产业赛道和萌芽赛道，采用校级初赛、省级复赛、总决赛三级赛制；参赛团队通过全国大学生创业服务网报名。平台记录官方通知与报名入口可核验的信息；2026/2027 年安排、费用与获奖比例未在本次核验中确认。",
+  "audience": {
+    "levels": ["undergraduate", "graduate", "vocational"],
+    "notes": "2025 年通知覆盖高教、职教与萌芽等赛道；参赛人员年龄不超过 35 岁（以通知下发日为准），具体资格以当届通知为准。"
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["hybrid"],
+    "notes": "团队项目参赛；校级初赛、省级复赛与总决赛结合，团队人数以当届赛道规则为准。"
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要技术或服务创新、商业与用户验证、材料撰写与路演答辩，跨学科协作要求较高。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    },
+    {
+      "skill_id": "technical-writing",
+      "target_level": 2
+    },
+    {
+      "skill_id": "data-analysis",
+      "target_level": 1
+    },
+    {
+      "skill_id": "web-development",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "2025 年通知：大赛于 2025 年 4 月至 10 月举办，报名系统 2025-05-09 开放，报名截止不晚于 2025-07-01；2026/2027 年安排待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "全国大学生创业服务网",
+      "url": "https://cy.ncss.cn/"
+    },
+    {
+      "label": "教育部 2025 年通知",
+      "url": "https://www.moe.gov.cn/srcsite/A08/s5672/202505/t20250509_1189810.html"
+    }
+  ],
+  "sources": [
+    {
+      "id": "moe-innovation-2025",
+      "title": "教育部关于举办中国国际大学生创新大赛（2025）的通知",
+      "url": "https://www.moe.gov.cn/srcsite/A08/s5672/202505/t20250509_1189810.html",
+      "publisher": "中华人民共和国教育部",
+      "source_type": "official",
+      "published_at": "2025-04-29",
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "organizers", "audience", "format", "schedule", "eligibility"],
+      "confidence": "high",
+      "notes": "教高函〔2025〕7 号；于 2026-11-01 访问。"
+    },
+    {
+      "id": "ncss-home",
+      "title": "全国大学生创业服务网",
+      "url": "https://cy.ncss.cn/",
+      "publisher": "教育部学生服务与素质发展中心",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["registration", "current_notices"],
+      "confidence": "high",
+      "notes": "大赛官方报名入口；于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "评分待补充。竞赛目录仅作检索线索，不参与平台评分，也不代表认可度或技术含量。"
+}
