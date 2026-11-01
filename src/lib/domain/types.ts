@@ -1,5 +1,6 @@
 export type {
   CommunityReview,
+  Company,
   Competition,
   CompetitionScore,
   CompetitionTrack,
@@ -38,4 +39,5 @@ export interface DataBundle {
   scoringModels: import('./schemas').ScoringModel[];
   vocabularies: import('./schemas').Vocabulary[];
   reviews: import('./schemas').CommunityReview[];
+  companies: import('./schemas').Company[];
 }

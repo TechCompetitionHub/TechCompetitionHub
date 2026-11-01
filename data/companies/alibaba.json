@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "alibaba",
+  "name": "阿里巴巴",
+  "aliases": ["Alibaba", "阿里"],
+  "industry": "电商、云计算、物流与数字科技",
+  "website": "https://www.alibabagroup.com/",
+  "careers_url": "https://talent.alibaba.com/",
+  "role_ids": ["frontend", "backend", "software", "algorithm", "ai", "product"],
+  "competition_preferences": [
+    {
+      "competition_id": "acm-icpc",
+      "status": "unknown",
+      "statement": "截至 2026-11-01，阿里巴巴 官方校园招聘入口未公开“ACM-ICPC”的直通面试、免笔试或优先条款；具体以岗位 JD 与当届校招公告为准。",
+      "source_url": "https://talent.alibaba.com/",
+      "accessed_at": "2026-11-01",
+      "notes": "仅表示本次核验未找到公开条款，不代表企业一定没有内部政策。"
+    }
+  ],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "alibaba-careers",
+      "title": "阿里巴巴校园招聘",
+      "url": "https://talent.alibaba.com/",
+      "publisher": "阿里巴巴集团",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles", "competition_preferences"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口与页面名称，具体岗位以官网为准。"
+    }
+  ],
+  "notes": "具体岗位、批次与资格以官方招聘官网为准。",
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01"
+}

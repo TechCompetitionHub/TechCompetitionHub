@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "meituan",
+  "name": "美团",
+  "aliases": ["Meituan", "美团点评"],
+  "industry": "本地生活服务、即时零售与科技平台",
+  "website": "https://www.meituan.com/",
+  "careers_url": "https://zhaopin.meituan.com/web/home",
+  "role_ids": ["backend", "frontend", "software", "algorithm", "product"],
+  "competition_preferences": [
+    {
+      "competition_id": "acm-icpc",
+      "status": "unknown",
+      "statement": "截至 2026-11-01，美团 官方校园招聘入口未公开“ACM-ICPC”的直通面试、免笔试或优先条款；具体以岗位 JD 与当届校招公告为准。",
+      "source_url": "https://zhaopin.meituan.com/web/home",
+      "accessed_at": "2026-11-01",
+      "notes": "仅表示本次核验未找到公开条款，不代表企业一定没有内部政策。"
+    }
+  ],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "meituan-careers",
+      "title": "美团招聘",
+      "url": "https://zhaopin.meituan.com/web/home",
+      "publisher": "美团",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles", "competition_preferences"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口与页面名称，具体岗位以官网为准。"
+    }
+  ],
+  "notes": "具体岗位与资格以美团招聘官网为准。",
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01"
+}

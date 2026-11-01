@@ -20,6 +20,8 @@ const CategoryDetailPage = lazy(() =>
 );
 import { AboutPage } from '../pages/AboutPage';
 import { CommunityPage } from '../pages/CommunityPage';
+import { CareersPage } from '../pages/CareersPage';
+import { CompanyDetailPage } from '../pages/CompanyDetailPage';
 import { CompetitionCatalogPage } from '../pages/CompetitionCatalogPage';
 import { CompetitionDetailPage } from '../pages/CompetitionDetailPage';
 import { ContributePage } from '../pages/ContributePage';
@@ -76,6 +78,8 @@ export function AppRoutes() {
           }
         />
         <Route path="rankings" element={<RankingsPage />} />
+        <Route path="careers" element={<CareersPage />} />
+        <Route path="careers/:companyId" element={<CompanyDetailPage />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="projects/:projectId" element={<ProjectDetailPage />} />
         <Route path="skills" element={<SkillsPage />} />

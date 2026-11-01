@@ -85,6 +85,28 @@ describe('核心页面', () => {
     expect(screen.getByRole('heading', { level: 1, name: '这个页面不存在' })).toBeInTheDocument();
   });
 
+  it('求职地图按岗位与企业展示直通条款', () => {
+    renderApp('/careers');
+    expect(
+      screen.getByRole('heading', { level: 1, name: '从竞赛经历走向岗位' }),
+    ).toBeInTheDocument();
+    expect(screen.getAllByText('大疆创新（DJI）').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('直通面试').length).toBeGreaterThan(0);
+    expect(screen.getByRole('link', { name: /补充企业信息/ })).toBeInTheDocument();
+  });
+
+  it('企业详情展示竞赛偏好与官方来源', () => {
+    renderApp('/careers/dji');
+    expect(screen.getByRole('heading', { level: 1, name: '大疆创新（DJI）' })).toBeInTheDocument();
+    expect(screen.getAllByText(/RM\/RC AWARD/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/官方来源/).length).toBeGreaterThan(0);
+  });
+
+  it('未知企业返回 404 内容', () => {
+    renderApp('/careers/not-real');
+    expect(screen.getByRole('heading', { level: 1, name: '这个企业不存在' })).toBeInTheDocument();
+  });
+
   it('排行榜只列出满足准入条件的条目并解释排除原因', () => {
     renderApp('/rankings');
     expect(screen.getByRole('heading', { level: 1, name: '竞赛价值榜' })).toBeInTheDocument();
@@ -259,6 +281,8 @@ describe('核心页面', () => {
     '/categories',
     '/categories/robotics',
     '/rankings',
+    '/careers',
+    '/careers/dji',
     '/projects',
     '/skills',
     '/skills/python-programming',

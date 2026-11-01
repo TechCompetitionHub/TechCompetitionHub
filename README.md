@@ -12,7 +12,7 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、117 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、122 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
 
 ## 仓库关系
 
@@ -36,12 +36,15 @@
 | 路线模板     | 2    | 嵌入式、数据建模方向                            |
 | 指南         | 4    | 选赛、复盘、可复现性、数据核验                  |
 | 含赛道信息   | 18   | 赛道/组别来自官网或当届通知                     |
+| 企业         | 10   | 校招入口、岗位方向与竞赛偏好                    |
+| 岗位方向     | 13   | 嵌入式、前端、后端、算法、机器人、芯片等        |
+| 公开直通条款 | 1    | 仅统计官方明确写出的直通/优先                   |
 | 外部目录引用 | 27   | 仅作检索线索，不参与评分                        |
 | 社区评价     | 0    | 用户提交经审核后展示，不参与平台评分            |
 
 > 部分条目记录高校常用的“A 类”竞赛目录引用。该目录/榜单只用于检索，不参与平台评分，也不代表认可度、技术含量或适合度；平台评分仍按六维模型、证据等级与核验日期独立评估。详见 [数据模型](docs/DATA_MODEL.md)。
 
-论坛以 GitHub Discussions 承载；竞赛详情支持提交“参赛者自述评分”，必须填写是否参加过、赛道、年份、学校（可选）、角色与公开主页，经审核后才展示，且不进入平台评分或正式排名。项目成果目录当前为真实空状态：平台不使用示例项目冒充提交。
+论坛以 GitHub Discussions 承载；竞赛详情支持提交“参赛者自述评分”，必须填写是否参加过、赛道、年份、学校（可选）、角色与公开主页，经审核后才展示，且不进入平台评分或正式排名。求职地图按岗位方向与企业组织校招入口，只把官方明确写出的竞赛直通/优先条款标为“直通/优先”。项目成果目录当前为真实空状态：平台不使用示例项目冒充提交。
 
 ## 快速开始
 

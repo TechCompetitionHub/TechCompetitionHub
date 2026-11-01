@@ -2,6 +2,7 @@ import type { ZodType } from 'zod';
 import { parseContentFile, slugFromFilename } from '../lib/domain/content';
 import {
   communityReviewSchema,
+  companySchema,
   competitionSchema,
   projectSchema,
   resourceSchema,
@@ -74,6 +75,10 @@ const reviewModules = import.meta.glob<unknown>('../../data/reviews/*.json', {
   eager: true,
   import: 'default',
 });
+const companyModules = import.meta.glob<unknown>('../../data/companies/*.json', {
+  eager: true,
+  import: 'default',
+});
 const contentModules = import.meta.glob<string>('../../content/guides/*.md', {
   eager: true,
   query: '?raw',
@@ -88,6 +93,9 @@ const isPublicProject = (project: Project): boolean =>
 
 const isPublicReview = (review: import('../lib/domain/types').CommunityReview): boolean =>
   !review.is_example && review.verification_status === 'approved' && review.consent_public;
+
+const isPublicCompany = (company: import('../lib/domain/types').Company): boolean =>
+  !company.is_example && company.verification_status !== 'rejected';
 
 function sortByName<T extends { name?: string; title?: string; id: string }>(records: T[]): T[] {
   return [...records].sort((a, b) =>
@@ -119,6 +127,9 @@ const vocabularies = parseRecords(vocabularyModules, vocabularySchema).sort((a, 
 const reviews = parseRecords(reviewModules, communityReviewSchema)
   .filter(isPublicReview)
   .sort((a, b) => b.submitted_at.localeCompare(a.submitted_at));
+const companies = parseRecords(companyModules, companySchema)
+  .filter(isPublicCompany)
+  .sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
 
 const contents: ContentEntry[] = Object.entries(contentModules)
   .map(([path, raw]) => parseContentFile(raw, slugFromFilename(path)))
@@ -134,6 +145,7 @@ export const dataset: DataBundle = {
   scoringModels,
   vocabularies,
   reviews,
+  companies,
 };
 
 export { contents };
@@ -150,6 +162,7 @@ export const indexes = {
   roadmaps: asMap(roadmaps),
   vocabularies: asMap(vocabularies),
   reviews: asMap(reviews),
+  companies: asMap(companies),
   contents: new Map(contents.map((entry) => [entry.slug, entry])),
 };
 

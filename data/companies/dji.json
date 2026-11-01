@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "dji",
+  "name": "大疆创新（DJI）",
+  "aliases": ["DJI", "大疆"],
+  "industry": "无人机、机器人、影像与智能系统",
+  "website": "https://www.dji.com/",
+  "careers_url": "https://careers.dji.com/",
+  "role_ids": [
+    "embedded",
+    "robotics",
+    "software",
+    "algorithm",
+    "hardware",
+    "test",
+    "mechanical",
+    "project-management"
+  ],
+  "competition_preferences": [
+    {
+      "competition_id": "robomaster-university-championship",
+      "status": "direct_channel",
+      "statement": "RoboMaster 官网提供“RM 专属招聘通道”：RM/RC AWARD 提名者和获奖人可获直通面试；RoboMaster 参赛队员及执行队员可参与，官网同时说明已有超 1000 位 RM 参赛人才入职大疆。",
+      "source_url": "https://www.robomaster.com/zh-CN/recruit",
+      "accessed_at": "2026-11-01",
+      "notes": "具体权益、届别与资格以专属招聘通道页面为准。"
+    },
+    {
+      "competition_id": "robocon",
+      "status": "plus",
+      "statement": "RoboMaster 专属招聘通道页面明确 ROBOCON 成功参赛同学可参与；直通面试权益在页面上明确面向 RM/RC AWARD 提名者和获奖人，ROBOCON 的具体权益以官网为准。",
+      "source_url": "https://www.robomaster.com/zh-CN/recruit",
+      "accessed_at": "2026-11-01",
+      "notes": "不把“可参与通道”写成“保证直通面试”。"
+    }
+  ],
+  "hiring_programs": [
+    {
+      "name": "拓疆者校园招聘",
+      "description": "大疆校园招聘项目；具体岗位与批次以官网为准。",
+      "url": "https://careers.dji.com/"
+    },
+    {
+      "name": "实习生招聘",
+      "description": "大疆实习生招聘入口。",
+      "url": "https://careers.dji.com/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dji-careers",
+      "title": "大疆创新校园招聘",
+      "url": "https://careers.dji.com/",
+      "publisher": "DJI 大疆",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口与页面名称，具体岗位以官网为准。"
+    },
+    {
+      "id": "dji-rm-recruit",
+      "title": "RoboMaster 专属招聘通道",
+      "url": "https://www.robomaster.com/zh-CN/recruit",
+      "publisher": "RoboMaster / DJI 大疆",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["competition_preferences", "hiring_programs"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；页面说明 RM/RC 专属通道、直通面试与参赛资格。"
+    }
+  ],
+  "notes": "岗位方向来自官网招聘页与 RM 专属通道页；具体岗位、地点与资格以官网 JD 为准。",
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01"
+}

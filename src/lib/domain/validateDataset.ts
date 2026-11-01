@@ -131,6 +131,7 @@ export function validateDataset(
   duplicateIds(bundle.resources, 'resources', issues);
   duplicateIds(bundle.roadmaps, 'roadmaps', issues);
   duplicateIds(bundle.reviews, 'reviews', issues);
+  duplicateIds(bundle.companies, 'companies', issues);
 
   for (const vocabulary of bundle.vocabularies) {
     const termIds = new Set<string>();
@@ -734,6 +735,42 @@ export function validateDataset(
     }
     checkDate(review.submitted_at, path, asOf, issues, 'warning');
     checkDate(review.reviewed_at, path, asOf, issues);
+  }
+
+  const jobRoleIds = new Set(
+    bundle.vocabularies.find((item) => item.id === 'job-roles')?.terms.map((term) => term.id) ?? [],
+  );
+  for (const company of bundle.companies) {
+    const path = `companies/${company.id}`;
+    for (const roleId of company.role_ids) {
+      if (!jobRoleIds.has(roleId)) {
+        issues.push({
+          severity: 'error',
+          code: 'unknown_job_role',
+          path,
+          message: `企业引用了不存在的岗位方向：${roleId}`,
+        });
+      }
+    }
+    for (const preference of company.competition_preferences) {
+      if (!competitionMap.has(preference.competition_id)) {
+        issues.push({
+          severity: 'error',
+          code: 'missing_competition_reference',
+          path,
+          message: `企业招聘偏好引用了不存在的竞赛：${preference.competition_id}`,
+        });
+      }
+      checkDate(preference.accessed_at, path, asOf, issues, 'warning');
+    }
+    if (company.verification_status === 'verified' && !company.last_verified_at) {
+      issues.push({
+        severity: 'error',
+        code: 'verified_without_date',
+        path,
+        message: 'verified 企业必须填写 last_verified_at',
+      });
+    }
   }
 
   const contentSlugs = new Set<string>();

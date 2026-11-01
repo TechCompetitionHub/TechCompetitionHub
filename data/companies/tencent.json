@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "tencent",
+  "name": "腾讯",
+  "aliases": ["Tencent"],
+  "industry": "互联网、社交、游戏、云与金融科技",
+  "website": "https://www.tencent.com/zh-cn/",
+  "careers_url": "https://careers.tencent.com/",
+  "role_ids": ["frontend", "backend", "software", "algorithm", "ai", "test", "product"],
+  "competition_preferences": [
+    {
+      "competition_id": "acm-icpc",
+      "status": "unknown",
+      "statement": "截至 2026-11-01，腾讯 官方校园招聘入口未公开“ACM-ICPC”的直通面试、免笔试或优先条款；具体以岗位 JD 与当届校招公告为准。",
+      "source_url": "https://careers.tencent.com/",
+      "accessed_at": "2026-11-01",
+      "notes": "仅表示本次核验未找到公开条款，不代表企业一定没有内部政策。"
+    }
+  ],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "tencent-careers",
+      "title": "腾讯校园招聘",
+      "url": "https://careers.tencent.com/",
+      "publisher": "腾讯",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles", "competition_preferences"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口与页面名称，具体岗位以官网为准。"
+    }
+  ],
+  "notes": "未把算法竞赛经历写成企业官方优先条款；具体岗位以官网 JD 为准。",
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01"
+}

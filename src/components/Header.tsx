@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { to: '/', label: '首页', end: true },
   { to: '/competitions', label: '找竞赛' },
   { to: '/rankings', label: '排行榜' },
+  { to: '/careers', label: '求职' },
   { to: '/projects', label: '项目成果' },
   { to: '/skills', label: '技能图谱' },
   { to: '/planner', label: '成长规划' },

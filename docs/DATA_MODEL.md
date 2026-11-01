@@ -93,6 +93,31 @@
 - 目录名称与平台名称不一致时，在 `notes` 说明（例如使用原赛事名）；
 - 评分引擎不读取该字段，正式排名也不使用它。
 
+## 3.1 Company（企业/招聘信息）
+
+文件：`data/companies/<id>.json`。只记录公开校招入口、岗位方向与有来源的竞赛直通/优先条款。
+
+| 字段                      | 说明                                                                  |
+| ------------------------- | --------------------------------------------------------------------- |
+| `name` / `aliases`        | 企业名称与别名                                                        |
+| `industry`                | 行业                                                                  |
+| `website` / `careers_url` | 官网与官方校招入口                                                    |
+| `role_ids`                | 岗位方向 ID，来自 `job-roles` 词表                                    |
+| `competition_preferences` | `{competition_id, status, statement, source_url, accessed_at, notes}` |
+| `hiring_programs`         | `{name, description, url}` 校园招聘/实习项目                          |
+| `sources`                 | 官方招聘页或公告来源                                                  |
+| `verification_status`     | 是否已核验                                                            |
+
+`competition_preferences.status`：
+
+- `direct_channel`：官方明确直通面试/免笔试等；
+- `priority`：官方明确优先；
+- `plus`：可参与专属通道/加分，但不保证直通；
+- `no_public_channel`：已查看的官方入口未公开；
+- `unknown`：待核验。
+
+没有官方原文时不得把“参赛经历”写成“保证录用”或“直通”。岗位方向词表：`data/vocabularies/job-roles.json`。
+
 ## 4. Source（来源）
 
 ```json

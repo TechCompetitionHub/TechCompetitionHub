@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "id": "job-roles",
+  "label": "求职岗位方向",
+  "description": "企业校园招聘中常见的工程师与产品岗位方向，用于将竞赛经历映射到求职方向。",
+  "terms": [
+    {
+      "id": "embedded",
+      "label": "嵌入式工程师",
+      "description": "单片机、RTOS、驱动、嵌入式 Linux 与软硬件联调。"
+    },
+    {
+      "id": "frontend",
+      "label": "前端工程师",
+      "description": "Web 前端、交互、可视化与浏览器性能。"
+    },
+    {
+      "id": "backend",
+      "label": "后端工程师",
+      "description": "服务端、数据库、分布式系统与 API 设计。"
+    },
+    {
+      "id": "software",
+      "label": "软件开发工程师",
+      "description": "通用软件开发、工程化、测试与版本协作。"
+    },
+    {
+      "id": "algorithm",
+      "label": "算法工程师",
+      "description": "算法设计、数据结构、优化与工程落地。"
+    },
+    {
+      "id": "ai",
+      "label": "人工智能工程师",
+      "description": "机器学习、深度学习、视觉、NLP 与模型部署。"
+    },
+    {
+      "id": "robotics",
+      "label": "机器人工程师",
+      "description": "机器人系统、控制、感知、规划与仿真。"
+    },
+    {
+      "id": "ic",
+      "label": "芯片/IC 工程师",
+      "description": "数字/模拟设计、验证、版图、EDA 与芯片应用。"
+    },
+    {
+      "id": "hardware",
+      "label": "硬件工程师",
+      "description": "电路设计、PCB、电源、信号完整性与硬件调试。"
+    },
+    {
+      "id": "test",
+      "label": "测试/验证工程师",
+      "description": "测试设计、自动化、质量保障与问题定位。"
+    },
+    {
+      "id": "mechanical",
+      "label": "机械工程师",
+      "description": "机械结构、传动、材料、加工与样机验证。"
+    },
+    {
+      "id": "product",
+      "label": "产品经理",
+      "description": "需求分析、产品设计、项目推进与用户研究。"
+    },
+    {
+      "id": "project-management",
+      "label": "项目管理",
+      "description": "研发项目计划、跨团队协作、风险与交付管理。"
+    }
+  ]
+}

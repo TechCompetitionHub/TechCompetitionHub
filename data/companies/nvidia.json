@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "nvidia",
+  "name": "英伟达",
+  "aliases": ["NVIDIA", "Nvidia"],
+  "industry": "GPU、加速计算、人工智能与机器人",
+  "website": "https://www.nvidia.cn/",
+  "careers_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+  "role_ids": ["embedded", "software", "algorithm", "ai", "ic", "robotics"],
+  "competition_preferences": [
+    {
+      "competition_id": "robocup-china",
+      "status": "unknown",
+      "statement": "截至 2026-11-01，英伟达 官方校园招聘入口未公开“RoboCup 中国赛”的直通面试、免笔试或优先条款；具体以岗位 JD 与当届校招公告为准。",
+      "source_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "accessed_at": "2026-11-01",
+      "notes": "仅表示本次核验未找到公开条款，不代表企业一定没有内部政策。"
+    }
+  ],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "nvidia-careers",
+      "title": "NVIDIA Careers",
+      "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "publisher": "NVIDIA",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles", "competition_preferences"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口与页面名称，具体岗位以官网为准。"
+    }
+  ],
+  "notes": "具体岗位与地点以 NVIDIA 官方招聘网站为准。",
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01"
+}

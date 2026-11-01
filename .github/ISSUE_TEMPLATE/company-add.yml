@@ -1,0 +1,117 @@
+name: 补充企业招聘信息
+description: 补充企业校招入口、岗位方向或竞赛直通/优先条款；必须附官方来源。
+title: '[企业补充] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > 请附企业官方招聘页或官方公告链接，并写明访问日期。
+        > 不要把“听说”“内部消息”写成官方直通条款；没有官方依据请选择“未知”。
+
+  - type: input
+    id: company_name
+    attributes:
+      label: 企业名称
+      placeholder: 例如：大疆创新（DJI）
+    validations:
+      required: true
+
+  - type: input
+    id: careers_url
+    attributes:
+      label: 官方校园招聘入口
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: roles
+    attributes:
+      label: 岗位方向（可多选）
+      multiple: true
+      options:
+        - 嵌入式工程师
+        - 前端工程师
+        - 后端工程师
+        - 软件开发工程师
+        - 算法工程师
+        - 人工智能工程师
+        - 机器人工程师
+        - 芯片/IC 工程师
+        - 硬件工程师
+        - 测试/验证工程师
+        - 机械工程师
+        - 产品经理
+        - 项目管理
+
+  - type: dropdown
+    id: competition
+    attributes:
+      label: 相关竞赛
+      description: 只选择与企业公开条款直接相关的竞赛。
+      options:
+        - 无特定竞赛
+        - RoboMaster
+        - ROBOCON
+        - RoboCup 中国赛
+        - ROBOTAC
+        - ACM-ICPC
+        - MCM/ICM
+        - 西门子杯
+        - 华为 ICT 大赛
+        - 百度之星
+        - 全国大学生电子设计竞赛
+        - 全国大学生智能汽车竞赛
+        - 全国大学生信息安全竞赛
+        - 全国大学生集成电路创新创业大赛
+        - 全国大学生嵌入式芯片与系统设计竞赛
+        - 全国大学生统计建模大赛
+        - 其他
+
+  - type: dropdown
+    id: preference
+    attributes:
+      label: 招聘条款类型
+      options:
+        - 官方直通面试/免笔试
+        - 官方明确优先
+        - 可参与专属通道/加分
+        - 官网未公开
+        - 未知/待核验
+    validations:
+      required: true
+
+  - type: textarea
+    id: statement
+    attributes:
+      label: 条款原文或准确转述
+      description: 写清适用对象、届别、岗位与限制；不要扩大解释。
+      placeholder: 例如：官方页面写明“RM/RC AWARD 提名者和获奖人将获得直通面试的机会”。
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: 来源 URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: accessed_at
+    attributes:
+      label: 访问日期
+      placeholder: 2026-11-01
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 确认
+      options:
+        - label: 我附上了官方来源，没有把社区传言写成官方条款。
+          required: true
+        - label: 我没有包含个人隐私、未授权截图或内部资料。
+          required: true

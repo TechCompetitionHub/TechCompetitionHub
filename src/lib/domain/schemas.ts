@@ -514,6 +514,48 @@ export const vocabularySchema = z
 export type Vocabulary = z.infer<typeof vocabularySchema>;
 export type VocabularyTerm = z.infer<typeof vocabularyTermSchema>;
 
+const competitionPreferenceSchema = z
+  .object({
+    competition_id: slugSchema,
+    status: z.enum(['direct_channel', 'priority', 'plus', 'no_public_channel', 'unknown']),
+    statement: z.string().trim().min(20).max(1200),
+    source_url: httpUrlSchema,
+    accessed_at: isoDateSchema,
+    notes: z.string().trim().max(1000).nullable(),
+  })
+  .strict();
+
+const hiringProgramSchema = z
+  .object({
+    name: z.string().trim().min(2).max(160),
+    description: z.string().trim().max(600).nullable(),
+    url: httpUrlSchema.nullable(),
+  })
+  .strict();
+
+export const companySchema = z
+  .object({
+    schema_version: z.literal(SCHEMA_VERSION),
+    is_example: z.boolean(),
+    id: slugSchema,
+    name: z.string().trim().min(2).max(160),
+    aliases: z.array(z.string().trim().min(1).max(120)),
+    industry: z.string().trim().min(2).max(160),
+    website: httpUrlSchema,
+    careers_url: httpUrlSchema,
+    role_ids: z.array(slugSchema).min(1),
+    competition_preferences: z.array(competitionPreferenceSchema),
+    hiring_programs: z.array(hiringProgramSchema),
+    sources: z.array(sourceSchema).min(1),
+    verification_status: verificationStatusSchema,
+    last_verified_at: isoDateSchema.nullable(),
+    updated_at: isoDateSchema,
+    notes: z.string().trim().max(2000).nullable(),
+  })
+  .strict();
+
+export type Company = z.infer<typeof companySchema>;
+
 export const communityReviewSchema = z
   .object({
     schema_version: z.literal(SCHEMA_VERSION),

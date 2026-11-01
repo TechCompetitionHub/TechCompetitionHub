@@ -3,6 +3,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import {
   communityReviewSchema,
+  companySchema,
   competitionSchema,
   contentFrontmatterSchema,
   projectSchema,
@@ -17,6 +18,7 @@ const OUTPUT_DIR = path.join(process.cwd(), 'data', 'schemas');
 
 const SCHEMAS = [
   ['competition', competitionSchema],
+  ['company', companySchema],
   ['community-review', communityReviewSchema],
   ['skill', skillSchema],
   ['project', projectSchema],
