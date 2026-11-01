@@ -7,6 +7,7 @@ import { Container, PageHeader, SectionHeading } from '../components/Layout';
 import { usePageMeta } from '../components/Seo';
 import { EmptyState } from '../components/States';
 import { RankingEntry } from '../features/rankings/RankingEntry';
+import { RankingPodium } from '../features/rankings/RankingPodium';
 import { formatDate, formatScore } from '../lib/utils/format';
 import { getDomainOptions, getValueRanking } from '../services/competitionService';
 import { getScoringModel } from '../services/scoringService';
@@ -85,13 +86,27 @@ export function RankingsPage() {
                   </h2>
                   <Badge tone="success">正式评分</Badge>
                 </div>
-                <ol className="space-y-4">
-                  {ranking.entries.map((entry) => (
-                    <li key={entry.competition.id}>
-                      <RankingEntry entry={entry} />
-                    </li>
-                  ))}
-                </ol>
+                <div className="mb-3 flex items-center justify-between">
+                  <h2 className="text-lg font-bold text-ink-900">前三名 · 领奖台</h2>
+                  <Badge tone="accent">高分优先</Badge>
+                </div>
+                <RankingPodium entries={ranking.entries} />
+
+                {ranking.entries.length > 3 ? (
+                  <div className="mt-8">
+                    <div className="mb-3 flex items-center justify-between">
+                      <h2 className="text-lg font-bold text-ink-900">第 4 名及以后</h2>
+                      <span className="text-xs text-ink-500">按综合分依次排列</span>
+                    </div>
+                    <ol start={4} className="space-y-3">
+                      {ranking.entries.slice(3).map((entry) => (
+                        <li key={entry.competition.id}>
+                          <RankingEntry entry={entry} />
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                ) : null}
               </>
             ) : (
               <EmptyState

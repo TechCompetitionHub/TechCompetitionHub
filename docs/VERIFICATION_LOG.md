@@ -36,7 +36,7 @@ npm run check
 | 格式   | `npm run format:check`       | 通过                                                                                |
 | Lint   | `npm run lint`               | 通过，0 error                                                                       |
 | 类型   | `npm run typecheck`          | 通过                                                                                |
-| 测试   | `npm test`                   | 10 个文件、115 个测试全部通过（含 23 条路由 axe 审计）                              |
+| 测试   | `npm test`                   | 10 个文件、116 个测试全部通过（含 23 条路由 axe 审计）                              |
 | 数据   | `npm run data:validate`      | 31 竞赛 / 30 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章 / 0 社区评价；0 错误、0 警告 |
 | Schema | `npm run data:schemas:check` | 9 个 JSON Schema 与 Zod 定义一致                                                    |
 | 构建   | `npm run build`              | 通过                                                                                |
@@ -209,7 +209,9 @@ postbuild：... base=/
 - 视觉检查：Chrome 1440×1200 桌面与 CDP 390×844 移动视口截图；移动端 `scrollWidth = innerWidth = 390`，无横向溢出。
 - 论坛头像采用维护者设计的原图，优化为 `public/forum-avatar.jpg`（512×512，约 42 KB），用于页头与社区页；README 已记录出处与许可提示。
 - Discussions 当前默认 6 个分类，社区页链接实际分类。
-- 测试：10 个文件、115 个测试全部通过；`npm run check` exit 0。
-- 构建：627 modules，sitemap 100 个 URL（31 竞赛 + 30 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），CSS 55.06 KB；数据 JSON 拆为 `catalog-data`（约 215 KB），应用主包约 304 KB，vendor 分块独立。
+- 竞赛详情新增 1–5 星评分入口，选择后跳转 `/submit-review` 并预填评分；已审核的他人评价继续显示平均分、分布与背景信息。
+- 价值榜改为“前三名高低领奖台 + 第 4 名起列表”；桌面 1440×1200 与 CDP 390×844 移动视口已检查，移动端无横向溢出。
+- 测试：10 个文件、116 个测试全部通过；`npm run check` exit 0。
+- 构建：628 modules，sitemap 100 个 URL（31 竞赛 + 30 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），CSS 59.00 KB；数据 JSON 拆为 `catalog-data`（约 215 KB），应用主包约 307.57 KB，vendor 分块独立。
 - 懒加载：论坛分类、竞赛类别、类别详情、文章详情、提交竞赛与提交评价均按需加载；骨架屏在 Suspense 期间显示。
 - 推送提交 `020b1e7` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 100 个 URL（31 竞赛 / 30 技能 / 4 文章 / 17 静态路由 / 12 类别 / 6 论坛分类），10 个新增竞赛 ID 均可检索；应用主包 304,011 bytes，`catalog-data` 约 215 KB。

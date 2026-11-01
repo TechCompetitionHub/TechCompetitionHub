@@ -87,6 +87,9 @@ describe('核心页面', () => {
     renderApp('/rankings');
     expect(screen.getByRole('heading', { level: 1, name: '竞赛价值榜' })).toBeInTheDocument();
     expect(screen.getAllByText(/正式评分/).length).toBeGreaterThan(0);
+    expect(screen.getByRole('heading', { level: 2, name: '前三名 · 领奖台' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: '第 4 名及以后' })).toBeInTheDocument();
+    expect(screen.getAllByText('冠军').length).toBeGreaterThan(0);
     expect(screen.getByText(/未进入正式排名的条目/)).toBeInTheDocument();
     expect(screen.getAllByText(/资料不足|尚未提供平台评分/).length).toBeGreaterThan(0);
   });
@@ -180,10 +183,21 @@ describe('核心页面', () => {
     expect(screen.getByText(/不参与平台六维评分或正式排名/)).toBeInTheDocument();
   });
 
-  it('竞赛详情在无社区评价时显示空状态与提交入口', () => {
+  it('竞赛详情在无社区评价时显示空状态与评分入口', () => {
     renderApp('/competitions/cumcm');
     expect(screen.getByText('暂无已审核的社区评分')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: '提交参赛评价' })).toBeInTheDocument();
+    expect(screen.getByRole('group', { name: '选择评分' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: '提交评分' })).toBeInTheDocument();
+  });
+
+  it('选择星级后跳转到带评分参数的提交页', async () => {
+    const user = userEvent.setup();
+    renderApp('/competitions/cumcm');
+    await user.click(screen.getByRole('button', { name: '5 星' }));
+    expect(screen.getByRole('link', { name: '提交 5 星评价' })).toHaveAttribute(
+      'href',
+      expect.stringContaining('rating=5'),
+    );
   });
 
   it('社区页链接到实际存在的 Discussions 分类', () => {

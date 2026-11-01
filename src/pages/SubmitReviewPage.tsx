@@ -39,8 +39,10 @@ export function SubmitReviewPage() {
   const competitions = listCompetitions();
   const [searchParams] = useSearchParams();
   const initialCompetition = searchParams.get('competition') ?? competitions[0]?.id ?? '';
+  const requestedRating = searchParams.get('rating') ?? '';
+  const initialRating = ['1', '2', '3', '4', '5'].includes(requestedRating) ? requestedRating : '4';
   const [competitionId, setCompetitionId] = useState(initialCompetition);
-  const [rating, setRating] = useState('4');
+  const [rating, setRating] = useState(initialRating);
   const [participated, setParticipated] = useState('yes');
   const [track, setTrack] = useState('');
   const [year, setYear] = useState('');
