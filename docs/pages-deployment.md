@@ -1,62 +1,64 @@
 # GitHub Pages 部署说明
 
-站点是纯静态 SPA，构建产物在 `dist/`。推荐使用 GitHub Actions 构建并部署，而不是提交 `dist/`。
+站点是纯静态 SPA，构建产物在 `dist/`。使用 GitHub Actions 构建并部署，不提交 `dist/`。
 
-## 1. 两种发布目标
+## 1. 发布目标
 
-| 目标             | 仓库                                              | URL                                                        | `VITE_BASE_PATH`               |
-| ---------------- | ------------------------------------------------- | ---------------------------------------------------------- | ------------------------------ |
-| 项目站点（推荐） | `TechCompetitionHub/TechCompetitionHub`           | `https://techcompetitionhub.github.io/TechCompetitionHub/` | `/TechCompetitionHub/`（默认） |
-| 组织根站点       | `TechCompetitionHub/TechCompetitionHub.github.io` | `https://techcompetitionhub.github.io/`                    | `/`                            |
+| 用途                 | 仓库                                              | URL                                                        | `VITE_BASE_PATH`       |
+| -------------------- | ------------------------------------------------- | ---------------------------------------------------------- | ---------------------- |
+| **主站点（根域名）** | `TechCompetitionHub/TechCompetitionHub.github.io` | `https://techcompetitionhub.github.io/`                    | `/`（默认）            |
+| 项目站点（可选镜像） | `TechCompetitionHub/TechCompetitionHub`           | `https://techcompetitionhub.github.io/TechCompetitionHub/` | `/TechCompetitionHub/` |
 
-当前仓库的默认构建与工作流面向**项目站点**。组织根站点仓库目前为空；如果希望根域名站点：
+两个仓库使用**同一提交**与同一套工作流。部署工作流按仓库名自动选择 base 与 `SITE_URL`：
 
-### 方案 A：把源码放在 `.github.io` 仓库
-
-将同一套源码放到 `TechCompetitionHub.github.io`，在部署工作流中设置：
-
-```yaml
-env:
-  VITE_BASE_PATH: /
+```bash
+REPO_NAME="${GITHUB_REPOSITORY#*/}"
+if [ "$REPO_NAME" = "TechCompetitionHub.github.io" ]; then
+  export VITE_BASE_PATH="/"
+  export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io"
+else
+  export VITE_BASE_PATH="/${REPO_NAME}/"
+  export SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}"
+fi
 ```
 
-并把 `SITE_URL` 改为 `https://techcompetitionhub.github.io`。工作流、数据与测试不需要改。
+因此不需要为两个仓库维护两份构建配置。
 
-### 方案 B：保留主仓库，根站点做重定向
+## 2. 首次部署步骤（根站点）
 
-在 `.github.io` 仓库放一个最小静态页面，重定向到 `/TechCompetitionHub/`。这样主仓库仍是唯一源码，但根域名不是完整站点。此方案不推荐用于长期 SEO。
-
-### 方案 C：跨仓库部署
-
-使用带 Pages 权限的细粒度 PAT 将 `dist/` 推送到 `.github.io`。这会引入额外密钥与权限，首版不采用；如确需使用，必须限制 token 范围、仅存于 Actions Secrets，并记录在 SECURITY.md。
-
-## 2. 首次部署步骤（项目站点）
-
-1. 确认 `main` 分支包含本仓库代码。
-2. 打开仓库 **Settings → Pages**。
+1. 确认 `TechCompetitionHub.github.io` 的 `main` 与主仓库指向同一提交。
+2. 打开根站点仓库 **Settings → Pages**。
 3. **Build and deployment → Source** 选择 **GitHub Actions**。
 4. 推送 `main`，或在 **Actions → Deploy GitHub Pages → Run workflow** 手动触发。
-5. 等待 `build` 与 `deploy` 两个 job 成功。
-6. 打开 `https://techcompetitionhub.github.io/TechCompetitionHub/`，检查：
-   - 首页与竞赛目录加载；
-   - 直接刷新 `/competitions/cumcm` 不 404；
+5. 等待 `build` 与 `deploy` 成功。
+6. 打开 `https://techcompetitionhub.github.io/`，检查：
+   - 首页、竞赛目录、详情、排行榜、技能、规划器、指南、社区、404；
+   - 直接刷新 `/competitions/cumcm` 不白屏；
+   - 静态资源路径以 `/assets/` 开头；
    - `sitemap.xml` 与 `robots.txt` 可访问；
-   - 静态资源路径以 `/TechCompetitionHub/assets/` 开头；
-   - 移动端导航与键盘焦点可用。
+   - 移动端 375px 无横向溢出，键盘 Tab 顺序与焦点可见。
 
-## 3. 工作流
+> Pages 未启用时，工作流会在 **Setup Pages** 步骤失败；这是预期状态。启用后重新运行即可。`main` 的检查步骤（安装、格式、Lint、类型、测试、数据、Schema）应全部通过。
+
+## 3. 项目站点（可选）
+
+在 `TechCompetitionHub/TechCompetitionHub` 仓库同样把 Pages Source 设为 GitHub Actions。工作流检测到仓库名为 `TechCompetitionHub`，使用 base `/TechCompetitionHub/`，部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。
+
+项目站点可作为开发预览或备用入口；根站点是主入口，两者内容相同。
+
+## 4. 工作流
 
 `.github/workflows/deploy-pages.yml`：
 
 - 触发：`push` 到 `main`、`workflow_dispatch`。
 - 权限：`contents: read`、`pages: write`、`id-token: write`。
 - 并发：`pages`，不取消进行中的部署。
-- `build` job：`npm ci` → 格式 → Lint → 类型 → 测试 → 数据校验 → Schema 漂移 → `configure-pages` → `npm run build` → `upload-pages-artifact`。
+- `build` job：`npm ci` → 格式 → Lint → 类型 → 测试 → 数据校验 → Schema 漂移 → `configure-pages` → 动态 base 构建 → `upload-pages-artifact`。
 - `deploy` job：`deploy-pages`，环境 `github-pages`。
 
 PR 由 `.github/workflows/ci.yml` 检查，不部署。
 
-## 4. 深层链接与 404
+## 5. 深层链接与 404
 
 GitHub Pages 不支持 SPA rewrites。`scripts/postbuild.ts` 会：
 
@@ -67,37 +69,50 @@ GitHub Pages 不支持 SPA rewrites。`scripts/postbuild.ts` 会：
 
 当用户直接访问 `/competitions/xxx` 时，Pages 返回 `404.html`（内容与 `index.html` 相同），React Router 读取真实 URL 并渲染详情页。HTTP 状态仍是 404，但页面可用；这是 GitHub Pages 的已知限制。
 
-## 5. 自定义域名
+## 6. 同步两个仓库
 
-1. 在仓库 Pages 设置中填写 Custom domain。
+同一提交需要推送到两个远程：
+
+```bash
+git remote add root https://github.com/TechCompetitionHub/TechCompetitionHub.github.io.git
+git push origin main
+git push root main
+```
+
+本机可使用已配置的 SSH 身份推送到两个仓库。根站点仓库必须命名为 `TechCompetitionHub.github.io`，否则 GitHub Pages 不会把它当作组织根站点。
+
+## 7. 自定义域名
+
+1. 在根站点仓库 Pages 设置中填写 Custom domain。
 2. 按 GitHub 文档配置 DNS（A/AAAA 或 CNAME）。
 3. 启用 HTTPS。
-4. 如果使用根域名或自定义域名，构建时设置 `VITE_BASE_PATH=/`，并把 `SITE_URL` 改为自定义域名。
+4. 根域名/自定义域名仍使用 `VITE_BASE_PATH=/`；把 `SITE_URL` 改为自定义域名。
 5. 在 `public/` 放置 `CNAME` 文件（Vite 会复制到 `dist/`），或通过 Pages 设置写入。
 
-## 6. 排障
+## 8. 排障
 
-| 现象               | 检查                                                                                           |
-| ------------------ | ---------------------------------------------------------------------------------------------- |
-| 页面白屏、资源 404 | `dist/index.html` 的资源路径是否以正确 base 开头；构建时是否设置了错误 `VITE_BASE_PATH`        |
-| 刷新详情页 404     | `dist/404.html` 是否存在；Pages 是否使用 Actions 部署                                          |
-| 样式丢失           | 是否使用 `npm run build` 而不是直接部署源码；Tailwind 是否在构建中运行                         |
-| 部署 job 权限错误  | `permissions` 是否包含 `pages: write` 与 `id-token: write`；Pages Source 是否为 GitHub Actions |
-| sitemap URL 错误   | 构建时 `SITE_URL` 是否与最终域名一致                                                           |
-| 外部链接检查失败   | 外站可能临时不可用；链接检查是非阻塞的每周任务，不要因此回滚站点                               |
+| 现象               | 检查                                                       |
+| ------------------ | ---------------------------------------------------------- |
+| Setup Pages 失败   | Pages Source 是否为 GitHub Actions；仓库是否启用 Pages     |
+| 页面白屏、资源 404 | 构建时 base 是否与仓库类型匹配；根站点必须为 `/`           |
+| 刷新详情页 404     | `dist/404.html` 是否存在；Pages 是否使用 Actions 部署      |
+| 样式丢失           | 是否使用 `npm run build`；Tailwind 是否在构建中运行        |
+| 部署 job 权限错误  | `permissions` 是否包含 `pages: write` 与 `id-token: write` |
+| sitemap URL 错误   | 构建时 `SITE_URL` 是否与最终域名一致                       |
+| 外部链接检查失败   | 外站可能临时不可用；链接检查是非阻塞的每周任务             |
 
-## 7. 回滚
+## 9. 回滚
 
 - 在 **Actions → Deploy GitHub Pages** 中找到上一个成功部署的提交，重新运行 `workflow_dispatch`。
-- 或 revert 造成问题的提交并推送 `main`。
+- 或 revert 造成问题的提交并推送到两个仓库。
 - 数据错误可单独 revert 对应 JSON 文件；不要删除历史记录。
 
-## 8. 发布后检查
+## 10. 发布后检查
 
-- [ ] 首页、目录、详情、排行榜、技能、规划器、指南、社区、404 均可访问。
-- [ ] 直接刷新深层链接不白屏。
+- [ ] 根站点 `/` 可访问，资源使用 `/assets/`。
+- [ ] 深层链接直接刷新不白屏。
 - [ ] 移动端 375px 无横向溢出。
 - [ ] 键盘 Tab 顺序合理，焦点可见。
-- [ ] `sitemap.xml` 包含主要路由与数据详情页。
+- [ ] `sitemap.xml` 使用根域名并包含主要路由与数据详情页。
 - [ ] 页面没有虚构统计或未授权内容。
-- [ ] 在仓库 About 中设置描述、主页 URL 与 Topics。
+- [ ] 根站点仓库 About 中设置主页 URL 与 Topics。

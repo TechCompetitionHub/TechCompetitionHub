@@ -3,12 +3,13 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, 'dist');
-const BASE = process.env.VITE_BASE_PATH ?? '/TechCompetitionHub/';
+const BASE = process.env.VITE_BASE_PATH ?? '/';
 const BASE_NO_SLASH = BASE.replace(/\/$/, '');
 const ASSET_BASE = BASE === '/' ? '/assets/' : `${BASE}assets/`;
-const SITE_URL = (
-  process.env.SITE_URL ?? 'https://techcompetitionhub.github.io/TechCompetitionHub'
-).replace(/\/$/, '');
+const SITE_URL = (process.env.SITE_URL ?? 'https://techcompetitionhub.github.io').replace(
+  /\/$/,
+  '',
+);
 
 async function listSlugs(directory: string, extension: '.json' | '.md'): Promise<string[]> {
   const { readdir } = await import('node:fs/promises');

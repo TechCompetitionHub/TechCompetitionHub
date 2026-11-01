@@ -4,6 +4,7 @@
 - 环境：Windows 11、Node v24.17.0、npm 11.14.1、Git 2.47.1
 - 提交状态：已推送 `origin/main`（commit `95b12b4`）；GitHub Pages 尚未启用，尚未部署
 - 说明：本文件只记录实际运行的命令与结果；没有运行的检查不会被写成“通过”。
+- 2026-11-01 更新：主站改为根站点 `TechCompetitionHub.github.io`（base `/`）。第 3–5 节保留迁移前项目站点验证记录；第 9 节为当前根站点验证。
 
 ## 1. 干净安装
 
@@ -144,10 +145,33 @@ npm run links:check:online
 
 ## 8. 未完成或未验证
 
-- 已推送 `origin/main`；GitHub Pages 尚未启用，真实部署未验证。
+- 已推送主仓库与根站点仓库的 `main`；GitHub Pages 尚未启用，真实部署未验证。
 - 未在真实手机/浏览器上做人工视觉与键盘走查；已有自动化 axe 与响应式布局检查。
 - 首版 8 条评分尚未由维护者/领域评审人工复核。
 - 外部链接在线检查受本机网络影响，未在 CI 环境运行。
 - 项目成果目录为真实空状态，未做项目提交演练。
 - Discussions 未启用；Issue 模板与分类指引已提交，需仓库设置。
 - 许可证最终选择需维护者确认。
+
+## 9. 根站点（当前主站）验证
+
+根站点发布目标：`TechCompetitionHub/TechCompetitionHub.github.io` → `https://techcompetitionhub.github.io/`。
+
+- 默认生产构建 base 改为 `/`；项目站点使用 `VITE_BASE_PATH=/TechCompetitionHub/` 覆盖。
+- `npm run check`：exit 0；93 个测试、数据校验 0 错误 0 警告、Schema 8 个一致。
+- 根站点构建：
+
+```text
+dist/index.html                            1.00 kB │ gzip:   0.58 kB
+dist/assets/index-Ce1RVKu1.css            39.07 kB │ gzip:   7.01 kB
+dist/assets/vendor-react-ker38TCy.js      50.53 kB │ gzip:  17.88 kB
+dist/assets/vendor-zod-kdM93vdI.js        92.28 kB │ gzip:  26.19 kB
+dist/assets/GuideDetailPage-DrprvxZs.js  167.85 kB │ gzip:  51.49 kB
+dist/assets/index-BC7yxjMV.js            625.21 kB │ gzip: 190.07 kB
+postbuild：... base=/
+```
+
+- `dist/index.html` 资源为 `/assets/...`；sitemap 首页为 `https://techcompetitionhub.github.io/`，包含 10 条竞赛详情 URL。
+- 根站点预览：`/`、`/competitions/cumcm`、`/404.html`、主 JS、`/sitemap.xml` 均返回 200；主 JS 625,208 bytes。
+- 项目站点覆盖构建：`VITE_BASE_PATH=/TechCompetitionHub/` 时资源为 `/TechCompetitionHub/assets/...`，postbuild 通过；随后已恢复根站点构建。
+- GitHub Pages 需要在根站点仓库设置中启用 **GitHub Actions** 后，部署工作流才能通过 `Setup Pages` 并发布。

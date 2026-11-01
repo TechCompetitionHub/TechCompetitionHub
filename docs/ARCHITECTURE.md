@@ -14,7 +14,7 @@ TechCompetitionHub 首版是静态站点，目标是：
 4. 不部署后端、数据库或付费 API；未来可平滑替换数据源。
 5. 贡献门槛低：JSON + Markdown + PR。
 
-主要约束：GitHub Pages 只托管静态文件，不能运行 Node/Python 服务端；项目站点 URL 带仓库路径，必须正确配置 `base`；深层路由刷新需要 `404.html` 回退。
+主要约束：GitHub Pages 只托管静态文件，不能运行 Node/Python 服务端；根站点与项目站点的 URL 形式不同，必须正确配置 `base`；深层路由刷新需要 `404.html` 回退。
 
 ## 2. 技术栈
 
@@ -73,7 +73,7 @@ Repository / Service (src/services)
 *                         404
 ```
 
-- `base`：开发为 `/`，生产默认 `/TechCompetitionHub/`；可用 `VITE_BASE_PATH` 覆盖。
+- `base`：开发为 `/`，生产默认 `/`（根站点）；项目站点使用 `VITE_BASE_PATH=/TechCompetitionHub/` 覆盖。部署工作流按仓库名自动选择。
 - `BrowserRouter basename` 从 `import.meta.env.BASE_URL` 推导。
 - 构建后 `scripts/postbuild.ts` 将 `index.html` 复制为 `404.html`。GitHub Pages 对未知路径返回 404 页面，React Router 再按当前 URL 渲染；因此深层链接刷新不会白屏。
 - `.nojekyll` 防止 GitHub Pages 的 Jekyll 处理。
@@ -114,7 +114,7 @@ Repository / Service (src/services)
 2. `vite build`（base、资源哈希、CSS 提取）
 3. `tsx scripts/postbuild.ts`：校验 base、生成 `404.html`、`.nojekyll`、`sitemap.xml`、`robots.txt`
 
-CI（`.github/workflows/ci.yml`）在 PR 上执行格式、Lint、类型、测试、数据校验、Schema 漂移检查与构建，不部署。`deploy-pages.yml` 在 `main` push 或手动触发时执行同一套检查后使用官方 Pages Actions 部署。`link-check.yml` 每周运行外部链接检查，不阻断 PR。
+CI（`.github/workflows/ci.yml`）在 PR 上执行格式、Lint、类型、测试、数据校验、Schema 漂移检查与构建，不部署。`deploy-pages.yml` 在 `main` push 或手动触发时执行同一套检查后使用官方 Pages Actions 部署；同一工作流用于根站点仓库（base `/`）与主仓库项目站点（base `/TechCompetitionHub/`），按仓库名自动选择。`link-check.yml` 每周运行外部链接检查，不阻断 PR。
 
 ## 9. 性能与可访问性
 

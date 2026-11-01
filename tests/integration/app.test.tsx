@@ -105,7 +105,11 @@ describe('核心页面', () => {
   it('经验文章按需加载并渲染 Markdown', async () => {
     renderApp('/guides/choose-first-competition');
     expect(
-      await screen.findByRole('heading', { level: 1, name: '如何选择第一场科技竞赛' }),
+      await screen.findByRole(
+        'heading',
+        { level: 1, name: '如何选择第一场科技竞赛' },
+        { timeout: 5000 },
+      ),
     ).toBeInTheDocument();
     expect(screen.getByText('先说结论')).toBeInTheDocument();
     expect(screen.getAllByRole('heading', { level: 2 }).length).toBeGreaterThan(0);

@@ -7,7 +7,7 @@ export const SITE = {
   contributing:
     'https://github.com/TechCompetitionHub/TechCompetitionHub/blob/main/CONTRIBUTING.md',
   license: 'MIT（代码）/ CC BY 4.0（原创文档）',
-  pagesBaseUrl: 'https://techcompetitionhub.github.io/TechCompetitionHub/',
+  pagesBaseUrl: 'https://techcompetitionhub.github.io/',
 } as const;
 
 export function issueTemplateUrl(template: string): string {

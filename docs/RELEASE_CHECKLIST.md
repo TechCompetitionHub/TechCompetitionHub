@@ -26,14 +26,14 @@
 - [x] 数据校验通过（10 竞赛 / 25 技能 / 23 资源 / 2 路线 / 4 文章，0 错误 0 警告）。
 - [x] 生成 Schema 与 Zod 定义一致（`npm run data:schemas:check`）。
 - [x] 生产构建通过（`npm run build`）。
-- [x] 生产构建 base path 正确（默认 `/TechCompetitionHub/`，postbuild 校验）。
+- [x] 生产构建 base path 正确（根站点默认 `/`；项目站点 `/TechCompetitionHub/`，postbuild 校验）。
 - [x] `404.html`、`.nojekyll`、`sitemap.xml`、`robots.txt` 生成。
 - [x] PR 工作流不部署生产站点（`ci.yml` 无 Pages 权限）。
 - [x] Pages 工作流权限最小化（contents read、pages write、id-token write）。
 - [x] 仓库没有密钥和个人敏感信息（人工检索 + `.gitignore`）。
 - [ ] 移动端、键盘操作、空状态和错误状态人工复核（已做自动化与响应式检查，仍需真机/浏览器人工走查）。
 - [x] 关键页面有标题、描述与合理 SEO 元数据（`usePageMeta`）。
-- [ ] 生产预览在真实 GitHub Pages 环境验证（已推送 `main`，Pages 尚未启用）。
+- [ ] 生产预览在真实 GitHub Pages 环境验证（已推送两个仓库，Pages 尚未启用）。
 - [ ] 外部链接在线检查（`npm run links:check:online`）在 CI 定期任务中运行一次。
 
 ## GitHub 设置
@@ -41,12 +41,12 @@
 - [ ] 仓库描述、Topics、README 和许可证设置完成。
 - [ ] 启用 Discussions 并创建 `.github/DISCUSSION_GUIDE.md` 中的分类。
 - [ ] 配置 Issues 表单（文件已提交）与 PR 模板。
-- [ ] 配置 Pages 使用 GitHub Actions 部署。
+- [ ] 在根站点仓库配置 Pages 使用 GitHub Actions 部署；主仓库项目站点可选。
 - [ ] 检查默认分支保护、必需检查与合并权限。
 - [ ] 配置社区行为准则与安全报告流程（文件已提交，需在仓库设置中启用入口）。
 - [ ] 配置 Dependabot 告警（`dependabot.yml` 已提交，需在仓库设置中确认）。
 - [ ] 添加仓库标签（如 `data`、`bug`、`accessibility`）以便分类。
-- [ ] 为 `TechCompetitionHub.github.io` 决定用途：根站点、重定向或暂不使用。
+- [x] 确定发布目标：根站点 `TechCompetitionHub.github.io` 为主，主仓库项目站点为可选镜像。
 
 ## 发布说明
 

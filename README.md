@@ -12,7 +12,16 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码已推送至 `main` 分支；GitHub Pages 与 Discussions 的仓库设置由维护者完成，首次部署前请按下方的部署与设置清单操作。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点为 `https://techcompetitionhub.github.io/`**。GitHub Pages 与 Discussions 的仓库设置由维护者完成，首次部署前请按下方的部署与设置清单操作。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+
+## 仓库关系
+
+| 仓库                                              | 用途                               | 部署地址                                                   |
+| ------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------- |
+| `TechCompetitionHub/TechCompetitionHub`           | 源码、Issue、Discussions、项目站点 | `https://techcompetitionhub.github.io/TechCompetitionHub/` |
+| `TechCompetitionHub/TechCompetitionHub.github.io` | 根站点发布镜像（同一提交）         | `https://techcompetitionhub.github.io/`                    |
+
+同一提交推送到两个仓库。部署工作流按仓库名自动选择 base：根站点仓库使用 `/`，主仓库使用 `/TechCompetitionHub/`；两边的检查、构建与数据完全相同。
 
 当前仓库真实数据（2026-11-01 核验）：
 
@@ -44,16 +53,22 @@ npm run build
 npm run preview
 ```
 
-构建默认使用项目站点 base `/TechCompetitionHub/`；如需根域名站点：
+构建默认使用根站点 base `/`。如需部署到项目站点（`/TechCompetitionHub/`）：
 
 ```bash
-VITE_BASE_PATH=/ npm run build
+VITE_BASE_PATH=/TechCompetitionHub/ npm run build
 ```
 
 Windows PowerShell：
 
 ```powershell
-$env:VITE_BASE_PATH='/'; npm run build
+$env:VITE_BASE_PATH='/TechCompetitionHub/'; npm run build
+```
+
+本地预览根站点构建：
+
+```bash
+npm run preview
 ```
 
 ## 常用命令
@@ -123,29 +138,44 @@ $env:VITE_BASE_PATH='/'; npm run build
 
 ## GitHub Pages 部署
 
-1. 将仓库推送到 `TechCompetitionHub/TechCompetitionHub` 的 `main` 分支（需维护者批准）。
-2. 在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
+### 根站点（主站点）
+
+1. 将同一提交推送到 `TechCompetitionHub/TechCompetitionHub.github.io` 的 `main`。
+2. 在该仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
 3. 推送 `main` 或手动运行 **Deploy GitHub Pages** 工作流。
-4. 站点地址：`https://techcompetitionhub.github.io/TechCompetitionHub/`。
-5. 工作流会先执行格式、Lint、类型、测试、数据校验与构建，再上传并部署。
+4. 站点地址：`https://techcompetitionhub.github.io/`。
 
-`TechCompetitionHub.github.io` 组织站点仓库当前为空。若要用根域名 `https://techcompetitionhub.github.io/`，需要将源码放到该仓库，或以 `VITE_BASE_PATH=/` 构建并调整部署目标；两种方案见 [Pages 部署说明](docs/pages-deployment.md)。
+工作流检测到仓库名为 `TechCompetitionHub.github.io` 时自动使用 `VITE_BASE_PATH=/` 与 `SITE_URL=https://techcompetitionhub.github.io`。
 
-PR 工作流只检查，不部署生产站点。部署工作流权限限制为 `contents: read`、`pages: write`、`id-token: write`。
+### 项目站点（可选镜像）
+
+`TechCompetitionHub/TechCompetitionHub` 使用同一工作流，检测到仓库名为 `TechCompetitionHub` 时自动使用 `VITE_BASE_PATH=/TechCompetitionHub/`，部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。这不是主站，但可作为开发预览/备用入口。
+
+### 同步两个仓库
+
+```bash
+git remote add root https://github.com/TechCompetitionHub/TechCompetitionHub.github.io.git
+git push origin main
+git push root main
+```
+
+本机已配置 `root`/SSH 身份时可直接推送到两个远程。根站点仓库必须命名为 `TechCompetitionHub.github.io`，否则 GitHub Pages 不会把它当作组织根站点。
+
+工作流会先执行格式、Lint、类型、测试、数据校验与构建，再上传并部署。PR 工作流只检查，不部署生产站点；部署工作流权限限制为 `contents: read`、`pages: write`、`id-token: write`。
 
 ## 维护者仓库设置
 
 首次发布时在 GitHub 仓库中完成以下设置；代码与工作流文件已经就绪：
 
-- **About**：填写描述 `大学生科技竞赛开源成长平台：可追溯的数据、可解释的评分与规则式成长规划`，主页设为 `https://techcompetitionhub.github.io/TechCompetitionHub/`，添加 Topics：`competition`、`education`、`react`、`typescript`、`github-pages`、`open-data`。
-- **Pages**：`Settings → Pages → Build and deployment → Source` 选择 **GitHub Actions**；推送 `main` 或手动运行 `Deploy GitHub Pages`。
-- **Discussions**：`Settings → General → Features` 启用 Discussions，按 [.github/DISCUSSION_GUIDE.md](.github/DISCUSSION_GUIDE.md) 创建 8 个分类。站内只链接 Discussions 根地址，不链接不存在的分类。
-- **Actions**：允许仓库运行 Actions；默认工作流权限设为只读，部署工作流已声明所需最小权限。
-- **分支保护**：保护 `main`，要求 `CI / verify` 通过后再合并，禁止未审查的直接推送。
-- **Issues**：确认 `.github/ISSUE_TEMPLATE/` 表单可用；按需创建 `data`、`bug`、`accessibility`、`documentation` 标签。
+- **About（根站点仓库）**：填写描述 `大学生科技竞赛开源成长平台：可追溯的数据、可解释的评分与规则式成长规划`，主页设为 `https://techcompetitionhub.github.io/`，添加 Topics：`competition`、`education`、`react`、`typescript`、`github-pages`、`open-data`。
+- **Pages（根站点仓库）**：在 `TechCompetitionHub.github.io` 的 `Settings → Pages → Build and deployment → Source` 选择 **GitHub Actions**；推送 `main` 或手动运行 `Deploy GitHub Pages`。
+- **Pages（主仓库，可选）**：如保留项目站点镜像，在 `TechCompetitionHub` 仓库同样选择 GitHub Actions。
+- **Discussions（主仓库）**：在 `TechCompetitionHub` 的 `Settings → General → Features` 启用 Discussions，按 [.github/DISCUSSION_GUIDE.md](.github/DISCUSSION_GUIDE.md) 创建 8 个分类。站内只链接 Discussions 根地址。
+- **Actions**：允许两个仓库运行 Actions；默认工作流权限设为只读，部署工作流已声明所需最小权限。
+- **分支保护**：保护两个仓库的 `main`，要求 `CI / verify` 通过后再合并，禁止未审查的直接推送。
+- **Issues（主仓库）**：确认 `.github/ISSUE_TEMPLATE/` 表单可用；按需创建 `data`、`bug`、`accessibility`、`documentation` 标签。
 - **安全**：启用 Dependabot alerts 与 Security Advisories 私密报告；确认 `SECURITY.md` 中的渠道可访问。
 - **许可证**：确认代码 MIT 与原创内容 CC BY 4.0；如更换许可证，先更新 `LICENSE` / `LICENSE-CONTENT.md` 与 README。
-- **组织站点**：决定 `TechCompetitionHub.github.io` 的用途（根站点、重定向或暂不使用），方案见 [Pages 部署说明](docs/pages-deployment.md)。
 
 部署后至少检查：首页、目录、详情、排行榜、技能、规划器、指南、社区、404 可访问；直接刷新深层链接不白屏；移动端 375px 无横向溢出；键盘 Tab 顺序与焦点可见；`sitemap.xml` 包含主要路由。
 
@@ -167,6 +197,7 @@ PR 工作流只检查，不部署生产站点。部署工作流权限限制为 `
 - 首版没有账户、跨设备收藏、动态评分、后端审核后台或 AI 辅助。
 - 排行榜目前只实现 P0 要求的**竞赛价值榜**；项目成果榜、技能路线/资源榜、成长案例展示尚未实现。
 - GitHub Pages 的真实部署与 404 回退状态尚未在远程环境验证；本地预览与构建产物检查已通过。
+- 根站点仓库与主仓库目前需要手动同步推送；未配置自动镜像或跨仓库部署令牌。
 - 外部链接在线检查为每周非阻塞任务，受网络环境影响时以人工复核为准。
 - 部分竞赛官网仅提供前端渲染页面，链接检查以 HTTP 可访问性为准，不保证页面内容解析完整。
 

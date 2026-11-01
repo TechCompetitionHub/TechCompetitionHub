@@ -2,11 +2,11 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
 
-const PROJECT_BASE = '/TechCompetitionHub/';
+const DEFAULT_BASE = '/';
 
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
-  const base = isProduction ? (process.env.VITE_BASE_PATH ?? PROJECT_BASE) : '/';
+  const base = isProduction ? (process.env.VITE_BASE_PATH ?? DEFAULT_BASE) : '/';
 
   return {
     base,

@@ -17,7 +17,7 @@
 | 工具链                                            | Node v24.17.0、npm 11.14.1、Git 2.47.1；未安装 GitHub CLI               |
 | 结论                                              | 没有需要保留的既有代码；两个远程仓库均为空，不存在覆盖风险              |
 
-部署目标决策：主仓库 `TechCompetitionHub` 作为源码与项目站点（`https://techcompetitionhub.github.io/TechCompetitionHub/`）。`TechCompetitionHub.github.io` 暂不写入；如后续需要根域名站点，可通过 `VITE_BASE_PATH=/` 复用同一构建产物。该决策记录于 `docs/ADR/0003-github-pages.md`，最终发布目标由维护者确认。
+部署目标决策（2026-11-01 维护者确认）：根站点 `TechCompetitionHub.github.io` 为主站点（`https://techcompetitionhub.github.io/`）；主仓库 `TechCompetitionHub` 保留源码、Issue、Discussions，并作为可选项目站点（`https://techcompetitionhub.github.io/TechCompetitionHub/`）。同一提交镜像推送到两个仓库，部署工作流按仓库名自动选择 base：根站点 `/`，项目站点 `/TechCompetitionHub/`。该决策记录于 `docs/ADR/0003-github-pages.md`。
 
 ## 2. 技术方案
 
@@ -107,6 +107,6 @@
 ## 6. 需要维护者确认的事项
 
 1. 许可证：代码采用 MIT、原创文档采用 CC BY 4.0 是否符合预期（`LICENSE` 需最终确认）。
-2. Pages 发布目标：项目站点或组织根站点（`TechCompetitionHub.github.io`）。
-3. 是否授权将本地提交推送到远程；本计划默认不推送。
+2. Pages 发布目标：根站点 `TechCompetitionHub.github.io` 为主，项目站点为可选镜像（已确认）。
+3. 维护者已授权推送；代码已推送至主仓库与根站点仓库。
 4. 评分初评需由维护者/领域评审复核后再对外宣传。
