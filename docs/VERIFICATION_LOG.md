@@ -204,4 +204,4 @@ postbuild：... base=/
 - Discussions 当前默认 6 个分类，社区页链接实际分类。
 - 测试：10 个文件、109 个测试全部通过；`npm run check` exit 0。
 - 构建：608 modules，sitemap 78 个 URL（21 竞赛 + 25 技能 + 4 文章 + 16 静态路由 + 12 类别），base `/`。
-- 推送提交 `94918d8` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 21 条竞赛 / 63 个 URL；`/forum-avatar.jpg` 返回 200（image/jpeg，42,156 bytes）；`/submit-review` 与 `/submit-competition` 由 `404.html` 回退渲染。
+- 推送提交 `718a58e` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 21 条竞赛 / 12 个类别 / 78 个 URL；`/forum-avatar.jpg` 返回 200（image/jpeg，42,156 bytes）；`/submit-review`、`/submit-competition` 与 `/categories/robotics` 由 `404.html` 回退渲染。
