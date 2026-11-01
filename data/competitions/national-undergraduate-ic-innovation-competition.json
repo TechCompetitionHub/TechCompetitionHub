@@ -180,5 +180,10 @@
       "description": null,
       "url": null
     }
-  ]
+  ],
+  "equipment": {
+    "type": "off_the_shelf",
+    "description": "通常使用 EDA 工具、FPGA/芯片开发板或企业提供的软硬件环境。",
+    "requirements": null
+  }
 }

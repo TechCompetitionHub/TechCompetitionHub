@@ -56,6 +56,8 @@ describe('核心页面', () => {
     expect(screen.getByText('目录不等于认可度或技术含量')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: '可选的参赛方向' })).toBeInTheDocument();
     expect(screen.getAllByText('本科组').length).toBeGreaterThan(0);
+    expect(screen.getByText('设备要求')).toBeInTheDocument();
+    expect(screen.getAllByText('无需设备').length).toBeGreaterThan(0);
   });
 
   it('新增 ROS 2 技能展示任务与验收标准', () => {

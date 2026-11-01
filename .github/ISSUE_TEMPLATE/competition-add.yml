@@ -77,6 +77,30 @@ body:
         - 个人/团队均有
         - 不确定
 
+  - type: dropdown
+    id: equipment
+    attributes:
+      label: 设备要求
+      options:
+        - 无需设备
+        - 成品设备
+        - 自制设备
+        - 未知
+    validations:
+      required: true
+
+  - type: textarea
+    id: equipment_description
+    attributes:
+      label: 设备简介（可选）
+      description: 成品设备可写设备名称/类型；自制设备可写自制内容。
+
+  - type: textarea
+    id: equipment_requirements
+    attributes:
+      label: 自制设备要求（仅自制设备需要）
+      description: 写清加工、调试、安全或场地要求。
+
   - type: textarea
     id: summary
     attributes:

@@ -69,5 +69,10 @@
   "scoring_model_version": null,
   "scores": null,
   "notes": "示例数据，不得进入公开目录或排行榜。",
-  "tracks": []
+  "tracks": [],
+  "equipment": {
+    "type": "unknown",
+    "description": null,
+    "requirements": null
+  }
 }

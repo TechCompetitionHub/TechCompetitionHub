@@ -20,6 +20,7 @@ import {
   getCostOptions,
   getDifficultyOptions,
   getDomainOptions,
+  getEquipmentOptions,
   getFormatOptions,
   getScoreMap,
   getStatusOptions,
@@ -30,7 +31,7 @@ export function CompetitionCatalogPage() {
   usePageMeta({
     title: '竞赛目录',
     description:
-      '按领域、适合对象、难度、形式和费用筛选大学生科技竞赛。筛选条件保存在 URL 中，可分享与刷新恢复。',
+      '按领域、适合对象、难度、形式、设备要求与费用筛选大学生科技竞赛。筛选条件保存在 URL 中，可分享与刷新恢复。',
   });
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -40,6 +41,7 @@ export function CompetitionCatalogPage() {
   const audiences = getAudienceOptions();
   const difficulties = getDifficultyOptions();
   const formats = getFormatOptions();
+  const equipmentOptions = getEquipmentOptions();
   const costs = getCostOptions();
   const statuses = getStatusOptions();
   const scoreMap = useMemo(() => getScoreMap(), []);
@@ -158,6 +160,25 @@ export function CompetitionCatalogPage() {
                 {formats.map((format) => (
                   <option key={format.value} value={format.value}>
                     {format.label}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+
+            <Field
+              label="设备要求"
+              htmlFor="filter-equipment"
+              hint="无需设备 / 成品设备 / 自制设备 / 未知"
+            >
+              <Select
+                id="filter-equipment"
+                value={filters.equipment}
+                onChange={(event) => update('equipment', event.target.value)}
+              >
+                <option value="">全部设备要求</option>
+                {equipmentOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}（{option.count}）
                   </option>
                 ))}
               </Select>

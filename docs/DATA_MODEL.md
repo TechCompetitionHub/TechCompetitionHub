@@ -45,6 +45,7 @@
 | `description`               | 是   | string      | 50–6000 字，客观描述                                                           |
 | `audience`                  | 是   | object      | `{levels, notes}`；levels 来自词表                                             |
 | `format`                    | 是   | object      | `{team_based, team_size, delivery_modes, notes}`                               |
+| `equipment`                 | 是   | object      | `{type, description, requirements}`；type 见设备规则                           |
 | `difficulty`                | 是   | object      | `{level: 1–5, rationale}`，平台自定义                                          |
 | `estimated_cost`            | 是   | object      | `{amount, currency, status, basis, notes}`；未知时 amount=null、status=unknown |
 | `skills_required`           | 是   | object[]    | `{skill_id, target_level: 0–4}`                                                |
@@ -70,6 +71,17 @@
 - `status = verified` 时必须有 `amount`。
 - 未知费用不得写成 `free` 或 0。
 - 估算必须使用 `estimated` 并在 `basis`/`notes` 说明。
+
+### 设备规则
+
+`equipment.type` 只允许：
+
+- `none`：无需专用设备，主要使用电脑/软件；
+- `off_the_shelf`：使用成品设备、商用开发板、实验箱或成套软硬件；
+- `self_built`：团队自行制作机器人、电路、机械装置等；
+- `unknown`：官方来源未确认设备要求。
+
+`equipment.description` 用于成品/自制设备简介，可为 null；`equipment.requirements` 用于自制设备的加工、调试、安全或场地要求，可为 null。没有来源时使用 `unknown`，不要把猜测写成“无需设备”。
 
 ### 外部目录规则
 

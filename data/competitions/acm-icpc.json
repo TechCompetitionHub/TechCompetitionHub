@@ -108,5 +108,10 @@
   "id": "acm-icpc",
   "name": "ACM-ICPC 国际大学生程序设计竞赛",
   "summary": "面向高校学生的国际大学生程序设计竞赛，三人一队，在限时内协作解决算法与数据结构问题。",
-  "description": "ICPC（International Collegiate Programming Contest）官网为赛事官方入口，提供赛区、规则与赛事信息。比赛以三人团队在限时内解决多道算法题为核心，强调算法设计、程序实现与团队协作。平台记录官网可核验的名称、赛制定位与赛区信息；具体报名资格、赛程、费用与奖项以当届官网为准。"
+  "description": "ICPC（International Collegiate Programming Contest）官网为赛事官方入口，提供赛区、规则与赛事信息。比赛以三人团队在限时内解决多道算法题为核心，强调算法设计、程序实现与团队协作。平台记录官网可核验的名称、赛制定位与赛区信息；具体报名资格、赛程、费用与奖项以当届官网为准。",
+  "equipment": {
+    "type": "none",
+    "description": null,
+    "requirements": null
+  }
 }

@@ -130,6 +130,24 @@ const externalListReferenceSchema = z
 
 export type ExternalListReference = z.infer<typeof externalListReferenceSchema>;
 
+export const equipmentRequirementSchema = z.enum([
+  'none',
+  'off_the_shelf',
+  'self_built',
+  'unknown',
+]);
+
+export const equipmentInfoSchema = z
+  .object({
+    type: equipmentRequirementSchema,
+    description: z.string().trim().max(1000).nullable(),
+    requirements: z.string().trim().max(1000).nullable(),
+  })
+  .strict();
+
+export type EquipmentRequirement = z.infer<typeof equipmentRequirementSchema>;
+export type EquipmentInfo = z.infer<typeof equipmentInfoSchema>;
+
 const audienceSchema = z
   .object({
     levels: z.array(z.string().trim().min(1)).min(1),
@@ -227,6 +245,7 @@ export const competitionSchema = z
     description: z.string().trim().min(50).max(6000),
     audience: audienceSchema,
     format: formatSchema,
+    equipment: equipmentInfoSchema,
     difficulty: difficultySchema,
     estimated_cost: estimatedCostSchema,
     skills_required: z.array(skillRequirementSchema),

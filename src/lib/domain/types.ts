@@ -4,6 +4,8 @@ export type {
   CompetitionScore,
   CompetitionTrack,
   ContentFrontmatter,
+  EquipmentInfo,
+  EquipmentRequirement,
   ExternalListReference,
   PracticeTask,
   Project,

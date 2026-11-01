@@ -144,5 +144,10 @@
   },
   "notes": "赛季规则与赛制每年调整；费用、资格与日程以官方当届公告为准。",
   "external_lists": [],
-  "tracks": []
+  "tracks": [],
+  "equipment": {
+    "type": "self_built",
+    "description": "团队自行研发多种机器人及配套系统参与对抗。",
+    "requirements": "需要机械加工、嵌入式、控制、视觉与测试条件，硬件成本通常较高；具体规则以当届公告为准。"
+  }
 }

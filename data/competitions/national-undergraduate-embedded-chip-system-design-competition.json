@@ -126,5 +126,10 @@
       "description": null,
       "url": null
     }
-  ]
+  ],
+  "equipment": {
+    "type": "off_the_shelf",
+    "description": "通常使用厂商开发板、FPGA 板卡、芯片平台或竞赛提供的软硬件环境。",
+    "requirements": null
+  }
 }

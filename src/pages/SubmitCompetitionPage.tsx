@@ -5,6 +5,7 @@ import { Field, Select, TextInput } from '../components/Fields';
 import { Container, PageHeader, SectionHeading } from '../components/Layout';
 import { usePageMeta } from '../components/Seo';
 import { ExternalLink } from '../components/ExternalLink';
+import { EQUIPMENT_OPTIONS } from '../lib/domain/equipment';
 import { getAudienceOptions, getDomainOptions } from '../services/competitionService';
 import { issueTemplateUrl, SITE } from '../services/site';
 
@@ -19,6 +20,9 @@ interface DraftForm {
   description: string;
   audience: string;
   domains: string[];
+  equipment: string;
+  equipmentDescription: string;
+  equipmentRequirements: string;
 }
 
 const INITIAL_FORM: DraftForm = {
@@ -32,6 +36,9 @@ const INITIAL_FORM: DraftForm = {
   description: '',
   audience: 'undergraduate',
   domains: [],
+  equipment: 'unknown',
+  equipmentDescription: '',
+  equipmentRequirements: '',
 };
 
 function isHttpUrl(value: string): boolean {
@@ -83,6 +90,9 @@ export function SubmitCompetitionPage() {
     if (form.summary.trim().length < 20) issues.push('一句话说明至少 20 个字符。');
     if (form.description.trim().length < 50) issues.push('详细说明至少 50 个字符。');
     if (form.domains.length === 0) issues.push('至少选择一个领域。');
+    if (form.equipment === 'self_built' && form.equipmentRequirements.trim().length < 5) {
+      issues.push('自制设备请填写设备要求，至少 5 个字符。');
+    }
 
     setErrors(issues);
     if (issues.length > 0) {
@@ -111,6 +121,11 @@ export function SubmitCompetitionPage() {
       audience: {
         levels: [form.audience],
         notes: '用户提交草稿；具体资格以当届通知为准。',
+      },
+      equipment: {
+        type: form.equipment,
+        description: form.equipmentDescription.trim() || null,
+        requirements: form.equipmentRequirements.trim() || null,
       },
       format: {
         team_based: true,
@@ -291,6 +306,51 @@ export function SubmitCompetitionPage() {
                     </option>
                   ))}
                 </Select>
+              </Field>
+              <Field
+                label="设备要求"
+                htmlFor="submit-equipment"
+                hint="无需设备 / 成品设备 / 自制设备 / 未知。"
+              >
+                <Select
+                  id="submit-equipment"
+                  value={form.equipment}
+                  onChange={(event) => update('equipment', event.target.value)}
+                >
+                  {EQUIPMENT_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </Select>
+              </Field>
+              <Field
+                label="设备简介（可选）"
+                htmlFor="submit-equipment-description"
+                hint="成品设备可写设备名称/类型；自制设备可写自制内容。"
+              >
+                <textarea
+                  id="submit-equipment-description"
+                  value={form.equipmentDescription}
+                  onChange={(event) => update('equipmentDescription', event.target.value)}
+                  rows={2}
+                  className="field-control"
+                  placeholder="例如：商用开发板、传感器与云平台；或团队自制机器人。"
+                />
+              </Field>
+              <Field
+                label="自制设备要求（自制设备必填）"
+                htmlFor="submit-equipment-requirements"
+                hint="写清加工、调试、安全或场地要求；不是自制设备可留空。"
+              >
+                <textarea
+                  id="submit-equipment-requirements"
+                  value={form.equipmentRequirements}
+                  onChange={(event) => update('equipmentRequirements', event.target.value)}
+                  rows={2}
+                  className="field-control"
+                  placeholder="例如：需要机械加工、嵌入式调试与测试场地。"
+                />
               </Field>
               <fieldset>
                 <legend className="mb-2 text-sm font-semibold text-ink-900">

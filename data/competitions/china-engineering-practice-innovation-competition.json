@@ -158,5 +158,10 @@
       "description": null,
       "url": null
     }
-  ]
+  ],
+  "equipment": {
+    "type": "self_built",
+    "description": "团队自行设计、制作并调试新能源车、智能+装置或其它工程作品。",
+    "requirements": "需要机械/电子/控制设计、加工装配与现场调试条件；具体设备与安全要求以当届赛项通知为准。"
+  }
 }

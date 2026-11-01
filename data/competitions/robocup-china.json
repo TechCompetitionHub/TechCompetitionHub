@@ -127,5 +127,10 @@
       "description": null,
       "url": null
     }
-  ]
+  ],
+  "equipment": {
+    "type": "self_built",
+    "description": "团队自行搭建机器人或仿真系统参加赛区任务。",
+    "requirements": "需要机器人/仿真、控制、视觉与现场调试条件；具体平台与赛区规则以当届通知为准。"
+  }
 }

@@ -117,5 +117,10 @@
       "description": null,
       "url": null
     }
-  ]
+  ],
+  "equipment": {
+    "type": "unknown",
+    "description": null,
+    "requirements": null
+  }
 }

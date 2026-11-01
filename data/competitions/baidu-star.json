@@ -90,5 +90,10 @@
   "verification_status": "needs_review",
   "last_verified_at": null,
   "notes": "主办组织、赛制、日程与费用待核验；评分待补充。",
-  "tracks": []
+  "tracks": [],
+  "equipment": {
+    "type": "none",
+    "description": null,
+    "requirements": null
+  }
 }

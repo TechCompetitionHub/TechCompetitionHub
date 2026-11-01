@@ -100,5 +100,10 @@
   "verification_status": "verified",
   "last_verified_at": "2026-11-01",
   "notes": "赛事平台为前端应用，具体赛制、日程与费用待核验。",
-  "tracks": []
+  "tracks": [],
+  "equipment": {
+    "type": "self_built",
+    "description": "团队围绕机械工程方向自行设计并制作装置或工程样机。",
+    "requirements": "需要机械设计、加工、装配与测试条件；具体材料、尺寸与安全要求以当届通知为准。"
+  }
 }

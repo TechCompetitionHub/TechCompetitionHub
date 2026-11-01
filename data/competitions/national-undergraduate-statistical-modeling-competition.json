@@ -173,5 +173,10 @@
       "description": null,
       "url": null
     }
-  ]
+  ],
+  "equipment": {
+    "type": "none",
+    "description": null,
+    "requirements": null
+  }
 }

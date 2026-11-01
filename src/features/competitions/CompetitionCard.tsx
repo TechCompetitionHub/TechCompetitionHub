@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { Competition } from '../../lib/domain/types';
+import { equipmentLabel } from '../../lib/domain/equipment';
 import { formatDate, formatScore, statusLabel } from '../../lib/utils/format';
 import { getAudienceLabel, getDomainLabel } from '../../services/competitionService';
 import { Badge } from '../../components/Badge';
@@ -38,6 +39,7 @@ export function CompetitionCard({
               {getDomainLabel(domain)}
             </Badge>
           ))}
+          <Badge tone="neutral">{equipmentLabel(competition.equipment.type)}</Badge>
         </div>
         {rank ? (
           <span className="rounded-full bg-gradient-to-br from-navy-800 to-navy-900 px-2.5 py-1 text-xs font-bold text-white shadow-sm">

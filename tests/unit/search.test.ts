@@ -50,6 +50,24 @@ describe('搜索与筛选', () => {
     expect(individual.every((competition) => !competition.format.team_based)).toBe(true);
   });
 
+  it('按设备要求过滤', () => {
+    const selfBuilt = filterCompetitions(dataset.competitions, {
+      ...DEFAULT_FILTERS,
+      equipment: 'self_built',
+    });
+    expect(selfBuilt.length).toBeGreaterThan(0);
+    expect(selfBuilt.every((competition) => competition.equipment.type === 'self_built')).toBe(
+      true,
+    );
+
+    const noEquipment = filterCompetitions(dataset.competitions, {
+      ...DEFAULT_FILTERS,
+      equipment: 'none',
+    });
+    expect(noEquipment.length).toBeGreaterThan(0);
+    expect(noEquipment.every((competition) => competition.equipment.type === 'none')).toBe(true);
+  });
+
   it('按数据状态过滤', () => {
     const verified = filterCompetitions(dataset.competitions, {
       ...DEFAULT_FILTERS,

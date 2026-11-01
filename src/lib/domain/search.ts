@@ -9,6 +9,7 @@ export interface CompetitionFilters {
   audience: string;
   difficulty: string;
   format: string;
+  equipment: string;
   status: string;
   cost: string;
   sort: CompetitionSort;
@@ -20,6 +21,7 @@ export const DEFAULT_FILTERS: CompetitionFilters = {
   audience: '',
   difficulty: '',
   format: '',
+  equipment: '',
   status: '',
   cost: '',
   sort: 'recommended',
@@ -40,6 +42,7 @@ const FILTER_KEYS: Array<keyof CompetitionFilters> = [
   'audience',
   'difficulty',
   'format',
+  'equipment',
   'status',
   'cost',
   'sort',
@@ -121,6 +124,10 @@ function matchesFormat(competition: Competition, format: string): boolean {
   return competition.format.delivery_modes.includes(format as 'online' | 'offline' | 'hybrid');
 }
 
+function matchesEquipment(competition: Competition, equipment: string): boolean {
+  return !equipment || competition.equipment.type === equipment;
+}
+
 function matchesCost(competition: Competition, cost: string): boolean {
   if (!cost) return true;
   return competition.estimated_cost.status === cost;
@@ -155,6 +162,7 @@ export function filterCompetitions(
     if (filters.difficulty && competition.difficulty.level !== Number(filters.difficulty))
       return false;
     if (!matchesFormat(competition, filters.format)) return false;
+    if (!matchesEquipment(competition, filters.equipment)) return false;
     if (!matchesCost(competition, filters.cost)) return false;
     if (filters.status && competition.verification_status !== filters.status) return false;
     return true;

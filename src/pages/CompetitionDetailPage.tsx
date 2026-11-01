@@ -12,6 +12,7 @@ import { CommunityRatingPanel } from '../features/competitions/CommunityRatingPa
 import { CompetitionScorePanel } from '../features/competitions/CompetitionScorePanel';
 import { ExternalLists } from '../features/competitions/ExternalLists';
 import { NotFoundPage } from './NotFoundPage';
+import { EQUIPMENT_DESCRIPTIONS, equipmentLabel } from '../lib/domain/equipment';
 import { formatDate, levelLabel } from '../lib/utils/format';
 import {
   getAudienceLabel,
@@ -160,6 +161,18 @@ export function CompetitionDetailPage() {
                       .map((mode) => DELIVERY_LABELS[mode] ?? mode)
                       .join(' / ')}
                   </span>
+                </Fact>
+                <Fact label="设备要求">
+                  <span>{equipmentLabel(competition.equipment.type)}</span>
+                  <span className="mt-1 block text-xs leading-5 text-ink-500">
+                    {competition.equipment.description ??
+                      EQUIPMENT_DESCRIPTIONS[competition.equipment.type]}
+                  </span>
+                  {competition.equipment.requirements ? (
+                    <span className="mt-1 block text-xs leading-5 text-ink-500">
+                      要求：{competition.equipment.requirements}
+                    </span>
+                  ) : null}
                 </Fact>
                 <Fact label="赛道/组别">
                   {competition.tracks.length > 0 ? (

@@ -90,5 +90,10 @@
   "verification_status": "needs_review",
   "last_verified_at": null,
   "notes": "官方站点不可访问；主办、赛制、日程与费用待核验；评分待补充。",
-  "tracks": []
+  "tracks": [],
+  "equipment": {
+    "type": "self_built",
+    "description": "团队自行设计并制作机械创新作品。",
+    "requirements": "需要机械设计、加工、装配与测试条件；具体赛题与设备限制以当届通知为准。"
+  }
 }

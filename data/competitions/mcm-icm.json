@@ -101,5 +101,10 @@
   "id": "mcm-icm",
   "name": "美国大学生数学建模竞赛（MCM/ICM）",
   "summary": "由 COMAP 组织的国际数学建模赛事，团队在限时内完成建模、求解、验证与英文论文写作。",
-  "description": "MCM/ICM 由 COMAP 组织，官网介绍 Mathematical Contest in Modeling（MCM）与 Interdisciplinary Contest in Modeling（ICM）两项赛事。参赛队需要在限定时间内完成问题建模、求解、结果分析与英文论文写作。平台记录官网可核验的名称、赛道与赛制定位；具体报名、日程、费用与评审规则以 COMAP 当届官网为准。"
+  "description": "MCM/ICM 由 COMAP 组织，官网介绍 Mathematical Contest in Modeling（MCM）与 Interdisciplinary Contest in Modeling（ICM）两项赛事。参赛队需要在限定时间内完成问题建模、求解、结果分析与英文论文写作。平台记录官网可核验的名称、赛道与赛制定位；具体报名、日程、费用与评审规则以 COMAP 当届官网为准。",
+  "equipment": {
+    "type": "none",
+    "description": null,
+    "requirements": null
+  }
 }

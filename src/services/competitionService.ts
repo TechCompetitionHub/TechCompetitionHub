@@ -1,3 +1,4 @@
+import { EQUIPMENT_OPTIONS } from '../lib/domain/equipment';
 import { rankCompetitions, type RankingResult } from '../lib/domain/ranking';
 import { evaluateCompetitionScore } from '../lib/domain/scoring';
 import type { Competition, Skill } from '../lib/domain/types';
@@ -95,6 +96,19 @@ export function getStatusOptions(): Array<{ value: string; label: string }> {
   return getVocabularyTerms('verification-statuses').map((term) => ({
     value: term.id,
     label: term.label,
+  }));
+}
+
+export function getEquipmentOptions(): Array<{
+  value: string;
+  label: string;
+  description: string;
+  count: number;
+}> {
+  return EQUIPMENT_OPTIONS.map((option) => ({
+    ...option,
+    count: dataset.competitions.filter((competition) => competition.equipment.type === option.value)
+      .length,
   }));
 }
 
