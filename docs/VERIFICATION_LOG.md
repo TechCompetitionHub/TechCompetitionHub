@@ -218,4 +218,4 @@ postbuild：... base=/
 - 测试：10 个文件、122 个测试全部通过；`npm run check` exit 0。
 - 构建：684 modules，sitemap 151 个 URL（31 竞赛 + 30 技能 + 4 文章 + 18 静态路由 + 12 类别 + 6 论坛分类 + 50 企业），CSS 59.20 KB；数据 JSON 拆为 `catalog-data`（约 277 KB），应用主包约 326 KB，vendor 分块独立。
 - 懒加载：论坛分类、竞赛类别、类别详情、文章详情、提交竞赛与提交评价均按需加载；骨架屏在 Suspense 期间显示。
-- 推送提交 `79646dc` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 111 个 URL（含 10 家企业详情），主 JS 324,323 bytes，`求职地图` 与 10 个企业 ID 可检索；`/careers` 由 `404.html` 回退渲染。
+- 推送提交 `2c933bb` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 151 个 URL（含 50 家企业详情），主 JS 326,239 bytes，`求职地图` 可检索；`/careers` 由 `404.html` 回退渲染。
