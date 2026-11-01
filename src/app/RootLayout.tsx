@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
+import { RouteProgress } from '../components/RouteProgress';
 import { ScrollToTop } from '../components/ScrollToTop';
 
 export function RootLayout() {
@@ -20,6 +21,7 @@ export function RootLayout() {
       </div>
       <ScrollToTop />
       <Header />
+      <RouteProgress />
       <main id="main-content" tabIndex={-1} className="flex-1">
         <div key={location.pathname} className="page-in">
           <ErrorBoundary>

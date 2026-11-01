@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { LoadingBlock } from '../components/States';
+import { PageSkeleton } from '../components/PageSkeleton';
 import { RootLayout } from './RootLayout';
 
 const ForumCategoryPage = lazy(() =>
@@ -35,11 +35,21 @@ import { RankingsPage } from '../pages/RankingsPage';
 import { ScoringMethodPage } from '../pages/ScoringMethodPage';
 import { SkillDetailPage } from '../pages/SkillDetailPage';
 import { SkillsPage } from '../pages/SkillsPage';
-import { SubmitCompetitionPage } from '../pages/SubmitCompetitionPage';
-import { SubmitReviewPage } from '../pages/SubmitReviewPage';
 
 const GuideDetailPage = lazy(() =>
   import('../pages/GuideDetailPage').then((module) => ({ default: module.GuideDetailPage })),
+);
+
+const SubmitCompetitionPage = lazy(() =>
+  import('../pages/SubmitCompetitionPage').then((module) => ({
+    default: module.SubmitCompetitionPage,
+  })),
+);
+
+const SubmitReviewPage = lazy(() =>
+  import('../pages/SubmitReviewPage').then((module) => ({
+    default: module.SubmitReviewPage,
+  })),
 );
 
 export function AppRoutes() {
@@ -52,7 +62,7 @@ export function AppRoutes() {
         <Route
           path="categories"
           element={
-            <Suspense fallback={<LoadingBlock label="正在加载竞赛类别…" />}>
+            <Suspense fallback={<PageSkeleton label="正在加载竞赛类别…" />}>
               <CategoriesPage />
             </Suspense>
           }
@@ -60,7 +70,7 @@ export function AppRoutes() {
         <Route
           path="categories/:domainId"
           element={
-            <Suspense fallback={<LoadingBlock label="正在加载竞赛类别…" />}>
+            <Suspense fallback={<PageSkeleton label="正在加载竞赛类别…" />}>
               <CategoryDetailPage />
             </Suspense>
           }
@@ -75,7 +85,7 @@ export function AppRoutes() {
         <Route
           path="guides/:slug"
           element={
-            <Suspense fallback={<LoadingBlock label="正在加载文章…" />}>
+            <Suspense fallback={<PageSkeleton label="正在加载文章…" />}>
               <GuideDetailPage />
             </Suspense>
           }
@@ -85,15 +95,29 @@ export function AppRoutes() {
         <Route
           path="forum/:slug"
           element={
-            <Suspense fallback={<LoadingBlock label="正在加载论坛分类…" />}>
+            <Suspense fallback={<PageSkeleton label="正在加载论坛分类…" />}>
               <ForumCategoryPage />
             </Suspense>
           }
         />
         <Route path="about" element={<AboutPage />} />
         <Route path="contribute" element={<ContributePage />} />
-        <Route path="submit-competition" element={<SubmitCompetitionPage />} />
-        <Route path="submit-review" element={<SubmitReviewPage />} />
+        <Route
+          path="submit-competition"
+          element={
+            <Suspense fallback={<PageSkeleton label="正在加载提交表单…" />}>
+              <SubmitCompetitionPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="submit-review"
+          element={
+            <Suspense fallback={<PageSkeleton label="正在加载评价表单…" />}>
+              <SubmitReviewPage />
+            </Suspense>
+          }
+        />
         <Route path="data-policy" element={<DataPolicyPage />} />
         <Route path="scoring-method" element={<ScoringMethodPage />} />
         <Route path="privacy" element={<PrivacyPage />} />

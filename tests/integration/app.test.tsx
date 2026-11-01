@@ -136,6 +136,7 @@ describe('核心页面', () => {
   it('用户可以生成竞赛 JSON 草稿并看到 needs_review', async () => {
     const user = userEvent.setup();
     renderApp('/submit-competition');
+    await screen.findByRole('heading', { level: 1, name: '提交一条竞赛' });
     await user.type(screen.getByLabelText('竞赛名称'), '测试竞赛');
     await user.type(screen.getByLabelText('官方入口'), 'https://example.org/contest');
     await user.type(
@@ -156,6 +157,7 @@ describe('核心页面', () => {
   it('用户可以生成带公开背景信息的参赛评价', async () => {
     const user = userEvent.setup();
     renderApp('/submit-review?competition=cumcm');
+    await screen.findByRole('heading', { level: 1, name: '提交参赛评价' });
     await user.type(screen.getByLabelText('赛道/组别'), '本科组');
     await user.type(screen.getByLabelText('参赛年份'), '2025');
     await user.type(screen.getByLabelText('学校（可选，公开展示）'), '示例大学');
