@@ -145,7 +145,7 @@ npm run links:check:online
 
 ## 8. 未完成或未验证
 
-- 根站点已部署并完成首页、资源、404.html 与深层链接回退验证；项目站点镜像尚未部署。
+- 根站点与项目站点镜像均已部署，并完成首页、资源、404.html 与深层链接回退验证。
 - 未在真实手机/浏览器上做人工视觉与键盘走查；已有自动化 axe 与响应式布局检查。
 - 首版 8 条评分尚未由维护者/领域评审人工复核。
 - 外部链接在线检查受本机网络影响，未在 CI 环境运行。
@@ -175,4 +175,5 @@ postbuild：... base=/
 - 根站点预览：`/`、`/competitions/cumcm`、`/404.html`、主 JS、`/sitemap.xml` 均返回 200；主 JS 625,208 bytes。
 - 项目站点覆盖构建：`VITE_BASE_PATH=/TechCompetitionHub/` 时资源为 `/TechCompetitionHub/assets/...`，postbuild 通过；随后已恢复根站点构建。
 - 根站点 Pages 已由 GitHub Actions 成功部署（2026-11-01）。线上检查：首页 200、主 JS 200、`404.html` 200、`/competitions/cumcm` 返回 HTTP 404 但由 SPA 回退渲染、sitemap 含 10 条竞赛 URL、robots 指向 sitemap。
+- 项目站点镜像已由主仓库 Actions 部署成功：`https://techcompetitionhub.github.io/TechCompetitionHub/` 返回 200，sitemap 主机为 `https://techcompetitionhub.github.io/TechCompetitionHub/`，深层链接同样由 `404.html` 回退。
 - 部署时发现 `GITHUB_REPOSITORY_OWNER` 为大小写混合，sitemap/robots 曾生成 `https://TechCompetitionHub.github.io/`；工作流已改为小写 owner，重新部署后以 `https://techcompetitionhub.github.io/` 为准。

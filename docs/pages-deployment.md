@@ -2,7 +2,7 @@
 
 站点是纯静态 SPA，构建产物在 `dist/`。使用 GitHub Actions 构建并部署，不提交 `dist/`。
 
-> 2026-11-01：根站点已启用并通过 GitHub Actions 部署到 `https://techcompetitionhub.github.io/`。以下步骤保留用于迁移、重建或项目站点镜像。
+> 2026-11-01：根站点已启用并通过 GitHub Actions 部署到 `https://techcompetitionhub.github.io/`；主仓库项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。以下步骤保留用于迁移、重建或故障恢复。
 
 ## 1. 发布目标
 

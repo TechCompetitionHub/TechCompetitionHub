@@ -41,7 +41,7 @@
 - [ ] 仓库描述、Topics、README 和许可证设置完成。
 - [ ] 启用 Discussions 并创建 `.github/DISCUSSION_GUIDE.md` 中的分类。
 - [ ] 配置 Issues 表单（文件已提交）与 PR 模板。
-- [x] 根站点仓库 Pages 已通过 GitHub Actions 部署；主仓库项目站点可选，尚未部署。
+- [x] 根站点与主仓库项目站点均已通过 GitHub Actions 部署（主仓库为镜像）。
 - [ ] 检查默认分支保护、必需检查与合并权限。
 - [ ] 配置社区行为准则与安全报告流程（文件已提交，需在仓库设置中启用入口）。
 - [ ] 配置 Dependabot 告警（`dependabot.yml` 已提交，需在仓库设置中确认）。
