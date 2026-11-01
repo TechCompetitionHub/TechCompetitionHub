@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "prerequisite_skill_ids": ["ros2"],
+  "resource_ids": ["ros2-docs"],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01",
+  "id": "simulation",
+  "name": "机器人仿真",
+  "domain": "robotics",
+  "definition": "使用 Gazebo 等仿真环境搭建场景、传感器与机器人模型，并用可复现指标验证控制/算法。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未使用过机器人仿真工具。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能运行示例世界与机器人模型，观察传感器数据。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立搭建场景、加载 URDF/SDF，并调整物理与传感器参数。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能用仿真对比算法/控制方案，分析误差与失败模式。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计仿真测试矩阵与自动化回归，指导团队复现。"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "gazebo-nav-test",
+      "title": "搭建可复现的仿真导航测试",
+      "level": 2,
+      "goal": "在仿真世界中让机器人完成固定路线，并记录成功率、耗时与碰撞次数。",
+      "prerequisites": ["会运行 ROS 2 节点", "了解 URDF/SDF 基础"],
+      "steps": [
+        "搭建包含障碍物的世界与机器人模型。",
+        "运行导航/控制节点，记录 rosbag 与指标。",
+        "改变初始位姿与障碍物，重复至少 5 次。"
+      ],
+      "deliverables": ["世界与模型文件", "测试脚本", "指标表与失败分析"],
+      "acceptance_criteria": [
+        "同一配置可重复运行。",
+        "记录成功率、耗时与碰撞次数。",
+        "至少说明 2 个失败模式及改进方向。"
+      ],
+      "estimated_hours": 10,
+      "common_failures": ["物理参数不稳定", "只跑一次就下结论"]
+    }
+  ],
+  "related_competition_ids": ["robocon", "robocup-china", "raicom", "robotac", "siemens-cup"],
+  "sources": [
+    {
+      "id": "gazebo-docs",
+      "title": "Gazebo Documentation",
+      "url": "https://gazebosim.org/docs",
+      "publisher": "Open Robotics",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考。"
+    }
+  ]
+}

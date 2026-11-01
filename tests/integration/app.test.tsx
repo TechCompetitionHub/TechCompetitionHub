@@ -54,6 +54,14 @@ describe('核心页面', () => {
       screen.getByRole('heading', { level: 2, name: '外部竞赛目录（不参与评分）' }),
     ).toBeInTheDocument();
     expect(screen.getByText('目录不等于认可度或技术含量')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: '可选的参赛方向' })).toBeInTheDocument();
+    expect(screen.getAllByText('本科组').length).toBeGreaterThan(0);
+  });
+
+  it('新增 ROS 2 技能展示任务与验收标准', () => {
+    renderApp('/skills/ros2');
+    expect(screen.getByRole('heading', { level: 1, name: 'ROS 2' })).toBeInTheDocument();
+    expect(screen.getByText('用 ROS 2 搭建差速小车仿真链路')).toBeInTheDocument();
   });
 
   it('类别页展示机器人方向竞赛', async () => {
@@ -238,6 +246,7 @@ describe('核心页面', () => {
     '/projects',
     '/skills',
     '/skills/python-programming',
+    '/skills/ros2',
     '/planner?target=competition:cumcm',
     '/guides',
     '/guides/choose-first-competition',

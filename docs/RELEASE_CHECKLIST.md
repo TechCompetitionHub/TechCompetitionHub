@@ -5,7 +5,7 @@
 ## 产品与数据
 
 - [x] 首版范围与非目标明确（README、PRD、关于页）。
-- [x] 所有公开竞赛都有唯一 ID（21 条，校验通过）。
+- [x] 所有公开竞赛都有唯一 ID（31 条，校验通过）。
 - [x] 官方事实有可访问来源（每条 verified 竞赛至少一个 official 来源）。
 - [x] 数据核验时间和状态可见（详情页、来源列表、Provenance）。
 - [x] 示例数据与正式数据分离（`data/examples/`，`is_example: true`，不加载）。
@@ -23,8 +23,9 @@
 - [x] 格式检查通过（`npm run format:check`）。
 - [x] Lint 通过（`npm run lint`）。
 - [x] 类型检查通过（`npm run typecheck`）。
-- [x] 单元/集成测试通过（113 个测试，含 22 条路由的 axe 审计）。
-- [x] 数据校验通过（21 竞赛 / 25 技能 / 23 资源 / 2 路线 / 4 文章 / 0 社区评价，0 错误 0 警告）。
+- [x] 单元/集成测试通过（115 个测试，含 23 条路由的 axe 审计）。
+- [x] 数据校验通过（31 竞赛 / 30 技能 / 23 资源 / 2 路线 / 4 文章 / 0 社区评价，0 错误 0 警告）。
+- [x] 18 条竞赛包含结构化赛道/组别；其余标注“待补充”，不伪造赛项。
 - [x] 生成 Schema 与 Zod 定义一致（`npm run data:schemas:check`）。
 - [x] 生产构建通过（`npm run build`）。
 - [x] 生产构建 base path 正确（根站点默认 `/`；项目站点 `/TechCompetitionHub/`，postbuild 校验）。

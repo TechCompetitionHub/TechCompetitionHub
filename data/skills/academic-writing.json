@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "prerequisite_skill_ids": ["technical-writing", "latex"],
+  "resource_ids": ["uw-madison-writing"],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01",
+  "id": "academic-writing",
+  "name": "论文撰写",
+  "domain": "writing",
+  "definition": "围绕研究问题组织摘要、方法、结果、讨论与限制，写出可评审、可复现的学术文本。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未写过完整的技术论文。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按模板写出结构完整的课程报告。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立写出问题—方法—结果—限制清晰的论文，并正确引用来源。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能根据评审意见重构论证、补充实验并处理反例。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计写作规范、评审他人论文并指导团队修改。"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "modeling-paper",
+      "title": "把一次建模结果写成 8 页论文",
+      "level": 2,
+      "goal": "完成含摘要、假设、模型、求解、检验、评价与参考文献的建模论文。",
+      "prerequisites": ["完成一次建模/数据分析练习"],
+      "steps": [
+        "先写 200 字摘要与 5 条假设。",
+        "用图表呈现结果，并写清误差与适用范围。",
+        "请同伴按评审清单给出至少 3 条修改意见。"
+      ],
+      "deliverables": ["8 页论文 PDF", "评审意见与修改记录", "数据/代码链接"],
+      "acceptance_criteria": [
+        "摘要包含方法、结果与限制。",
+        "每个结论都有数据或引用支撑。",
+        "至少完成一轮同伴评审。"
+      ],
+      "estimated_hours": 12,
+      "common_failures": ["摘要只写背景", "结论超出数据范围", "引用与正文不对应"]
+    }
+  ],
+  "related_competition_ids": [
+    "cumcm",
+    "mcm-icm",
+    "national-undergraduate-statistical-modeling-competition"
+  ],
+  "sources": [
+    {
+      "id": "wisc-writing",
+      "title": "The Writer’s Handbook",
+      "url": "https://writing.wisc.edu/handbook/",
+      "publisher": "University of Wisconsin–Madison",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考。"
+    }
+  ]
+}

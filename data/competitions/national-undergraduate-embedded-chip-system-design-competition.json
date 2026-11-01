@@ -109,5 +109,22 @@
   "updated_at": "2026-11-01",
   "scoring_model_version": null,
   "scores": null,
-  "notes": "评分待补充；主办单位与具体日程未在本次核验中确认。竞赛目录仅作检索线索，不参与平台评分。"
+  "notes": "评分待补充；主办单位与具体日程未在本次核验中确认。竞赛目录仅作检索线索，不参与平台评分。",
+  "tracks": [
+    {
+      "name": "应用赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "芯片设计赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "FPGA 创新设计赛道",
+      "description": null,
+      "url": null
+    }
+  ]
 }

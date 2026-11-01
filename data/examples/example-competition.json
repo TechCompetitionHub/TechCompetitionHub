@@ -14,7 +14,10 @@
   },
   "format": {
     "team_based": true,
-    "team_size": { "min": 1, "max": 3 },
+    "team_size": {
+      "min": 1,
+      "max": 3
+    },
     "delivery_modes": ["offline"],
     "notes": "示例值。"
   },
@@ -38,7 +41,12 @@
     "status": "unknown",
     "notes": "示例值，禁止当作真实日期。"
   },
-  "official_urls": [{ "label": "示例链接（非竞赛官网）", "url": "https://www.w3.org/TR/" }],
+  "official_urls": [
+    {
+      "label": "示例链接（非竞赛官网）",
+      "url": "https://www.w3.org/TR/"
+    }
+  ],
   "sources": [
     {
       "id": "example-source",
@@ -60,5 +68,6 @@
   "updated_at": "2026-11-01",
   "scoring_model_version": null,
   "scores": null,
-  "notes": "示例数据，不得进入公开目录或排行榜。"
+  "notes": "示例数据，不得进入公开目录或排行榜。",
+  "tracks": []
 }

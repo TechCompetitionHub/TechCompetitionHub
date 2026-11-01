@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "prerequisite_skill_ids": ["technical-writing"],
+  "resource_ids": [],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01",
+  "id": "documentation-slides",
+  "name": "文档与 PPT 编辑",
+  "domain": "communication",
+  "definition": "把技术工作整理成结构清晰、可评审的文档与答辩幻灯片，控制信息密度与视觉层级。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未独立写过技术文档或答辩 PPT。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能按模板填写项目文档与幻灯片。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立组织结构、图表、引用与版本记录，完成可读的文档/PPT。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能针对不同读者压缩信息、设计叙事，并用证据回应评审问题。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能制定文档规范、评审他人材料并指导团队表达。"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "project-deck",
+      "title": "把项目报告压缩成 8 页答辩 PPT",
+      "level": 2,
+      "goal": "从一份技术报告提炼问题、方法、结果、限制与下一步，形成 8 页幻灯片与 1 页摘要。",
+      "prerequisites": ["有一份可公开的项目报告"],
+      "steps": [
+        "列出评审最关心的 5 个问题。",
+        "为每个问题选择一张图或一个关键数字。",
+        "制作 8 页 PPT，并写 1 页执行摘要。"
+      ],
+      "deliverables": ["8 页 PPT", "1 页摘要", "图表来源清单"],
+      "acceptance_criteria": [
+        "每页只有一个核心结论。",
+        "图表有来源、坐标轴与单位。",
+        "限制与下一步没有被省略。"
+      ],
+      "estimated_hours": 5,
+      "common_failures": ["堆满文字", "图表没有结论", "隐藏失败结果"]
+    }
+  ],
+  "related_competition_ids": [
+    "cumcm",
+    "mcm-icm",
+    "china-international-college-innovation-competition"
+  ],
+  "sources": [
+    {
+      "id": "libreoffice-docs",
+      "title": "LibreOffice Documentation",
+      "url": "https://www.libreoffice.org/get-help/documentation/",
+      "publisher": "The Document Foundation",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考。"
+    }
+  ]
+}

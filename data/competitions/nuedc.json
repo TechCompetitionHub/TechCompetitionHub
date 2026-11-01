@@ -93,5 +93,6 @@
   ],
   "verification_status": "needs_review",
   "last_verified_at": null,
-  "notes": "官方站点不可访问；主办、赛制、日程与费用待核验；评分待补充。"
+  "notes": "官方站点不可访问；主办、赛制、日程与费用待核验；评分待补充。",
+  "tracks": []
 }

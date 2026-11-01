@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["物联网设计竞赛", "IoT 设计竞赛"],
+  "organizers": [],
+  "domains": ["embedded", "software", "ai"],
+  "tracks": [
+    {
+      "name": "本科赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "高职赛道",
+      "description": null,
+      "url": null
+    }
+  ],
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": null
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline", "online"],
+    "notes": "团队完成物联网作品并提交/答辩；具体赛制以当届通知为准。"
+  },
+  "difficulty": {
+    "level": 3,
+    "rationale": "需要嵌入式、网络、云平台与作品实现能力；具体难度以赛题为准。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "embedded-c",
+      "target_level": 2
+    },
+    {
+      "skill_id": "microcontroller",
+      "target_level": 2
+    },
+    {
+      "skill_id": "web-development",
+      "target_level": 1
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网已发布 2026 年通知；具体日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "竞赛官网",
+      "url": "https://iot.sjtu.edu.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "iot-home",
+      "title": "2026 年全国大学生物联网设计竞赛",
+      "url": "https://iot.sjtu.edu.cn/",
+      "publisher": "全国大学生物联网设计竞赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "tracks"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "具体赛题、报名资格、日程与费用以当届通知为准。",
+  "id": "iot-design-competition",
+  "name": "全国大学生物联网设计竞赛",
+  "summary": "面向高校学生的物联网设计赛事，围绕物联网系统、嵌入式、云平台与行业应用完成作品。",
+  "description": "全国大学生物联网设计竞赛官网发布 2026 年赛事通知、命题赛道与报名信息，并设本科与高职赛道。平台记录官网可核验的名称与赛道；具体赛题、报名资格、日程与费用以当届通知为准。"
+}

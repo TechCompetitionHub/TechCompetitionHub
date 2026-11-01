@@ -21,9 +21,21 @@ export default defineConfig(({ mode }) => {
           defaultHandler(warning);
         },
         output: {
-          manualChunks: {
-            'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-            'vendor-zod': ['zod'],
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (
+                id.includes('react-dom') ||
+                id.includes('react-router') ||
+                id.includes('/react/')
+              ) {
+                return 'vendor-react';
+              }
+              if (id.includes('/zod/')) return 'vendor-zod';
+              return undefined;
+            }
+            // Keep the growing dataset cacheable and out of the application shell.
+            if (id.includes('/data/')) return 'catalog-data';
+            return undefined;
           },
         },
       },

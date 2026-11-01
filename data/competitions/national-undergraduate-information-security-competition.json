@@ -162,5 +162,17 @@
       "accessed_at": "2026-11-01",
       "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
     }
+  ],
+  "tracks": [
+    {
+      "name": "作品赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "创新实践能力赛",
+      "description": null,
+      "url": null
+    }
   ]
 }

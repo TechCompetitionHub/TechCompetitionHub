@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "prerequisite_skill_ids": ["python-programming", "linux-cli"],
+  "resource_ids": ["ros2-docs"],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01",
+  "id": "ros2",
+  "name": "ROS 2",
+  "domain": "robotics",
+  "definition": "使用 ROS 2 组织节点、话题、服务、参数与 TF，完成机器人软件集成与调试。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未使用过 ROS 或 ROS 2。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能跟随教程运行 talker/listener、查看 topic 与启动 launch 文件。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立拆分节点、定义接口、使用参数与 TF，并定位常见通信问题。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能设计多节点架构、处理 QoS/生命周期与性能问题，并写集成测试。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计机器人软件架构、制定接口规范并指导团队调试。"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "ros2-diff-drive",
+      "title": "用 ROS 2 搭建差速小车仿真链路",
+      "level": 2,
+      "goal": "实现一个发布里程计与 TF 的差速小车节点，并在仿真中订阅传感器数据。",
+      "prerequisites": ["掌握 Python 基础", "了解 Linux 命令行"],
+      "steps": [
+        "创建 ROS 2 包，定义小车状态与传感器消息接口。",
+        "实现差速运动学、里程计与 TF 广播。",
+        "用 launch 文件启动节点并录制 rosbag。"
+      ],
+      "deliverables": ["ROS 2 包源码", "launch 文件", "运行记录与 README"],
+      "acceptance_criteria": [
+        "ros2 topic echo 能看到里程计与传感器数据。",
+        "TF 树结构正确，无孤立坐标系。",
+        "README 能复现启动与验证步骤。"
+      ],
+      "estimated_hours": 8,
+      "common_failures": ["坐标系方向错误", "QoS 不匹配导致收不到消息"]
+    }
+  ],
+  "related_competition_ids": [
+    "robocon",
+    "robocup-china",
+    "robomaster-university-championship",
+    "raicom",
+    "robotac"
+  ],
+  "sources": [
+    {
+      "id": "ros2-docs-source",
+      "title": "ROS 2 Documentation",
+      "url": "https://docs.ros.org/en/jazzy/",
+      "publisher": "Open Robotics",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考。"
+    }
+  ]
+}

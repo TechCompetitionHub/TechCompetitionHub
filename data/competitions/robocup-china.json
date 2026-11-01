@@ -115,5 +115,17 @@
   ],
   "verification_status": "verified",
   "last_verified_at": "2026-11-01",
-  "notes": "2026 通知已发布；具体赛制、日程与费用待核验。"
+  "notes": "2026 通知已发布；具体赛制、日程与费用待核验。",
+  "tracks": [
+    {
+      "name": "RoboCup 赛区",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "中国机器人大赛",
+      "description": null,
+      "url": null
+    }
+  ]
 }

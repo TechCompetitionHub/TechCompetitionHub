@@ -180,5 +180,32 @@
   "updated_at": "2026-11-01",
   "scoring_model_version": null,
   "scores": null,
-  "notes": "评分待补充。竞赛目录仅作检索线索，不参与平台评分，也不代表认可度或技术含量。"
+  "notes": "评分待补充。竞赛目录仅作检索线索，不参与平台评分，也不代表认可度或技术含量。",
+  "tracks": [
+    {
+      "name": "高教主赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "“青年红色筑梦之旅”赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "职教赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "产业赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "萌芽赛道",
+      "description": null,
+      "url": null
+    }
+  ]
 }

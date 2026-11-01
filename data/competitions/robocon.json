@@ -86,5 +86,22 @@
   "external_lists": [],
   "verification_status": "verified",
   "last_verified_at": "2026-11-01",
-  "notes": "官网首页未列出主办/承办单位；具体赛制、日程与费用以当届通知为准。"
+  "notes": "官网首页未列出主办/承办单位；具体赛制、日程与费用以当届通知为准。",
+  "tracks": [
+    {
+      "name": "足式机器人挑战赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "女娲补天技能挑战赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "女娲补天竞技赛",
+      "description": null,
+      "url": null
+    }
+  ]
 }

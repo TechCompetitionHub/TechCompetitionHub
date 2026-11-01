@@ -99,5 +99,6 @@
   ],
   "verification_status": "verified",
   "last_verified_at": "2026-11-01",
-  "notes": "赛事平台为前端应用，具体赛制、日程与费用待核验。"
+  "notes": "赛事平台为前端应用，具体赛制、日程与费用待核验。",
+  "tracks": []
 }

@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["西门子杯", "CIMC", "中国智能制造挑战赛"],
+  "organizers": [],
+  "domains": ["electronics", "embedded", "mechanical"],
+  "tracks": [
+    {
+      "name": "流程行业自动化方向",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "离散行业自动化方向（逻辑算法）",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "离散行业自动化方向（工程实践）",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "离散行业运动控制方向",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "信息化网络化方向",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "智能装备设计与数字孪生制造方向",
+      "description": null,
+      "url": null
+    }
+  ],
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": null
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队参赛，按赛项完成工程设计、调试与答辩。"
+  },
+  "difficulty": {
+    "level": 4,
+    "rationale": "需要自动化、控制、嵌入式或数字孪生等工程能力，并完成现场调试。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "control-theory",
+      "target_level": 2
+    },
+    {
+      "skill_id": "embedded-c",
+      "target_level": 2
+    },
+    {
+      "skill_id": "simulation",
+      "target_level": 2
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网列出赛项与赛区；具体日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "大赛官网",
+      "url": "http://www.siemenscup-cimc.org.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "siemens-cup-home",
+      "title": "“西门子杯”中国智能制造挑战赛官网",
+      "url": "http://www.siemenscup-cimc.org.cn/",
+      "publisher": "“西门子杯”中国智能制造挑战赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "tracks"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "具体赛题、报名资格、日程与费用以当届通知为准。",
+  "id": "siemens-cup",
+  "name": "“西门子杯”中国智能制造挑战赛",
+  "summary": "面向高校学生的智能制造工程实践赛事，覆盖流程/离散行业自动化、运动控制、信息化与数字孪生等方向。",
+  "description": "“西门子杯”中国智能制造挑战赛官网列出智能制造工程设计与应用类多个赛项，包括流程行业自动化、离散行业自动化（逻辑算法/工程实践）、运动控制、信息化网络化、智能装备设计与数字孪生制造等方向。平台记录官网可核验的名称与赛项目录；具体赛题、报名资格、日程与费用以当届通知为准。"
+}

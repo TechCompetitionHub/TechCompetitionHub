@@ -97,6 +97,7 @@ function haystack(competition: Competition): string {
       competition.summary,
       competition.description,
       ...competition.domains,
+      ...competition.tracks.map((track) => track.name),
       ...competition.organizers.map((organizer) => organizer.name),
     ].join(' '),
   );

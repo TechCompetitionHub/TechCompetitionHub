@@ -161,6 +161,13 @@ export function CompetitionDetailPage() {
                       .join(' / ')}
                   </span>
                 </Fact>
+                <Fact label="赛道/组别">
+                  {competition.tracks.length > 0 ? (
+                    <span>{competition.tracks.map((track) => track.name).join(' / ')}</span>
+                  ) : (
+                    <span className="text-ink-500">待补充</span>
+                  )}
+                </Fact>
                 <Fact label="技术难度">
                   <span aria-label={`难度 ${competition.difficulty.level} / 5`}>
                     {'★'.repeat(competition.difficulty.level)}
@@ -195,6 +202,35 @@ export function CompetitionDetailPage() {
                 <p className="mt-3 text-xs leading-5 text-ink-500">{competition.format.notes}</p>
               ) : null}
             </section>
+
+            {competition.tracks.length > 0 ? (
+              <section aria-labelledby="tracks-heading">
+                <SectionHeading
+                  id="tracks-heading"
+                  eyebrow="赛道与组别"
+                  title="可选的参赛方向"
+                  description="赛道名称来自官网或当届通知；具体赛题、晋级规则与组别限制以当届规则为准。"
+                />
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {competition.tracks.map((track) => (
+                    <li
+                      key={track.name}
+                      className="rounded-xl border border-line bg-surface p-4 shadow-sm"
+                    >
+                      <h3 className="text-sm font-semibold text-ink-900">{track.name}</h3>
+                      {track.description ? (
+                        <p className="mt-1 text-xs leading-5 text-ink-500">{track.description}</p>
+                      ) : null}
+                      {track.url ? (
+                        <ExternalLink href={track.url} className="mt-2 inline-block text-xs">
+                          官方赛项链接
+                        </ExternalLink>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
 
             <section aria-labelledby="schedule-heading">
               <SectionHeading

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "prerequisite_skill_ids": ["technical-writing"],
+  "resource_ids": [],
+  "related_project_ids": [],
+  "maintainer": "TechCompetitionHub 维护者",
+  "updated_at": "2026-11-01",
+  "id": "latex",
+  "name": "LaTeX 排版",
+  "domain": "writing",
+  "definition": "使用 LaTeX 完成论文/报告的公式、图表、交叉引用、参考文献与模板排版。",
+  "levels": [
+    {
+      "level": 0,
+      "label": "L0 尚未接触",
+      "behavior": "尚未使用过 LaTeX。"
+    },
+    {
+      "level": 1,
+      "label": "L1 跟随教程",
+      "behavior": "能编译模板并修改标题、段落与简单公式。"
+    },
+    {
+      "level": 2,
+      "label": "L2 独立完成",
+      "behavior": "能独立排版公式、图表、表格、交叉引用与参考文献。"
+    },
+    {
+      "level": 3,
+      "label": "L3 调试与取舍",
+      "behavior": "能处理模板冲突、字体/编码、长表格与复杂排版问题。"
+    },
+    {
+      "level": 4,
+      "label": "L4 设计与指导",
+      "behavior": "能设计论文模板与写作规范，指导团队协作。"
+    }
+  ],
+  "practice_tasks": [
+    {
+      "id": "latex-paper",
+      "title": "用 LaTeX 排版一篇 6 页技术论文",
+      "level": 2,
+      "goal": "完成含公式、图表、交叉引用与参考文献的 6 页论文，并能从干净环境编译。",
+      "prerequisites": ["了解基本论文结构"],
+      "steps": [
+        "选择会议/竞赛模板并建立目录结构。",
+        "加入至少 3 个公式、2 张图、1 个表与 10 条参考文献。",
+        "在干净环境编译并检查警告。"
+      ],
+      "deliverables": ["LaTeX 源码", "编译后的 PDF", "编译说明"],
+      "acceptance_criteria": [
+        "无未定义引用/文献。",
+        "图表编号与交叉引用正确。",
+        "他人可按 README 复现编译。"
+      ],
+      "estimated_hours": 6,
+      "common_failures": ["中文编码/字体错误", "参考文献未编译完整"]
+    }
+  ],
+  "related_competition_ids": [
+    "cumcm",
+    "mcm-icm",
+    "national-undergraduate-statistical-modeling-competition"
+  ],
+  "sources": [
+    {
+      "id": "latex-project",
+      "title": "LaTeX Project Documentation",
+      "url": "https://www.latex-project.org/help/documentation/",
+      "publisher": "LaTeX Project",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["definition", "levels", "practice_tasks"],
+      "confidence": "medium",
+      "notes": "于 2026-11-01 访问；用于技能定义与任务设计参考。"
+    }
+  ]
+}

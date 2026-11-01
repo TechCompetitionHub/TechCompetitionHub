@@ -12,7 +12,7 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、113 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、115 个测试、数据校验与生产构建。源码已推送至 `TechCompetitionHub/TechCompetitionHub` 与根站点仓库 `TechCompetitionHub.github.io`；**主站点已通过 GitHub Actions 部署：`https://techcompetitionhub.github.io/`（2026-11-01）**，项目站点镜像也已部署到 `https://techcompetitionhub.github.io/TechCompetitionHub/`。Discussions 已启用；About 与分支保护由维护者继续设置。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
 
 ## 仓库关系
 
@@ -27,14 +27,15 @@
 
 | 类型         | 数量 | 说明                                          |
 | ------------ | ---- | --------------------------------------------- |
-| 竞赛         | 21   | 17 条已核验；4 条待核验（目录索引）           |
+| 竞赛         | 31   | 25 条已核验；6 条待核验（目录索引）           |
 | 已评分       | 8    | 六维评分，平台编辑初评，待维护者/领域评审复核 |
-| 正式排名     | 8    | 满足准入规则；13 条因未评分进入“资料不足”     |
-| 技能         | 25   | L0–L4 行为描述、前置依赖、练习任务            |
+| 正式排名     | 8    | 满足准入规则；23 条因未评分进入“资料不足”     |
+| 技能         | 30   | L0–L4 行为描述、前置依赖、练习任务            |
 | 学习资源     | 23   | 真实链接、访问条款与最后检查日期              |
 | 路线模板     | 2    | 嵌入式、数据建模方向                          |
 | 指南         | 4    | 选赛、复盘、可复现性、数据核验                |
-| 外部目录引用 | 19   | 仅作检索线索，不参与评分                      |
+| 含赛道信息   | 18   | 赛道/组别来自官网或当届通知                   |
+| 外部目录引用 | 27   | 仅作检索线索，不参与评分                      |
 | 社区评价     | 0    | 用户提交经审核后展示，不参与平台评分          |
 
 > 部分条目记录高校常用的“A 类”竞赛目录引用。该目录/榜单只用于检索，不参与平台评分，也不代表认可度、技术含量或适合度；平台评分仍按六维模型、证据等级与核验日期独立评估。详见 [数据模型](docs/DATA_MODEL.md)。

@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["算法精英", "AIC", "全球校园 AI 算法精英大赛"],
+  "organizers": [],
+  "domains": ["ai", "software", "data_science"],
+  "tracks": [
+    {
+      "name": "算法挑战赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "算法应用赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "产业命题赛道",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "算法主题赛",
+      "description": null,
+      "url": null
+    }
+  ],
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": null
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["online", "offline"],
+    "notes": "团队参赛，包含赛区选拔与全国赛；具体赛制以当届通知为准。"
+  },
+  "difficulty": {
+    "level": 4,
+    "rationale": "需要机器学习、数据处理与算法实现能力；具体难度以赛道为准。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "machine-learning",
+      "target_level": 2
+    },
+    {
+      "skill_id": "python-programming",
+      "target_level": 2
+    },
+    {
+      "skill_id": "data-analysis",
+      "target_level": 2
+    },
+    {
+      "skill_id": "algorithms",
+      "target_level": 2
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网已发布 2026 年通知；具体日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "大赛官网",
+      "url": "https://www.aicomp.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "aic-home",
+      "title": "全球校园人工智能算法精英大赛",
+      "url": "https://www.aicomp.cn/",
+      "publisher": "全球校园人工智能算法精英大赛组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "tracks", "notices"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "具体赛题、报名资格、日程与费用以当届通知为准。",
+  "id": "global-campus-ai-algorithm-competition",
+  "name": "全球校园人工智能算法精英大赛",
+  "summary": "面向高校学生的人工智能算法赛事，覆盖算法挑战、算法应用、产业命题与主题赛等方向。",
+  "description": "全球校园人工智能算法精英大赛官网提供大赛概况、赛题规则、赛区与通知，并展示算法挑战、算法应用、产业命题、算法主题等赛道。平台记录官网可核验的名称与赛道；具体赛题、报名资格、日程与费用以当届通知为准。"
+}

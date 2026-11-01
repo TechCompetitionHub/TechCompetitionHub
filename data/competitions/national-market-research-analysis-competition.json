@@ -116,5 +116,17 @@
   "updated_at": "2026-11-01",
   "scoring_model_version": null,
   "scores": null,
-  "notes": "评分待补充。竞赛目录仅作检索线索，不参与平台评分，也不代表认可度或技术含量。"
+  "notes": "评分待补充。竞赛目录仅作检索线索，不参与平台评分，也不代表认可度或技术含量。",
+  "tracks": [
+    {
+      "name": "本科组",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "专科组",
+      "description": null,
+      "url": null
+    }
+  ]
 }

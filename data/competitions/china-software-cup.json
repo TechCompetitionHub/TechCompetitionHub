@@ -126,5 +126,6 @@
   ],
   "verification_status": "verified",
   "last_verified_at": "2026-11-01",
-  "notes": "具体赛题、报名资格、日程与费用以当届通知为准。"
+  "notes": "具体赛题、报名资格、日程与费用以当届通知为准。",
+  "tracks": []
 }

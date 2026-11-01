@@ -40,6 +40,7 @@
 | `aliases`                   | 是   | string[]    | 简称/别名，可为空                                                              |
 | `organizers`                | 是   | object[]    | `{name, role, url}`；role 为 host/organizer/co-organizer/secretariat/sponsor   |
 | `domains`                   | 是   | string[]    | 受控领域 ID，至少 1 个                                                         |
+| `tracks`                    | 是   | object[]    | `{name, description, url}`；赛道/组别；未知时为空数组                          |
 | `summary`                   | 是   | string      | 20–600 字                                                                      |
 | `description`               | 是   | string      | 50–6000 字，客观描述                                                           |
 | `audience`                  | 是   | object      | `{levels, notes}`；levels 来自词表                                             |

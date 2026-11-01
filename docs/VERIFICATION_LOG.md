@@ -36,8 +36,8 @@ npm run check
 | 格式   | `npm run format:check`       | 通过                                                                                |
 | Lint   | `npm run lint`               | 通过，0 error                                                                       |
 | 类型   | `npm run typecheck`          | 通过                                                                                |
-| 测试   | `npm test`                   | 10 个文件、113 个测试全部通过（含 22 条路由 axe 审计）                              |
-| 数据   | `npm run data:validate`      | 21 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章 / 0 社区评价；0 错误、0 警告 |
+| 测试   | `npm test`                   | 10 个文件、115 个测试全部通过（含 23 条路由 axe 审计）                              |
+| 数据   | `npm run data:validate`      | 31 竞赛 / 30 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章 / 0 社区评价；0 错误、0 警告 |
 | Schema | `npm run data:schemas:check` | 9 个 JSON Schema 与 Zod 定义一致                                                    |
 | 构建   | `npm run build`              | 通过                                                                                |
 
@@ -136,9 +136,10 @@ npm run links:check:online
 
 ## 7. 数据与评分抽查
 
-- 21 条竞赛中 17 条 `verified`、4 条 `needs_review`（百度之星、机械创新设计、电子设计、华为 ICT）；所有 verified 条目至少一个 official 来源。
-- 8 条有平台评分并满足正式排名准入；13 条无评分，进入“资料不足”。
-- 19 条竞赛带外部目录引用（高校常用“A 类”84 项目录），该字段不参与评分与排名；RoboMaster 未引用该目录。
+- 31 条竞赛中 25 条 `verified`、6 条 `needs_review`（百度之星、机械创新设计、电子设计、华为 ICT、CCPC、中国高校智能机器人创意大赛）；所有 verified 条目至少一个 official 来源。
+- 8 条有平台评分并满足正式排名准入；23 条无评分，进入“资料不足”。
+- 27 条竞赛带外部目录引用（高校常用“A 类”84 项目录），该字段不参与评分与排名；RoboMaster、MCM/ICM、CCPC 未引用该目录。
+- 18 条竞赛带结构化赛道/组别；其余保持空数组并标注待补充。
 - 社区参赛评价公开数据为 0 条；不使用示例评价填充。
 - 全国大学生数学建模竞赛：82/90/85/88/90/55，按 0.25/0.20/0.20/0.15/0.15/0.05 计算 = 84.95。
 - RoboMaster：92/86/94/92/92/30 = 88.10。
@@ -194,7 +195,8 @@ postbuild：... base=/
 ## 11. 论坛、竞赛扩展与用户评分
 
 - 新增 8 条竞赛：ROBOCON、中国机器人大赛暨 RoboCup 机器人世界杯中国赛、“中国软件杯”、中国大学生机械工程创新创意大赛、百度之星、全国大学生机械创新设计大赛、全国大学生电子设计竞赛、华为 ICT 大赛。
-- 竞赛总数 21：17 条 verified、4 条 needs_review；8 条已评分，13 条资料不足；19 条带外部目录引用。
+- 新增 10 条竞赛（ACM-ICPC、MCM/ICM、西门子杯、CCPC、睿抗、中国高校智能机器人创意大赛、中国机器人及人工智能大赛、物联网设计、算法精英、ROBOTAC）与 5 个技能（ROS 2、机器人仿真、文档与 PPT、LaTeX、论文撰写）。
+- 竞赛总数 31：25 条 verified、6 条 needs_review；8 条已评分，23 条资料不足；27 条带外部目录引用；18 条带结构化赛道。
 - 新增 `community-review` Schema、`data/reviews/` 与 `data/reviews/README.md`；公开评价为 0，不使用示例评价。
 - 新增 `/submit-review`：要求填写是否参加过、赛道、年份、学校（可选）、角色、公开主页、证据链接与公开同意；生成 Markdown 并通过 GitHub Issue 提交，审核后才展示。
 - 竞赛详情新增“参赛者自述评分”区块：无评价时显示空状态；有审核评价时显示平均分、样本量、分布与公开背景。社区评分不参与平台六维评分或正式排名。
@@ -207,7 +209,7 @@ postbuild：... base=/
 - 视觉检查：Chrome 1440×1200 桌面与 CDP 390×844 移动视口截图；移动端 `scrollWidth = innerWidth = 390`，无横向溢出。
 - 论坛头像采用维护者设计的原图，优化为 `public/forum-avatar.jpg`（512×512，约 42 KB），用于页头与社区页；README 已记录出处与许可提示。
 - Discussions 当前默认 6 个分类，社区页链接实际分类。
-- 测试：10 个文件、113 个测试全部通过；`npm run check` exit 0。
-- 构建：612 modules，sitemap 85 个 URL（21 竞赛 + 25 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），CSS 55.06 KB，主 JS 683.83 KB（无 700 KB 警告），base `/`。
+- 测试：10 个文件、115 个测试全部通过；`npm run check` exit 0。
+- 构建：627 modules，sitemap 100 个 URL（31 竞赛 + 30 技能 + 4 文章 + 17 静态路由 + 12 类别 + 6 论坛分类），CSS 55.06 KB；数据 JSON 拆为 `catalog-data`（约 215 KB），应用主包约 304 KB，vendor 分块独立。
 - 懒加载：论坛分类、竞赛类别、类别详情、文章详情、提交竞赛与提交评价均按需加载；骨架屏在 Suspense 期间显示。
 - 推送提交 `70dd4a7` 后，根站点与项目站点 Deploy 均成功；线上首页 200，CSS `/assets/index-BvSTu5Nj.css` 200（55,064 bytes），主 JS 683,829 bytes；CSS/JS 均包含 `route-progress`，CSS 包含 `skeleton`；sitemap 仍为 85 个 URL。

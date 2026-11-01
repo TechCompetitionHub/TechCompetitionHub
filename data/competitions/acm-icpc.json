@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["ACM-ICPC", "ICPC", "国际大学生程序设计竞赛", "ACM"],
+  "organizers": [],
+  "domains": ["software"],
+  "tracks": [
+    {
+      "name": "亚洲东大陆赛区",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "世界总决赛",
+      "description": null,
+      "url": null
+    }
+  ],
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": null
+  },
+  "format": {
+    "team_based": true,
+    "team_size": {
+      "min": 3,
+      "max": 3
+    },
+    "delivery_modes": ["online", "offline"],
+    "notes": "三人一队，通常包含网络/赛区选拔与现场总决赛。"
+  },
+  "difficulty": {
+    "level": 5,
+    "rationale": "需要在高压限时下完成多道算法题，涉及数据结构、图论、动态规划与数学。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "algorithms",
+      "target_level": 3
+    },
+    {
+      "skill_id": "c-programming",
+      "target_level": 3
+    },
+    {
+      "skill_id": "python-programming",
+      "target_level": 1
+    },
+    {
+      "skill_id": "project-management",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网提供赛区与规则入口；具体赛季日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "ICPC 官网",
+      "url": "https://icpc.global/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "icpc-home",
+      "title": "The ICPC International Collegiate Programming Contest",
+      "url": "https://icpc.global/",
+      "publisher": "ICPC",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "format", "regions"],
+      "confidence": "high",
+      "notes": "官网为 JavaScript 应用；核验名称、入口与赛区结构。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "具体赛区、报名资格、日程与费用以 ICPC 当届官网为准。",
+  "id": "acm-icpc",
+  "name": "ACM-ICPC 国际大学生程序设计竞赛",
+  "summary": "面向高校学生的国际大学生程序设计竞赛，三人一队，在限时内协作解决算法与数据结构问题。",
+  "description": "ICPC（International Collegiate Programming Contest）官网为赛事官方入口，提供赛区、规则与赛事信息。比赛以三人团队在限时内解决多道算法题为核心，强调算法设计、程序实现与团队协作。平台记录官网可核验的名称、赛制定位与赛区信息；具体报名资格、赛程、费用与奖项以当届官网为准。"
+}

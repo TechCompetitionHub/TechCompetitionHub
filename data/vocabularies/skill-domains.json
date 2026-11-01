@@ -48,6 +48,11 @@
       "id": "communication",
       "label": "表达与协作",
       "description": "技术写作、答辩、项目管理与团队协作。"
+    },
+    {
+      "id": "writing",
+      "label": "论文与排版",
+      "description": "学术写作、LaTeX 排版、引用规范与论文评审。"
     }
   ]
 }

@@ -105,6 +105,16 @@ const officialUrlSchema = z
   })
   .strict();
 
+const competitionTrackSchema = z
+  .object({
+    name: z.string().trim().min(1).max(160),
+    description: z.string().trim().max(600).nullable(),
+    url: httpUrlSchema.nullable(),
+  })
+  .strict();
+
+export type CompetitionTrack = z.infer<typeof competitionTrackSchema>;
+
 const externalListReferenceSchema = z
   .object({
     id: slugSchema,
@@ -212,6 +222,7 @@ export const competitionSchema = z
     aliases: z.array(z.string().trim().min(1).max(120)),
     organizers: z.array(organizerSchema),
     domains: z.array(z.string().trim().min(1)).min(1),
+    tracks: z.array(competitionTrackSchema),
     summary: z.string().trim().min(20).max(600),
     description: z.string().trim().min(50).max(6000),
     audience: audienceSchema,

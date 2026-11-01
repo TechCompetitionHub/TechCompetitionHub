@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "aliases": ["ROBOTAC", "全国大学生机器人大赛 ROBOTAC"],
+  "organizers": [],
+  "domains": ["robotics", "mechanical", "embedded"],
+  "tracks": [
+    {
+      "name": "对抗赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "任务赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "具身智能灵巧手挑战赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "四足机甲挑战赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "AIROBOTIC 创新挑战赛",
+      "description": null,
+      "url": null
+    },
+    {
+      "name": "数字仿真挑战赛",
+      "description": null,
+      "url": null
+    }
+  ],
+  "audience": {
+    "levels": ["undergraduate"],
+    "notes": null
+  },
+  "format": {
+    "team_based": true,
+    "team_size": null,
+    "delivery_modes": ["offline"],
+    "notes": "团队自主研发机器人参赛；具体赛制以当届规则为准。"
+  },
+  "difficulty": {
+    "level": 4,
+    "rationale": "需要机械、嵌入式、控制与团队协作，并完成现场任务。"
+  },
+  "estimated_cost": {
+    "amount": null,
+    "currency": "CNY",
+    "status": "unknown",
+    "basis": null,
+    "notes": "本次核验未在官网确认报名费、材料费或差旅成本；使用前请查看当届通知。"
+  },
+  "skills_required": [
+    {
+      "skill_id": "robotics-integration",
+      "target_level": 2
+    },
+    {
+      "skill_id": "mechanical-design",
+      "target_level": 2
+    },
+    {
+      "skill_id": "embedded-c",
+      "target_level": 1
+    },
+    {
+      "skill_id": "control-theory",
+      "target_level": 1
+    }
+  ],
+  "schedule": {
+    "registration_start": null,
+    "registration_end": null,
+    "event_start": null,
+    "event_end": null,
+    "status": "unknown",
+    "notes": "官网展示 2026 年通知与赛项；具体日程待核验。"
+  },
+  "official_urls": [
+    {
+      "label": "赛事官网",
+      "url": "https://www.robotac.cn/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "robotac-home",
+      "title": "全国大学生机器人大赛 ROBOTAC",
+      "url": "https://www.robotac.cn/",
+      "publisher": "全国大学生机器人大赛 ROBOTAC 组委会",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "tracks", "notices"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问。"
+    }
+  ],
+  "external_lists": [
+    {
+      "id": "cahe-2024-catalog",
+      "name": "全国普通高校大学生竞赛分析报告（2024）竞赛目录（84项）",
+      "publisher": "中国高等教育学会高校竞赛评估与管理体系研究专家工作组（高校教务处转载）",
+      "year": 2024,
+      "category": "竞赛目录（高校常用 A 类口径）",
+      "url": "https://jwc.kmu.edu.cn/info/1020/2683.htm",
+      "accessed_at": "2026-11-01",
+      "notes": "原始报告于 2024-03-22 发布；“A类”是高校转载时的常用口径。该目录仅作检索线索，不参与平台评分，不代表认可度或技术含量。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "created_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "scoring_model_version": null,
+  "scores": null,
+  "notes": "具体规则、报名资格、日程与费用以当届通知为准。",
+  "id": "robotac",
+  "name": "全国大学生机器人大赛 ROBOTAC",
+  "summary": "全国大学生机器人大赛 ROBOTAC 方向，包含机器人对抗、任务、具身智能与数字仿真等赛项。",
+  "description": "全国大学生机器人大赛 ROBOTAC 官网介绍赛事定位、竞赛委员会与历届赛事，并列出对抗、任务、具身智能灵巧手、四足机甲、AIROBOTIC 创新与数字仿真等赛项。平台记录官网可核验的名称与赛项；具体规则、报名资格、日程与费用以当届通知为准。"
+}

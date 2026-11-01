@@ -2,6 +2,7 @@ export type {
   CommunityReview,
   Competition,
   CompetitionScore,
+  CompetitionTrack,
   ContentFrontmatter,
   ExternalListReference,
   PracticeTask,
