@@ -7,6 +7,7 @@ import { Alert } from '../../components/States';
 import { Badge } from '../../components/Badge';
 import { ScoreBar } from '../../components/ScoreBar';
 import { ScoreStatusBadge } from '../../components/StatusBadge';
+import { CompetitionRadarChart } from './CompetitionRadarChart';
 
 export function CompetitionScorePanel({ competition }: { competition: Competition }) {
   const model = getScoringModel();
@@ -52,27 +53,32 @@ export function CompetitionScorePanel({ competition }: { competition: Competitio
         </Alert>
       ) : null}
 
-      <div className="mt-6 space-y-5">
-        {model.dimensions.map((dimension) => {
-          const dimensionScore = scores.dimension_scores[dimension.id];
-          if (!dimensionScore) {
+      <div className="mt-6 grid gap-6 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
+        <div className="rounded-xl border border-line bg-surface-muted/60 p-3">
+          <CompetitionRadarChart competition={competition} />
+        </div>
+        <div className="space-y-5">
+          {model.dimensions.map((dimension) => {
+            const dimensionScore = scores.dimension_scores[dimension.id];
+            if (!dimensionScore) {
+              return (
+                <div key={dimension.id}>
+                  <p className="text-sm font-semibold text-ink-900">{dimension.name}</p>
+                  <p className="mt-1 text-xs text-ink-500">缺失 · 不参与正式排名</p>
+                </div>
+              );
+            }
             return (
-              <div key={dimension.id}>
-                <p className="text-sm font-semibold text-ink-900">{dimension.name}</p>
-                <p className="mt-1 text-xs text-ink-500">缺失 · 不参与正式排名</p>
-              </div>
+              <ScoreBar
+                key={dimension.id}
+                name={dimension.name}
+                score={dimensionScore.score}
+                weight={dimension.weight}
+                rationale={`${dimensionScore.rationale}（证据等级：${dimensionScore.evidence_level}）`}
+              />
             );
-          }
-          return (
-            <ScoreBar
-              key={dimension.id}
-              name={dimension.name}
-              score={dimensionScore.score}
-              weight={dimension.weight}
-              rationale={`${dimensionScore.rationale}（证据等级：${dimensionScore.evidence_level}）`}
-            />
-          );
-        })}
+          })}
+        </div>
       </div>
 
       <p className="mt-5 text-sm leading-6 text-ink-500">{scores.evidence_summary}</p>

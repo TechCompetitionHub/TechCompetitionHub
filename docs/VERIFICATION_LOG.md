@@ -36,7 +36,7 @@ npm run check
 | 格式   | `npm run format:check`       | 通过                                                                                          |
 | Lint   | `npm run lint`               | 通过，0 error                                                                                 |
 | 类型   | `npm run typecheck`          | 通过                                                                                          |
-| 测试   | `npm test`                   | 10 个文件、122 个测试全部通过（含 25 条路由 axe 审计）                                        |
+| 测试   | `npm test`                   | 10 个文件、123 个测试全部通过（含 25 条路由 axe 审计）                                        |
 | 数据   | `npm run data:validate`      | 35 竞赛 / 35 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章 / 0 社区评价 / 50 企业；0 错误、0 警告 |
 | Schema | `npm run data:schemas:check` | 10 个 JSON Schema 与 Zod 定义一致                                                             |
 | 构建   | `npm run build`              | 通过                                                                                          |
@@ -216,7 +216,8 @@ postbuild：... base=/
 - 竞赛数据新增 `equipment` 对象；35 条竞赛全部补全，并在卡片、详情与目录筛选中展示。
 - 新增 4 条竞赛（三创赛、大广赛、挑战杯、服务外包）与 5 个技能（数据可视化、云计算、网络基础、优化方法、CAD 建模）；岗位方向扩展到 19 个。
 - 新增 `/careers` 求职地图与 `/careers/:companyId` 企业详情：50 家企业、19 个岗位方向；DJI 的 RM 专属招聘通道为 `direct_channel`，其余无公开依据的条款标为 `unknown`。
-- 测试：10 个文件、122 个测试全部通过；`npm run check` exit 0。
-- 构建：693 modules，sitemap 161 个 URL（35 竞赛 + 35 技能 + 4 文章 + 18 静态路由 + 13 类别 + 6 论坛分类 + 50 企业），CSS 59.20 KB；数据 JSON 拆为 `catalog-data`（约 301 KB），应用主包约 327 KB，vendor 分块独立。
+- 竞赛详情新增六维评分雷达图，数值来自评分记录；参与贡献页新增贡献者排行榜（Git 提交数快照）。
+- 测试：10 个文件、123 个测试全部通过；`npm run check` exit 0。
+- 构建：696 modules，sitemap 161 个 URL（35 竞赛 + 35 技能 + 4 文章 + 18 静态路由 + 13 类别 + 6 论坛分类 + 50 企业），CSS 60.06 KB；数据 JSON 拆为 `catalog-data`（约 301.86 KB），应用主包约 331.68 KB，vendor 分块独立。
 - 懒加载：论坛分类、竞赛类别、类别详情、文章详情、提交竞赛与提交评价均按需加载；骨架屏在 Suspense 期间显示。
 - 推送提交 `3f05ddb` 后，根站点与项目站点 Deploy 均成功；线上 sitemap 为 161 个 URL（35 竞赛 / 35 技能 / 50 企业详情），主 JS 约 327 KB；`/careers` 由 `404.html` 回退渲染。

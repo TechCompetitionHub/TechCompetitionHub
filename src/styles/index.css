@@ -278,6 +278,11 @@
       route-progress-fade 560ms ease-out both;
   }
 
+  .radar-area {
+    transform-origin: 160px 150px;
+    animation: radar-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
   .skeleton {
     position: relative;
     overflow: hidden;
@@ -314,6 +319,17 @@
   }
   100% {
     transform: scaleX(1);
+  }
+}
+
+@keyframes radar-in {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

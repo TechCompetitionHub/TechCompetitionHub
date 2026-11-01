@@ -1,8 +1,10 @@
+import { Badge } from '../components/Badge';
 import { ButtonLink, ExternalButton } from '../components/Button';
 import { Container, PageHeader, SectionHeading } from '../components/Layout';
 import { usePageMeta } from '../components/Seo';
 import { Alert } from '../components/States';
 import { ExternalLink } from '../components/ExternalLink';
+import { getContributorSnapshot, listContributors } from '../services/contributorService';
 import { SITE, issueTemplateUrl } from '../services/site';
 
 const STEPS = [
@@ -34,6 +36,9 @@ export function ContributePage() {
       '通过 Issue 与 Pull Request 贡献竞赛数据、项目、技能与代码。包含本地检查命令、数据规则、审核流程与安全报告渠道。',
   });
 
+  const contributors = listContributors();
+  const snapshot = getContributorSnapshot();
+
   return (
     <>
       <PageHeader
@@ -52,6 +57,72 @@ export function ContributePage() {
       />
 
       <Container className="py-8">
+        <section className="mb-10" aria-labelledby="contributors-heading">
+          <SectionHeading
+            id="contributors-heading"
+            eyebrow="贡献者排行榜"
+            title="把贡献记录在公开数据里"
+            description="按 Git 提交数快照排名，不代表代码行数、影响力或贡献价值；数据、代码、文档与设计贡献都计入同一榜单。"
+            action={
+              <ExternalLink href={`${SITE.repo}/blob/main/CONTRIBUTING.md`} className="text-sm">
+                如何贡献
+              </ExternalLink>
+            }
+          />
+          <div className="grid gap-3 md:grid-cols-3">
+            {contributors.map((contributor, index) => (
+              <article
+                key={contributor.id}
+                className="card-hover rounded-2xl border border-line bg-surface p-5 shadow-card"
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    aria-hidden="true"
+                    className="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-navy-900 text-sm font-black text-white"
+                  >
+                    {index + 1}
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="truncate text-base font-bold text-ink-900">
+                      <a
+                        href={`https://github.com/${contributor.github}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-brand-700"
+                      >
+                        {contributor.name}
+                      </a>
+                    </h3>
+                    <p className="text-xs text-ink-500">
+                      {contributor.role} · {contributor.commits} 次提交
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {contributor.areas.map((area) => (
+                    <Badge key={area} tone="brand">
+                      {area}
+                    </Badge>
+                  ))}
+                </div>
+                <p className="mt-3 text-xs leading-5 text-ink-500">{contributor.note}</p>
+              </article>
+            ))}
+            <div className="flex flex-col justify-center rounded-2xl border border-dashed border-line-strong bg-surface/60 p-5">
+              <p className="text-sm font-semibold text-ink-900">等待下一位贡献者</p>
+              <p className="mt-1 text-xs leading-5 text-ink-500">
+                修正一条事实、补充一条竞赛、提交一个项目或改进一处可访问性，都可以进入榜单。
+              </p>
+              <ExternalLink href={issueTemplateUrl('competition-add.yml')} className="mt-3 text-xs">
+                从一条竞赛数据开始
+              </ExternalLink>
+            </div>
+          </div>
+          <p className="mt-3 text-xs leading-5 text-ink-500">
+            {snapshot.note} 快照日期：{snapshot.updated_at}。
+          </p>
+        </section>
+
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(280px,0.6fr)]">
           <div className="space-y-10">
             <section aria-labelledby="flow-heading">

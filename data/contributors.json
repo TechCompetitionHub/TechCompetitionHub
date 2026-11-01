@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-11-01",
+  "metric": "git_commits_snapshot",
+  "note": "按 Git 提交数的静态快照排名，不代表代码行数、影响力和贡献价值；数据、代码、文档与设计贡献都计入同一榜单。",
+  "contributors": [
+    {
+      "id": "scunf",
+      "name": "scunf",
+      "github": "scunf",
+      "role": "维护者",
+      "commits": 31,
+      "first_contribution": "2026-11-01",
+      "last_contribution": "2026-11-01",
+      "areas": ["数据", "代码", "文档", "视觉"],
+      "note": "初始版本、数据扩展、社区规则与站点维护。"
+    }
+  ]
+}

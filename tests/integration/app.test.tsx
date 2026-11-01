@@ -58,6 +58,16 @@ describe('核心页面', () => {
     expect(screen.getAllByText('本科组').length).toBeGreaterThan(0);
     expect(screen.getByText('设备要求')).toBeInTheDocument();
     expect(screen.getAllByText('无需设备').length).toBeGreaterThan(0);
+    expect(screen.getByRole('img', { name: /六维评分雷达图/ })).toBeInTheDocument();
+  });
+
+  it('参与贡献页展示贡献者排行榜', () => {
+    renderApp('/contribute');
+    expect(
+      screen.getByRole('heading', { level: 2, name: '把贡献记录在公开数据里' }),
+    ).toBeInTheDocument();
+    expect(screen.getAllByText('scunf').length).toBeGreaterThan(0);
+    expect(screen.getByText('等待下一位贡献者')).toBeInTheDocument();
   });
 
   it('新增 ROS 2 技能展示任务与验收标准', () => {
