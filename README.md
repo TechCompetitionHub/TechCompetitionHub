@@ -12,7 +12,7 @@
 
 ## 当前状态
 
-本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码位于 `main` 分支；GitHub Pages 与 Discussions 的仓库设置由维护者完成，首次部署前请按下方的部署与设置清单操作。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
+本地 MVP 已实现并通过格式、Lint、类型、93 个测试、数据校验与生产构建。源码已推送至 `main` 分支；GitHub Pages 与 Discussions 的仓库设置由维护者完成，首次部署前请按下方的部署与设置清单操作。实际命令与结果见 [验证记录](docs/VERIFICATION_LOG.md)。
 
 当前仓库真实数据（2026-11-01 核验）：
 
