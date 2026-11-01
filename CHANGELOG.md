@@ -12,8 +12,9 @@
 - 竞赛目录新增设备要求筛选，竞赛卡片与详情展示设备分类、简介和要求。
 - 竞赛详情增加 1–5 星“他人评分”入口；选择星级后在提交页预填评分，仍需审核后展示。
 - 价值榜改为前三名高低领奖台（冠军居中、亚/季军两侧），第 4 名起按名次列表排列。
-- 新增 `/careers` 求职地图与 `/careers/:companyId` 企业详情：按 13 个岗位方向和 10 家企业浏览校招入口、岗位方向与竞赛直通/优先条款。
+- 新增 `/careers` 求职地图与 `/careers/:companyId` 企业详情：按 13 个岗位方向和 50 家企业浏览校招入口、岗位方向与竞赛直通/优先条款。
 - 新增 `data/companies/` 企业 Schema、`job-roles` 词表与 `company-add.yml` 补充模板；DJI 的 RM 专属招聘通道已按官方页面核验。
+- 企业从 10 家扩展到 50 家：新增京东、网易、快手、滴滴、拼多多、B站、携程、蚂蚁、中兴、比亚迪、联想、SHEIN、OPPO、宇树、石头、禾赛、讯飞、金山办公，以及 Microsoft、Amazon、Apple、Qualcomm、Arm、ABB、Schneider、ASML、Micron、TI、ADI、Oracle、IBM、Adobe、Cisco、Dell、HP、Airbnb、Toyota、Google、Meta、Tesla 等；无公开直通条款的保持空数组。
 - 竞赛数据新增 `tracks` 赛道/组别字段；18 条竞赛包含结构化赛道信息，未知赛项保持空数组。
 - 新增 5 个技能：ROS 2、机器人仿真、文档与 PPT 编辑、LaTeX 排版、论文撰写；新增 `writing` 技能领域。
 - 竞赛数据新增 `external_lists` 外部目录引用；目录/榜单只作检索线索，不参与评分或排名，也不代表认可度与技术含量。
@@ -23,7 +24,7 @@
 - 新增 `/forum` 与 6 个 `/forum/:slug` 论坛分类页：分类边界、适用/不适用内容、可复制发帖模板、相关站内入口和 GitHub 直达；社区页增加论坛搜索。
 - 新增 `docs/COMMUNITY_MODERATION.md`，明确处理阶梯、参赛评价审核、数据纠错分工与申诉。
 - 视觉与动效升级：首页渐变网格与光晕、渐变标题、卡片悬浮抬升、页面进入过渡、顶部路由进度条、懒加载页面骨架屏与 shimmer、CSS 滚动进度条、Header 滚动阴影；全部使用 CSS/原生 React，并支持 `prefers-reduced-motion`。
-- 提交竞赛与提交评价页改为按需加载；数据 JSON 拆为 `catalog-data` chunk，应用主包约 324 KB、数据 chunk 约 237 KB。
+- 提交竞赛与提交评价页改为按需加载；数据 JSON 拆为 `catalog-data` chunk，应用主包约 326 KB、数据 chunk 约 277 KB。
 - 新增社区参赛评价：1–5 星、是否参加过、赛道、年份、学校（可选）、角色、公开主页与证据链接；审核后展示，不参与平台评分。
 - 新增 `data/reviews/` 与 `community-review` JSON Schema；当前公开评价为 0，不使用示例评价填充。
 

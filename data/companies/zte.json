@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "zte",
+  "name": "中兴通讯",
+  "aliases": ["ZTE"],
+  "industry": "通信设备、网络、终端与芯片",
+  "website": "https://www.zte.com.cn/",
+  "careers_url": "https://job.zte.com.cn/cn/",
+  "role_ids": ["embedded", "software", "algorithm", "hardware", "test", "ic"],
+  "competition_preferences": [],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "zte-careers",
+      "title": "中兴通讯 校园招聘/招聘入口",
+      "url": "https://job.zte.com.cn/cn/",
+      "publisher": "中兴通讯",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口、企业名称与岗位方向。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "notes": "仅记录公开校招入口与岗位方向；未找到公开竞赛直通/优先条款，具体以企业官网 JD 为准。"
+}

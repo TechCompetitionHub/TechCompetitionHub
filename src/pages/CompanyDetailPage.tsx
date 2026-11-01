@@ -5,6 +5,7 @@ import { Container, PageHeader, SectionHeading } from '../components/Layout';
 import { usePageMeta } from '../components/Seo';
 import { ExternalLink } from '../components/ExternalLink';
 import { SourceList } from '../components/SourceList';
+import { StatusBadge } from '../components/StatusBadge';
 import {
   PREFERENCE_STATUS_DESCRIPTIONS,
   PREFERENCE_STATUS_LABELS,
@@ -54,7 +55,8 @@ export function CompanyDetailPage() {
         title={company.name}
         description={company.industry}
         meta={
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <StatusBadge status={company.verification_status} />
             {company.role_ids.map((roleId) => (
               <Badge key={roleId} tone="brand">
                 {getJobRoleLabel(roleId)}

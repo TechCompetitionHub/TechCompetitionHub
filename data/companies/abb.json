@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "abb",
+  "name": "ABB",
+  "aliases": ["ABB"],
+  "industry": "工业自动化、机器人、电气与数字化",
+  "website": "https://global.abb/",
+  "careers_url": "https://careers.abb/china/zh",
+  "role_ids": ["embedded", "hardware", "robotics", "software", "mechanical", "project-management"],
+  "competition_preferences": [],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "abb-careers",
+      "title": "ABB 校园招聘/招聘入口",
+      "url": "https://careers.abb/china/zh",
+      "publisher": "ABB",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口、企业名称与岗位方向。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "notes": "仅记录公开校招入口与岗位方向；未找到公开竞赛直通/优先条款，具体以企业官网 JD 为准。"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "meta",
+  "name": "Meta",
+  "aliases": ["Meta"],
+  "industry": "社交平台、推荐系统、VR/AR 与人工智能",
+  "website": "https://about.meta.com/",
+  "careers_url": "https://www.metacareers.com/",
+  "role_ids": ["software", "frontend", "backend", "algorithm", "ai", "product"],
+  "competition_preferences": [],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "meta-careers",
+      "title": "Meta 校园招聘/招聘入口",
+      "url": "https://www.metacareers.com/",
+      "publisher": "Meta",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles"],
+      "confidence": "low",
+      "notes": "官方招聘页在当前网络访问受限；仅核验官方域名与入口，待人工复核。"
+    }
+  ],
+  "verification_status": "needs_review",
+  "last_verified_at": null,
+  "updated_at": "2026-11-01",
+  "notes": "仅记录公开校招入口与岗位方向；未找到公开竞赛直通/优先条款，具体以企业官网 JD 为准。"
+}

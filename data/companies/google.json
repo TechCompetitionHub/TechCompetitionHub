@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "google",
+  "name": "谷歌",
+  "aliases": ["Google"],
+  "industry": "搜索、云、移动系统与人工智能",
+  "website": "https://www.google.com/",
+  "careers_url": "https://www.google.com/about/careers/applications/",
+  "role_ids": ["software", "frontend", "backend", "algorithm", "ai", "product"],
+  "competition_preferences": [],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "google-careers",
+      "title": "谷歌 校园招聘/招聘入口",
+      "url": "https://www.google.com/about/careers/applications/",
+      "publisher": "谷歌",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles"],
+      "confidence": "low",
+      "notes": "官方招聘页在当前网络访问受限；仅核验官方域名与入口，待人工复核。"
+    }
+  ],
+  "verification_status": "needs_review",
+  "last_verified_at": null,
+  "updated_at": "2026-11-01",
+  "notes": "仅记录公开校招入口与岗位方向；未找到公开竞赛直通/优先条款，具体以企业官网 JD 为准。"
+}

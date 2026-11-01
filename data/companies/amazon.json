@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "amazon",
+  "name": "亚马逊",
+  "aliases": ["Amazon"],
+  "industry": "电商、云服务、物流与人工智能",
+  "website": "https://www.amazon.com/",
+  "careers_url": "https://www.amazon.jobs/",
+  "role_ids": ["software", "backend", "frontend", "algorithm", "ai", "product"],
+  "competition_preferences": [],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "amazon-careers",
+      "title": "亚马逊 校园招聘/招聘入口",
+      "url": "https://www.amazon.jobs/",
+      "publisher": "亚马逊",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口、企业名称与岗位方向。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "notes": "仅记录公开校招入口与岗位方向；未找到公开竞赛直通/优先条款，具体以企业官网 JD 为准。"
+}

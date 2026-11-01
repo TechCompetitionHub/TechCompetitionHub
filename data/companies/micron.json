@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "is_example": false,
+  "id": "micron",
+  "name": "美光",
+  "aliases": ["Micron"],
+  "industry": "存储芯片、半导体与系统",
+  "website": "https://www.micron.com/",
+  "careers_url": "https://careers.micron.com/careers",
+  "role_ids": ["embedded", "hardware", "software", "ic", "test"],
+  "competition_preferences": [],
+  "hiring_programs": [],
+  "sources": [
+    {
+      "id": "micron-careers",
+      "title": "美光 校园招聘/招聘入口",
+      "url": "https://careers.micron.com/careers",
+      "publisher": "美光",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-11-01",
+      "supports": ["name", "careers_url", "roles"],
+      "confidence": "high",
+      "notes": "于 2026-11-01 访问；仅核验公开校招入口、企业名称与岗位方向。"
+    }
+  ],
+  "verification_status": "verified",
+  "last_verified_at": "2026-11-01",
+  "updated_at": "2026-11-01",
+  "notes": "仅记录公开校招入口与岗位方向；未找到公开竞赛直通/优先条款，具体以企业官网 JD 为准。"
+}
