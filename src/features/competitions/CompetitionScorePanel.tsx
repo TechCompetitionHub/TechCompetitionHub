@@ -77,39 +77,45 @@ export function CompetitionScorePanel({ competition }: { competition: Competitio
 
       <p className="mt-5 text-sm leading-6 text-ink-500">{scores.evidence_summary}</p>
 
-      <dl className="mt-5 grid gap-3 rounded-xl border border-line bg-surface-muted p-4 text-xs sm:grid-cols-2">
+      <div className="mt-5 grid gap-3 rounded-xl border border-line bg-surface-muted p-4 text-xs sm:grid-cols-2">
         <div>
-          <dt className="text-ink-500">评分状态</dt>
-          <dd className="mt-1 font-semibold text-ink-900">
+          <p className="text-ink-500">评分状态</p>
+          <p className="mt-1 font-semibold text-ink-900">
             {scores.review_status === 'approved'
               ? '平台初评已记录'
               : scores.review_status === 'in_review'
                 ? '复核中'
                 : '草稿'}
-          </dd>
+          </p>
         </div>
         <div>
-          <dt className="text-ink-500">复核记录</dt>
-          <dd className="mt-1 font-semibold text-ink-900">
+          <p className="text-ink-500">复核记录</p>
+          <p className="mt-1 font-semibold text-ink-900">
             {scores.reviewed_at ? formatDate(scores.reviewed_at) : '待补充'}
             {scores.reviewer_role ? ` · ${scores.reviewer_role}` : ''}
-          </dd>
+          </p>
         </div>
         <div>
-          <dt className="text-ink-500">评分覆盖率</dt>
-          <dd className="mt-1 font-semibold text-ink-900">
+          <p className="text-ink-500">评分覆盖率</p>
+          <p className="mt-1 font-semibold text-ink-900">
             {Math.round(evaluation.coverage * 100)}%
-          </dd>
+          </p>
         </div>
         <div>
-          <dt className="text-ink-500">缺失维度</dt>
-          <dd className="mt-1 font-semibold text-ink-900">
+          <p className="text-ink-500">样本量</p>
+          <p className="mt-1 font-semibold text-ink-900">
+            {scores.sample_size ?? '未提供可靠样本'}
+          </p>
+        </div>
+        <div>
+          <p className="text-ink-500">缺失维度</p>
+          <p className="mt-1 font-semibold text-ink-900">
             {evaluation.missingDimensions.length > 0
               ? evaluation.missingDimensions.join('、')
               : '无'}
-          </dd>
+          </p>
         </div>
-      </dl>
+      </div>
 
       {scores.notes ? <p className="mt-3 text-xs leading-5 text-ink-500">{scores.notes}</p> : null}
       <p className="mt-4 text-xs leading-5 text-ink-500">

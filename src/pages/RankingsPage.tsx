@@ -76,6 +76,7 @@ export function RankingsPage() {
               </p>
             </div>
 
+            <h2 className="sr-only">排名结果</h2>
             {ranking.entries.length > 0 ? (
               <>
                 <div className="mb-3 flex items-center justify-between">
@@ -155,19 +156,19 @@ export function RankingsPage() {
           <aside className="space-y-5">
             <div className="rounded-2xl border border-line bg-surface p-5 shadow-card">
               <h2 className="text-sm font-bold text-ink-900">评分维度与权重</h2>
-              <dl className="mt-3 space-y-3">
+              <div className="mt-3 space-y-3">
                 {model.dimensions.map((dimension) => (
                   <div key={dimension.id}>
                     <div className="flex items-center justify-between gap-2">
-                      <dt className="text-sm text-ink-700">{dimension.name}</dt>
-                      <dd className="text-sm font-semibold text-ink-900">
+                      <span className="text-sm text-ink-700">{dimension.name}</span>
+                      <span className="text-sm font-semibold text-ink-900">
                         {(dimension.weight * 100).toFixed(0)}%
-                      </dd>
+                      </span>
                     </div>
                     <p className="mt-0.5 text-xs leading-5 text-ink-500">{dimension.description}</p>
                   </div>
                 ))}
-              </dl>
+              </div>
               <p className="mt-4 border-t border-line pt-3 text-xs leading-5 text-ink-500">
                 权重之和为 1。未知维度不会被当作 0 分；资料不足的条目不进入正式排名。
               </p>

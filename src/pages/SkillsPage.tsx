@@ -94,6 +94,7 @@ export function SkillsPage() {
           找到 <strong>{results.length}</strong> 个技能
         </p>
 
+        <h2 className="sr-only">技能列表</h2>
         {results.length > 0 ? (
           <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {results.map((skill) => (

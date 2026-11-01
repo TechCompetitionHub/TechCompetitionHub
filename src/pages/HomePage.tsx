@@ -115,30 +115,30 @@ export function HomePage() {
             </div>
           </div>
 
-          <dl className="grid grid-cols-2 gap-3 rounded-2xl border border-white/15 bg-white/5 p-5">
+          <div className="grid grid-cols-2 gap-3 rounded-2xl border border-white/15 bg-white/5 p-5">
             <div className="rounded-xl bg-white/5 p-4">
-              <dt className="text-xs text-white/60">已收录竞赛</dt>
-              <dd className="mt-1 text-2xl font-bold">{competitions.length}</dd>
-              <dd className="mt-1 text-[11px] text-white/50">真实仓库数据</dd>
+              <p className="text-xs text-white/60">已收录竞赛</p>
+              <p className="mt-1 text-2xl font-bold">{competitions.length}</p>
+              <p className="mt-1 text-[11px] text-white/50">真实仓库数据</p>
             </div>
             <div className="rounded-xl bg-white/5 p-4">
-              <dt className="text-xs text-white/60">已核验</dt>
-              <dd className="mt-1 text-2xl font-bold">{verified}</dd>
-              <dd className="mt-1 text-[11px] text-white/50">有官方来源</dd>
+              <p className="text-xs text-white/60">已核验</p>
+              <p className="mt-1 text-2xl font-bold">{verified}</p>
+              <p className="mt-1 text-[11px] text-white/50">有官方来源</p>
             </div>
             <div className="rounded-xl bg-white/5 p-4">
-              <dt className="text-xs text-white/60">已评分</dt>
-              <dd className="mt-1 text-2xl font-bold">{scored}</dd>
-              <dd className="mt-1 text-[11px] text-white/50">其中 {ranked} 条进入正式榜</dd>
+              <p className="text-xs text-white/60">已评分</p>
+              <p className="mt-1 text-2xl font-bold">{scored}</p>
+              <p className="mt-1 text-[11px] text-white/50">其中 {ranked} 条进入正式榜</p>
             </div>
             <div className="rounded-xl bg-white/5 p-4">
-              <dt className="text-xs text-white/60">技能 / 免费资源</dt>
-              <dd className="mt-1 text-2xl font-bold">
+              <p className="text-xs text-white/60">技能 / 免费资源</p>
+              <p className="mt-1 text-2xl font-bold">
                 {skills.length} / {freeResources}
-              </dd>
-              <dd className="mt-1 text-[11px] text-white/50">可执行任务与真实链接</dd>
+              </p>
+              <p className="mt-1 text-[11px] text-white/50">可执行任务与真实链接</p>
             </div>
-          </dl>
+          </div>
         </Container>
       </section>
 
@@ -274,16 +274,16 @@ export function HomePage() {
                 平台评分由六个维度加权构成。未知维度不会被当作 0
                 分或满分；资料不足的条目会单独列出，不参与正式排名。
               </p>
-              <dl className="mt-5 space-y-3">
+              <div className="mt-5 space-y-3">
                 {ranking.model.dimensions.map((dimension) => (
                   <div key={dimension.id} className="flex items-start justify-between gap-4">
-                    <dt className="text-sm text-ink-700">{dimension.name}</dt>
-                    <dd className="shrink-0 text-sm font-semibold text-ink-900">
+                    <span className="text-sm text-ink-700">{dimension.name}</span>
+                    <span className="shrink-0 text-sm font-semibold text-ink-900">
                       {(dimension.weight * 100).toFixed(0)}%
-                    </dd>
+                    </span>
                   </div>
                 ))}
-              </dl>
+              </div>
               <div className="mt-5 border-t border-line pt-4">
                 <Link to="/scoring-method" className="link-inline text-sm">
                   查看完整方法、缺失数据规则与版本记录

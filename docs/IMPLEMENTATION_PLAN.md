@@ -6,16 +6,16 @@
 
 ## 1. 阶段 0 仓库与 Git 检查结果
 
-| 检查项                                            | 结果                                                                |
-| ------------------------------------------------- | ------------------------------------------------------------------- |
-| 本地工作目录                                      | `D:\桌面\TechCompetitionHub`，初始仅含 `docs/`（PRD 与 Agent 约束） |
-| 本地 Git                                          | 初始不是 Git 仓库；已执行 `git init -b main`                        |
-| `TechCompetitionHub/TechCompetitionHub`           | 远程存在，`main` 为默认分支，仓库大小 0，无分支、无提交、无 Pages   |
-| `TechCompetitionHub/TechCompetitionHub.github.io` | 远程存在，`main` 为默认分支，仓库大小 0，无分支、无提交、无 Pages   |
-| GitHub 组织                                       | 2026-11-01 创建，2 个公开仓库，均未配置描述与许可证                 |
+| 检查项                                            | 结果                                                                    |
+| ------------------------------------------------- | ----------------------------------------------------------------------- |
+| 本地工作目录                                      | `D:\桌面\TechCompetitionHub`，初始仅含 `docs/`（PRD 与 Agent 约束）     |
+| 本地 Git                                          | 初始不是 Git 仓库；已执行 `git init -b main`                            |
+| `TechCompetitionHub/TechCompetitionHub`           | 远程存在，`main` 为默认分支，仓库大小 0，无分支、无提交、无 Pages       |
+| `TechCompetitionHub/TechCompetitionHub.github.io` | 远程存在，`main` 为默认分支，仓库大小 0，无分支、无提交、无 Pages       |
+| GitHub 组织                                       | 2026-11-01 创建，2 个公开仓库，均未配置描述与许可证                     |
 | Git 身份                                          | 本地已配置提交身份（不在文档记录个人信息）；SSH `github-scunf` 认证成功 |
-| 工具链                                            | Node v24.17.0、npm 11.14.1、Git 2.47.1；未安装 GitHub CLI           |
-| 结论                                              | 没有需要保留的既有代码；两个远程仓库均为空，不存在覆盖风险          |
+| 工具链                                            | Node v24.17.0、npm 11.14.1、Git 2.47.1；未安装 GitHub CLI               |
+| 结论                                              | 没有需要保留的既有代码；两个远程仓库均为空，不存在覆盖风险              |
 
 部署目标决策：主仓库 `TechCompetitionHub` 作为源码与项目站点（`https://techcompetitionhub.github.io/TechCompetitionHub/`）。`TechCompetitionHub.github.io` 暂不写入；如后续需要根域名站点，可通过 `VITE_BASE_PATH=/` 复用同一构建产物。该决策记录于 `docs/ADR/0003-github-pages.md`，最终发布目标由维护者确认。
 

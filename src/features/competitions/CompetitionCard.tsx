@@ -55,27 +55,27 @@ export function CompetitionCard({
         {competition.summary}
       </p>
 
-      <dl className="mt-4 grid grid-cols-2 gap-2 text-xs text-ink-500">
+      <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-ink-500">
         <div>
-          <dt className="sr-only">参赛形式</dt>
-          <dd>{teamLabel}</dd>
+          <span className="sr-only">参赛形式</span>
+          <span>{teamLabel}</span>
         </div>
         <div>
-          <dt className="sr-only">适合对象</dt>
-          <dd>{competition.audience.levels.map(getAudienceLabel).join(' / ')}</dd>
+          <span className="sr-only">适合对象</span>
+          <span>{competition.audience.levels.map(getAudienceLabel).join(' / ')}</span>
         </div>
         <div>
-          <dt className="sr-only">难度</dt>
-          <dd>
+          <span className="sr-only">难度</span>
+          <span>
             难度 {'★'.repeat(competition.difficulty.level)}
             {'☆'.repeat(5 - competition.difficulty.level)}
-          </dd>
+          </span>
         </div>
         <div>
-          <dt className="sr-only">最后核验</dt>
-          <dd>核验 {formatDate(competition.last_verified_at)}</dd>
+          <span className="sr-only">最后核验</span>
+          <span>核验 {formatDate(competition.last_verified_at)}</span>
         </div>
-      </dl>
+      </div>
 
       <div className="mt-4 flex items-center justify-between border-t border-line pt-3 text-xs">
         <span className="text-ink-500">

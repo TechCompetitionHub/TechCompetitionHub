@@ -77,22 +77,20 @@ export function GuideDetailPage() {
           <aside className="space-y-5">
             <div className="rounded-2xl border border-line bg-surface p-5">
               <h2 className="text-sm font-bold text-ink-900">文章信息</h2>
-              <dl className="mt-3 space-y-2 text-xs text-ink-500">
+              <div className="mt-3 space-y-2 text-xs text-ink-500">
                 <div>
-                  <dt className="font-semibold text-ink-700">分类</dt>
-                  <dd>
-                    {CATEGORY_LABELS[guide.frontmatter.category] ?? guide.frontmatter.category}
-                  </dd>
+                  <p className="font-semibold text-ink-700">分类</p>
+                  <p>{CATEGORY_LABELS[guide.frontmatter.category] ?? guide.frontmatter.category}</p>
                 </div>
                 <div>
-                  <dt className="font-semibold text-ink-700">作者</dt>
-                  <dd>{guide.frontmatter.author}</dd>
+                  <p className="font-semibold text-ink-700">作者</p>
+                  <p>{guide.frontmatter.author}</p>
                 </div>
                 <div>
-                  <dt className="font-semibold text-ink-700">最后更新</dt>
-                  <dd>{formatDate(guide.frontmatter.updated_at)}</dd>
+                  <p className="font-semibold text-ink-700">最后更新</p>
+                  <p>{formatDate(guide.frontmatter.updated_at)}</p>
                 </div>
-              </dl>
+              </div>
               <p className="mt-4 border-t border-line pt-3 text-xs leading-5 text-ink-500">
                 经验文章是社区观点，不替代官方规则；引用数据时请回到来源核对。
               </p>

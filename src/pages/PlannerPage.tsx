@@ -48,6 +48,7 @@ export function PlannerPage() {
       />
 
       <Container className="py-8">
+        <h2 className="sr-only">规划工作区</h2>
         {selected ? (
           <>
             <div className="rounded-2xl border border-line bg-surface p-5 shadow-card">

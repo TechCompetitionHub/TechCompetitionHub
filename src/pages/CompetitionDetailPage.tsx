@@ -121,7 +121,7 @@ export function CompetitionDetailPage() {
 
             <section aria-labelledby="facts-heading">
               <SectionHeading id="facts-heading" eyebrow="关键事实" title="先核对，再判断" />
-              <dl className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2">
                 <Fact label="主办/组织方">
                   {competition.organizers.length > 0 ? (
                     <ul className="space-y-1">
@@ -188,7 +188,7 @@ export function CompetitionDetailPage() {
                     {competition.sources.length} 条
                   </span>
                 </Fact>
-              </dl>
+              </div>
               {competition.format.notes ? (
                 <p className="mt-3 text-xs leading-5 text-ink-500">{competition.format.notes}</p>
               ) : null}
@@ -395,8 +395,8 @@ export function CompetitionDetailPage() {
 function Fact({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div className="rounded-xl border border-line bg-surface p-4">
-      <dt className="text-xs font-semibold tracking-wide text-ink-500 uppercase">{label}</dt>
-      <dd className="mt-1.5 text-sm leading-6 text-ink-900">{children}</dd>
+      <p className="text-xs font-semibold tracking-wide text-ink-500 uppercase">{label}</p>
+      <div className="mt-1.5 text-sm leading-6 text-ink-900">{children}</div>
     </div>
   );
 }

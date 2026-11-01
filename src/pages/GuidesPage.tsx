@@ -32,6 +32,7 @@ export function GuidesPage() {
       />
 
       <Container className="py-8">
+        <h2 className="sr-only">指南列表</h2>
         {guides.length > 0 ? (
           <div className="space-y-10">
             {categories.map((category) => {

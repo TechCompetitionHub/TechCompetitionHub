@@ -136,4 +136,34 @@ describe('核心页面', () => {
     });
     expect(results.violations).toEqual([]);
   });
+
+  const auditRoutes = [
+    '/',
+    '/competitions',
+    '/competitions/cumcm',
+    '/rankings',
+    '/projects',
+    '/skills',
+    '/skills/python-programming',
+    '/planner?target=competition:cumcm',
+    '/guides',
+    '/guides/choose-first-competition',
+    '/community',
+    '/about',
+    '/contribute',
+    '/data-policy',
+    '/scoring-method',
+    '/privacy',
+  ];
+
+  it.each(auditRoutes)('页面 %s 通过基础可访问性检查', async (path) => {
+    const { container } = renderApp(path);
+    await waitFor(() => {
+      expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
+    });
+    const results = await axe.run(container, {
+      rules: { 'color-contrast': { enabled: false } },
+    });
+    expect(results.violations).toEqual([]);
+  });
 });

@@ -38,6 +38,7 @@ export function ProjectsPage() {
       />
 
       <Container className="py-8">
+        <h2 className="sr-only">项目列表</h2>
         {projects.length > 0 ? (
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project) => (

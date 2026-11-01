@@ -247,9 +247,9 @@ export function CompetitionCatalogPage() {
           </div>
         </div>
 
+        <h2 className="sr-only">竞赛列表</h2>
         {results.length > 0 ? (
           <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            <h2 className="sr-only">竞赛列表</h2>
             {results.map((competition) => (
               <CompetitionCard
                 key={competition.id}

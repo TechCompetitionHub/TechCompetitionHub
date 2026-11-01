@@ -35,7 +35,7 @@ npm run check
 | 格式   | `npm run format:check`       | 通过                                                                   |
 | Lint   | `npm run lint`               | 通过，0 error                                                          |
 | 类型   | `npm run typecheck`          | 通过                                                                   |
-| 测试   | `npm test`                   | 9 个文件、77 个测试全部通过                                            |
+| 测试   | `npm test`                   | 9 个文件、93 个测试全部通过（含 16 条路由 axe 审计）                   |
 | 数据   | `npm run data:validate`      | 10 竞赛 / 25 技能 / 23 资源 / 2 路线 / 1 模型 / 4 文章；0 错误、0 警告 |
 | Schema | `npm run data:schemas:check` | 8 个 JSON Schema 与 Zod 定义一致                                       |
 | 构建   | `npm run build`              | 通过                                                                   |
@@ -51,12 +51,12 @@ npm run check
 ✓ tests/unit/skill-graph.test.ts (8)
 ✓ tests/unit/search.test.ts (10)
 ✓ tests/unit/data-validation.test.ts (14)
-✓ tests/integration/app.test.tsx (13)
+✓ tests/integration/app.test.tsx (29)
 Test Files  9 passed (9)
-Tests       77 passed (77)
+Tests       93 passed (93)
 ```
 
-集成测试覆盖：首页、目录筛选与 URL 状态、空状态、详情深层链接、404、排行榜准入与排除、技能详情、成长规划器、Markdown 文章按需加载、移动导航键盘关闭、社区链接约束、首页/目录 axe-core 基础可访问性。
+集成测试覆盖：首页、目录筛选与 URL 状态、空状态、详情深层链接、404、排行榜准入与排除、技能详情、成长规划器、Markdown 文章按需加载、移动导航键盘关闭、社区链接约束；并对 16 条主要路由逐一执行 axe-core 基础可访问性审计（关闭仅依赖布局的 color-contrast 规则）。
 
 ## 3. 生产构建
 
@@ -67,8 +67,8 @@ dist/index.html                            1.10 kB │ gzip:   0.59 kB
 dist/assets/index-Ce1RVKu1.css            39.07 kB │ gzip:   7.01 kB
 dist/assets/vendor-react-ker38TCy.js      50.53 kB │ gzip:  17.88 kB
 dist/assets/vendor-zod-kdM93vdI.js        92.28 kB │ gzip:  26.19 kB
-dist/assets/GuideDetailPage-Clz2oA1m.js  167.85 kB │ gzip:  51.50 kB
-dist/assets/index-VfzxwOLz.js            624.80 kB │ gzip: 190.02 kB
+dist/assets/GuideDetailPage-B6oIN5hv.js  167.85 kB │ gzip:  51.49 kB
+dist/assets/index-DUJE_cwx.js            625.29 kB │ gzip: 190.10 kB
 ✓ built in 2.90s
 postbuild：404.html、.nojekyll、sitemap.xml（52 个 URL）、robots.txt 已生成并校验；base=/TechCompetitionHub/
 ```
@@ -79,14 +79,14 @@ postbuild 校验：base 路径、`404.html` 与 `index.html` 一致、sitemap �
 
 启动 `npm run preview -- --host 127.0.0.1 --port 4173`，实际 HTTP 结果：
 
-| URL                                            | 状态 | 结果                     |
-| ---------------------------------------------- | ---- | ------------------------ |
-| `/TechCompetitionHub/`                         | 200  | HTML，含 `id="root"`     |
-| `/TechCompetitionHub/competitions/cumcm`       | 200  | SPA 回退 HTML            |
-| `/TechCompetitionHub/404.html`                 | 200  | 与 `index.html` 内容一致 |
-| `/TechCompetitionHub/sitemap.xml`              | 200  | 包含 10 条竞赛详情 URL   |
-| `/TechCompetitionHub/robots.txt`               | 200  | 指向 sitemap             |
-| `/TechCompetitionHub/assets/index-ADg4KPU-.js` | 200  | 624,784 bytes            |
+| URL                                                                   | 状态 | 结果                            |
+| --------------------------------------------------------------------- | ---- | ------------------------------- |
+| `/TechCompetitionHub/`                                                | 200  | HTML，含 `id="root"`            |
+| `/TechCompetitionHub/competitions/cumcm`                              | 200  | SPA 回退 HTML                   |
+| `/TechCompetitionHub/404.html`                                        | 200  | 与 `index.html` 内容一致        |
+| `/TechCompetitionHub/sitemap.xml`                                     | 200  | 包含 10 条竞赛详情 URL          |
+| `/TechCompetitionHub/robots.txt`                                      | 200  | 指向 sitemap                    |
+| 主 JS 资源（`/TechCompetitionHub/assets/index-*.js`，以构建引用为准） | 200  | 625,286 bytes（哈希随构建变化） |
 
 > Vite preview 对未知路径返回 200 SPA 回退；GitHub Pages 会返回 404 + `404.html`，两者都依赖同一份 React 路由。真实 Pages 行为尚未部署验证。
 

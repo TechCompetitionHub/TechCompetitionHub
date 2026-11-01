@@ -74,34 +74,34 @@ export function ProjectDetailPage() {
                 title="运行环境与验证方法"
                 description="项目展示不等于平台对原创性、质量或获奖真实性作出保证；请以证据链接与复现记录为准。"
               />
-              <dl className="space-y-4 rounded-xl border border-line bg-surface p-5 text-sm leading-6">
+              <div className="space-y-4 rounded-xl border border-line bg-surface p-5 text-sm leading-6">
                 <div>
-                  <dt className="font-semibold text-ink-900">环境</dt>
-                  <dd className="mt-1 text-ink-700">{project.reproducibility.environment}</dd>
+                  <p className="font-semibold text-ink-900">环境</p>
+                  <p className="mt-1 text-ink-700">{project.reproducibility.environment}</p>
                 </div>
                 <div>
-                  <dt className="font-semibold text-ink-900">依赖</dt>
-                  <dd className="mt-1 text-ink-700">
+                  <p className="font-semibold text-ink-900">依赖</p>
+                  <p className="mt-1 text-ink-700">
                     {project.reproducibility.dependencies.length > 0
                       ? project.reproducibility.dependencies.join('、')
                       : '未列出'}
-                  </dd>
+                  </p>
                 </div>
                 <div>
-                  <dt className="font-semibold text-ink-900">运行步骤</dt>
-                  <dd className="mt-1">
+                  <p className="font-semibold text-ink-900">运行步骤</p>
+                  <div className="mt-1">
                     <ol className="list-decimal space-y-1 pl-5 text-ink-700">
                       {project.reproducibility.run_steps.map((step) => (
                         <li key={step}>{step}</li>
                       ))}
                     </ol>
-                  </dd>
+                  </div>
                 </div>
                 <div>
-                  <dt className="font-semibold text-ink-900">测试方法</dt>
-                  <dd className="mt-1 text-ink-700">{project.reproducibility.test_method}</dd>
+                  <p className="font-semibold text-ink-900">测试方法</p>
+                  <p className="mt-1 text-ink-700">{project.reproducibility.test_method}</p>
                 </div>
-              </dl>
+              </div>
             </section>
 
             <section aria-labelledby="results-heading">
